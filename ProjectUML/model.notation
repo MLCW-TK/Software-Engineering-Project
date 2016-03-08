@@ -103,7 +103,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ujaUY-VYEeWV-96N_MXogA"/>
     </children>
     <element xmi:type="uml:Interface" href="model.uml#_ujYfIOVYEeWV-96N_MXogA"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ujaUUeVYEeWV-96N_MXogA" x="843" y="126" width="218" height="196"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ujaUUeVYEeWV-96N_MXogA" x="905" y="117" width="218" height="196"/>
   </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_s6jngeVVEeWV-96N_MXogA" name="diagram_compatibility_version" stringValue="1.1.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_s6jnguVVEeWV-96N_MXogA"/>
@@ -158,7 +158,7 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ukTFIeVYEeWV-96N_MXogA"/>
     <element xmi:type="uml:Association" href="model.uml#_ukFCsOVYEeWV-96N_MXogA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ukTFIuVYEeWV-96N_MXogA" points="[0, 0, 558, 109]$[-558, -109, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ukwYIOVYEeWV-96N_MXogA" id="(0.0,0.0)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ukwYIOVYEeWV-96N_MXogA" id="(1.0,0.04205607476635514)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ukwYIeVYEeWV-96N_MXogA" id="(0.0,0.0)"/>
   </edges>
 </notation:Diagram>
