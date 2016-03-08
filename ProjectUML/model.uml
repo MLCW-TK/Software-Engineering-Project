@@ -1,2 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_tAXG0OVQEeWm85KOYWRhCg" name="RootElement"/>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_tAXG0OVQEeWm85KOYWRhCg" name="RootElement">
+  <packagedElement xmi:type="uml:Class" xmi:id="_wLfz0OVVEeWV-96N_MXogA" name="RestaurantSystem" visibility="package">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_RB3z8OVWEeWV-96N_MXogA" name="userFactory" visibility="protected" type="_hCN1oOVXEeWV-96N_MXogA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_IXi2MOVYEeWV-96N_MXogA" name="userfactory" type="_hCN1oOVXEeWV-96N_MXogA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_T0D80uVYEeWV-96N_MXogA" name="userfactory" type="_hCN1oOVXEeWV-96N_MXogA" association="_T0DVwOVYEeWV-96N_MXogA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hCN1oOVXEeWV-96N_MXogA" name="UserFactory">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ukFpwOVYEeWV-96N_MXogA" name="interface1" type="_ujYfIOVYEeWV-96N_MXogA" association="_ukFCsOVYEeWV-96N_MXogA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_T0DVwOVYEeWV-96N_MXogA" memberEnd="_T0D80uVYEeWV-96N_MXogA _T0FyAOVYEeWV-96N_MXogA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T0D80OVYEeWV-96N_MXogA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T0D80eVYEeWV-96N_MXogA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_T0FyAOVYEeWV-96N_MXogA" name="restaurantsystem" type="_wLfz0OVVEeWV-96N_MXogA" association="_T0DVwOVYEeWV-96N_MXogA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_ujYfIOVYEeWV-96N_MXogA" name="User">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5YPI0OVYEeWV-96N_MXogA" name="first_name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EE6G4OVZEeWV-96N_MXogA" name="last_name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_IMu34OVZEeWV-96N_MXogA" name="user_name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_bK1goOVZEeWV-96N_MXogA" name="email" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fZ2ewOVZEeWV-96N_MXogA" name="addresss" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ukFCsOVYEeWV-96N_MXogA" memberEnd="_ukFpwOVYEeWV-96N_MXogA _ukHe8OVYEeWV-96N_MXogA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ukFCseVYEeWV-96N_MXogA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ukFCsuVYEeWV-96N_MXogA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ukHe8OVYEeWV-96N_MXogA" name="userfactory" type="_hCN1oOVXEeWV-96N_MXogA" association="_ukFCsOVYEeWV-96N_MXogA"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_UEqPgOVWEeWV-96N_MXogA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UErdoOVWEeWV-96N_MXogA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
