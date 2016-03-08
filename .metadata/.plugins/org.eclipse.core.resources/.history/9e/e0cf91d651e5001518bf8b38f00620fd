@@ -1,0 +1,10 @@
+package enjoy.your.meal;
+
+public class RestaurantSystem {
+	public static void main(String[] args){
+		System.out.println("Welcome to our restaurant!");
+		System.out.println("What would you like to do today?");
+		System.out.println("Select 1 to register a new user. Select 2 to login");
+		
+	}
+}

@@ -1,0 +1,7 @@
+package enjoy.your.meal;
+
+public class RestaurantSystem {
+	public static void main(String[] args){
+		System.out.println("Welcome to our restaurant!");
+	}
+}
