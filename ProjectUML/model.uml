@@ -37,6 +37,10 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_ukHe8OVYEeWV-96N_MXogA" name="userfactory" type="_hCN1oOVXEeWV-96N_MXogA" association="_ukFCsOVYEeWV-96N_MXogA"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_f3YxEOXiEeWMC9mby3h4Vg" name="ClientUser"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_f4chAOXiEeWMC9mby3h4Vg" client="_ujYfIOVYEeWV-96N_MXogA" supplier="_f3YxEOXiEeWMC9mby3h4Vg"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lTRyAOXiEeWMC9mby3h4Vg" name="ChefUser"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_lUO0QOXiEeWMC9mby3h4Vg" client="_ujYfIOVYEeWV-96N_MXogA" supplier="_tAXG0OVQEeWm85KOYWRhCg"/>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_UEqPgOVWEeWV-96N_MXogA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UErdoOVWEeWV-96N_MXogA" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>

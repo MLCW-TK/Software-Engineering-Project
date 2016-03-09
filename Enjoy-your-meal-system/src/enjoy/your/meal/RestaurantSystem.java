@@ -3,6 +3,10 @@ package enjoy.your.meal;
 import java.util.Scanner;
 
 public class RestaurantSystem {
+	/**
+	 * This is the Main of this programme. 
+	 * @param args
+	 */
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Welcome to our restaurant!");
