@@ -1,20 +1,30 @@
 package enjoyyourmeal;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class LoadSystem extends Thread {
-	String restaurant_name;
+	RestaurantSystem re1;
 	ClientUser LoginUser;
 	public LoadSystem(String name){
-		restaurant_name = name;
+		re1 = new RestaurantSystem(name);
 	}
+	public StaffUser createStaff(String firstname, String lastname, String username, String password, String email, HashMap<String,String> contacts){
+		return new StaffUser(firstname, lastname, username, password, email, contacts);
+	}
+	
+	public void addStaff(StaffUser staff){
+		re1.addUser(staff);
+	}
+
+	// In case we need to "promote" a client to be a staff next time....
+//	private void convertClientToStaff(ClientUser client){
+//		client = (StaffUser)client;
+//	}
 	
 	@Override
 	public void run() {
 		Scanner sc = new Scanner(System.in);
-		RestaurantSystem re1 = new RestaurantSystem(restaurant_name);
-		StaffUser Chef = new StaffUser("Mathias", "Loh", "mathiasloh", "12345", "kyd1992", null);
-		re1.addUser(Chef);
 		while (!re1.exit){
 			while (re1.getRegistrationPhase()){
 				System.out.println("Welcome to " + re1.getRestaurantName() + " !");
