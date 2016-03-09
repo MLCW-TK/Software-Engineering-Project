@@ -52,12 +52,16 @@ public class LoadSystem extends Thread {
 					//
 					// Implementation of birthday here
 					//
-					System.out.println("Welcome, " + LoginUser.getFirstname() + " " + LoginUser.getLastname() + "!");
+					System.out.println("Welcome, " + LoginUser.getFirstname() + " " + LoginUser.getLastname() + "!" + " (" + LoginUser.getUsertype() + ")");
 					System.out.println("What would you like to do today? (Enter numbers)");
 					System.out.println("1. Order a meal");
-					System.out.println("2. Insert a meal");
-					System.out.println("3. Logout");
-					System.out.println("4. Shutdown system");
+					System.out.println("2. View your orders");
+					System.out.println("3. Checkout");
+					System.out.println("4. Inserting a meal");
+					System.out.println("5. Adding a special price offer");
+					System.out.println("6. Removing a special price offer");
+					System.out.println("7. Logout");
+					System.out.println("8. Shutdown system");
 					String input = sc.nextLine();
 					switch(input){
 					case "1":
@@ -68,12 +72,46 @@ public class LoadSystem extends Thread {
 						break;
 					case "4":
 						break;
+					case "5":
+						break;
+					case "6":
+						break;
+					case "7":
+						re1.setUserPhase(false);
+						re1.setRegistrationPhase(true);
+						System.out.println("You have logged out. Thank you for using Enjoy-Your-Meal-System");
+						System.out.println("");
+						break;
+					case "8":
+						break;
 					default: 
 						break;
 					}
 					
 				} else{
-					System.out.println("fucked up again zzz");
+					System.out.println("Welcome, " + LoginUser.getFirstname() + " " + LoginUser.getLastname() + "!" + " (" + LoginUser.getUsertype() + ")");
+					System.out.println("What would you like to do today? (Enter numbers)");
+					System.out.println("1. Order a meal");
+					System.out.println("2. View your orders");
+					System.out.println("3. Checkout");
+					System.out.println("4. Logout");
+					String input = sc.nextLine();
+					switch(input){
+					case "1":
+						break;
+					case "2":
+						break;
+					case "3":
+						break;
+					case "4":
+						re1.setUserPhase(false);
+						re1.setRegistrationPhase(true);
+						System.out.println("You have logged out. Thank you for using Enjoy-Your-Meal-System");
+						System.out.println("");
+						break;
+					default:
+						break;
+					}
 				}
 			}
 		}

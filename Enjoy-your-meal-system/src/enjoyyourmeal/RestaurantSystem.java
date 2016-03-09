@@ -90,6 +90,8 @@ public class RestaurantSystem{
 		/**
 		 * contact_details is a HashMap<String, String>
 		 */
+		boolean register = true;
+		while (register){
 		HashMap<String, String> contact_details = new HashMap<String, String>();
 		/**
 		 * Sequence of instructions to register an user.
@@ -108,7 +110,7 @@ public class RestaurantSystem{
 		 */
 		System.out.println("Please confirm your password by re-entering it: ");
 		String passwordConfirmed = sc2.nextLine();
-		while (password != passwordConfirmed){
+		while (!password.equals(passwordConfirmed)){
 			System.out.println("Please make sure your password is entered correctly.");
 			System.out.println("Please enter your password: ");
 			password = sc2.nextLine();
@@ -148,77 +150,159 @@ public class RestaurantSystem{
 		if (response.equalsIgnoreCase("YES")){
 			newUser.setReceiveUpdates(true);
 			/** 
-			 * Asks for contact detail of the user wants to receive updates but has not provided the email address.
-			 * If no contact is give, ask for email address.
-			 * If other contacts is give, ask the user to specify the receive method.
+			 * Checks if either email or contact details were given
+			 * If none were given, prompt the user to give either email address or contact address
+			 * If other contacts were given, asks the user to specify the receive method.
 			 */
-			if (email == ""){
+			if (email.equals("")){
 				if (contact_details.isEmpty()){
-					// Give the ClientUser an option to only provide other contact detail at this step.
-					System.out.println("No contact details found. Please enter your email address: (Press 'enter' to skip)");
-					email = sc2.nextLine();
-					newUser.setEmail(email);
-					newUser.setReceiveAddress(email);
-					if (email == ""){
-						// Ask for alternative contact information and set it as the ReceiveAddress.
-						System.out.println("We need at least one of your contact to update you our special offers. Please enter the contact field description: (email address, address, phone number...)");
-						String value1 = sc2.nextLine();
-						System.out.println("Please enter the contact field value");
-						String value2 = sc2.nextLine();
-						contact_details.put(value1, value2);
-						newUser.setReceiveAddress(value2);
-					}
-				}
-				else{					
-					System.out.println("No email address set. Please choose your specified contact details");
-					System.out.println(newUser.getContact());
-					String ContactKey = sc2.nextLine();
-					
-					while (true){
-						if (newUser.getContactHash().containsKey(ContactKey)){
-							newUser.setReceiveAddress(newUser.getContactValue(ContactKey));
+//					while (newUser.getEmail().equals("")){
+//						// Give the ClientUser an option to only provide other contact detail at this step.
+//						System.out.println("No contact details found. Please enter an email address: ");
+//						email = sc2.nextLine();
+//						newUser.setEmail(email);
+//						newUser.setReceiveAddress(email);
+//					}
+//					if (email == ""){
+//						// Ask for alternative contact information and set it as the ReceiveAddress.
+//						System.out.println("We need at least one of your contact to update you our special offers. Please enter the contact field description: (email address, address, phone number...)");
+//						String value1 = sc2.nextLine();
+//						System.out.println("Please enter the contact field value");
+//						String value2 = sc2.nextLine();
+//						contact_details.put(value1, value2);
+//						newUser.setReceiveAddress(value2);
+//					}
+					while (newUser.getEmail().equals("") && newUser.getContactHash().isEmpty()){
+						System.out.println("No contact details found");
+						System.out.println("Where would you like us to send you updates?");
+						System.out.println("Type '1' to enter an email address, or '2' to enter other contact details manually");
+						String ans = sc2.nextLine();
+						switch(ans){
+						case "1":
+							System.out.println("Please enter your email address: ");
+							email = sc2.nextLine();
+							if (email.equals("")){
+								continue;
+							} else {
+								newUser.setEmail(email);
+								newUser.setReceiveAddress(email);
+								System.out.println("We will send you updates by email from now on");
+								break;
+							}
+						case "2":
+							System.out.println("Please enter a contact field description");
+							String value1 = sc2.nextLine();
+							System.out.println("Please enter a contact field value");
+							String value2 = sc2.nextLine();
+							if (value1.equals("") || value2.equals("")){
+								continue;
+							}
+							contact_details.put(value1, value2);
+							newUser.setReceiveAddress(newUser.getContactHash().get(value1));
+							System.out.println("We will send updates to " + value1 + " from now on");
+							break;
+							
+						default:
+							System.out.println("Invalid input. Please try again");
 							break;
 						}
-						else{
-							System.out.println("Wrong input selected. Please try again");
-							ContactKey = sc2.nextLine();
-						}
 					}
 				}
-			} else {
-				System.out.println("Would you like to change how you would like to receive updates? (yes/no, default = email)");
-				String response2 = sc2.nextLine();
-				if (response2.equalsIgnoreCase("YES")){
-					System.out.println("Please enter one of your contact types shown below");
-					System.out.println(newUser.getContact());
-					String ContactKey = sc2.nextLine();
-					while (true){
-						if (newUser.getContactHash().containsKey(ContactKey)){
-							newUser.setReceiveAddress(newUser.getContactValue(ContactKey));
-							break;
+					else{
+						boolean UnresolvedUpdateChoice = true;
+						while (newUser.getReceiveAddress().equals("")){
+							System.out.println("No email address set for updates notification");
+							System.out.println("Type '1' if you would like to add an email address to receive updates, or type '2' if you like to choose from other contact details");
+							String NotifyResponse = sc2.nextLine();
+							switch(NotifyResponse){
+							case "1":
+								System.out.println("Please enter an email address");
+								email = sc2.nextLine();
+								if (email.equals("")){
+									continue;
+								} else {
+									newUser.setEmail(email);
+									newUser.setReceiveAddress(email);
+									System.out.println("Email updated. You will receive email updates from now on");
+									break;
+								}
+							case "2":
+								System.out.println("Please choose from the list below");
+								System.out.println(newUser.getContact());
+								String ContactKey = sc2.nextLine();
+						
+								while (true){
+									if (newUser.getContactHash().containsKey(ContactKey)){
+										newUser.setReceiveAddress(newUser.getContactValue(ContactKey));
+										System.out.println("We will send updates to " + ContactKey + " from now on");
+										break;
+									}
+									else{
+										System.out.println("Wrong input selected. Please try again");
+										ContactKey = sc2.nextLine();
+									}
+								}
+								break;
+							default:
+								System.out.println("Invalid response. Please try again");
+								break;
+							}
 						}
-						else{
-							System.out.println("Wrong input selected. Please try again");
-							ContactKey = sc2.nextLine();
 						}
+				}else {
+					if (!newUser.getContactHash().isEmpty()){
+						System.out.println("Would you like to change how you would like to receive updates? (yes/no, default = email)");
+						String response2 = sc2.nextLine();
+							if (response2.equalsIgnoreCase("YES")){
+								System.out.println("Please enter one of your contact types shown below");
+								System.out.println(newUser.getContact());
+								String ContactKey = sc2.nextLine();
+							while (true){
+								if (newUser.getContactHash().containsKey(ContactKey)){
+									newUser.setReceiveAddress(newUser.getContactValue(ContactKey));
+									break;
+								}
+								else{
+									System.out.println("Wrong input selected. Please try again");
+									ContactKey = sc2.nextLine();
+								}
+							}	
+						}
+					} else {
+						System.out.println("We will send you email updates if any!");
 					}
 				}
-			}
 		}
-		if (this.user_list.isEmpty()){
-			this.user_list.add(newUser);
-			System.out.println("Registration successful! Please login in the main menu");
-		}
-		else{
-			if (user_list.contains(newUser)){
-				System.out.println("User already exist, please retry again, or log in with the main menu");
+		
+		System.out.println("Would you like to save this account? (yes/no)");
+		String save = sc2.nextLine();
+		if (save.equalsIgnoreCase("YES")){
+			/**
+			 * Adds created user to the list of users in the system
+			 * If user already exist, tells the user that registration has failed.
+			 * Else, lets the user know that registration has been successful.
+			 */
+			if (this.user_list.isEmpty()){
+				this.user_list.add(newUser);
+				System.out.println("Registration successful! Please login in the main menu");
+				break;
 			}
 			else{
-				user_list.add(newUser);
-				System.out.println("Registration successful! Please login in the main menu");
+				if (user_list.contains(newUser)){
+					System.out.println("Registration failed");
+					System.out.println("User already exist, please retry again. or log in with the main menu");
+					break;
+				}
+				else{
+					user_list.add(newUser);
+					System.out.println("Registration successful! Please login in the main menu");
+					break;
+				}	
 			}
-			
+		} else {
+			break;
 		}
+	}
 	}	
 	
 	public ClientUser login(String username, String password){

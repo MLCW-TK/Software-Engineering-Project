@@ -11,6 +11,7 @@ public class ClientUser{
 	private HashMap<String, String> contact;
 	boolean receive_updates = false;
 	private String receive_address;;
+	protected String user_type;
 	
 	public ClientUser(String firstname, String lastname, String username, String password, String email, HashMap<String, String> contact){
 		this.setFirstname(firstname);
@@ -20,10 +21,15 @@ public class ClientUser{
 		this.email = email;
 		this.contact = contact;
 		this.receive_address = email;
+		this.user_type = "Client";
 	}
 	
 	protected String getUsername(){
 		return this.user_name; 
+	}
+	
+	protected String getUsertype(){
+		return this.user_type;
 	}
 	
 	protected String getPassword(){

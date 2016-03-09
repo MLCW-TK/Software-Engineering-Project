@@ -6,7 +6,10 @@ public class StaffUser extends ClientUser {
 	public StaffUser(String firstname, String lastname, String username, String password, String email,
 			HashMap<String, String> contact) {
 		super(firstname, lastname, username, password, email, contact);
+		user_type = "Staff";
 	}
+	
+	
 	
 	@Override
 	public boolean equals(Object o){
