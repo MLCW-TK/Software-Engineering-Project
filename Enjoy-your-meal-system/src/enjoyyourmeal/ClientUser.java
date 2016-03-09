@@ -5,43 +5,44 @@ import java.util.HashMap;
 public class ClientUser{
 	private String first_name;
 	private String last_name;
-	private String user_name;
+	protected String user_name;
 	private String password;
-	private String email;
+	protected String email;
 	private HashMap<String, String> contact;
 	boolean receive_updates = false;
-	private String receive_address = email;
+	private String receive_address;;
 	
 	public ClientUser(String firstname, String lastname, String username, String password, String email, HashMap<String, String> contact){
-		this.first_name = firstname;
-		this.last_name = lastname;
+		this.setFirstname(firstname);
+		this.setLastname(lastname);
 		this.user_name = username;
 		this.password = password;
 		this.email = email;
 		this.contact = contact;
+		this.receive_address = email;
 	}
 	
-	public String getUsername(){
+	protected String getUsername(){
 		return this.user_name; 
 	}
 	
-	public String getEmail(){
+	protected String getPassword(){
+		return this.password;
+	}
+	
+	protected String getEmail(){
 		return this.email;
 	}
 	
-	public HashMap<String, String> getContactHash(){
+	protected HashMap<String, String> getContactHash(){
 		return contact;
 	}
 	
-	public String getContact(){
-		String s = new String();
-		for (String values: this.contact.keySet()){
-			s += values + " ";
-		}
-		return s;
+	protected String getContact(){
+		return this.contact.keySet().toString();
 	}
 	
-	public String getContactValue(String ContactKey){
+	protected String getContactValue(String ContactKey){
 		return contact.get(ContactKey);
 	}
 	
@@ -49,12 +50,32 @@ public class ClientUser{
 		this.receive_updates = bool;
 	}
 	
-	public void setEmail(String email){
+	protected void setEmail(String email){
 		this.email = email;
 	}
 	
-	public void setReceiveAddress(String receive_address){
+	protected String getFirstname() {
+		return first_name;
+	}
+
+	protected void setFirstname(String first_name) {
+		this.first_name = first_name;
+	}
+	
+	protected void setReceiveAddress(String receive_address){
 		this.receive_address = receive_address;
+	}
+	
+	protected String getReceiveAddress(){
+		return this.receive_address;
+	}
+	
+	protected String getLastname() {
+		return last_name;
+	}
+
+	protected void setLastname(String last_name) {
+		this.last_name = last_name;
 	}
 	
 	// Equals and hash
@@ -62,13 +83,15 @@ public class ClientUser{
 	public boolean equals(Object o){
 		if (o instanceof ClientUser){
 			ClientUser c1 = (ClientUser) o; 
-			return (c1.getUsername().equals(this.user_name) || c1.getEmail().equals(this.email));
+			return (c1.getUsername().equals(this.user_name));
 		}
 		return false;
 	}
 	
 	@Override
 	public int hashCode(){
-		return 41*((user_name+email).length()+19);
+		return 41*((user_name).length()+19);
 	}
+
+
 }
