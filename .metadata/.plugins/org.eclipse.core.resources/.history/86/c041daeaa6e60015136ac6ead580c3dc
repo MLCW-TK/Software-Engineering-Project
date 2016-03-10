@@ -1,0 +1,168 @@
+package enjoyyourmeal;
+
+import static org.junit.Assert.*;
+
+import java.util.HashMap;
+
+import org.junit.Test;
+
+
+public class ClientUserTest {
+		HashMap<String, String> TestHash = new HashMap<String, String>();
+	@Test
+	public void testHashCode() {
+		// first initialization.
+		ClientUser w = new ClientUser("firstname", "lastname", "username", "password");
+		ClientUser x = new ClientUser("firstname1", "lastname1", "username", "password1");
+		// second initialization. 
+		ClientUser y = new ClientUser("firstname2", "lastname2", "username", "password2", "kyd19924@gmail.com", TestHash);
+		ClientUser z = new ClientUser("firstname3", "lastname3", "username", "password3", "kyd1992@gmail.com", TestHash);
+		// Tests: w, x, y, z all different objects
+		assertNotSame(w, x);
+		assertNotSame(w, y);
+		assertNotSame(w, z);
+		assertNotSame(x, y);
+		assertNotSame(x, z);
+		assertNotSame(y, z);
+		// Tests: But are equals based on definition (usernames are the same)
+	    assertTrue(w.equals(x) && x.equals(w));
+	    assertTrue(y.hashCode() == z.hashCode());
+	    assertTrue(x.equals(y) && y.equals(x));
+	    assertTrue(x.hashCode() == y.hashCode());
+	}
+
+	@Test
+	public void testClientUser() {
+		
+		ClientUser w = new ClientUser("firstname", "lastname", "username", "password");
+		if (w.equals(null)){
+			fail("ClientUser is not implemented");
+		}
+		ClientUser y = new ClientUser("firstname2", "lastname2", "username", "password2", "kyd19924@gmail.com", TestHash);
+		if (y.equals(null)){
+			fail("ClientUser is not implemented");
+		}
+	}
+
+	@Test
+	public void testGetUsername() {
+		ClientUser w = new ClientUser("firstname", "lastname", "username", "password");
+		if (!w.getUsername().equals("username")){
+			fail("getUsername is not working");
+		}
+	}
+
+	@Test
+	public void testGetUsertype() {
+		ClientUser w = new ClientUser("firstname", "lastname", "username", "password");
+		if (!w.getUsertype().equals("Client")){
+			fail("getUsertype is not working");
+		}
+	}
+
+	@Test
+	public void testGetPassword() {
+		ClientUser w = new ClientUser("firstname", "lastname", "username", "password");
+		if (!w.getPassword().equals("password")){
+			fail("getPassword is not working");
+		}
+	}
+
+	@Test
+	public void testGetEmail() {
+		ClientUser w = new ClientUser("firstname", "lastname", "username", "password", "kyd1992@gmail.com", TestHash);
+		if (!w.getEmail().equals("kyd1992")){
+			fail("getEmail is not working");
+		}
+	}
+
+	@Test
+	public void testGetContactHash() {
+		ClientUser y = new ClientUser("firstname2", "lastname2", "username", "password2", "kyd19924@gmail.com", TestHash);
+		assertTrue(y.getContactHash().equals(TestHash));
+	}
+
+	@Test
+	public void testGetContactKeys() {
+		ClientUser y = new ClientUser("firstname2", "lastname2", "username", "password2", "kyd19924@gmail.com", TestHash);
+		assertTrue(y.getContactKeys().equals(TestHash.keySet().toString()));
+	}
+
+	@Test
+	public void testGetContactValue() {
+		TestHash.put("value1", "value2");
+		ClientUser y = new ClientUser("firstname2", "lastname2", "username", "password2", "kyd19924@gmail.com", TestHash);
+		assertTrue(y.getContactValue("value1").equals(TestHash.get("value1")));
+	}
+
+	@Test
+	public void testSetReceiveUpdates() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetEmail() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetFirstname() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetFirstname() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetReceiveAddress() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetReceiveAddress() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetLastname() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetLastname() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testEqualsObject() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testObject() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetClass() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testEqualsObject1() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testClone() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testToString() {
+		fail("Not yet implemented");
+	}
+
+}

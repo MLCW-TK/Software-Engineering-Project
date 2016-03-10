@@ -2,8 +2,11 @@ package enjoyyourmeal;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Set;
+
+import enjoyyourmeal.Meals.Meals;
 
 public class RestaurantSystem{
 	String name;
@@ -11,6 +14,7 @@ public class RestaurantSystem{
 	boolean user_phase = true;
 	boolean exit = false;
 	private Set<ClientUser> user_list;
+	LinkedList<Meals> Meals;
 	/**
 	 * This is the constructor of RestaurantSystem.
 	 * @param restaurant_name
@@ -18,6 +22,7 @@ public class RestaurantSystem{
 	public RestaurantSystem(String restaurant_name){
 		this.name = restaurant_name;
 		this.user_list = new HashSet<ClientUser>();
+		this.Meals = new LinkedList<Meals>();
 	}
 	/**
 	 * Public method to add a ClientUser object to user_list
@@ -209,7 +214,6 @@ public class RestaurantSystem{
 					}
 				}
 					else{
-						boolean UnresolvedUpdateChoice = true;
 						while (newUser.getReceiveAddress().equals("")){
 							System.out.println("No email address set for updates notification");
 							System.out.println("Type '1' if you would like to add an email address to receive updates, or type '2' if you like to choose from other contact details");
@@ -228,7 +232,7 @@ public class RestaurantSystem{
 								}
 							case "2":
 								System.out.println("Please choose from the list below");
-								System.out.println(newUser.getContact());
+								System.out.println(newUser.getContactKeys());
 								String ContactKey = sc2.nextLine();
 						
 								while (true){
@@ -255,7 +259,7 @@ public class RestaurantSystem{
 						String response2 = sc2.nextLine();
 							if (response2.equalsIgnoreCase("YES")){
 								System.out.println("Please enter one of your contact types shown below");
-								System.out.println(newUser.getContact());
+								System.out.println(newUser.getContactKeys());
 								String ContactKey = sc2.nextLine();
 							while (true){
 								if (newUser.getContactHash().containsKey(ContactKey)){
@@ -318,6 +322,10 @@ public class RestaurantSystem{
 			}
 		}
 		return null;
+	}
+	
+	public void InitiateMeals(Meals meal){
+		this.Meals.add(meal);
 	}
 
 }

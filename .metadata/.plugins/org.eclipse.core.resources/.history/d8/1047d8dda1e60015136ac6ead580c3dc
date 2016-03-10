@@ -1,0 +1,124 @@
+package enjoyyourmeal;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ClientUserTestTest {
+
+	@Test
+	public void testTestHashCode() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestClientUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestGetUsername() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestGetUsertype() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestGetPassword() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestGetEmail() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestGetContactHash() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestGetContact() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestGetContactValue() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestSetReceiveUpdates() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestSetEmail() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestGetFirstname() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestSetFirstname() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestSetReceiveAddress() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestGetReceiveAddress() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestGetLastname() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestSetLastname() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestEqualsObject() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestObject() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestGetClass() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestEqualsObject1() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestClone() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testTestToString() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,6 @@
+
+package enjoyyourmeal;
+
+public class Meal1 implements Meals{
+
+}

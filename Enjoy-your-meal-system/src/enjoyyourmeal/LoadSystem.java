@@ -1,26 +1,23 @@
 package enjoyyourmeal;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Scanner;
+import enjoyyourmeal.Meals.Meals;
 
 public class LoadSystem extends Thread {
 	RestaurantSystem re1;
 	ClientUser LoginUser;
+	LinkedList<Meals> meals;
+	
 	public LoadSystem(String name){
 		re1 = new RestaurantSystem(name);
-	}
-	public StaffUser createStaff(String firstname, String lastname, String username, String password, String email, HashMap<String,String> contacts){
-		return new StaffUser(firstname, lastname, username, password, email, contacts);
+		meals = new LinkedList<Meals>();
 	}
 	
 	public void addStaff(StaffUser staff){
 		re1.addUser(staff);
 	}
-
-	// In case we need to "promote" a client to be a staff next time....
-//	private void convertClientToStaff(ClientUser client){
-//		client = (StaffUser)client;
-//	}
 	
 	@Override
 	public void run() {

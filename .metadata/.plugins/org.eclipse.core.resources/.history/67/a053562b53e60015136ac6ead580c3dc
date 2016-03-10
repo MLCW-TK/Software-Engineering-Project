@@ -1,0 +1,8 @@
+
+package enjoyyourmeal;
+
+import enjoyyourmeal.Meals.Meals;
+
+public class Meal1 implements Meals{
+
+}

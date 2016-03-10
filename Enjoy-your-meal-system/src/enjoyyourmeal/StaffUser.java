@@ -6,10 +6,24 @@ public class StaffUser extends ClientUser {
 	public StaffUser(String firstname, String lastname, String username, String password, String email,
 			HashMap<String, String> contact) {
 		super(firstname, lastname, username, password, email, contact);
-		user_type = "Staff";
+		this.user_type = "Staff";
 	}
 	
+	public StaffUser(String firstname, String lastname, String username, String password, String email) {
+		super(firstname, lastname, username, password, email);
+		this.user_type = "Staff";
+	}
 	
+	public StaffUser(String firstname, String lastname, String username, String password,
+			HashMap<String, String> contact) {
+		super(firstname, lastname, username, password,contact);
+		this.user_type = "Staff";
+	}
+	
+	public StaffUser(String firstname, String lastname, String username, String password) {
+		super(firstname, lastname, username, password);
+		this.user_type = "Staff";
+	}
 	
 	@Override
 	public boolean equals(Object o){

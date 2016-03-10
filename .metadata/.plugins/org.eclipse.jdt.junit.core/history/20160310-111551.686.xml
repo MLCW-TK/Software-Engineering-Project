@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ClientUserTest" project="Enjoy-your-meal-system" tests="20" started="20" failures="0" errors="0" ignored="0">
+  <testsuite name="enjoyyourmeal.ClientUserTest" time="0.0">
+    <testcase name="testGetContactHash" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testGetContactKeys" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testGetPassword" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testGetEmail" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testSetFirstname" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testGetContactValue" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testToString" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testEqualsObject" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testSetLastname" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testGetLastname" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testClientUser" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="getReceiveUpdates" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testHashCode" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testSetReceiveAddress" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testGetUsername" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testGetUsertype" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testGetFirstname" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testSetReceiveUpdates" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testGetReceiveAddress" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+    <testcase name="testSetEmail" classname="enjoyyourmeal.ClientUserTest" time="0.0"/>
+  </testsuite>
+</testrun>
