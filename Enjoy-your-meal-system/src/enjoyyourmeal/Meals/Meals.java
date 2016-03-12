@@ -1,10 +1,10 @@
 package enjoyyourmeal.Meals;
 
 public interface Meals {
-	double price = 0;
-	double specialPrice = 0;
-	String description = "";
-	boolean specialOffer = false;
-	Ingredient[] ing = new Ingredient[10];
+	public double price = 0;
+	public double specialPrice = 0;
+	public String description = "";
+	public boolean specialOffer = false;
+	public Ingredient[] ing = new Ingredient[10];
 	
 }
