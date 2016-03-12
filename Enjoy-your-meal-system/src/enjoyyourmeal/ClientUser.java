@@ -1,18 +1,31 @@
 package enjoyyourmeal;
 
 import java.util.HashMap;
-
+/**
+ * Class of ClientUser
+ * @author MLCW, Xiong
+ *
+ */
 public class ClientUser{
 	private String first_name;
 	private String last_name;
 	protected String user_name;
 	private String password;
 	protected String email = "" ;
-	private HashMap<String, String> contact = new HashMap<String,String>();;
+	private HashMap<String, String> contact = new HashMap<String,String>();
 	boolean receive_updates = false;
 	private String receive_address = this.email;
 	protected String user_type = "Client";
 	
+	/**
+	 * ClientUser constructor
+	 * @param firstname
+	 * @param lastname
+	 * @param username
+	 * @param password
+	 * @param email
+	 * @param contact
+	 */
 	public ClientUser(String firstname, String lastname, String username, String password, String email, HashMap<String,String> contact){
 		this.first_name = firstname;
 		this.last_name = lastname;
@@ -22,6 +35,14 @@ public class ClientUser{
 		this.contact = contact;
 	}
 	
+	/**
+	 * ClientUser constructor
+	 * @param firstname
+	 * @param lastname
+	 * @param username
+	 * @param password
+	 * @param email
+	 */
 	public ClientUser(String firstname, String lastname, String username, String password, String email){
 		this.first_name = firstname;
 		this.last_name = lastname;
@@ -31,6 +52,14 @@ public class ClientUser{
 		this.contact = new HashMap<String,String>();
 	}
 	
+	/**
+	 * ClientUser constructor
+	 * @param firstname
+	 * @param lastname
+	 * @param username
+	 * @param password
+	 * @param contact
+	 */
 	public ClientUser(String firstname, String lastname, String username, String password, HashMap<String,String> contact){
 		this.first_name = firstname;
 		this.last_name = lastname;
@@ -40,6 +69,13 @@ public class ClientUser{
 		this.contact = contact;;
 	}
 	
+	/**
+	 * ClientUser constructor
+	 * @param firstname
+	 * @param lastname
+	 * @param username
+	 * @param password
+	 */
 	public ClientUser(String firstname, String lastname, String username, String password){
 		this.first_name = firstname;
 		this.last_name = lastname;
@@ -50,6 +86,7 @@ public class ClientUser{
 		this.receive_address = email;
 	}
 	
+	// getters and setters
 	protected String getUsername(){
 		return this.user_name; 
 	}
@@ -114,6 +151,9 @@ public class ClientUser{
 		this.last_name = last_name;
 	}
 	
+	/**
+	 * returns a string of the Client's first name, last name, user name, email, and other contact details.
+	 */
 	public String toString(){
 		String s = new String();
 		s += "Name: " + this.first_name + " " + this.last_name;
@@ -134,6 +174,9 @@ public class ClientUser{
 	}
 	
 	// Equals and hash
+	/**
+	 * Check if the user_name is the same
+	 */
 	@Override
 	public boolean equals(Object o){
 		if (o instanceof ClientUser){
@@ -142,10 +185,18 @@ public class ClientUser{
 		}
 		return false;
 	}
-	
+	/**
+	 * overridden hashCode method
+	 */
 	@Override
 	public int hashCode(){
-		return 41*((user_name).length()+19);
+    	int code = 0;
+        for (int i=0; i < user_name.length(); i++){
+        	char c = user_name.charAt(i);
+        	int h = 41+((int)c+i)*(19+i);
+        	code += h;
+        }
+		return code;
 	}
 
 
