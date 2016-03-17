@@ -1,0 +1,39 @@
+package enjoyyourmeal.Meals;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class IngredientTest {
+	Ingredient TestIngredient = new Ingredient("test1", 1, 1.56);
+	
+	@Test
+	public void testDefaultConstructor(){
+		Ingredient TestIngredient1 = new Ingredient("test1", 1.56);
+		assertTrue(TestIngredient1 instanceof Ingredient);
+		assertTrue(TestIngredient1.getQuantity() == 1);
+		assertTrue(TestIngredient1.getTotalPrice() == TestIngredient1.getPriceperquantity()*TestIngredient1.getQuantity());
+		assertTrue(TestIngredient1.getName() == "test1");
+		Ingredient TestIngredient2 = new Ingredient("test1", 1.56);
+		assertTrue(TestIngredient1.equals(TestIngredient2));
+		assertTrue(TestIngredient2.equals(TestIngredient1));
+		assertTrue(TestIngredient1.equals(TestIngredient));
+		assertTrue(TestIngredient.equals(TestIngredient1));
+		assertTrue(TestIngredient2.equals(TestIngredient));
+		assertTrue(TestIngredient.equals(TestIngredient2));
+		assertTrue(TestIngredient == TestIngredient1);
+	}
+	
+	@Test(expected = RuntimeException.class)
+	public void ConstructorQuantityCannotBeNegative() {
+		Ingredient TestIngredient1 = new Ingredient("test", -1, 1.56);
+		fail("quantity cannot be negative");
+	}
+	
+	@Test(expected = RuntimeException.class)
+	public void CannotRemoveZeroQuantity(){
+		TestIngredient.removeQuantity(2);
+		fail("quantity cannot be negative");
+	}
+
+}

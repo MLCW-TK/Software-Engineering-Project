@@ -1,6 +1,0 @@
-
-package enjoyyourmeal.Meals;
-
-public class Meal1 implements Meals{
-
-}

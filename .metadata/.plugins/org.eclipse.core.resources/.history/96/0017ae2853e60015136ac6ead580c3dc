@@ -1,5 +1,0 @@
-package enjoyyourmeal;
-
-public interface Meals {
-	
-}

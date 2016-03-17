@@ -1,0 +1,16 @@
+package enjoyyourmeal.Meals;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class IngredientTest {
+	Ingredient TestIngredient = new Ingredient("test", 1, 1.56);
+	
+	
+	@Test 
+	public void QuantityCannotBeNegative {
+		fail("Not yet implemented");
+	}
+
+}

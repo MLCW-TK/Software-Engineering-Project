@@ -1,0 +1,40 @@
+package enjoyyourmeal;
+
+import enjoyyourmeal.Meals.Ingredient;
+import enjoyyourmeal.Meals.Meals;
+
+public class RunSystem {
+	public static void main(String[] args){
+		/**
+		 * Loads our system
+		 */
+		LoadSystem le1 = new LoadSystem("our restaurant");
+		
+		/**
+		 * Loads all staff members into our system
+		 */
+		StaffUser chef = new StaffUser("Mathias", "Loh", "mathiasloh", "12345", "kyd1992@gmail.com");
+		System.out.println(chef.toString());
+		le1.addStaff(chef);
+		
+		/**
+		 * Loads all predefined ingredients
+		 * Constructors: Ingredient(String name, double priceperquantity), Ingredient(String name, double quantity, double priceperquantity)
+		 */
+		Ingredient testIngredient1 = new Ingredient("Ingredient1", 6, 1.10);
+		Ingredient testIngredient2 = new Ingredient("Ingredient2", 2.5, 1.69);
+		Ingredient testIngredient3 = new Ingredient("Ingredient3", 2.3);
+	
+		
+		/**
+		 * Loads all predefined meals
+		 * Constructors: Meal(String name, String description, Ingredients args(ingredients))
+		 */
+		Meals testMeal1 = new Meals("Meal1", "Good Food1", testIngredient1, testIngredient2);
+		Meals testMeal2 = new Meals("Meal2", "Good Food2", testIngredient2, testIngredient3);
+		Meals testMeal3 = new Meals("Meal3", "Good Food3", testIngredient1, testIngredient2, testIngredient3);
+		
+		Thread system1 = new Thread(le1);
+		system1.start();
+	}
+}

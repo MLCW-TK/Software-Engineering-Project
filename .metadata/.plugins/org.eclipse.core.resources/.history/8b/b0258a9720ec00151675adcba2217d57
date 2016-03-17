@@ -1,0 +1,36 @@
+package enjoyyourmeal.Meals;
+
+public class Ingredient {
+	public String name;
+	public Integer quantity;
+	public double priceperquantity;
+	public double totalprice;
+	
+	public Ingredient(String name, Integer quantity, double priceperquantity){
+		this.name = name;
+		this.quantity = quantity;
+		this.priceperquantity = priceperquantity;
+		this.totalprice = priceperquantity * quantity;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+	
+	public Integer getQuantity(){
+		return this.quantity;
+	}
+	
+	public void addQuantity(Integer quantity){
+		this.quantity = quantity;
+		this.totalprice = priceperquantity * quantity;
+	}
+	
+	public void removeQuantity(Integer quantity){
+		this.quantity = quantity;
+		this.totalprice = priceperquantity * quantity;
+	}
+	
+	
+	
+}

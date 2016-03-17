@@ -1,0 +1,18 @@
+package enjoyyourmeal.Meals;
+
+import java.util.LinkedList;
+
+public class Meals {
+	public String name;
+	public double price;
+	public double specialPrice;
+	public String description = "";
+	public boolean specialOffer = false;
+	public LinkedList<Ingredient> ingredients;
+	
+	public Meals(String name, Ingredient ...ingredients){
+		this.name = name;
+		
+	}
+	
+}

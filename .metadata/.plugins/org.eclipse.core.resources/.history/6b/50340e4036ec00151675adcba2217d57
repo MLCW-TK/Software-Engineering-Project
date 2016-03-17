@@ -1,0 +1,21 @@
+package enjoyyourmeal.Meals;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class MealsTest {
+	// TestIngredient = TestIngredient1
+	Ingredient TestIngredient = new Ingredient("test", 1.56);
+	Ingredient TestIngredient1 = new Ingredient("test", 1.56);
+	// TestIngredient2 != TestIngredient, != TestIngredient1
+	
+	Ingredient TestIngredient2 = new Ingredient("test2", 1.56);
+	Meals testMeal = new Meals("Chicken rice", "Singapore delicacy", TestIngredient, TestIngredient2);
+	@Test
+	public void testConstuctors() {
+		System.out.println(testMeal.getIngredients().toString());
+		fail("Not yet implemented");
+	}
+
+}
