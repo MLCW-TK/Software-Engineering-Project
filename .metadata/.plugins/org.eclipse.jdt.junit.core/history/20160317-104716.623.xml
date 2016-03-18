@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="IngredientTest" project="Enjoy-your-meal-system" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="enjoyyourmeal.Meals.IngredientTest" time="0.0">
-    <testcase name="QuantityCannotBeNegative" classname="enjoyyourmeal.Meals.IngredientTest" time="0.0"/>
-  </testsuite>
-</testrun>

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="MealsTest.testAlreadyIncludedIngredient" project="Enjoy-your-meal-system" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testcase name="testAlreadyIncludedIngredient" classname="enjoyyourmeal.Meals.MealsTest" time="0.0"/>
-</testrun>

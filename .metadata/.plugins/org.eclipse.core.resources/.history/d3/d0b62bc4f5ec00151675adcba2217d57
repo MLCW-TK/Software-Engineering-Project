@@ -1,0 +1,65 @@
+package Orders;
+
+import MealSystem.Meals;
+import Users.User;
+import java.util.*;
+
+public class Order{
+	Stack<String> SummarySequence;
+	ArrayList<ArrayList<Object>> orderSequence;
+	HashMap<Meals, Integer> meal_count;
+	ArrayList<ArrayList<Object>> specialOfferOrderSequence;
+	int total_transaction;
+	String changed;
+	
+	public Order(){
+		this.orderSequence = new ArrayList<ArrayList<Object>>();
+		this.meal_count = new HashMap<Meals, Integer>();
+		this.specialOfferOrderSequence = new ArrayList<ArrayList<Object>>();
+	}
+	
+	public void Add_order(Meals meal, User user, int count){
+		for (int i = 0; i<count; i++){
+			ArrayList<Object> temp = new ArrayList<Object>();
+			temp.add(user);
+			temp.add(meal);
+			orderSequence.add(temp);
+			String s = new String();
+			s += user.getUsername() + " : " + meal.getName() + " " + meal.getIngredientsString() + "\n";
+			SummarySequence.push(s);
+		}
+		
+		if (!meal_count.containsKey(meal)){
+			meal_count.put(meal, count);
+		} else {
+			int current_count = meal_count.get(meal);
+			meal_count.put(meal, current_count + count);
+		}
+		
+		total_transaction += (count)*meal.getPrice();
+		
+	}
+
+
+	public String Summary(){
+		String s = new String();
+		for (int i = 0; i < orderSequence.size(); i++){
+			ArrayList<Object> arr = orderSequence.get(i);
+			
+			String username = ((User) arr.get(0)).getUsername();
+			Meals meal = ((Meals) arr.get(1));
+			String current_meal = ((Meals) arr.get(1)).getName();
+			String ingredients = ((Meals) arr.get(1)).getIngredientsString();
+			
+			s += username;
+			s += " : ";
+			s += current_meal;
+			s += " " + ingredients;
+			s += "\n";
+		}
+		s += "Total transaction cost: " + total_transaction;
+		return s;
+	}
+
+	
+}

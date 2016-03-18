@@ -1,7 +1,0 @@
-package enjoyyourmeal.Meals;
-
-public class Ingredient {
-	public name;
-	public quantity;
-	I
-}

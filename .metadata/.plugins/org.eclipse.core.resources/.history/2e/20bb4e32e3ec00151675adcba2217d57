@@ -1,0 +1,11 @@
+package Orders;
+
+import MealSystem.Meals;
+import Users.User;
+import java.util.HashMap;
+
+public class Order {
+	public HashMap<Meals, User> Meal_User;
+	public HashMap<Meals, Integer> Meal_Count;
+	public HashMap<Meals, User> SpecialOfferOrder
+}

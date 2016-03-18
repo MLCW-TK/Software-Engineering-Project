@@ -1,0 +1,25 @@
+package Orders;
+
+import MealSystem.Meals;
+import Users.User;
+import java.util.HashMap;
+
+public class Order {
+	HashMap<Meals, User> meal_user;
+	HashMap<Meals, Integer> meal_count;
+	HashMap<Meals, User> specialOfferOrder;
+	int total_transaction;
+	
+	public Order(){
+		this.meal_user = new HashMap<Meals, User>();
+		this.meal_count = new HashMap<Meals, Integer>();
+		this.specialOfferOrder = new HashMap<Meals, User>();
+	}
+	
+	public void add_order(Meals meal, User user, Integer count){
+		meal_user.put(meal, user);
+		meal_count.put(meal, count);
+		
+	}
+	
+}

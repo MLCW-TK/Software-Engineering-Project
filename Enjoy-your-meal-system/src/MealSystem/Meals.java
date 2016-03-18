@@ -5,14 +5,19 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Observable;
 
-public class Meals {
+public class Meals{
 	public String name;
+	public double totalIngredientsPrice;
+	public double extraIngredientsPrice;
 	public double price;
+	public double temp_price;
 	public double specialPrice;
 	public String description = "";
 	public boolean specialOfferToggle = false;
 	public HashSet<Ingredient> ingredients = new HashSet<Ingredient>();
+	
 	
 	public Meals(String name, String description, Ingredient ...ingredients){
 		this.name = name;
@@ -20,9 +25,27 @@ public class Meals {
 			this.ingredients.add(obj);
 		}
 		this.description = description;
-		this.price = round(updatePrices(),2);
+		this.extraIngredientsPrice = 0;
+		this.totalIngredientsPrice = updatePrices();
+		this.price = this.totalIngredientsPrice;
+		this.temp_price = price;
 	}
 	
+	public Meals(String name, String description, double price, Ingredient ...ingredients){
+		this.name = name;
+		for (Ingredient obj : ingredients){
+			this.ingredients.add(obj);
+		}
+		this.description = description;
+		this.temp_price = price;
+		this.price = price;
+		this.extraIngredientsPrice = 0;
+		this.totalIngredientsPrice = updatePrices();
+	}
+	
+	public double getTotalIngredientPrice(){
+		return round(this.totalIngredientsPrice,2);
+	}
 	
 	public double updatePrices(){
 		double price = 0;
@@ -50,12 +73,17 @@ public class Meals {
 		if (isSpecialOffer()){
 			return round(specialPrice,2);
 		} else {
-			this.price = updatePrices();
-			return this.price;
+			if (this.extraIngredientsPrice+this.price < this.price){
+				return round(this.price,2);
+			} else {
+				return round(extraIngredientsPrice+this.price,2);
+			}
 		}
 	}
 
-
+	public void setPrice(int price){
+		this.price = price;
+	}
 
 	public double getSpecialPrice() {
 		if (isSpecialOffer()){
@@ -106,7 +134,6 @@ public class Meals {
 		}
 		Collections.sort(s);
 		return s.toString();
-		
 	}
 	
 	public void addIngredient(Ingredient ingredient){
@@ -114,21 +141,17 @@ public class Meals {
 			throw new RuntimeException("Ingredient already exist!");
 		} else {
 			ingredients.add(ingredient);
-			this.price = updatePrices();
-			if (specialOfferToggle){
-				this.specialPrice = updateSpecialPrices(ingredient.getTotalprice());
-			}
+			this.extraIngredientsPrice += round(ingredient.getTotalprice(),2);
+			this.totalIngredientsPrice += round(this.extraIngredientsPrice,2);
 		}
 	}
+	
 	
 	public void removeIngredient(Ingredient ingredient){
 		if (ingredients.contains(ingredient)){
 			ingredients.remove(ingredient);
-			this.price = updatePrices();
-			if (specialOfferToggle){
-				
-				this.specialPrice = updateSpecialPrices(-ingredient.getTotalprice());
-			}
+			this.extraIngredientsPrice -= round(ingredient.getTotalprice(),2);
+			this.totalIngredientsPrice -= round(this.extraIngredientsPrice,2);
 		} else {
 			throw new RuntimeException("Ingredient does not exist!");
 		}
@@ -141,12 +164,8 @@ public class Meals {
 			} else {
 				double quantity_changed = quantity - ingredient.getQuantity();
 				ingredient.setQuantity(quantity);
-				this.price = updatePrices();
-				if (specialOfferToggle){
-					double price_difference = quantity_changed*ingredient.getPriceperquantity();
-					this.specialPrice = updateSpecialPrices(price_difference);
-				}
-				
+				this.extraIngredientsPrice += round((quantity_changed)*ingredient.priceperquantity,2);
+				this.totalIngredientsPrice += round(this.extraIngredientsPrice,2);
 			}
 			
 		} else {

@@ -11,8 +11,8 @@ public class ClientUserTest {
 		HashMap<String, String> TestHash = new HashMap<String, String>();
 	@Test
 	public void testHashCode() {
-		// first initialization.
-		ClientUser w = new ClientUser("firstname", "lastname", "username", "password");
+		// first initialization. Tests abstract class User.
+		User w = new ClientUser("firstname", "lastname", "username", "password");
 		ClientUser x = new ClientUser("firstname1", "lastname1", "username", "password1");
 		// second initialization. 
 		ClientUser y = new ClientUser("firstname2", "lastname2", "username", "password2", "kyd19924@gmail.com", TestHash);
@@ -137,12 +137,6 @@ public class ClientUserTest {
 		assertTrue(x.getFirstname().equals("firstname1"));
 	}
 
-	@Test
-	public void testSetFirstname() {
-		ClientUser x = new ClientUser("firstname1", "lastname1", "username", "password1");
-		x.setFirstname("Mathias");
-		assertTrue(x.getFirstname().equals("Mathias"));
-	}
 
 	@Test
 	public void testSetReceiveAddress() {
@@ -161,16 +155,10 @@ public class ClientUserTest {
 	@Test
 	public void testGetLastname() {
 		ClientUser x = new ClientUser("firstname1", "lastname1", "username", "password1");
-		x.setLastname("Mathias");
-		assertTrue(x.getLastname().equals("Mathias"));
+		assertTrue(x.getLastname().equals("lastname1"));
 	}
 
-	@Test
-	public void testSetLastname() {
-		ClientUser x = new ClientUser("firstname1", "lastname1", "username", "password1");
-		x.setLastname("Mathias");
-		assertTrue(x.getLastname().equals("Mathias"));
-	}
+
 
 	@Test
 	public void testEqualsObject() {

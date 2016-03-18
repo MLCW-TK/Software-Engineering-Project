@@ -33,6 +33,7 @@ public class LoadSystem extends Thread {
 		this.meals.add(meals);
 	}
 	
+	
 	@Override
 	public void run() {
 		sc = new Scanner(System.in);

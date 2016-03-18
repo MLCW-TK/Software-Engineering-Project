@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="MealsTest" project="Enjoy-your-meal-system" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="enjoyyourmeal.Meals.MealsTest" time="0.0">
-    <testcase name="testRound" classname="enjoyyourmeal.Meals.MealsTest" time="0.0"/>
-    <testcase name="testForNoSpecialOfferSetYetException" classname="enjoyyourmeal.Meals.MealsTest" time="0.0"/>
-    <testcase name="testForNoSpecialOfferYetException" classname="enjoyyourmeal.Meals.MealsTest" time="0.0"/>
-    <testcase name="testConstuctors" classname="enjoyyourmeal.Meals.MealsTest" time="0.0"/>
-  </testsuite>
-</testrun>
