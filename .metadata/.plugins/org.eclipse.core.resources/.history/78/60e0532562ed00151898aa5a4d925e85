@@ -135,7 +135,7 @@ public class Meals{
 	 * @param specialPrice
 	 */
 	public void setSpecialPrice(double specialPrice) {
-		if (isSpecialOffer() && this.price>=specialPrice){
+		if (isSpecialOffer()){
 			this.specialPrice = specialPrice;
 		} else {
 			throw new RuntimeException("Special offer not set yet!");

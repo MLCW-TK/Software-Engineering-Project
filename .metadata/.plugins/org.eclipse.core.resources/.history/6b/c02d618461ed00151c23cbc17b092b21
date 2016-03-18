@@ -12,8 +12,6 @@ public class LotteryFidelityCard implements FidelityCard{
 	public LotteryFidelityCard(User owner, int percentage){
 		this.owner = owner;
 		this.percentage = percentage;
-		owner.setCanReceiveSpecialOffers(false);
-		owner.setFidelityCard(this);
 	}
 	
 	public void setPercentage(int percentage){

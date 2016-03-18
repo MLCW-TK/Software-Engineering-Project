@@ -27,13 +27,13 @@ public class MealsTest {
 		assertTrue(testMeal.getPrice()==5.69);
 		Ingredient TestIngredient4 = new Ingredient("test4", 3);
 		testMeal.addIngredient(TestIngredient4);
-//		assertTrue(testMeal.getPrice()==8.69);
-//		testMeal.removeIngredient(TestIngredient4);
-//		assertTrue(testMeal.getPrice()==5.69);
-//		testMeal.changeIngredientQuantity(TestIngredient3, 0.5);
-//		assertTrue(testMeal.getPrice()==4.19);
-//		testMeal.setSpecialOfferToggle(false);
-//		assertTrue(testMeal.getPrice()==6.56-1.5);		
+		assertTrue(testMeal.getPrice()==8.69);
+		testMeal.removeIngredient(TestIngredient4);
+		assertTrue(testMeal.getPrice()==5.69);
+		testMeal.changeIngredientQuantity(TestIngredient3, 0.5);
+		assertTrue(testMeal.getPrice()==4.19);
+		testMeal.setSpecialOfferToggle(false);
+		assertTrue(testMeal.getPrice()==6.56-1.5);		
 	}
 	
 	@Test(expected = RuntimeException.class)
