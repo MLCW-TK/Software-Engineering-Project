@@ -1,0 +1,10 @@
+package CardFidelitySystem;
+
+public class LotteryFidelityCard implements FidelityCard{
+
+	public void UseFeature() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

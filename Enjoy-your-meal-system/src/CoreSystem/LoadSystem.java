@@ -1,5 +1,6 @@
 package CoreSystem;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -7,9 +8,11 @@ import MealSystem.Ingredient;
 import MealSystem.Meals;
 import Users.ClientUser;
 import Users.StaffUser;
+import Orders.Order;
 
 public class LoadSystem extends Thread {
 	RestaurantSystem re1;
+	ArrayList<Order> orders;
 	ClientUser LoginUser;
 	HashSet<Meals> meals;
 	HashSet<Ingredient> ingredients;
@@ -23,6 +26,7 @@ public class LoadSystem extends Thread {
 		re1 = new RestaurantSystem(name);
 		meals = new HashSet<Meals>();
 		ingredients = new HashSet<Ingredient>();
+		orders = new ArrayList<Order>();
 	}
 	
 	/**
@@ -140,6 +144,7 @@ public class LoadSystem extends Thread {
 					switch(input){
 					// TO BE IMPLEMENTED
 					case "1":
+						
 						break;
 					case "2":
 						break;

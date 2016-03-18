@@ -1,0 +1,15 @@
+package CardFidelitySystem;
+
+import java.util.Random;
+
+import Users.User;
+
+public class LotteryFidelityCard{
+	User owner;
+	Random rand = new Random();
+	
+	public LotteryFidelityCard(User owner){
+		this.owner = owner;
+	}
+
+}

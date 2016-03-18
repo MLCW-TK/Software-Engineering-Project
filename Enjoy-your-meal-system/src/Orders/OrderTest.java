@@ -12,7 +12,7 @@ import Users.*;
 public class OrderTest {
 
 	@Test
-	public void test() {
+	public void test() throws CloneNotSupportedException {
 		Order Ordersystem = new Order();
 		User Mathias = new ClientUser("Mathias", "Loh", "mathiasloh", "12345");
 		Ingredient testIngredient1 = new Ingredient("Ingredient1", 6, 1.10);
@@ -22,20 +22,12 @@ public class OrderTest {
 		Meals testMeal2 = new Meals("Meal2", "Good Food2", testIngredient2, testIngredient3);
 		Meals testMeal3 = new Meals("Meal3", "Good Food3", testIngredient1, testIngredient2, testIngredient3);
 	
+		Meals cloned1 = (Meals) testMeal1.createNewInstance();
+		cloned1.addIngredient(testIngredient3);
+		Ordersystem.Add_order(cloned1, Mathias, 1);
 		Ordersystem.Add_order(testMeal1, Mathias, 1);
-		System.out.println(Ordersystem.SummarySequence.size());
-		Ordersystem.Add_order(testMeal2, Mathias, 3);
-		System.out.println(Ordersystem.SummarySequence.size());
-		testMeal1.addIngredient(testIngredient3);
-		System.out.println(Ordersystem.SummarySequence.size());
-		testMeal1.removeIngredient(testIngredient1);
-		System.out.println(Ordersystem.SummarySequence.size());
-		Ordersystem.Add_order(testMeal1, Mathias, 2);
 		
-		testMeal2.removeIngredient(testIngredient2);
-		testMeal2.removeIngredient(testIngredient3);
-		testMeal2.addIngredient(testIngredient1);
-		testMeal2.changeIngredientQuantity(testIngredient1, 0);
+		
 		System.out.println(Ordersystem.SummarySequence.size());
 		System.out.println(Ordersystem.Summary());
 		fail("lol");

@@ -1,0 +1,36 @@
+package CardFidelitySystem;
+
+import Orders.Order;
+import Users.User;
+
+public class PointFidelityCard{
+	User owner;
+	int points;
+	double totalAmountSpent;
+	double totalAmountProcessed;
+	int discountTickets;
+	
+	public PointFidelityCard(){
+		super(owner);
+		owner.setCanReceiveSpecialOffers(false);
+	}
+
+	public void update(){
+		for (Order userorder : this.owner.getOrders()){
+			totalAmountSpent += userorder.getTotalTransaction();
+		}
+	}
+	
+	public void updatePoints(int ){
+		
+	}
+	
+	@Override
+	public void UseFeature() {
+		update();
+		double outstandingAmounts = this.totalAmountSpent - this.totalAmountProcessed;
+		
+	}
+	
+	
+}

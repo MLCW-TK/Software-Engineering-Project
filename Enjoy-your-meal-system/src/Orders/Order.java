@@ -18,7 +18,7 @@ public class Order{
 		this.orderSequence = new ArrayList<ArrayList<Object>>();
 		this.meal_count = new HashMap<Meals, Integer>();
 		this.specialOfferOrderSequence = new ArrayList<ArrayList<Object>>();
-		this.SummarySequence = new Stack();
+		this.SummarySequence = new Stack<String>();
 	}
 	
 	public void Add_order(Meals meal, User user, int count){
@@ -61,6 +61,10 @@ public class Order{
 		return s;
 	}
 
+	public double getTotalTransaction(){
+		return round(this.total_transaction,2);
+	}
+	
 	public static double round(double value, int places) {
 	    if (places < 0) throw new IllegalArgumentException();
 

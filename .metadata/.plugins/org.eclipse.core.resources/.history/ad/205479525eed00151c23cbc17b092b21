@@ -1,0 +1,11 @@
+package CardFidelitySystem;
+
+import Users.User;
+
+public abstract class FidelityCard {
+	User owner;
+	
+	public FidelityCard(User owner){
+		this.owner = owner;
+	}
+}

@@ -1,0 +1,17 @@
+package CardFidelitySystem;
+
+public class BasicFidelityCard implements FidelityCard {
+	String username;
+	String firstname;
+	String password;
+	
+	
+	
+	@Override
+	public void UseFeature() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

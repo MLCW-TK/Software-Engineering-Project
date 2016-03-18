@@ -1,0 +1,9 @@
+package CardFidelitySystem;
+
+import Users.User;
+
+public class LotteryFidelityCard{
+	User owner;
+	
+
+}

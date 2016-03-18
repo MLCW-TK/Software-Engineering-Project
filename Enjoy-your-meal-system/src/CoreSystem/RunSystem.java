@@ -1,8 +1,7 @@
 package CoreSystem;
 
-import MealSystem.Ingredient;
-import MealSystem.Meals;
-import Users.StaffUser;
+import MealSystem.*;
+import Users.*;
 
 public class RunSystem {
 	public static void main(String[] args){

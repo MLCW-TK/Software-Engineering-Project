@@ -5,7 +5,6 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Observable;
 
 public class Meals{
 	public String name;
@@ -17,7 +16,6 @@ public class Meals{
 	public String description = "";
 	public boolean specialOfferToggle = false;
 	public HashSet<Ingredient> ingredients = new HashSet<Ingredient>();
-	
 	
 	public Meals(String name, String description, Ingredient ...ingredients){
 		this.name = name;
@@ -41,6 +39,12 @@ public class Meals{
 		this.price = price;
 		this.extraIngredientsPrice = 0;
 		this.totalIngredientsPrice = updatePrices();
+	}
+	
+	public Meals createNewInstance(){
+		Ingredient[] new_ingredients = new Ingredient[this.ingredients.size()];
+		Meals new_meal = new Meals(this.name, this.description, this.price, this.ingredients.toArray(new_ingredients));
+		return new_meal;
 	}
 	
 	public double getTotalIngredientPrice(){

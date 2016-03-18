@@ -1,0 +1,5 @@
+package CardFidelitySystem;
+
+public interface FidelityCard {
+	public void UseFeature();
+}
