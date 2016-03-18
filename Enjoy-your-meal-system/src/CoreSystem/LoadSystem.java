@@ -15,20 +15,36 @@ public class LoadSystem extends Thread {
 	HashSet<Ingredient> ingredients;
 	private Scanner sc;
 	
+	/**
+	 * LoadSystem constructor
+	 * @param name
+	 */
 	public LoadSystem(String name){
 		re1 = new RestaurantSystem(name);
 		meals = new HashSet<Meals>();
 		ingredients = new HashSet<Ingredient>();
 	}
 	
+	/**
+	 * Add a staff user to the RestaurantSystem re1
+	 * @param staff
+	 */
 	public void addStaff(StaffUser staff){
 		this.re1.addUser(staff);
 	}
 	
+	/**
+	 * Add an ingredient to the HashSet<Ingredient> ingredients
+	 * @param ingredient
+	 */
 	public void addIngredient(Ingredient ingredient){
 		this.ingredients.add(ingredient);
 	}
 	
+	/**
+	 * Add a meal to the HashSet<Meals> meals
+	 * @param meals
+	 */
 	public void addMeals(Meals meals){
 		this.meals.add(meals);
 	}
@@ -37,6 +53,7 @@ public class LoadSystem extends Thread {
 	public void run() {
 		sc = new Scanner(System.in);
 		while (!re1.exit){
+			// when the system is in RegistrationPhase, run the registration thread as follows
 			while (re1.getRegistrationPhase()){
 				System.out.println("Welcome to " + re1.getRestaurantName() + " !");
 				System.out.println("Please type 'register' to register a new user, or 'login' to create a new one");
@@ -86,6 +103,7 @@ public class LoadSystem extends Thread {
 					System.out.println("8. Shutdown system");
 					String input = sc.nextLine();
 					switch(input){
+					// TO BE IMPLEMENTED
 					case "1":
 						break;
 					case "2":
@@ -119,6 +137,7 @@ public class LoadSystem extends Thread {
 					System.out.println("4. Logout");
 					String input = sc.nextLine();
 					switch(input){
+					// TO BE IMPLEMENTED
 					case "1":
 						break;
 					case "2":
