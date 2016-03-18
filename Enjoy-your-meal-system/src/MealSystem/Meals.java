@@ -18,7 +18,12 @@ public class Meals{
 	public boolean specialOfferToggle = false;
 	public HashSet<Ingredient> ingredients = new HashSet<Ingredient>();
 	
-	
+	/**
+	 * constructor Meals, without specifying the price
+	 * @param name
+	 * @param description
+	 * @param ingredients
+	 */
 	public Meals(String name, String description, Ingredient ...ingredients){
 		this.name = name;
 		for (Ingredient obj : ingredients){
@@ -31,6 +36,13 @@ public class Meals{
 		this.temp_price = price;
 	}
 	
+	/**
+	 * constructor Meals, specifying the price
+	 * @param name
+	 * @param description
+	 * @param price
+	 * @param ingredients
+	 */
 	public Meals(String name, String description, double price, Ingredient ...ingredients){
 		this.name = name;
 		for (Ingredient obj : ingredients){
@@ -43,10 +55,18 @@ public class Meals{
 		this.totalIngredientsPrice = updatePrices();
 	}
 	
+	/**
+	 * getTotalIngredientPrice to 2 decimal places, i.e. to cents
+	 * @return
+	 */
 	public double getTotalIngredientPrice(){
 		return round(this.totalIngredientsPrice,2);
 	}
 	
+	/**
+	 * updatePrices by summing up prices of each ingredient.
+	 * @return
+	 */
 	public double updatePrices(){
 		double price = 0;
 		for (Ingredient obj : this.ingredients){
@@ -68,7 +88,12 @@ public class Meals{
 		return name;
 	}
 
-
+	/**
+	 * getPrice of the meal
+	 * if on special offer, return special price
+	 * else, return normal price with consideration of extra ingredients. 
+	 * @return
+	 */
 	public double getPrice() {
 		if (isSpecialOffer()){
 			return round(specialPrice,2);
@@ -80,11 +105,18 @@ public class Meals{
 			}
 		}
 	}
-
+	
+	/**
+	 * set the price of the meal
+	 * @param price
+	 */
 	public void setPrice(int price){
 		this.price = price;
 	}
-
+	/** 
+	 * returns special price if the meal is on special offer
+	 * @return
+	 */
 	public double getSpecialPrice() {
 		if (isSpecialOffer()){
 			return round(specialPrice,2);
@@ -93,9 +125,12 @@ public class Meals{
 		}
 	}
 
-
+	/**
+	 * set special price only when the offer is on
+	 * @param specialPrice
+	 */
 	public void setSpecialPrice(double specialPrice) {
-		if (isSpecialOffer()){
+		if (isSpecialOffer() && this.price>=specialPrice){
 			this.specialPrice = specialPrice;
 		} else {
 			throw new RuntimeException("Special offer not set yet!");
@@ -112,21 +147,34 @@ public class Meals{
 		this.description = description;
 	}
 
-
+	/**
+	 * check if this meal is on special offer
+	 * @return
+	 */
 	public boolean isSpecialOffer() {
 		return specialOfferToggle;
 	}
 
-
+	/**
+	 * set the special offer state to be true or false
+	 * @param specialOffer
+	 */
 	public void setSpecialOfferToggle(boolean specialOffer) {
 		this.specialOfferToggle = specialOffer;
 	}
 
-
+	/**
+	 * get the HashSet of ingredients
+	 * @return
+	 */
 	public HashSet<Ingredient> getIngredients() {
 		return ingredients;
 	}
 	
+	/**
+	 * return a string of the names of ingredients
+	 * @return
+	 */
 	public String getIngredientsString(){
 		ArrayList<String> s = new ArrayList<String>();
 		for (Ingredient obj : ingredients){
@@ -136,6 +184,10 @@ public class Meals{
 		return s.toString();
 	}
 	
+	/**
+	 * add an extra ingredient
+	 * @param ingredient
+	 */
 	public void addIngredient(Ingredient ingredient){
 		if (ingredients.contains(ingredient)){
 			throw new RuntimeException("Ingredient already exist!");
@@ -193,10 +245,10 @@ public class Meals{
 		}
 		return false;
 	}
+	
 	/**
 	 * overridden hashCode method
-	 */
-	
+	 */	
 	@Override
 	public int hashCode(){
     	int code = 0;
