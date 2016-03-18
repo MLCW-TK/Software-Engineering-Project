@@ -162,7 +162,7 @@ public class RestaurantSystem{
 					System.out.println("Contact field error. Please try again.");
 				}
 				// Checks contact field description validity. Breaks to start of detail phase if
-				// none was returned. Loop to ask contact field description is empty
+				// “none” was returned. Loop to ask contact field description is empty
 				do{
 				System.out.println("Please enter a valid contact field description");
 				System.out.println("NOTE: Empty values are not allowed. You may type 'none' to exit");
