@@ -4,16 +4,13 @@ import java.util.Random;
 
 import Users.User;
 
-public class LotteryFidelityCard implements FidelityCard{
-	User owner;
+public class LotteryFidelityCard extends FidelityCard{
 	Random rand = new Random();
 	int percentage;
 	
+
 	public LotteryFidelityCard(User owner, int percentage){
-		this.owner = owner;
-		this.percentage = percentage;
-		owner.setCanReceiveSpecialOffers(false);
-		owner.setFidelityCard(this);
+		super(owner, percentage);
 	}
 	
 	public void setPercentage(int percentage){
