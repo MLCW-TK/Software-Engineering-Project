@@ -115,14 +115,13 @@ public class Meals{
 	}
 	/** 
 	 * returns special price if the meal is on special offer
-	 * else return price;
 	 * @return
 	 */
 	public double getSpecialPrice() {
 		if (isSpecialOffer()){
 			return round(specialPrice,2);
 		} else {
-			return getPrice();
+			return round(price, 2);
 		}
 	}
 

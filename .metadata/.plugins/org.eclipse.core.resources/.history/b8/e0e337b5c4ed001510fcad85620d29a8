@@ -115,7 +115,6 @@ public class Meals{
 	}
 	/** 
 	 * returns special price if the meal is on special offer
-	 * else return price;
 	 * @return
 	 */
 	public double getSpecialPrice() {

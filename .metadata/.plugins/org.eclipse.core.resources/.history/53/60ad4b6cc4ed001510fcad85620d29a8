@@ -95,15 +95,20 @@ public class Meals{
 
 	/**
 	 * getPrice of the meal
+	 * if on special offer, return special price
 	 * else, return normal price with consideration of extra ingredients. 
 	 * @return
 	 */
 	public double getPrice() {
+		if (isSpecialOffer()){
+			return round(specialPrice,2);
+		} else {
 			if (this.extraIngredientsPrice+this.price < this.price){
 				return round(this.price,2);
 			} else {
 				return round(extraIngredientsPrice+this.price,2);
 			}
+		}
 	}
 	
 	/**
@@ -115,14 +120,13 @@ public class Meals{
 	}
 	/** 
 	 * returns special price if the meal is on special offer
-	 * else return price;
 	 * @return
 	 */
 	public double getSpecialPrice() {
 		if (isSpecialOffer()){
 			return round(specialPrice,2);
 		} else {
-			return getPrice();
+			return round(price, 2);
 		}
 	}
 

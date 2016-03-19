@@ -82,7 +82,6 @@ public class LoadSystem extends Thread {
 						break;
 					} 
 					re1.setRegistrationPhase(false);
-					re1.setUserPhase(true);
 					break;
 					
 				default:
