@@ -3,8 +3,7 @@ package CardFidelitySystem;
 import Orders.Order;
 import Users.User;
 
-public class PointFidelityCard implements FidelityCard{
-	User owner;
+public class PointFidelityCard extends FidelityCard{
 	int points = 0;
 	double totalAmountSpent;
 	double totalAmountProcessed;
@@ -12,9 +11,9 @@ public class PointFidelityCard implements FidelityCard{
 	boolean canGetDiscount = false;
 	
 	public PointFidelityCard(User owner){
-		this.owner = owner;
+		super(owner);
 		owner.setCanReceiveSpecialOffers(false);
-		owner.setFidelityCard(this);
+
 	}
 
 	public void update(){

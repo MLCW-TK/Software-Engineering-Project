@@ -2,12 +2,10 @@ package CardFidelitySystem;
 
 import Users.User;
 
-public class BasicFidelityCard implements FidelityCard {
-	User owner;
+public class BasicFidelityCard extends FidelityCard {
 	
 	public BasicFidelityCard(User owner){
-		this.owner = owner;
-		owner.setFidelityCard(this);
+		super(owner);
 	}
 	
 	public boolean UseFeature() {
