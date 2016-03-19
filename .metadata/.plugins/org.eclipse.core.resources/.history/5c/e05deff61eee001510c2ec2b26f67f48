@@ -22,7 +22,7 @@ public class RestaurantSystem implements Publisher{
 	private ArrayList<Subscriber> subscriber_list = new ArrayList<Subscriber>();
 	public HashSet<Meals> meal_list = new HashSet<Meals>();
 	public String birthdaySpecialOffer = "30% discount!";
-	public double birthdayOffer = 0.3;
+	
 	/**
 	 * This is the constructor of RestaurantSystem.
 	 * @param restaurant_name
@@ -472,7 +472,7 @@ public class RestaurantSystem implements Publisher{
 		String message = new String();
 		message = message
 				+ "Happy Birthday! Dear "+((User)sub).getFirstname() +" " + ((User) sub).getLastname()
-				+ ",\n"+ "We thank you for choosing to spend your birthday with "+this.getRestaurantName()+"!\n"
+				+ ",\n"+ "Would you like to celebrate your birthday at "+this.getRestaurantName()+"?\n"
 				+ "We offer you "+ this.getbirthdaySpecialOffer();
 		return message;
 	}

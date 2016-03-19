@@ -3,6 +3,7 @@ package Users;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Observable;
 import java.util.Scanner;
 
 import CardFidelitySystem.BasicFidelityCard;
@@ -24,7 +25,6 @@ public abstract class User implements Subscriber{
 	protected ArrayList<Order> userOrders = new ArrayList<Order>();
 	protected boolean canReceiveSpecialOffers = true;
 	protected FidelityCard membershipCard = new BasicFidelityCard(this);
-	@SuppressWarnings("deprecation")
 	private Date birthday = new Date(1000,1,1);
 	
 	/**
@@ -359,7 +359,7 @@ public abstract class User implements Subscriber{
 	}
 	
 	public void registerBirthday(){
-		System.out.println("Would you like to receive our special offers on your birthday?(Type 'yes' to accept.)");
+		System.out.println("Would you like to receive our special offer on your birthday?(Type 'yes' to accept.)");
 		Scanner sc = new Scanner(System.in);
 		String response = sc.nextLine();
 		if (!response.equalsIgnoreCase("YES")){this.receive_birthdayOffer=false;}
