@@ -107,8 +107,9 @@ public class LoadSystem extends Thread {
 					System.out.println("5. Adding a special price offer");
 					System.out.println("6. Removing a special price offer");
 					System.out.println("7. Send notifications to subscribed clients.");
-					System.out.println("8. Logout");
-					System.out.println("9. Shutdown system");
+					System.out.println("8. Change the birthday special offer.");
+					System.out.println("9. Logout");
+					System.out.println("10. Shutdown system");
 					String input = sc.nextLine();
 					switch(input){
 					// TO BE IMPLEMENTED
@@ -128,11 +129,16 @@ public class LoadSystem extends Thread {
 						re1.refresh();
 						re1.notifySubscriber();
 					case "8":
+						System.out.println("Please write a new statement of the birthday special offer");
+						Scanner cs = new Scanner(System.in);
+						String offer = cs.nextLine();
+						re1.setbirthdaySpecialOffer(offer);
+					case "9":
 						re1.setUserPhase(false);
 						re1.setRegistrationPhase(true);
 						System.out.println("You have logged out. Thank you for using Enjoy-Your-Meal-System");
 						System.out.println("");
-					case "9":
+					case "10":
 						break;
 					default: 
 						break;

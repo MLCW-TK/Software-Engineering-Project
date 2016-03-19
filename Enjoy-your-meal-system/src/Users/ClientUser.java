@@ -1,6 +1,9 @@
 package Users;
 
+import java.util.Date;
 import java.util.HashMap;
+
+import update.Subscriber;
 /**
  * Class of ClientUser
  * @author MLCW, Xiong
@@ -64,5 +67,6 @@ public class ClientUser extends User{
 	public String getUsertype(){
 		return this.user_type;
 	}
+
 
 }
