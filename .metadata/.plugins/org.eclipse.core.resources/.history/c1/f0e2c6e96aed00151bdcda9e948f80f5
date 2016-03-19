@@ -37,7 +37,7 @@ public class Order{
 				specialOfferOrderSequence.add(temp2);
 			}
 			
-			double amount_paid = 0;
+			double amount_paid;
 			if (user.getFidelityCard() instanceof BasicFidelityCard){
 				amount_paid = round(meal.getPrice(),2);
 				total_transaction += amount_paid;

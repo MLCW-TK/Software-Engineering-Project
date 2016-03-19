@@ -37,7 +37,7 @@ public class Order{
 				specialOfferOrderSequence.add(temp2);
 			}
 			
-			double amount_paid = 0;
+			double amount_paid;
 			if (user.getFidelityCard() instanceof BasicFidelityCard){
 				amount_paid = round(meal.getPrice(),2);
 				total_transaction += amount_paid;
@@ -79,6 +79,19 @@ public class Order{
 			int current_count = meal_count.get(meal);
 			meal_count.put(meal, current_count + count);
 		}
+		
+		// checks fidelity cards
+		// checks if fidelity card is Basic, and then check if it is on special offer
+		if (user.getFidelityCard() instanceof BasicFidelityCard){
+			total_transaction += ((double) count)*meal.getPrice();
+		} 
+		if (user.getFidelityCard() instanceof PointFidelityCard){
+			for (int i = 0; i < count; i++){
+				PointFidelityCard reference = (PointFidelityCard) user.getFidelityCard();
+				reference.Add_Cash_as_Points();
+			}
+		}
+		total_transaction += ((double) count)*meal.getPrice();
 	}
 
 	

@@ -19,9 +19,8 @@ public class PointFidelityCard implements FidelityCard{
 	}
 
 	public double getDiscountRate(){
-		return this.discountRate;
+		return this.discountRate
 	}
-	
 	public void update(){
 		totalAmountSpent = 0;
 		for (Order userorder : this.owner.getOrders()){

@@ -18,10 +18,6 @@ public class PointFidelityCard implements FidelityCard{
 		owner.setFidelityCard(this);
 	}
 
-	public double getDiscountRate(){
-		return this.discountRate;
-	}
-	
 	public void update(){
 		totalAmountSpent = 0;
 		for (Order userorder : this.owner.getOrders()){
@@ -41,21 +37,9 @@ public class PointFidelityCard implements FidelityCard{
 		}	
 	}
 	
-	public void Add_Cash_as_Points(double amount){
-		this.totalAmountProcessed += amount;
-		this.points += amount/10;
-		
-		if (this.points > 100){
-			discountTickets++;
-			canGetDiscount = true;
-			this.points = this.points - 100;
-		}
-		
-	}
-	
 	public boolean UseFeature(){
 		if (canGetDiscount){
-			discountTickets -= 1;
+			discountTickets --;
 			if (!(discountTickets > 0)){
 				canGetDiscount = false;
 			}
