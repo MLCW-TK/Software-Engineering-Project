@@ -115,7 +115,6 @@ public class Meals{
 	}
 	/** 
 	 * returns special price if the meal is on special offer
-	 * else return price;
 	 * @return
 	 */
 	public double getSpecialPrice() {
@@ -232,13 +231,6 @@ public class Meals{
 	    BigDecimal bd = new BigDecimal(value);
 	    bd = bd.setScale(places, RoundingMode.HALF_UP);
 	    return bd.doubleValue();
-	}
-	
-	public String toString(){
-		String s = new String();
-		s = this.getName()+": "+this.getDescription()+"\n" + "Original price: " + this.getPrice()+"\n"
-				+ "Special price: " +this.getSpecialPrice()+"\n\n";
-		return s;
 	}
 	
 	// Equals and hash
