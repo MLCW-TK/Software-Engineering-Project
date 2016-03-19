@@ -238,6 +238,13 @@ public class Meals{
 	    return bd.doubleValue();
 	}
 	
+	public String toString(){
+		String s = new String();
+		s = this.getName()+": "+this.getDescription()+"\n" + "Original price: " + this.getPrice()+"\n"
+				+ "Special price: " +this.getSpecialPrice()+"\n\n";
+		return s;
+	}
+	
 	// Equals and hash
 	/**
 	 * Check if the name is the same

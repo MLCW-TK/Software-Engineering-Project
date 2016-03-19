@@ -57,7 +57,7 @@ public class Order{
 			
 			if (user.getFidelityCard() instanceof PointFidelityCard){
 				PointFidelityCard reference = (PointFidelityCard) user.getFidelityCard();
-				if (reference.UseFeature()){
+				if (reference.useFeature()){
 					amount_paid = round(meal.getPrice()*reference.getDiscountRate(),2);
 					reference.Add_Cash_as_Points(amount_paid);
 					total_transaction += amount_paid;
@@ -70,7 +70,7 @@ public class Order{
 			
 			if (user.getFidelityCard() instanceof LotteryFidelityCard){
 				LotteryFidelityCard reference = (LotteryFidelityCard) user.getFidelityCard();
-				if (reference.UseFeature()){
+				if (reference.useFeature()){
 					amount_paid = 0;
 					total_transaction += amount_paid;
 				} else{
@@ -102,7 +102,8 @@ public class Order{
 		
 
 	}
-
+	
+	public double getTotalTransaction(){return this.total_transaction;}
 	
 	
 	public void Add_order_specialoffer(Meals meal, User user, int count){

@@ -24,7 +24,8 @@ public class LoadSystem extends Thread {
 	 */
 	public LoadSystem(String name){
 		re1 = new RestaurantSystem(name);
-		meals = new HashSet<Meals>();
+		meals = re1.meal_list;
+//		meals = new HashSet<Meals>();
 		ingredients = new HashSet<Ingredient>();
 		orders = new ArrayList<Order>();
 	}
@@ -104,8 +105,9 @@ public class LoadSystem extends Thread {
 					System.out.println("4. Inserting a meal");
 					System.out.println("5. Adding a special price offer");
 					System.out.println("6. Removing a special price offer");
-					System.out.println("7. Logout");
-					System.out.println("8. Shutdown system");
+					System.out.println("7. Send notifications to subscribed clients.");
+					System.out.println("8. Logout");
+					System.out.println("9. Shutdown system");
 					String input = sc.nextLine();
 					switch(input){
 					// TO BE IMPLEMENTED
@@ -122,12 +124,14 @@ public class LoadSystem extends Thread {
 					case "6":
 						break;
 					case "7":
+						re1.refresh();
+						re1.notifySubscriber();
+					case "8":
 						re1.setUserPhase(false);
 						re1.setRegistrationPhase(true);
 						System.out.println("You have logged out. Thank you for using Enjoy-Your-Meal-System");
 						System.out.println("");
-						break;
-					case "8":
+					case "9":
 						break;
 					default: 
 						break;

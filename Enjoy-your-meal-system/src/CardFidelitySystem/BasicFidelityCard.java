@@ -7,8 +7,9 @@ public class BasicFidelityCard extends FidelityCard {
 	public BasicFidelityCard(User owner){
 		super(owner);
 	}
-	
-	public boolean UseFeature() {
+
+	@Override
+	public boolean useFeature() {
 		this.owner.setCanReceiveSpecialOffers(true);
 		return true;
 	}

@@ -13,9 +13,9 @@ public class RunSystem {
 		/**
 		 * Loads all staff members into our system
 		 */
-		StaffUser chef = new StaffUser("Mathias", "Loh", "mathiasloh", "12345", "kyd1992@gmail.com");
+		User chef = new StaffUser("Mathias", "Loh", "mathiasloh", "12345", "kyd1992@gmail.com");
 		System.out.println(chef.toString());
-		le1.addStaff(chef);
+		le1.addStaff((StaffUser)chef);
 		
 		/**
 		 * Loads all predefined ingredients

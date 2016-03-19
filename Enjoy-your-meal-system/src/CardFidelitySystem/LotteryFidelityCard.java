@@ -17,7 +17,8 @@ public class LotteryFidelityCard extends FidelityCard{
 		this.percentage = percentage;
 	}
 
-	public boolean UseFeature() {
+	@Override
+	public boolean useFeature() {
 		int roll = rand.nextInt(100) + 1;
 		if (roll < percentage){
 			return true;

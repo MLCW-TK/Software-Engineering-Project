@@ -52,7 +52,8 @@ public class PointFidelityCard extends FidelityCard{
 		
 	}
 	
-	public boolean UseFeature(){
+	@Override
+	public boolean useFeature(){
 		if (canGetDiscount){
 			discountTickets -= 1;
 			if (!(discountTickets > 0)){

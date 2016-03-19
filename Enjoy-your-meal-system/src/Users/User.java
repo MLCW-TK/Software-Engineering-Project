@@ -7,8 +7,9 @@ import java.util.Observable;
 import CardFidelitySystem.BasicFidelityCard;
 import CardFidelitySystem.FidelityCard;
 import Orders.Order;
+import update.Subscriber;
 
-public abstract class User{
+public abstract class User implements Subscriber{
 	private String first_name;
 	private String last_name;
 	protected String user_name;
@@ -207,7 +208,4 @@ public abstract class User{
         }
 		return code;
 	}
-
-
-	
 }

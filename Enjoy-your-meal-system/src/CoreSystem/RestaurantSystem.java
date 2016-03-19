@@ -1,19 +1,26 @@
 package CoreSystem;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+import MealSystem.Meals;
 import Users.ClientUser;
 import Users.StaffUser;
+import Users.User;
+import update.Publisher;
+import update.Subscriber;
 
-public class RestaurantSystem{
+public class RestaurantSystem implements Publisher{
 	String name;
 	boolean registration_phase = true;
 	boolean user_phase = true;
 	boolean exit = false;
-	private Set<ClientUser> user_list;
+	Set<ClientUser> user_list;
+	private ArrayList<Subscriber> subscriber_list;
+	public HashSet<Meals> meal_list = new HashSet<Meals>();
 	
 	/**
 	 * This is the constructor of RestaurantSystem.
@@ -23,6 +30,7 @@ public class RestaurantSystem{
 		this.name = restaurant_name;
 		this.user_list = new HashSet<ClientUser>();
 	}
+	
 	/**
 	 * Public method to add a ClientUser object to user_list
 	 * @param newUser
@@ -391,5 +399,89 @@ public class RestaurantSystem{
 		throw new RuntimeException("No user found!");
 	}
 	
+	Set<ClientUser> getUser_list(){
+		return this.user_list;
+	}
+	
+	ArrayList<Subscriber> getSubscriber_list(){
+		return this.subscriber_list;
+	}
+	
+	HashSet<Meals> getMeal_list(){
+		return this.meal_list;
+	}
+//Region - update
+	@Override
+	public void subscribe(Subscriber sub) {
+		subscriber_list.add(sub);
+	}
+
+	@Override
+	public void unsubscribe(Subscriber unsub) {
+		int ind = (subscriber_list).indexOf(unsub);
+		subscriber_list.remove(ind);	
+	}
+	@Override
+	public void notifySubscriber() {
+		String offers = "";
+		if(!this.getMeal_list().isEmpty()){
+			try{
+				for(Meals meal: this.getMeal_list()){
+					if(meal.isSpecialOffer()){
+						offers = offers + meal.toString();
+					}
+				}
+				String screenMessage = "";
+				for(Subscriber sub :  this.getSubscriber_list()){
+					String receiveAddress = sub.getReceiveAddress();
+					String message = new String();
+					message = message 
+							+ "Goodday! Dear " + ((User)sub).getFirstname() +" " + ((User) sub).getLastname() 
+							+",\n"+ "Here are our new offers:\n"
+							+ offers;
+					// the actual notify method consists of sending emals, sending lettres,
+					// calling telephones, composing text message, etc.
+					// at this stage of this programme, the notification if achieved by popping up a string
+					// so that the staff of the restaurant can carry out the rest of the operation manually. :)
+					String userMessage = "From: "+this.getRestaurantName()+"\n"
+										+"To: "+receiveAddress +"\n"
+										+"Message: "+message+"\n";
+					screenMessage = screenMessage + userMessage;
+				}
+				System.out.println(screenMessage);
+			}catch(Exception e){
+				System.out.println("meal_list is emplty");
+			}
+		}
+		
+		
+	}
+	
+	public void refresh(){
+		// refresh the subscriber_list according to the state of clients
+		if(!this.getUser_list().isEmpty()){
+			try{
+				for(ClientUser client: this.getUser_list()){
+					if(client.getReceiveUpdates() && !this.getSubscriber_list().contains(client)){
+						Subscriber sub = (Subscriber)client;
+						subscribe(sub);
+					}	
+					if(!client.getReceiveUpdates() && this.getSubscriber_list().contains(client)){
+						Subscriber sub = (Subscriber)client;
+						unsubscribe(sub);
+					}
+				}
+			}catch(Exception e){
+				System.out.println("user_list is empty");
+			}
+		}
+		
+//		for(Subscriber unsub: subscriber_list){
+//			if(!((ClientUser)unsub).getReceiveUpdates()){
+//				this.unsubscribe(unsub);
+//			}
+//		}
+	}
+//EndRegion
 
 }
