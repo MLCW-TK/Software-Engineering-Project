@@ -101,16 +101,8 @@ public abstract class User{
 		return this.userOrders;
 	}
 	
-	public FidelityCard getFidelityCard(){
-		return this.membershipCard;
-	}
-	
 	public void setCanReceiveSpecialOffers(boolean bool){
 		this.canReceiveSpecialOffers = bool;
-	}
-	
-	public boolean getCanReceiveSpecialOffers(){
-		return this.canReceiveSpecialOffers;
 	}
 	
 	public String getUsername(){

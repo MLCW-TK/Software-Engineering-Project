@@ -3,24 +3,20 @@ package CardFidelitySystem;
 import Orders.Order;
 import Users.User;
 
-public class PointFidelityCard extends FidelityCard{
+public class PointFidelityCard implements FidelityCard{
+	User owner;
 	int points = 0;
 	double totalAmountSpent;
 	double totalAmountProcessed;
 	int discountTickets = 0;
 	boolean canGetDiscount = false;
-	double discountRate = 0.10;
 	
 	public PointFidelityCard(User owner){
-		super(owner);
+		this.owner = owner;
 		owner.setCanReceiveSpecialOffers(false);
-
+		owner.setFidelityCard(this);
 	}
 
-	public double getDiscountRate(){
-		return this.discountRate;
-	}
-	
 	public void update(){
 		totalAmountSpent = 0;
 		for (Order userorder : this.owner.getOrders()){
@@ -40,24 +36,8 @@ public class PointFidelityCard extends FidelityCard{
 		}	
 	}
 	
-	public void Add_Cash_as_Points(double amount){
-		this.totalAmountProcessed += amount;
-		this.points += amount/10;
-		
-		if (this.points > 100){
-			discountTickets++;
-			canGetDiscount = true;
-			this.points = this.points - 100;
-		}
-		
-	}
-	
 	public boolean UseFeature(){
 		if (canGetDiscount){
-			discountTickets -= 1;
-			if (!(discountTickets > 0)){
-				canGetDiscount = false;
-			}
 			return true;
 		}
 		return false;
