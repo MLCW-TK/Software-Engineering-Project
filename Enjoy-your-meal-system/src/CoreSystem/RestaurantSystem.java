@@ -19,7 +19,7 @@ public class RestaurantSystem implements Publisher{
 	boolean user_phase = true;
 	boolean exit = false;
 	Set<ClientUser> user_list;
-	private ArrayList<Subscriber> subscriber_list;
+	private ArrayList<Subscriber> subscriber_list = new ArrayList<Subscriber>();
 	public HashSet<Meals> meal_list = new HashSet<Meals>();
 	
 	/**
@@ -245,6 +245,7 @@ public class RestaurantSystem implements Publisher{
 		String response = sc2.nextLine();
 		if (response.equalsIgnoreCase("YES")){
 			newUser.setReceiveUpdates(true);
+			newUser.setReceiveAddress(email);
 			/** 
 			 * Checks if either email or contact details were given
 			 * If none were given, prompt the user to give either email address or contact address
@@ -424,63 +425,68 @@ public class RestaurantSystem implements Publisher{
 	@Override
 	public void notifySubscriber() {
 		String offers = "";
+		String screenMessage = "";
+//		System.out.println(this.getMeal_list().toString());
 		if(!this.getMeal_list().isEmpty()){
-			try{
-				for(Meals meal: this.getMeal_list()){
-					if(meal.isSpecialOffer()){
-						offers = offers + meal.toString();
-					}
+			for(Meals meal: this.getMeal_list()){
+//				System.out.println(meal.isSpecialOffer());
+				if(meal.isSpecialOffer()){
+					offers = offers + meal.toString();
 				}
-				String screenMessage = "";
-				for(Subscriber sub :  this.getSubscriber_list()){
-					String receiveAddress = sub.getReceiveAddress();
-					String message = new String();
-					message = message 
-							+ "Goodday! Dear " + ((User)sub).getFirstname() +" " + ((User) sub).getLastname() 
-							+",\n"+ "Here are our new offers:\n"
-							+ offers;
-					// the actual notify method consists of sending emals, sending lettres,
-					// calling telephones, composing text message, etc.
-					// at this stage of this programme, the notification if achieved by popping up a string
-					// so that the staff of the restaurant can carry out the rest of the operation manually. :)
-					String userMessage = "From: "+this.getRestaurantName()+"\n"
-										+"To: "+receiveAddress +"\n"
-										+"Message: "+message+"\n";
-					screenMessage = screenMessage + userMessage;
-				}
-				System.out.println(screenMessage);
-			}catch(Exception e){
-				System.out.println("meal_list is emplty");
 			}
-		}
+//			System.out.println(offers);
+//			System.out.println(this.getSubscriber_list().toString());
+			for(Subscriber sub :  this.getSubscriber_list()){
+//				System.out.println(sub.getReceiveAddress());
+				String message = new String();
+				message = message 
+						+ "Goodday! Dear " + ((User)sub).getFirstname() +" " + ((User) sub).getLastname() 
+						+",\n"+ "Here are our new offers:\n\n"
+						+ offers;
+				// the actual notify method consists of sending emals, sending lettres,
+				// calling telephones, composing text message, etc.
+				// at this stage of this programme, the notification if achieved by popping up a string
+				// so that the staff of the restaurant can carry out the rest of the operation manually. :)
+				String userMessage = "From: "+this.getRestaurantName()+"\n"
+									+"To: "+((User)sub).getReceiveAddress() +"\n"
+									+"Message: "+message+"\n";
+				screenMessage = screenMessage + userMessage;
+			}
+			System.out.println(screenMessage);
+		}else{System.out.println("Meal_list is empty!");}
 		
 		
 	}
 	
 	public void refresh(){
+//		System.out.println(this.getSubscriber_list().toString());
+		System.out.println("System refreshing subscriber list...");
 		// refresh the subscriber_list according to the state of clients
 		if(!this.getUser_list().isEmpty()){
-			try{
-				for(ClientUser client: this.getUser_list()){
-					if(client.getReceiveUpdates() && !this.getSubscriber_list().contains(client)){
+			for(Subscriber client: this.getUser_list()){
+				if(client.getReceiveUpdates() && !this.getSubscriber_list().contains(client)){
+					try{
 						Subscriber sub = (Subscriber)client;
 						subscribe(sub);
-					}	
-					if(!client.getReceiveUpdates() && this.getSubscriber_list().contains(client)){
+					}catch(Exception e){
+						System.out.println("error1");
+					}
+				}else{continue;}	
+				
+				if(!client.getReceiveUpdates() && this.getSubscriber_list().contains(client)){
+					try{
+						
 						Subscriber sub = (Subscriber)client;
 						unsubscribe(sub);
+					}catch(Exception e){
+						System.out.println("error2");
 					}
-				}
-			}catch(Exception e){
-				System.out.println("user_list is empty");
+				}else{continue;}
 			}
 		}
-		
-//		for(Subscriber unsub: subscriber_list){
-//			if(!((ClientUser)unsub).getReceiveUpdates()){
-//				this.unsubscribe(unsub);
-//			}
-//		}
+		System.out.println("Refreshing finished");
+//		System.out.println(this.getSubscriber_list().toString());
+
 	}
 //EndRegion
 
