@@ -99,6 +99,7 @@ public class LoadSystem extends Thread {
 					// Implementation of birthday here
 					//
 					System.out.println("Welcome, " + LoginUser.getFirstname() + " " + LoginUser.getLastname() + "!" + " (" + LoginUser.getUsertype() + ")");
+					re1.popupMessage(LoginUser);
 					System.out.println("What would you like to do today? (Enter numbers)");
 					System.out.println("1. Order a meal");
 					System.out.println("2. View your orders");
@@ -146,6 +147,7 @@ public class LoadSystem extends Thread {
 					
 				} else{
 					System.out.println("Welcome, " + LoginUser.getFirstname() + " " + LoginUser.getLastname() + "!" + " (" + LoginUser.getUsertype() + ")");
+					re1.popupMessage(LoginUser);
 					System.out.println("What would you like to do today? (Enter numbers)");
 					System.out.println("1. Order a meal");
 					System.out.println("2. View your orders");

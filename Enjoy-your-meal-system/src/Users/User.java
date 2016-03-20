@@ -358,6 +358,7 @@ public abstract class User implements Subscriber{
 		}
 	}
 	
+	public boolean getReceiveBirthdayOffer(){return this.receive_birthdayOffer;}
 	public void registerBirthday(){
 		System.out.println("Would you like to receive our special offers on your birthday?(Type 'yes' to accept.)");
 		Scanner sc = new Scanner(System.in);

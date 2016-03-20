@@ -468,6 +468,15 @@ public class RestaurantSystem implements Publisher{
 		
 	}
 
+	public void popupMessage(Subscriber sub){
+		if(sub.getReceiveUpdates()){
+			if(((User) sub).getReceiveBirthdayOffer()){
+				System.out.println(birthdayOffer(sub));
+			}
+			else{System.out.println(normaldayOffer(sub));}
+		}
+	}
+	
 	public String birthdayOffer(Subscriber sub){
 		String message = new String();
 		message = message
