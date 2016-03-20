@@ -26,7 +26,7 @@ public abstract class User implements Subscriber{
 	protected FidelityCard membershipCard = new BasicFidelityCard(this);
 	@SuppressWarnings("deprecation")
 	private Date birthday = new Date(1000,1,1);
-	
+	// Region - constructors
 	/**
 	 * 
 	 * @param firstname
@@ -145,6 +145,8 @@ public abstract class User implements Subscriber{
 		this.contact = new HashMap<String,String>();
 		this.receive_address = email;
 	}
+	// EndRegion
+	
 	
 	// getters and setters
 	public void setFidelityCard(FidelityCard fidelitycard){
@@ -219,6 +221,9 @@ public abstract class User implements Subscriber{
 		return last_name;
 	}
 	
+	/**
+	 * Ask the user if he wants to receive updates, and register with instructions.
+	 */
 	public void registerUpdates(){
 		System.out.println("Would you like to receive updates? ('yes', or press 'enter' to skip)");
 		Scanner sc2 = new Scanner(System.in);
@@ -359,6 +364,10 @@ public abstract class User implements Subscriber{
 	}
 	
 	public boolean getReceiveBirthdayOffer(){return this.receive_birthdayOffer;}
+	
+	/**
+	 * Ask the user if he wants to receive birthday special offer, and register with instructions.
+	 */
 	public void registerBirthday(){
 		System.out.println("Would you like to receive our special offers on your birthday?(Type 'yes' to accept.)");
 		Scanner sc = new Scanner(System.in);
@@ -370,6 +379,9 @@ public abstract class User implements Subscriber{
 		}	
 	}
 	
+	/**
+	 * record the birthday of user in the correct format.
+	 */
 	public void recordBirthday(){
 		do{
 			System.out.println("We need to know your birthday, please type it down in dd/mm/yyyy format.(e.g. 21/07/1993)");
