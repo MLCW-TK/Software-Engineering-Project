@@ -1,0 +1,7 @@
+package mealsystem;
+
+import ingredients.Ingredient;
+
+public interface MealBehavior {
+	void setBehavior(Meal meal, Ingredient ingredient, int Quantity);
+}

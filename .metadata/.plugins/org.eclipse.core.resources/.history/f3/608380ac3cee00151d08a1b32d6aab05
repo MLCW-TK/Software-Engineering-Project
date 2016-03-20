@@ -1,0 +1,12 @@
+package mealsystem;
+
+public class Appertizer extends Meal{
+
+	public Appertizer(String name, String description, double price, Ingredient[] ingredients) {
+		super(name, description, price, ingredients);
+	}
+	
+	public Appertizer(String name, String description, Ingredient[] ingredients) {
+		super(name, description, ingredients);
+	}
+}

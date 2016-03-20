@@ -1,0 +1,27 @@
+package mealsystem;
+
+import CustomUtilities.CustomUtilities;
+import ingredients.Ingredient;
+
+public class ChangeIngredient implements MealBehavior {
+
+	@Override
+	public void behavior(Meal meal, Ingredient ingredient, double quantity) {
+		if (meal.ingredients.contains(ingredient)){
+			if (ingredient.getQuantity() + quantity < 0){
+				throw new RuntimeException("Quantity cannot be less than 0!");
+			} else {
+				System.out.println(ingredient.getQuantity());
+				double quantity_changed = quantity - ingredient.getQuantity();
+				ingredient.setQuantity(quantity_changed);
+				System.out.println(ingredient.getQuantity());
+				meal.extraIngredientsPrice += CustomUtilities.round((quantity_changed)*ingredient.priceperquantity,2);
+				meal.totalIngredientsPrice += CustomUtilities.round(meal.extraIngredientsPrice,2);
+			}
+			
+		} else {
+			throw new RuntimeException("Ingredient not found!");
+		}	
+	}
+
+}

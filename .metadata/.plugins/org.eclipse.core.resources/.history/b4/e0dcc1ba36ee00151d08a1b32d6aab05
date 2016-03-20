@@ -1,0 +1,12 @@
+package CardFidelitySystem;
+
+public class BasicBehavior implements FidelityCardBehavior {
+	
+	
+	@Override
+	public boolean useFeature() {
+		this.owner.setCanReceiveSpecialOffers(true);
+		return true;
+	}
+	
+}

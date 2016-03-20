@@ -1,0 +1,36 @@
+package Orders;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import MealSystem.Ingredient;
+import MealSystem.Meal;
+import Users.*;
+
+
+public class OrderTest {
+
+	@Test
+	public void test() throws CloneNotSupportedException {
+		Order Ordersystem = new Order();
+		User Mathias = new ClientUser("Mathias", "Loh", "mathiasloh", "12345");
+		Ingredient testIngredient1 = new Ingredient("Ingredient1", 6, 1.10);
+		Ingredient testIngredient2 = new Ingredient("Ingredient2", 2.5, 1.69);
+		Ingredient testIngredient3 = new Ingredient("Ingredient3", 2.3);
+		Meal testMeal1 = new Meal("Meal1", "Good Food1", testIngredient1, testIngredient2);
+		Meal testMeal2 = new Meal("Meal2", "Good Food2", testIngredient2, testIngredient3);
+		Meal testMeal3 = new Meal("Meal3", "Good Food3", testIngredient1, testIngredient2, testIngredient3);
+	
+		Meal cloned1 = (Meal) testMeal1.createNewInstance();
+		cloned1.addIngredient(testIngredient3);
+		Ordersystem.Add_order(cloned1, Mathias, 1);
+		Ordersystem.Add_order(testMeal1, Mathias, 1);
+		
+		
+		System.out.println(Ordersystem.SummarySequence.size());
+		System.out.println(Ordersystem.Summary());
+		fail("lol");
+	}
+
+}

@@ -1,0 +1,12 @@
+package mealsystem;
+
+import ingredients.Ingredient;
+
+public class NormalBehavior implements MealBehavior {
+
+	@Override
+	public void behavior(Meal meal, Ingredient ingredient, int quantity) {
+		// this does nothing. standard constructor will settle everything :)
+	}
+
+}

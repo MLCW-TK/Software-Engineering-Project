@@ -1,18 +1,18 @@
 package Orders;
 
-import MealSystem.Meals;
 import Users.User;
+import cardfidelitysystem.*;
+import mealsystem.Meal;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
-
-import CardFidelitySystem.*;
+import CustomUtilities.CustomUtilities;
 
 public class Order{
 	Stack<String> SummarySequence;
 	ArrayList<ArrayList<Object>> orderSequence;
-	HashMap<Meals, Integer> meal_count;
+	HashMap<Meal, Integer> meal_count;
 	ArrayList<ArrayList<Object>> specialOfferOrderSequence;
 	double total_transaction;
 	
@@ -20,7 +20,7 @@ public class Order{
 	 * Constructor Order
 	 */
 	public Order(){
-		this.meal_count = new HashMap<Meals, Integer>();
+		this.meal_count = new HashMap<Meal, Integer>();
 		this.orderSequence = new ArrayList<ArrayList<Object>>();
 		this.specialOfferOrderSequence = new ArrayList<ArrayList<Object>>();
 		this.SummarySequence = new Stack();
@@ -32,7 +32,7 @@ public class Order{
 	 * @param user
 	 * @param count
 	 */
-	public void Add_order(Meals meal, User user, int count){
+	public void Add_order(Meal meal, User user, int count){
 		// Creates a list of all orders
 		for (int i = 0; i<count; i++){
 			ArrayList<Object> temp = new ArrayList<Object>();
@@ -51,18 +51,18 @@ public class Order{
 			
 			double amount_paid = 0;
 			if (user.getFidelityCard() instanceof BasicFidelityCard){
-				amount_paid = round(meal.getSpecialPrice(),2);
+				amount_paid = CustomUtilities.round(meal.getSpecialPrice(),2);
 				total_transaction += amount_paid;
 			} 
 			
 			if (user.getFidelityCard() instanceof PointFidelityCard){
 				PointFidelityCard reference = (PointFidelityCard) user.getFidelityCard();
 				if (reference.useFeature()){
-					amount_paid = round(meal.getPrice()*reference.getDiscountRate(),2);
+					amount_paid = CustomUtilities.round(meal.getPrice()*reference.getDiscountRate(),2);
 					reference.Add_Cash_as_Points(amount_paid);
 					total_transaction += amount_paid;
 				} else {
-					amount_paid = round(meal.getPrice(),2);
+					amount_paid = CustomUtilities.round(meal.getPrice(),2);
 					reference.Add_Cash_as_Points(amount_paid);
 					total_transaction += amount_paid;
 				}
@@ -95,18 +95,14 @@ public class Order{
 		} else {
 			int current_count = meal_count.get(meal);
 			meal_count.put(meal, current_count + count);
-		}
-
-		// calculate the total transaction
-		total_transaction += ((double) count)*meal.getPrice();
-		
+		}		
 
 	}
 	
 	public double getTotalTransaction(){return this.total_transaction;}
 	
 	
-	public void Add_order_specialoffer(Meals meal, User user, int count){
+	public void Add_order_specialoffer(Meal meal, User user, int count){
 		for (int i = 0; i<count; i++){
 			
 		}
@@ -117,15 +113,8 @@ public class Order{
 		while (!SummarySequence.isEmpty()){
 			s += SummarySequence.pop();
 		}
-		s += "Total transaction cost: " + round(total_transaction,2);
+		s += "Total transaction cost: " + CustomUtilities.round(total_transaction,2);
 		return s;
 	}
 
-	public static double round(double value, int places) {
-	    if (places < 0) throw new IllegalArgumentException();
-
-	    BigDecimal bd = new BigDecimal(value);
-	    bd = bd.setScale(places, RoundingMode.HALF_UP);
-	    return bd.doubleValue();
-	}
 }
