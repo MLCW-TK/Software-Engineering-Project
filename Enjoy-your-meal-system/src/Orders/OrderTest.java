@@ -4,9 +4,18 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import MealSystem.Ingredient;
-import MealSystem.Meals;
 import Users.*;
+import ingredients.Ingredient;
+import ingredients.IngredientFactory;
+import mealsystem.Appertizer;
+import mealsystem.AppertizerFactory;
+import mealsystem.Dessert;
+import mealsystem.DessertFactory;
+import mealsystem.MainCourse;
+import mealsystem.MainCourseFactory;
+import mealsystem.Meal;
+import mealsystem.MealFactory;
+import mealsystem.*;
 
 
 public class OrderTest {
@@ -15,20 +24,45 @@ public class OrderTest {
 	public void test() throws CloneNotSupportedException {
 		Order Ordersystem = new Order();
 		User Mathias = new ClientUser("Mathias", "Loh", "mathiasloh", "12345");
-		Ingredient testIngredient1 = new Ingredient("Ingredient1", 6, 1.10);
-		Ingredient testIngredient2 = new Ingredient("Ingredient2", 2.5, 1.69);
-		Ingredient testIngredient3 = new Ingredient("Ingredient3", 2.3);
-		Meals testMeal1 = new Meals("Meal1", "Good Food1", testIngredient1, testIngredient2);
-		Meals testMeal2 = new Meals("Meal2", "Good Food2", testIngredient2, testIngredient3);
-		Meals testMeal3 = new Meals("Meal3", "Good Food3", testIngredient1, testIngredient2, testIngredient3);
+		/**
+		 * Loads all predefined ingredients
+		 * Constructors: Ingredient(String name, double priceperquantity), Ingredient(String name, double quantity, double priceperquantity)
+		 */
+		IngredientFactory ingredient = new IngredientFactory();
+		Ingredient vegetable = ingredient.createIngredient("vegetable", 1, 1);
+		Ingredient meat = ingredient.createIngredient("Meat", 2);
 	
-		Meals cloned1 = (Meals) testMeal1.createNewInstance();
-		cloned1.addIngredient(testIngredient3);
-		Ordersystem.Add_order(cloned1, Mathias, 1);
-		Ordersystem.Add_order(testMeal1, Mathias, 1);
+		/**
+		 * Loads all predefined meals
+		 * Constructors: Meal(String name, String description, Ingredients args(ingredients))
+		 */
+		MealFactory appertizers = new AppertizerFactory();
+		MealFactory maincourses = new MainCourseFactory();
+		MealFactory desserts = new DessertFactory();
+		
+		Appertizer salad = (Appertizer) appertizers.createMeal("salad", "good for your health", 1, vegetable);
+		MainCourse steak = (MainCourse) maincourses.createMeal("salad", "also good for you", vegetable);
+		Dessert icecream = (Dessert) desserts.createMeal("icecream", "good for you", 10, vegetable);
 		
 		
-		System.out.println(Ordersystem.SummarySequence.size());
+		Ordersystem.Add_order(salad, Mathias, 1);
+		
+		salad.setBehavior(new AddIngredient());
+		salad.executeBehavior(meat, 1);
+		Ordersystem.Add_order(salad, Mathias, 1);
+		
+		salad.setBehavior(new ChangeIngredient());
+		salad.executeBehavior(vegetable, 1);
+		Ordersystem.Add_order(salad, Mathias, 1);
+		
+		salad.setBehavior(new NormalBehavior());
+		salad.executeBehavior(null, 0);
+		Ordersystem.Add_order(salad, Mathias, 1);
+		
+		salad.setBehavior(new ChangeIngredient());
+		salad.executeBehavior(vegetable, 1);
+		Ordersystem.Add_order(salad, Mathias, 1);
+		
 		System.out.println(Ordersystem.Summary());
 		fail("lol");
 	}

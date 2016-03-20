@@ -5,9 +5,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import CardFidelitySystem.BasicFidelityCard;
-import CardFidelitySystem.FidelityCard;
 import Orders.Order;
+import cardfidelitysystem.BasicFidelityCard;
+import cardfidelitysystem.FidelityCard;
 import update.Subscriber;
 
 public abstract class User implements Subscriber{

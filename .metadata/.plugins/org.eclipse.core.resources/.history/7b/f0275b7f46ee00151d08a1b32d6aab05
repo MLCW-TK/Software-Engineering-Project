@@ -1,0 +1,13 @@
+package mealsystem;
+
+import ingredients.Ingredient;
+
+public class RemoveIngredientBehavior implements MealBehavior {
+
+	@Override
+	public void behavior(Meal meal, Ingredient ingredient) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

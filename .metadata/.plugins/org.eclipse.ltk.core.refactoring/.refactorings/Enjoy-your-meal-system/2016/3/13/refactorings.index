@@ -1,0 +1,17 @@
+1458435306194	Rename type 'Basic'
+1458435453362	Delete element
+1458435466804	Delete element
+1458436875179	Rename type 'Appertizers'
+1458436927043	Rename type 'Meals'
+1458437234513	Rename package 'CardFidelitySystem'
+1458437249832	Rename package 'CoreSystem'
+1458437264217	Rename package 'MealSystem'
+1458438007289	Move compilation units
+1458439449152	Delete element
+1458440501464	Rename type 'DefaultIngredientBehavior'
+1458441213559	Rename type 'Round'
+1458441901091	Rename type 'MoreIngredientBehavior'
+1458443613200	Rename type 'AddMoreIngredientBehavior'
+1458443623965	Rename type 'RemoveIngredientBehavior'
+1458443648377	Rename type 'RemoveBehavior'
+1458443765936	Rename type 'ChangeIngredientBehavior'

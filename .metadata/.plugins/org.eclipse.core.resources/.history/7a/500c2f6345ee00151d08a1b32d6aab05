@@ -1,0 +1,17 @@
+package mealsystem;
+import ingredients.Ingredient;
+import CustomUtilities.*;
+
+
+public class MoreIngredientBehavior implements MealBehavior{
+	public void addIngredient(Meal meal, Ingredient ingredient){
+		if (meal.ingredients.contains(ingredient)){
+			throw new RuntimeException("Ingredient already exist!");
+		} else {
+			meal.ingredients.add(ingredient);
+			meal.extraIngredientsPrice += CustomUtilities.round(ingredient.getTotalprice(),2);
+			meal.totalIngredientsPrice += CustomUtilities.round(meal.extraIngredientsPrice,2);
+		}
+	}
+	}
+}
