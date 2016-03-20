@@ -3,6 +3,10 @@ package cardfidelitysystem;
 import orders.Order;
 import users.User;
 
+/**
+ * Point fidelity card implementation
+ *
+ */
 public class PointFidelityCard extends FidelityCard{
 	int points = 0;
 	double totalAmountSpent;
@@ -52,6 +56,11 @@ public class PointFidelityCard extends FidelityCard{
 		
 	}
 	
+	/**
+	 * Checks if user eligible for discount
+	 * If yes, set eligibility to false
+	 * returns true
+	 */
 	@Override
 	public boolean useFeature(){
 		if (canGetDiscount){

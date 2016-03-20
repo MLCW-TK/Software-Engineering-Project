@@ -2,6 +2,11 @@ package cardfidelitysystem;
 
 import users.User;
 
+/**
+ * 
+ * An abstract fidelity class.
+ *
+ */
 public abstract class FidelityCard {
 	public User owner;
 	public int percentage;

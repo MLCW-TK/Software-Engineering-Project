@@ -24,7 +24,7 @@ public class Order{
 		this.meal_count = new HashMap<Meal, Integer>();
 		this.orderSequence = new ArrayList<ArrayList<Object>>();
 		this.specialOfferOrderSequence = new ArrayList<ArrayList<Object>>();
-		this.SummarySequence = new Stack();
+		this.SummarySequence = new Stack<String>();
 	}
 	
 	/**
