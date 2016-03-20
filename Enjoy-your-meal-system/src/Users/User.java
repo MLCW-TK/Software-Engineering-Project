@@ -1,13 +1,13 @@
-package Users;
+package users;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import Orders.Order;
-import cardfidelitysystem.BasicFidelityCard;
-import cardfidelitysystem.FidelityCard;
+import cardFidelitySystem.BasicFidelityCard;
+import cardFidelitySystem.FidelityCard;
+import orders.Order;
 import update.Subscriber;
 
 public abstract class User implements Subscriber{

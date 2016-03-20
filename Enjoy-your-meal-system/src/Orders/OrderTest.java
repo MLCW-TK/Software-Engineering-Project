@@ -1,21 +1,22 @@
-package Orders;
+package orders;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import Users.*;
 import ingredients.Ingredient;
 import ingredients.IngredientFactory;
-import mealsystem.Appertizer;
-import mealsystem.AppertizerFactory;
-import mealsystem.Dessert;
-import mealsystem.DessertFactory;
-import mealsystem.MainCourse;
-import mealsystem.MainCourseFactory;
-import mealsystem.Meal;
-import mealsystem.MealFactory;
-import mealsystem.*;
+import mealSystem.AddIngredient;
+import mealSystem.Appertizer;
+import mealSystem.AppertizerFactory;
+import mealSystem.ChangeIngredient;
+import mealSystem.Dessert;
+import mealSystem.DessertFactory;
+import mealSystem.MainCourse;
+import mealSystem.MainCourseFactory;
+import mealSystem.MealFactory;
+import mealSystem.NormalBehavior;
+import users.*;
 
 
 public class OrderTest {

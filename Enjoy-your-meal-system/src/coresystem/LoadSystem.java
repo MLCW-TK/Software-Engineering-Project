@@ -1,14 +1,15 @@
-package coresystem;
+package coreSystem;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 
-import Users.ClientUser;
-import Users.StaffUser;
 import ingredients.Ingredient;
-import mealsystem.Meal;
-import Orders.Order;
+import mealSystem.Meal;
+import orders.Order;
+import users.ClientUser;
+import users.StaffUser;
+
 
 public class LoadSystem extends Thread {
 	RestaurantSystem re1;
@@ -99,6 +100,7 @@ public class LoadSystem extends Thread {
 					// Implementation of birthday here
 					//
 					System.out.println("Welcome, " + LoginUser.getFirstname() + " " + LoginUser.getLastname() + "!" + " (" + LoginUser.getUsertype() + ")");
+					re1.popupMessage(LoginUser);
 					System.out.println("What would you like to do today? (Enter numbers)");
 					System.out.println("1. Order a meal");
 					System.out.println("2. View your orders");
@@ -146,6 +148,7 @@ public class LoadSystem extends Thread {
 					
 				} else{
 					System.out.println("Welcome, " + LoginUser.getFirstname() + " " + LoginUser.getLastname() + "!" + " (" + LoginUser.getUsertype() + ")");
+					re1.popupMessage(LoginUser);
 					System.out.println("What would you like to do today? (Enter numbers)");
 					System.out.println("1. Order a meal");
 					System.out.println("2. View your orders");

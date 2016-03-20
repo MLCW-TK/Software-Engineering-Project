@@ -1,6 +1,6 @@
-package mealsystem;
+package mealSystem;
+import customUtilities.*;
 import ingredients.Ingredient;
-import CustomUtilities.*;
 
 
 public class AddIngredient implements MealBehavior{

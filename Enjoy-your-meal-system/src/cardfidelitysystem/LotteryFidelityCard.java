@@ -1,8 +1,8 @@
-package cardfidelitysystem;
+package cardFidelitySystem;
 
 import java.util.Random;
 
-import Users.User;
+import users.User;
 
 public class LotteryFidelityCard extends FidelityCard{
 	Random rand = new Random();

@@ -1,7 +1,7 @@
-package cardfidelitysystem;
+package cardFidelitySystem;
 
-import Orders.Order;
-import Users.User;
+import orders.Order;
+import users.User;
 
 public class PointFidelityCard extends FidelityCard{
 	int points = 0;

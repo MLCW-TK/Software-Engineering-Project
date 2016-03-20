@@ -1,4 +1,4 @@
-package mealsystem;
+package mealSystem;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -8,8 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.TreeMap;
 
-import CustomUtilities.CustomUtilities;
-
+import customUtilities.CustomUtilities;
 import ingredients.Ingredient;
 import ingredients.IngredientFactory;
 

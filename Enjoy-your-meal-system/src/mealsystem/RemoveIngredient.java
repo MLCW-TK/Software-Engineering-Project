@@ -1,6 +1,6 @@
-package mealsystem;
+package mealSystem;
 
-import CustomUtilities.CustomUtilities;
+import customUtilities.CustomUtilities;
 import ingredients.Ingredient;
 
 public class RemoveIngredient implements MealBehavior {

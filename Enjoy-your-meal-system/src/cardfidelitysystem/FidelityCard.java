@@ -1,6 +1,6 @@
-package cardfidelitysystem;
+package cardFidelitySystem;
 
-import Users.User;
+import users.User;
 
 public abstract class FidelityCard {
 	public User owner;

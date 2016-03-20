@@ -1,7 +1,8 @@
 package ingredients;
 
 import java.math.BigDecimal;
-import CustomUtilities.CustomUtilities;
+
+import customUtilities.CustomUtilities;
 
 public class Ingredient {
 	public String name;

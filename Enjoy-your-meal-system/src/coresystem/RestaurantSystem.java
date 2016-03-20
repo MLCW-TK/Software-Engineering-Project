@@ -1,4 +1,4 @@
-package coresystem;
+package coreSystem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,12 +6,12 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import Users.ClientUser;
-import Users.StaffUser;
-import Users.User;
-import mealsystem.Meal;
+import mealSystem.Meal;
 import update.Publisher;
 import update.Subscriber;
+import users.ClientUser;
+import users.StaffUser;
+import users.User;
 
 public class RestaurantSystem implements Publisher{
 	String name;
@@ -432,22 +432,8 @@ public class RestaurantSystem implements Publisher{
 		String screenMessage = "";
 		if(!this.getMeal_list().isEmpty()){
 			offers = this.allMealOffer();
-//			for(Meals meal: this.getMeal_list()){
-//				if(meal.isSpecialOffer()){
-//					offers = offers + meal.toString();
-//				}
-//			}
 			for(Subscriber sub :  this.getSubscriber_list()){
 				if(!((User)sub).birthdayIsToday()){	
-//					String message = new String();
-//					message = message 
-//							+ "Goodday! Dear " + ((User)sub).getFirstname() +" " + ((User) sub).getLastname() 
-//							+",\n"+ "Here are our new offers:\n\n"
-//							+ offers;
-					// the actual notify method consists of sending emals, sending lettres,
-					// calling telephones, composing text message, etc.
-					// at this stage of this programme, the notification if achieved by popping up a string
-					// so that the staff of the restaurant can carry out the rest of the operation manually. :)
 					String userMessage = "From: "+this.getRestaurantName()+"\n"
 											+"To: "+((User)sub).getReceiveAddress() +"\n"
 											+"Message: "+normaldayOffer(sub)+"\n";
@@ -468,6 +454,14 @@ public class RestaurantSystem implements Publisher{
 		
 	}
 
+	public void popupMessage(Subscriber sub){
+		if(sub.getReceiveUpdates()){
+			if(((User) sub).getReceiveBirthdayOffer()){
+				System.out.println(this.birthdayOffer(sub));}
+			else{System.out.println(this.normaldayOffer(sub));}
+		}
+	}
+	
 	public String birthdayOffer(Subscriber sub){
 		String message = new String();
 		message = message

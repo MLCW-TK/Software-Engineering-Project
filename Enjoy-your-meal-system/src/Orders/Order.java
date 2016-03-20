@@ -1,13 +1,16 @@
-package Orders;
+package orders;
 
-import Users.User;
-import cardfidelitysystem.*;
-import mealsystem.Meal;
+import customUtilities.CustomUtilities;
+import mealSystem.Meal;
+import users.User;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
-import CustomUtilities.CustomUtilities;
+
+import cardFidelitySystem.BasicFidelityCard;
+import cardFidelitySystem.LotteryFidelityCard;
+import cardFidelitySystem.PointFidelityCard;
 
 public class Order{
 	Stack<String> SummarySequence;
