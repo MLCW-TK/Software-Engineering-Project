@@ -1,4 +1,4 @@
-package mealSystem;
+package mealsystem;
 
 import java.util.HashMap;
 import java.util.Map;

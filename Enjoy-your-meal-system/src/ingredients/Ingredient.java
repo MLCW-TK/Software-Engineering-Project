@@ -2,7 +2,7 @@ package ingredients;
 
 import java.math.BigDecimal;
 
-import customUtilities.CustomUtilities;
+import customutilities.CustomUtilities;
 
 public class Ingredient {
 	public String name;

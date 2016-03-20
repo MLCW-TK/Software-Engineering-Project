@@ -1,4 +1,4 @@
-package mealSystem;
+package mealsystem;
 
 import ingredients.Ingredient;
 

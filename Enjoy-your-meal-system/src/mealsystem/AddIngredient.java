@@ -1,5 +1,5 @@
-package mealSystem;
-import customUtilities.*;
+package mealsystem;
+import customutilities.*;
 import ingredients.Ingredient;
 
 

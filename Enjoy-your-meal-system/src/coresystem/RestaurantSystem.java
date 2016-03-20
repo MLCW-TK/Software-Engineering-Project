@@ -1,4 +1,4 @@
-package coreSystem;
+package coresystem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import mealSystem.Meal;
+import mealsystem.Meal;
 import update.Publisher;
 import update.Subscriber;
 import users.ClientUser;

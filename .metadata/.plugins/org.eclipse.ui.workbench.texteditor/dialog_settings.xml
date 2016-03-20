@@ -6,12 +6,13 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Round" key="selection"/>
+		<item value="popup" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="popup"/>
 			<item value="round"/>
 			<item value="getIngredient"/>
 			<item value="get"/>
@@ -19,7 +20,6 @@
 			<item value="execute"/>
 			<item value="temp_price"/>
 			<item value="set"/>
-			<item value="int"/>
 		</list>
 		<list key="replacehistory">
 			<item value="CustomUtilities.round"/>

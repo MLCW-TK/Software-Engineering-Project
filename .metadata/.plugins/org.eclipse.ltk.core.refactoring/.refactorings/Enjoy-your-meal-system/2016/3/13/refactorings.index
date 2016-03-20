@@ -15,3 +15,6 @@
 1458443623965	Rename type 'RemoveIngredientBehavior'
 1458443648377	Rename type 'RemoveBehavior'
 1458443765936	Rename type 'ChangeIngredientBehavior'
+1458468793650	Rename package 'Orders'
+1458468803472	Rename package 'Users'
+1458468955029	Rename package 'CustomUtilities'

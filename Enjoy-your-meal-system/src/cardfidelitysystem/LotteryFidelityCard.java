@@ -1,4 +1,4 @@
-package cardFidelitySystem;
+package cardfidelitysystem;
 
 import java.util.Random;
 

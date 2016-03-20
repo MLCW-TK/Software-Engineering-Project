@@ -1,6 +1,6 @@
-package mealSystem;
+package mealsystem;
 
-import customUtilities.CustomUtilities;
+import customutilities.CustomUtilities;
 import ingredients.Ingredient;
 
 public class ChangeIngredient implements MealBehavior {

@@ -1,16 +1,16 @@
-package coreSystem;
+package coresystem;
 
 import java.util.HashSet;
 
 import ingredients.Ingredient;
 import ingredients.IngredientFactory;
-import mealSystem.Appertizer;
-import mealSystem.AppertizerFactory;
-import mealSystem.Dessert;
-import mealSystem.DessertFactory;
-import mealSystem.MainCourse;
-import mealSystem.MainCourseFactory;
-import mealSystem.MealFactory;
+import mealsystem.Appertizer;
+import mealsystem.AppertizerFactory;
+import mealsystem.Dessert;
+import mealsystem.DessertFactory;
+import mealsystem.MainCourse;
+import mealsystem.MainCourseFactory;
+import mealsystem.MealFactory;
 import users.*;
 
 public class RunSystem {

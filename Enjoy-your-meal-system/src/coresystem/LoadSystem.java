@@ -1,11 +1,11 @@
-package coreSystem;
+package coresystem;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 
 import ingredients.Ingredient;
-import mealSystem.Meal;
+import mealsystem.Meal;
 import orders.Order;
 import users.ClientUser;
 import users.StaffUser;
