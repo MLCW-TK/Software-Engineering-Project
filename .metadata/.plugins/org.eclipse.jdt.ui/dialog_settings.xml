@@ -52,7 +52,7 @@
 	<section name="javadoc">
 		<item value="public" key="access"/>
 		<item value="false" key="noindex"/>
-		<item value="/Users/mathiasloh/Dropbox/Software-Engineering-Project/Enjoy-your-meal-system/javadoc.xml" key="antpath"/>
+		<item value="/Users/mathiasloh/Dropbox/Software-Engineering-Project/Group1_Project_IS1220_part1_Loh_Xiong/javadoc.xml" key="antpath"/>
 		<item value="false" key="nodeprecatedlist"/>
 		<item value="true" key="use"/>
 		<item value="true" key="author"/>
@@ -69,19 +69,14 @@
 		<item value="/Users/mathiasloh/Dropbox/Software-Engineering-Project/Enjoy-your-meal-system/doc" key="destdir"/>
 		<item value="false" key="openinbrowser"/>
 		<section name="projects">
-			<section name="Enjoy-your-meal-system">
-				<item value="/Users/mathiasloh/Dropbox/Software-Engineering-Project/Enjoy-your-meal-system/javadoc.xml" key="antpath"/>
-				<item value="/Users/mathiasloh/Dropbox/Software-Engineering-Project/Enjoy-your-meal-system/doc" key="destdir"/>
-				<item value="" key="href"/>
-			</section>
 			<section name="ProjectUML">
 				<item value="/Users/mathiasloh/Dropbox/Software-Engineering-Project/ProjectUML/javadoc.xml" key="antpath"/>
 				<item value="/Users/mathiasloh/Dropbox/Software-Engineering-Project/ProjectUML/doc" key="destdir"/>
 				<item value="" key="href"/>
 			</section>
-			<section name="Group 22_Project IS1220_Part 2_KOH_ZHANG">
-				<item value="/Users/mathiasloh/Downloads/Group 22_Project IS1220_Part 2_KOH_ZHANG_versionfinal/Group 22_Project IS1220_Part 2_KOH_ZHANG/javadoc.xml" key="antpath"/>
-				<item value="/Users/mathiasloh/Downloads/Group 22_Project IS1220_Part 2_KOH_ZHANG_versionfinal/Group 22_Project IS1220_Part 2_KOH_ZHANG/doc" key="destdir"/>
+			<section name="Group1_Project_IS1220_part1_Loh_Xiong">
+				<item value="/Users/mathiasloh/Dropbox/Software-Engineering-Project/Group1_Project_IS1220_part1_Loh_Xiong/javadoc.xml" key="antpath"/>
+				<item value="/Users/mathiasloh/Dropbox/Software-Engineering-Project/Enjoy-your-meal-system/doc" key="destdir"/>
 				<item value="" key="href"/>
 			</section>
 		</section>
