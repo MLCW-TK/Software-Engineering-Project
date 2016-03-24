@@ -1,0 +1,567 @@
+package commandInterface;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+import libraryStructurePackage.*;
+import memberPackage.*;
+
+public class Client {
+	
+	public static ArrayList<Library> libraries = new ArrayList<Library>();
+	public static ArrayList<Member> members = new ArrayList<Member>();	
+	private static Scanner scanner = new Scanner(System.in);
+	private static CommandConsole cC = new CommandConsole();
+	
+	/*
+	 * create library <library name> : to create a library with a given name
+	 */
+	public static void createLibrary(String str) throws Exception{
+		
+		
+		String command = str.substring(16,str.length()-1);//command = library_name
+	
+		if (command.equals("")){
+			System.out.println("Please enter the name of the library!");
+			return;
+		}
+		
+		cC.create_library(command);
+		
+	}
+	
+
+	/*
+	 * add_room <library name> : to add a room to a library with given name
+	 */
+	private static void addRoom(String str) throws Exception {
+		String command = str.substring(10,str.length()-1);//command = library_name
+		
+		if (command.equals("")){
+			System.out.println("Please enter the name of the library!");
+			return;
+		}
+		
+		try{
+			cC.add_room(command,"");
+		}catch (Exception e){
+			return;
+		}
+		
+	}
+	
+	/*
+	 * add bookcase <library name, num shelves, room name> : to add a book-case with num shelves to a given room of a library with given name
+	 */
+	private static void addBookcase(String str) throws Exception {
+		String command = str.substring(14,str.length()-1);
+		//command = library_name, num_shelves,room_name
+		
+		StringTokenizer st = new StringTokenizer(command,",");
+		if (st.countTokens() != 3){
+			System.out.println("Command Line illegal!");
+			return;
+		}
+		
+			String library_name = st.nextToken();
+			int num_shelves = Integer.parseInt(st.nextToken());
+		    String room_name = st.nextToken();
+		     
+		try{
+			cC.add_bookcase(library_name, num_shelves,room_name);
+			
+		}catch (Exception e){
+			return;
+		}
+		
+	}
+	
+
+	/*
+	 * add_item <author name,title,item type, year, publisher,library name>
+	 * : to add a library item with given author, title, item type (book, CD, DVD),
+	 * year of publication, publisher to the temporary storage box of library named
+	 * library name.
+	 */
+	private static void addItem(String str) throws Exception {
+		String command = str.substring(10,str.length()-1);
+		//command = author_name,title,item_type, year, publisher,library_name
+		
+		StringTokenizer st = new StringTokenizer(command,",");
+		if (st.countTokens() != 6){
+			System.out.println("Command Line illegal!");
+			return;
+		}
+		
+			String author_name = st.nextToken();
+		    String title = st.nextToken();
+		    String item_type = st.nextToken();
+		    int year = Integer.parseInt(st.nextToken());
+		    String publisher = st.nextToken();
+		    String library_name = st.nextToken();
+		    
+		try{
+			cC.add_item(author_name,title,item_type, year, publisher,library_name);
+			
+		}catch (Exception e){
+			return;
+		}
+	}
+	
+	/*
+	 * store items <library name, storing strategy> : to store all library items
+	 * contained in the temporary storage box of library named library name into
+	 * the bookcases of the library using the given storing strategy.
+	 */
+	private static void storeItems(String str) throws Exception {
+		String command = str.substring(13,str.length()-1);
+		//command = library_name,strategy
+		
+		StringTokenizer st = new StringTokenizer(command,",");
+		
+		if (st.countTokens() != 2){
+			System.out.println("Command Line illegal!");
+			return;
+		}
+		
+			String library_name = st.nextToken();
+		    String strategy = st.nextToken();
+		    
+		try{
+			cC.store_items(library_name,strategy);
+			
+		}catch (Exception e){
+			return;
+		}
+		
+	}
+	
+	/*
+	 * unstore items <library name> : to remove all items stored in the bookcases
+	 * of library library name and place them all into the temporary storage box of
+	 * the library.
+	 */
+	private static void unStoreItems(String str) throws Exception {
+		String command = str.substring(15,str.length()-1);
+		//command = library_name
+
+		if (command.equals("")){
+			System.out.println("Please enter the name of the library!");
+			return;
+		}
+		
+		try{
+			cC.unstore_items(command);
+			
+		}catch (Exception e){
+			return;
+		}
+		
+	}
+	
+	/*list items <library name> :
+	 * to list all the items (books, CDs, DVDs) of a given library
+	 */
+	private static void listItems(String str) throws Exception {
+		String command = str.substring(12,str.length()-1);
+		//command = library_name
+
+		if (command.equals("")){
+			System.out.println("Please enter the name of the library!");
+			return;
+		}
+		
+		try{
+			cC.list_items(command);
+			
+		}catch (Exception e){
+			return;
+		}
+	}
+	
+	/*
+	 * list room <room name> : to list all bookcase (together with their content) in
+	 * room room name.
+	 */
+	private static void listRoom(String str) throws Exception {
+		String command = str.substring(11,str.length()-1);
+		//command = room_name 
+
+		if (command.equals("")){
+			System.out.println("Please enter the name of the room!");
+			return;
+		}
+		
+		try{
+			cC.list_room(command);
+		}catch (Exception e){
+			return;
+		}
+	}
+	
+	/*list_bookcase <room name, bookcase name> : to list all shelves (together
+	 * with their content) of bookshelf bookcase name located in room room name.
+     */
+	private static void listBookcase(String str) throws Exception {
+		String command = str.substring(15,str.length()-1);
+		StringTokenizer st = new StringTokenizer(command,",");
+		//command = room_name,bookcase_name
+		
+		if (st.countTokens() != 2){
+			System.out.println("Command Line illegal!");
+			return;
+		}
+		
+			String room_name = st.nextToken();
+		    String bookcase_name = st.nextToken();
+		    
+		try{
+			cC.list_bookcase(room_name,bookcase_name);
+		}catch (Exception e){
+			return;
+		}
+	}
+	
+	/*find items <author name> : to list all items (books, CDs, DVDs) whose
+	 * author is author name
+	 */
+	private static void findItems(String str) throws Exception {
+		String command = str.substring(12,str.length()-1);
+		//command = author_name
+
+		if (command.equals("")){
+			System.out.println("Please enter the name of the author_name!");
+			return;
+		}
+		
+		try{
+			cC.find_items(command);
+			
+		}catch (Exception e){
+			return;
+		}
+	}
+	
+	/*search title <title name> to list all items (books, CDs, DVDs) whose
+	 *title is title name
+	 */
+	private static void searchTitle(String str) throws Exception {
+		String command = str.substring(14,str.length()-1);
+		
+		//command = item_title 
+		if (command.equals("")){
+			System.out.println("Please enter the name of the title!");
+			return;
+		}
+		
+		try{
+			cC.search_title(command);
+			
+		}catch (Exception e){
+			return;
+		}
+	}
+	
+	/*add member <member name, ccard num, email, membership type> : to add
+	 * new member to the library
+	 */
+	private static void addMember(String str) throws Exception {
+		String command = str.substring(12,str.length()-1);
+		/*
+		 * Note: Here,we separate the name and the surname
+		 * command = name,surname,ccard_num,email,membership_type
+		 */
+		
+		StringTokenizer st = new StringTokenizer(command,",");
+		
+		if (st.countTokens() != 5){
+			System.out.println("Command Line illegal!");
+			return;
+		}
+		
+		    String name = st.nextToken();
+		    String surname = st.nextToken();
+			String ccard_num = st.nextToken();
+		    String email = st.nextToken();
+		    String membership_type = st.nextToken();
+		    
+		try{
+			cC.add_member(name,surname,ccard_num,email,membership_type);
+			
+		}catch (Exception e){
+			return;
+		}
+	}
+	
+	/*borrow item <member name, item title> : to let member named member nameborrow the item titled item title.
+	 */
+	private static void borrowItem(String str) throws Exception {
+		String command = str.substring(13,str.length()-1);
+		/*
+		 * Note: Here,we separate the name and the surname
+		 * command = name,surname,item_title
+		 */
+		
+		StringTokenizer st = new StringTokenizer(command,",");
+		
+		
+		if (st.countTokens() == 3){
+			String name = st.nextToken();
+			String surname = st.nextToken();
+			String item_title = st.nextToken();
+			try{
+				cC.borrow_item(name,surname,item_title);
+			}catch (Exception e){
+			}
+			return;
+		}
+	
+		
+		if (st.countTokens() == 6){
+			String name = st.nextToken();
+			String surname = st.nextToken();
+			String item_title = st.nextToken();
+			int day = Integer.parseInt(st.nextToken());
+			int month = Integer.parseInt(st.nextToken());
+			int year = Integer.parseInt(st.nextToken());
+			
+			try{
+				cC.borrow_item(name,surname,item_title,day,month,year);
+			}catch (Exception e){
+			}
+			return;
+		}
+		System.out.println("Command Line illegal!");
+	}
+	
+	/* check borrowed <member name> : to check the borrowing situation for the
+	 * member named member nameand possibly penalise the member if required.
+	 */
+	private static void checkBorrowed(String str) throws Exception {
+		String command = str.substring(16,str.length()-1);
+		/*
+		 * Note: Here,we separate the name and the surname
+		 * command = name,surname
+		 */
+		
+		
+		StringTokenizer st = new StringTokenizer(command,",");
+	    
+		if (st.countTokens() == 2){
+
+			String name = st.nextToken();
+		    String surname = st.nextToken();
+		    try{
+				cC.check_borrowed(name,surname);
+			}catch (Exception e){
+			}
+			return;
+		}
+		
+		if (st.countTokens() == 5){
+		    
+			String name = st.nextToken();
+		    String surname = st.nextToken();
+		    int day = Integer.parseInt(st.nextToken());
+			int month = Integer.parseInt(st.nextToken());
+			int year = Integer.parseInt(st.nextToken());
+			
+		    try{
+				cC.check_borrowed(name,surname,day,month,year);
+			}catch (Exception e){
+			}
+			return;
+		}
+
+		System.out.println("Command Line illegal!");
+	}
+	
+	/*set_unborrowable <item_title> : 
+	 * to set an  item whose title is “item_title” to be unborrowable 
+	 * which means only the golden member can borrow it  
+	 */
+	private static void setUnborrowable(String str) throws Exception {
+		String command = str.substring(18,str.length()-1);
+		
+		if (command.equals("")){
+			System.out.println("Please enter the title!");
+			return;
+		}
+		
+		try{
+			cC.set_unborrowable(command);
+			
+		}catch (Exception e){
+			return;
+		}
+		
+	}
+	public static void inputTreatement(String str) throws Exception{
+		
+		int len = str.length();
+		
+		String lastLetter = str.substring(len-1, len);
+	
+		/*
+		 * create library <library name> : to create a library with a given name
+		 */
+		
+		if ((str.length()>=17)&&((str.substring(0,16)).equals("create_library <"))&&(lastLetter.equals(">"))){
+			createLibrary(str);
+			return;
+		}
+		
+		/*
+		 * add_room <library name> : to add a room to a library with given name
+		 */
+		
+		
+		if (((str.length()>=11))&&((str.substring(0,10)).equals("add_room <"))&&(lastLetter.equals(">"))){
+			addRoom(str);
+			return;
+		}
+		
+		/*
+		 * add bookcase <library name, num shelves, room name> : to add a book-case with num shelves to a given room of a library with given name
+		 */
+		
+		if (((str.length()>=15))&&((str.substring(0,14)).equals("add_bookcase <"))&&(lastLetter.equals(">"))){
+			addBookcase(str);
+			return;
+		}
+		
+		/*
+		 * add_item <author name,title,item type, year, publisher,library name>
+		 * : to add a library item with given author, title, item type (book, CD, DVD),
+		 * year of publication, publisher to the temporary storage box of library named
+		 * library name.
+		 */
+		
+		if (((str.length()>=11))&&((str.substring(0,10)).equals("add_item <"))&&(lastLetter.equals(">"))){
+			addItem(str);
+			return;
+		}
+		
+		/*
+		 * store items <library name, storing strategy> : to store all library items
+		 * contained in the temporary storage box of library named library name into
+		 * the bookcases of the library using the given storing strategy.
+		 */
+		
+		if (((str.length()>=14))&&((str.substring(0,13)).equals("store_items <"))&&(lastLetter.equals(">"))){
+			storeItems(str);
+			return;
+		}
+		
+		/*
+		 * unstore items <library name> : to remove all items stored in the bookcases
+		 * of library library name and place them all into the temporary storage box of
+		 * the library.
+		 */
+		if (((str.length()>=16))&&((str.substring(0,15)).equals("unstore_items <"))&&(lastLetter.equals(">"))){
+			unStoreItems(str);
+			return;
+		}
+		
+		/*list items <library name> :
+		 * to list all the items (books, CDs, DVDs) of a given library
+		 */
+		if (((str.length()>=13))&&((str.substring(0,12)).equals("list_items <"))&&(lastLetter.equals(">"))){
+			listItems(str);
+			return;
+		}
+		
+		/*list room <room name> : to list all bookcase (together with their content) in
+		 * room room name.
+		 */
+		if (((str.length()>=12))&&((str.substring(0,11)).equals("list_room <"))&&(lastLetter.equals(">"))){
+			listRoom(str);
+			return;
+		}
+		
+		/*list_bookcase <room name, bookcase name> : to list all shelves (together
+		 * with their content) of bookshelf bookcase name located in room room name.
+         */
+		if (((str.length()>=16))&&((str.substring(0,15)).equals("list_bookcase <"))&&(lastLetter.equals(">"))){
+			//System.out.println("Ready to list bookcase");
+			listBookcase(str);
+			return;
+		}
+		
+		/*find items <author name> : to list all items (books, CDs, DVDs) whose
+		 * author is author name
+		 */
+		if (((str.length()>=13))&&((str.substring(0,12)).equals("find_items <"))&&(lastLetter.equals(">"))){
+			findItems(str);
+			return;
+		}
+		
+		/*search title <title name> to list all items (books, CDs, DVDs) whose
+		 *title is title name
+		 */
+		if (((str.length()>=15))&&((str.substring(0,14)).equals("search_title <"))&&(lastLetter.equals(">"))){
+			//System.out.println("Ready to search titles");
+			searchTitle(str);
+			return;
+		}
+		
+		/*add member <member name, ccard num, email, membership type> : to add
+		 * new member to the library
+		 */
+		if (((str.length()>=13))&&((str.substring(0,12)).equals("add_member <"))&&(lastLetter.equals(">"))){
+			addMember(str);
+			return;
+		}
+		
+		/*borrow item <member name, item title> : to let member named member nameborrow the item titled item title.
+		 */
+		if (((str.length()>=14))&&((str.substring(0,13)).equals("borrow_item <"))&&(lastLetter.equals(">"))){
+			borrowItem(str);
+			return;
+		}
+		
+		/* check borrowed <member name> : to check the borrowing situation for the
+		 * member named member name and possibly penalise the member if required.
+		 */
+		if (((str.length()>=17))&&((str.substring(0,16)).equals("check_borrowed <"))&&(lastLetter.equals(">"))){
+			checkBorrowed(str);
+			return;
+		}
+		
+		/*set_unborrowable <item_title> : 
+		 * to set an  item whose title is “item_title” to be unborrowable 
+		 * which means only the golden member can borrow it  
+		 */
+		if (((str.length()>=19))&&((str.substring(0,18)).equals("set_unborrowable <"))&&(lastLetter.equals(">"))){
+			setUnborrowable(str);
+			return;
+		}
+		//If the command line is illegal
+		System.out.println("The command line is illegal! Please input again!");
+	}
+	
+	public static void main(String[] args) throws Exception {
+		String str;
+		
+		while (true) {
+			
+			System.out.println("Please enter a command line:");
+			System.out.println("(If you want to stop the program, Press EXIT!)");
+			str = scanner.nextLine();
+			
+			//Stop the loop
+			if (str.equalsIgnoreCase("EXIT")){
+				System.out.print("Bye!");
+				return;
+			}
+			
+			
+			inputTreatement(str);
+			
+			System.out.println("Please press ENTER to continue:");
+			scanner.nextLine();
+			
+		}
+	}
+}

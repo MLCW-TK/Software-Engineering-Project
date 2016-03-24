@@ -36,6 +36,10 @@ public class RestaurantSystem implements Publisher{
 	 * Public method to add a ClientUser object to user_list
 	 * @param newUser
 	 */
+	public Set<ClientUser> getUserList(){
+		return user_list;
+	}
+	
 	public void addUser(ClientUser newUser){
 		user_list.add(newUser);
 	}

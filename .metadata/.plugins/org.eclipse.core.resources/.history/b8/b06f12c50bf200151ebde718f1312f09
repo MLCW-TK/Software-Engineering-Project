@@ -1,0 +1,70 @@
+package commandinterface;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
+
+import coresystem.RestaurantSystem;
+import ingredients.Ingredient;
+import mealsystem.Meal;
+import orders.Order;
+import users.ClientUser;
+
+public class CommandConsole {
+	static RestaurantSystem re1;
+	static ArrayList<Order> orders;
+	static ClientUser LoginUser;
+	static HashSet<Meal> meals;
+	static HashSet<Ingredient> ingredients;
+	private static Scanner sc;
+	private static CommandList cl = new CommandList();
+	
+	public static void registerUser(String input) throws RuntimeException{
+			String command = input.substring(11,input.length()-1);//command = library_name
+		
+			if (command.equals("")){
+				System.out.println("Please enter the name of the library!");
+				return;
+			}
+			
+			cl.register_user;
+			
+		}
+		
+	}
+	
+	public static void inputTreatment(String input){
+		int strlength = input.length();
+		String lastLetter = input.substring(strlength-1, strlength);
+		if ((input.length()>=11)&&((input.substring(0,10)).equals("register<"))&&(lastLetter.equals(">"))){
+		registerUser(input);
+		return;
+	}
+		
+		
+	}
+	
+	public static void main(String[] args) throws Exception {
+		String input;
+		
+		while (true) {
+			
+			System.out.println("Please enter a command line:");
+			System.out.println("(If you want to stop the program, Press EXIT!)");
+			input = sc.nextLine();
+			
+			//Stop the loop
+			if (input.equalsIgnoreCase("EXIT")){
+				System.out.print("Thanks for dining with us!");
+				return;
+			}
+			
+			
+			inputTreatement(input);
+			
+			System.out.println("Please press ENTER to continue:");
+			sc.nextLine();
+			
+		}
+	}
+}
