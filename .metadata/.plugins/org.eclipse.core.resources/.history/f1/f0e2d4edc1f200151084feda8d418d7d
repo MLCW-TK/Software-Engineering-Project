@@ -169,14 +169,6 @@ public class ClientConsole{
 		}
 	}
 	
-	public static void saveMeal(String input){
-		try {
-			currentMeal = cl.saveMeal();
-		} catch (RuntimeException e){
-			throw new RuntimeException(e.getMessage());
-		}
-	}
-	
 	public static void operationsInputTreatment(String input){
 		int strlength = input.length();
 		String lastLetter = input.substring(strlength-1, strlength);
@@ -191,10 +183,6 @@ public class ClientConsole{
 			return;}
 
 		if ((input.length()==14)&&((input.substring(0,13)).equals("currentMeal <"))&&(lastLetter.equals(">"))){
-			currentMeal(input);
-			return;}
-		
-		if ((input.length()==11)&&((input.substring(0,10)).equals("saveMeal <"))&&(lastLetter.equals(">"))){
 			currentMeal(input);
 			return;}
 		

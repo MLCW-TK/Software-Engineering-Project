@@ -169,14 +169,6 @@ public class ClientConsole{
 		}
 	}
 	
-	public static void saveMeal(String input){
-		try {
-			currentMeal = cl.saveMeal();
-		} catch (RuntimeException e){
-			throw new RuntimeException(e.getMessage());
-		}
-	}
-	
 	public static void operationsInputTreatment(String input){
 		int strlength = input.length();
 		String lastLetter = input.substring(strlength-1, strlength);

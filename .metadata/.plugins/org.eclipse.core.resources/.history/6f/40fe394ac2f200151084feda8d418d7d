@@ -95,7 +95,7 @@ public class CommandConsole {
 			throw new RuntimeException("currentMeal is empty!");
 		}
 		
-		System.out.println("Would you like to confirm your order? (yes/no)");
+		System.out.println("Would you like to confirm your order?");
 		String input = sc.nextLine();
 		if (input.equalsIgnoreCase("YES")){
 			ClientConsole.meals.add(ClientConsole.currentMeal);
