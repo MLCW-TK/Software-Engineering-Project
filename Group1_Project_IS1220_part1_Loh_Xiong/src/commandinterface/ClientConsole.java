@@ -177,42 +177,62 @@ public class ClientConsole{
 		}
 	}
 	
+	public static void listIngredients(String input){
+		String data = input.substring("listIngredients".length()+2,input.length()-1);
+		if (data.contains(",")){
+			System.out.println("Please enter valid commands");
+			throw new RuntimeException("Eg. listingredients <mealName>");				
+		}
+		
+		try {
+			cl.listIngredients(data);
+		} catch (RuntimeException e){
+			throw new RuntimeException(e.getMessage());
+		}
+	}
 	public static void operationsInputTreatment(String input){
 		int strlength = input.length();
 		String lastLetter = input.substring(strlength-1, strlength);
 
 		
-		if ((input.length()>=13)&&((input.substring(0,12)).equals("createMeal <"))&&(lastLetter.equals(">"))){
-			registerUser(input);
+		if ((input.length()>="createMeal <".length()+1)&&((input.substring(0,"createMeal <".length())).equals("createMeal <"))&&(lastLetter.equals(">"))){
+			createMeal(input);
 			return;}
 		
-		if ((input.length()>=16)&&((input.substring(0,15)).equals("addIngredient <"))&&(lastLetter.equals(">"))){
-			registerUser(input);
+		if ((input.length()>="addIngredient <".length()+1)&&((input.substring(0,"addIngredient <".length())).equals("addIngredient <"))&&(lastLetter.equals(">"))){
+			addIngredient(input);
 			return;}
 
-		if ((input.length()==14)&&((input.substring(0,13)).equals("currentMeal <"))&&(lastLetter.equals(">"))){
+		if ((input.length()=="currentMeal <".length()+1)&&((input.substring(0,"currentMeal <".length())).equals("currentMeal <"))&&(lastLetter.equals(">"))){
 			currentMeal(input);
 			return;}
 		
-		if ((input.length()==11)&&((input.substring(0,10)).equals("saveMeal <"))&&(lastLetter.equals(">"))){
-			currentMeal(input);
+		if ((input.length()=="saveMeal <".length()+1)&&((input.substring(0,"saveMeal <".length())).equals("saveMeal <"))&&(lastLetter.equals(">"))){
+			saveMeal(input);
 			return;}
 		
+		if ((input.length()>="listIngredients <".length()+1)&&((input.substring(0,"listIngredients <".length())).equals("listIngredients <"))&&(lastLetter.equals(">"))){
+			listIngredients(input);
+			return;}
 	}
 	
 	// Main program
 	public static void main(String[] args) throws Exception {
 		String input = new String();
 		while (globalPhase){
+			boolean loginMessagePrinted = false;
+			boolean loggedinMessagePrinted = false;
 			while (loginPhase) {
-				System.out.println("Welcome to our restaurant!");
-				System.out.println("To register, please enter: registerClient <firstname, lastname, username, password>");
-				System.out.println("To login, please enter: login <username, password>");
-				// Note that a secret method insertChef is included in the system
-				// Only "Special Users" would be made known of this feature
-				System.out.println("(please type 'exit' to exit)");
+				if (!loginMessagePrinted){
+					System.out.println("Welcome to our restaurant!");
+					System.out.println("To register, please enter: registerClient <firstname, lastname, username, password>");
+					System.out.println("To login, please enter: login <username, password>");
+					// Note that a secret method insertChef is included in the system
+					// Only "Special Users" would be made known of this feature
+					System.out.println("(please type 'exit' to exit)");	
+					loginMessagePrinted = true;
+				}
 				input = sc.nextLine();
-							
 				//Stop the loop
 				if (input.equalsIgnoreCase("EXIT")){
 					System.out.print("Thanks for dining with us!");
@@ -224,6 +244,7 @@ public class ClientConsole{
 					System.out.println("");
 					continue;
 				}
+
 				
 				try{
 					loginInputTreatment(input);	
@@ -232,10 +253,15 @@ public class ClientConsole{
 					System.out.println("");
 				}
 				
-			} while (loggedinPhase){
-				System.out.println("Welcome, " + currentUser.getFirstname() + " " + 
-					currentUser.getLastname() + "!" + " " + "(" + currentUser.getUsertype() + ")");
-				System.out.println("(You may type 'logout' to log out at any time)");
+			}
+			while (loggedinPhase){
+				if (!loggedinMessagePrinted){
+					System.out.println("Welcome, " + currentUser.getFirstname() + " " + 
+							currentUser.getLastname() + "!" + " " + "(" + currentUser.getUsertype() + ")");
+					System.out.println("You may type -help to see the available commands.");
+					System.out.println("(You may type 'logout' to log out at any time)");
+					loggedinMessagePrinted = true;
+				}
 				input = sc.nextLine();
 				if (input.equalsIgnoreCase("LOGOUT")){
 					System.out.println("Thank you for your time today!");
@@ -245,6 +271,20 @@ public class ClientConsole{
 					loggedinPhase = false;
 					continue;
 				}
+				if (input.equalsIgnoreCase("-help")){
+					if (currentUser.getUsertype().equals("Staff")){
+						String staffOperations = new String();
+						staffOperations+="Here are the operations only available to staff users:\n"
+								+"createMeal <name, price>			:	to create a meal with name and price set.\n"
+								+"addIngredient <name, quantity>	:	add an ingredient to the current meal, with quantity set in grams.\n"
+								+"currentMeal <>					:	print a summary of the current meal.\n"
+								+"saveMeal <>						:	save the curren meal.\n"
+								+"listIngredients <name>			:	list the ingredients of a chosen meal\n";
+						System.out.print(staffOperations);
+					}
+				}
+					
+				
 				try{
 					operationsInputTreatment(input);
 				} catch (RuntimeException e){

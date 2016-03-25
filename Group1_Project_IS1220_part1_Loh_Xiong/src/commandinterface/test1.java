@@ -42,7 +42,7 @@ public class test1 {
 		System.out.println("*** Tests saveMeal ***");
 		cc.saveMeal();
 		System.out.println("");
-		
+		/*
 		// add 20 different meals
 		// 2
 		System.out.print("*** Tests adding 20 different meals ***\n");
@@ -192,9 +192,11 @@ public class test1 {
 		cc.currentMeal();
 		cc.saveMeal();
 		System.out.println("");	
-		
-		System.out.println("Test listIngredients...");
-
+		*/
+		System.out.println("Test listIngredients for existing meal...");
+		cc.listIngredients("Raclette");
+		System.out.println("Test listIngredients for non-existing meal...");
+		cc.listIngredients("Raclettefoo");
 	}
 
 	

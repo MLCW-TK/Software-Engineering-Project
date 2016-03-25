@@ -293,6 +293,15 @@ public abstract class AbstractMeal{
 		return s;
 	}
 	
+	public void printIngredients(){
+		String s = "Meal: "+ this.getName();
+		s+="\nIngredients:\n";
+		for(Ingredient ingredient : this.ingredients){
+			s+=ingredient.getName()+" "+ingredient.getQuantity()+"g\n";
+		}
+		System.out.println(s);
+	}
+	
 	// Equals and hash
 	/**
 	 * Check if the name is the same

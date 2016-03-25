@@ -105,4 +105,19 @@ public class CommandConsole {
 			return ClientConsole.currentMeal;
 		}
 	}
+
+	public void listIngredients(String meal){
+		boolean bool = false;
+		for (AbstractMeal aMeal : ClientConsole.meals){
+			if (aMeal.getName().equalsIgnoreCase(meal)){
+				aMeal.printIngredients();
+				bool = true;
+			}
+		}
+		if (!bool){
+			System.out.println("This meal does not exist yet. You may want to check your spelling or create this meal.");
+			System.out.println("To create a meal: createmeal <name, price>");
+		}
+		
+	}
 }
