@@ -20,3 +20,9 @@
 1458468955029	Rename package 'CustomUtilities'
 1458476507195	Delete element
 1458847447233	Rename type 'CommandConsole'
+1458861593585	Rename method 'inputTreatment'
+1458862209362	Rename type 'CommandConsole'
+1458862223081	Rename type 'CommandList'
+1458863321392	Delete element
+1458863372355	Rename type 'LoginCommandConsole'
+1458863380005	Rename type 'LoginCommandList'

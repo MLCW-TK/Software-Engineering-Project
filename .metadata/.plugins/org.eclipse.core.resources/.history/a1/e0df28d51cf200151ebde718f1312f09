@@ -117,7 +117,7 @@ public class CommandConsole{
 	
 	// Main program
 	public static void main(String[] args) throws Exception {
-		String input = new String();
+		String input;
 		
 		while (loginPhase) {
 			System.out.println("Welcome to our restaurant!");
@@ -149,14 +149,7 @@ public class CommandConsole{
 			System.out.println("Welcome, " + currentUser.getFirstname() + " " + 
 				currentUser.getLastname() + "!" + " " + "(" + currentUser.getUsertype() + ")");
 			System.out.println("(You may type 'logout' to log out at any time)");
-			input = sc.nextLine();
-			if (input.equalsIgnoreCase("LOGOUT")){
-				System.out.println("Thank you for your time today!");
-				System.out.println("You have been logged out");
-				loginPhase = true;
-				loggedinPhase = false;
-				continue;
-			}
+			sc.nextLine();
 			
 		}
 	}

@@ -1,0 +1,43 @@
+package commandinterface;
+
+public class MainCommandConsole {
+	LoginCommandConsole lcc = new LoginCommandConsole();
+	
+	public static void main(String[] args) throws Exception {
+		String input;
+		lcc.
+		while () {
+			System.out.println("Welcome to our restaurant!");
+			System.out.println("What would you like to do?");
+			System.out.println("To register, please enter: registerClient <firstname, lastname, username, password>");
+			System.out.println("To login, please enter: login <username, password>");
+			// Note that a secret method insertChef is included in the system
+			// Only "Special Users" would be made known of this feature
+			System.out.println("(please type 'exit' to exit)");
+			input = sc.nextLine();
+						
+			//Stop the loop
+			if (input.equalsIgnoreCase("EXIT")){
+				System.out.print("Thanks for dining with us!");
+				return;}
+			
+			if (input.equals("")){
+				System.out.println("Wrong inputs detected. Please try again.");
+				System.out.println("");
+				continue;
+			}
+			
+			try{
+				loginInputTreatment(input);	
+			} catch (RuntimeException e){
+				System.out.println(e.getMessage());
+			}
+			
+		} while (loggedinPhase){
+			System.out.println("Welcome, " + currentUser.getFirstname() + " " + 
+				currentUser.getLastname() + "!" + " " + "(" + currentUser.getUsertype() + ")");
+			sc.nextLine();
+			
+		}
+	}
+}

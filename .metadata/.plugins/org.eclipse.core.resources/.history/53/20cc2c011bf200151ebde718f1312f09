@@ -10,18 +10,17 @@ import mealsystem.Meal;
 import orders.Order;
 import users.ClientUser;
 
-public class CommandConsole{
+public class LoginCommandConsole{
 	static RestaurantSystem re1 = new RestaurantSystem("our restaurant!");
 	static ArrayList<Order> orders = new ArrayList<Order>();
 	static HashSet<Meal> meals = new HashSet<Meal>();;
 	static HashSet<Ingredient> ingredients;
 	static Scanner sc = new Scanner(System.in);
-	private static CommandList cl = new CommandList();
+	private static LoginCommandList cl = new LoginCommandList();
 	static ClientUser currentUser;
 	static boolean loginPhase = true;
-	static boolean loggedinPhase = false;
 	
-	// Login Commands
+	
 	public static void registerUser(String input) throws RuntimeException{
 			String command = input.substring(16,input.length()-1);
 			String[] data = command.split(",");
@@ -86,7 +85,6 @@ public class CommandConsole{
 			}
 			
 			loginPhase = false;
-			loggedinPhase = true;
 			currentUser = cl.login(data[0], data[1]);
 	}
 	
@@ -111,53 +109,43 @@ public class CommandConsole{
 		System.out.println("");
 	}
 
-	// ClientUser commands
 	
 	
-	
-	// Main program
-	public static void main(String[] args) throws Exception {
-		String input = new String();
-		
-		while (loginPhase) {
-			System.out.println("Welcome to our restaurant!");
-			System.out.println("To register, please enter: registerClient <firstname, lastname, username, password>");
-			System.out.println("To login, please enter: login <username, password>");
-			// Note that a secret method insertChef is included in the system
-			// Only "Special Users" would be made known of this feature
-			System.out.println("(please type 'exit' to exit)");
-			input = sc.nextLine();
-						
-			//Stop the loop
-			if (input.equalsIgnoreCase("EXIT")){
-				System.out.print("Thanks for dining with us!");
-				return;}
-			
-			if (input.equals("")){
-				System.out.println("Wrong inputs detected. Please try again.");
-				System.out.println("");
-				continue;
-			}
-			
-			try{
-				loginInputTreatment(input);	
-			} catch (RuntimeException e){
-				System.out.println(e.getMessage());
-			}
-			
-		} while (loggedinPhase){
-			System.out.println("Welcome, " + currentUser.getFirstname() + " " + 
-				currentUser.getLastname() + "!" + " " + "(" + currentUser.getUsertype() + ")");
-			System.out.println("(You may type 'logout' to log out at any time)");
-			input = sc.nextLine();
-			if (input.equalsIgnoreCase("LOGOUT")){
-				System.out.println("Thank you for your time today!");
-				System.out.println("You have been logged out");
-				loginPhase = true;
-				loggedinPhase = false;
-				continue;
-			}
-			
-		}
-	}
+//	public static void main(String[] args) throws Exception {
+//		String input;
+//		
+//		while (loginPhase) {
+//			System.out.println("Welcome to our restaurant!");
+//			System.out.println("What would you like to do?");
+//			System.out.println("To register, please enter: registerClient <firstname, lastname, username, password>");
+//			System.out.println("To login, please enter: login <username, password>");
+//			// Note that a secret method insertChef is included in the system
+//			// Only "Special Users" would be made known of this feature
+//			System.out.println("(please type 'exit' to exit)");
+//			input = sc.nextLine();
+//						
+//			//Stop the loop
+//			if (input.equalsIgnoreCase("EXIT")){
+//				System.out.print("Thanks for dining with us!");
+//				return;}
+//			
+//			if (input.equals("")){
+//				System.out.println("Wrong inputs detected. Please try again.");
+//				System.out.println("");
+//				continue;
+//			}
+//			
+//			try{
+//				loginInputTreatment(input);	
+//			} catch (RuntimeException e){
+//				System.out.println(e.getMessage());
+//			}
+//			
+//		} while (loggedinPhase){
+//			System.out.println("Welcome, " + currentUser.getFirstname() + " " + 
+//				currentUser.getLastname() + "!" + " " + "(" + currentUser.getUsertype() + ")");
+//			sc.nextLine();
+//			
+//		}
+//	}
 }

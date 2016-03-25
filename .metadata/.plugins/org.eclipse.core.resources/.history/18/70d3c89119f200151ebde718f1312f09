@@ -2,15 +2,17 @@ package commandinterface;
 
 import users.*;
 
-public class CommandList {
-	// Login commands
+public class LoginCommandList {
+
+	public Object register_user;
+
 	public ClientUser register_user(String firstname, String lastname, String username, String password){
 		ClientUser newUser = new ClientUser(firstname, lastname, username, password);
 		return newUser;
 	}
 	
 	public ClientUser login(String username, String password){
-		for (ClientUser user : CommandConsole.re1.getUserList()){
+		for (ClientUser user : LoginCommandConsole.re1.getUserList()){
 			if (user.getUsername().equals(username) && user.getPassword().equals(password)){
 				return user;
 			}
@@ -23,7 +25,4 @@ public class CommandList {
 		StaffUser newUser = new StaffUser(firstname, lastname, username, password);
 		return newUser;
 	}
-	
-	// ClientUser commands
-	
 }
