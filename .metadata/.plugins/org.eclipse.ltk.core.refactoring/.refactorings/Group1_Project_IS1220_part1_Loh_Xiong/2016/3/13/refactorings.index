@@ -28,3 +28,9 @@
 1458863380005	Rename type 'LoginCommandList'
 1458864664346	Rename method 'register_user'
 1458864681435	Rename method 'insert_chef'
+1458865734926	Rename type 'CommandConsole'
+1458865743251	Rename type 'CommandList'
+1458866278415	Delete element
+1458867655189	Rename type 'Meal'
+1458867932988	Rename type 'MealFactory'
+1458871280007	Rename local variable 'ingrc'

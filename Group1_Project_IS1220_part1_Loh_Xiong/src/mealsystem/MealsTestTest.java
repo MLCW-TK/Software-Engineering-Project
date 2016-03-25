@@ -15,9 +15,9 @@ public class MealsTestTest {
 
 	@Test
 	public void test() {
-		MealFactory appertizers = new AppertizerFactory();
-		MealFactory maincourses = new MainCourseFactory();
-		MealFactory desserts = new DessertFactory();
+		AbstractMealFactory appertizers = new AppertizerFactory();
+		AbstractMealFactory maincourses = new MainCourseFactory();
+		AbstractMealFactory desserts = new DessertFactory();
 		
 		IngredientFactory ingredient = new IngredientFactory();
 		Ingredient vegetable = ingredient.createIngredient("vegetable", 1, 1.15);
@@ -25,7 +25,7 @@ public class MealsTestTest {
 		Appertizer salad = (Appertizer) appertizers.createMeal("salad", "good for your health", 0, vegetable);
 		MainCourse steak = (MainCourse) maincourses.createMeal("salad", "also good for you", vegetable);
 		Dessert icecream = (Dessert) desserts.createMeal("icecream", "good for you", 10, vegetable);
-		HashSet meal_list = new HashSet<Meal>();
+		HashSet meal_list = new HashSet<AbstractMeal>();
 		
 		assertTrue(!salad.equals(steak));
 		meal_list.add(salad);

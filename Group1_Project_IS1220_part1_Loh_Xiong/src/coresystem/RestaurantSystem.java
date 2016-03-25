@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import mealsystem.Meal;
+import mealsystem.AbstractMeal;
 import update.Publisher;
 import update.Subscriber;
 import users.ClientUser;
@@ -20,7 +20,7 @@ public class RestaurantSystem implements Publisher{
 	boolean exit = false;
 	Set<ClientUser> user_list;
 	private ArrayList<Subscriber> subscriber_list = new ArrayList<Subscriber>();
-	public HashSet<Meal> meal_list = new HashSet<Meal>();
+	public HashSet<AbstractMeal> meal_list = new HashSet<AbstractMeal>();
 	public String birthdaySpecialOffer = "30% discount!";
 	public double birthdayOffer = 0.3;
 	/**
@@ -416,7 +416,7 @@ public class RestaurantSystem implements Publisher{
 		return this.subscriber_list;
 	}
 	
-	HashSet<Meal> getMeal_list(){
+	HashSet<AbstractMeal> getMeal_list(){
 		return this.meal_list;
 	}
 //Region - update
@@ -477,7 +477,7 @@ public class RestaurantSystem implements Publisher{
 	
 	public String allMealOffer(){
 		String offers = new String();
-		for(Meal meal: this.getMeal_list()){
+		for(AbstractMeal meal: this.getMeal_list()){
 			if(meal.isSpecialOffer()){
 				offers = offers + meal.toString();
 			}

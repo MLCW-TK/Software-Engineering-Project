@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 import ingredients.Ingredient;
-import mealsystem.Meal;
+import mealsystem.AbstractMeal;
 import orders.Order;
 import users.ClientUser;
 import users.StaffUser;
@@ -15,7 +15,7 @@ public class LoadSystem extends Thread {
 	RestaurantSystem re1;
 	ArrayList<Order> orders;
 	ClientUser LoginUser;
-	HashSet<Meal> meals;
+	HashSet<AbstractMeal> meals;
 	HashSet<Ingredient> ingredients;
 	private Scanner sc;
 	
@@ -51,7 +51,7 @@ public class LoadSystem extends Thread {
 	 * Add a meal to the HashSet<Meals> meals
 	 * @param meals
 	 */
-	public void addMeals(Meal meals){
+	public void addMeals(AbstractMeal meals){
 		this.meals.add(meals);
 	}
 	

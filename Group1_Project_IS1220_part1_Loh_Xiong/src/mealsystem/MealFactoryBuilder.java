@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MealFactoryBuilder {
-	public static Map<String,MealFactory> buildFactory() {
-		Map<String, MealFactory> m = new HashMap<String, MealFactory>();
+	public static Map<String,AbstractMealFactory> buildFactory() {
+		Map<String, AbstractMealFactory> m = new HashMap<String, AbstractMealFactory>();
 		m.put("Appertizer", new AppertizerFactory());
 		m.put("MainCourse", new MainCourseFactory());
 		m.put("Dessert", new DessertFactory());

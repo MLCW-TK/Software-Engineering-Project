@@ -2,7 +2,7 @@ package mealsystem;
 
 import ingredients.Ingredient;
 
-public class Appertizer extends Meal{
+public class Appertizer extends AbstractMeal{
 
 	public Appertizer(String name, String description, double price, Ingredient[] ingredients) {
 		super(name, description, price, ingredients);
@@ -12,6 +12,9 @@ public class Appertizer extends Meal{
 		super(name, description, ingredients);
 	}
 	
+	public Appertizer(String name, double price){
+		super(name, price);
+	}
 	
 	@Override
 	public boolean equals(Object o){

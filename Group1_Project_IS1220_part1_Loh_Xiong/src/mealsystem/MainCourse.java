@@ -2,7 +2,7 @@ package mealsystem;
 
 import ingredients.Ingredient;
 
-public class MainCourse extends Meal {
+public class MainCourse extends AbstractMeal {
 
 	public MainCourse(String name, String description, double price, Ingredient[] ingredients) {
 		super(name, description, price, ingredients);
@@ -11,6 +11,10 @@ public class MainCourse extends Meal {
 	
 	public MainCourse(String name, String description, Ingredient[] ingredients) {
 		super(name, description, ingredients);
+	}
+	
+	public MainCourse(String name, double price){
+		super(name, price);
 	}
 	
 	@Override

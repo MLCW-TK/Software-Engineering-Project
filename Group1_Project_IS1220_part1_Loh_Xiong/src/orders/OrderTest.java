@@ -14,7 +14,7 @@ import mealsystem.Dessert;
 import mealsystem.DessertFactory;
 import mealsystem.MainCourse;
 import mealsystem.MainCourseFactory;
-import mealsystem.MealFactory;
+import mealsystem.AbstractMealFactory;
 import mealsystem.NormalBehavior;
 import users.*;
 
@@ -37,9 +37,9 @@ public class OrderTest {
 		 * Loads all predefined meals
 		 * Constructors: Meal(String name, String description, Ingredients args(ingredients))
 		 */
-		MealFactory appertizers = new AppertizerFactory();
-		MealFactory maincourses = new MainCourseFactory();
-		MealFactory desserts = new DessertFactory();
+		AbstractMealFactory appertizers = new AppertizerFactory();
+		AbstractMealFactory maincourses = new MainCourseFactory();
+		AbstractMealFactory desserts = new DessertFactory();
 		
 		Appertizer salad = (Appertizer) appertizers.createMeal("salad", "good for your health", 1, vegetable);
 		MainCourse steak = (MainCourse) maincourses.createMeal("salad", "also good for you", vegetable);

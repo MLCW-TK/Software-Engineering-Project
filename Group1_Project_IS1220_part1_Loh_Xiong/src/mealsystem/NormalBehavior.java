@@ -7,7 +7,7 @@ import ingredients.Ingredient;
 public class NormalBehavior implements MealBehavior {
 
 	@Override
-	public void behavior(Meal meal, Ingredient ingredient, double quantity) {
+	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {
 		meal.setPrice(meal.default_price);
 		meal.ingredients = new HashSet<Ingredient>();
 		for (Ingredient obj : meal.default_ingredients){

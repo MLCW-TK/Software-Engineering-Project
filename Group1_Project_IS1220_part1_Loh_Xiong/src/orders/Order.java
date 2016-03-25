@@ -1,7 +1,7 @@
 package orders;
 
 import customutilities.CustomUtilities;
-import mealsystem.Meal;
+import mealsystem.AbstractMeal;
 import users.User;
 
 import java.util.*;
@@ -13,7 +13,7 @@ import cardfidelitysystem.PointFidelityCard;
 public class Order{
 	Stack<String> SummarySequence;
 	ArrayList<ArrayList<Object>> orderSequence;
-	HashMap<Meal, Integer> meal_count;
+	HashMap<AbstractMeal, Integer> meal_count;
 	ArrayList<ArrayList<Object>> specialOfferOrderSequence;
 	double total_transaction;
 	
@@ -21,7 +21,7 @@ public class Order{
 	 * Constructor Order
 	 */
 	public Order(){
-		this.meal_count = new HashMap<Meal, Integer>();
+		this.meal_count = new HashMap<AbstractMeal, Integer>();
 		this.orderSequence = new ArrayList<ArrayList<Object>>();
 		this.specialOfferOrderSequence = new ArrayList<ArrayList<Object>>();
 		this.SummarySequence = new Stack<String>();
@@ -33,7 +33,7 @@ public class Order{
 	 * @param user
 	 * @param count
 	 */
-	public void Add_order(Meal meal, User user, int count){
+	public void Add_order(AbstractMeal meal, User user, int count){
 		// Creates a list of all orders
 		for (int i = 0; i<count; i++){
 			ArrayList<Object> temp = new ArrayList<Object>();
@@ -103,7 +103,7 @@ public class Order{
 	public double getTotalTransaction(){return this.total_transaction;}
 	
 	
-	public void Add_order_specialoffer(Meal meal, User user, int count){
+	public void Add_order_specialoffer(AbstractMeal meal, User user, int count){
 		for (int i = 0; i<count; i++){
 			
 		}

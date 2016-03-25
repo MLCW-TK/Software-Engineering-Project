@@ -8,7 +8,7 @@ import mealsystem.Dessert;
 import mealsystem.DessertFactory;
 import mealsystem.MainCourse;
 import mealsystem.MainCourseFactory;
-import mealsystem.MealFactory;
+import mealsystem.AbstractMealFactory;
 import users.*;
 
 public class RunSystem {
@@ -41,9 +41,9 @@ public class RunSystem {
 		 * Loads all predefined meals
 		 * Constructors: Meal(String name, String description, Ingredients args(ingredients))
 		 */
-		MealFactory appertizers = new AppertizerFactory();
-		MealFactory maincourses = new MainCourseFactory();
-		MealFactory desserts = new DessertFactory();
+		AbstractMealFactory appertizers = new AppertizerFactory();
+		AbstractMealFactory maincourses = new MainCourseFactory();
+		AbstractMealFactory desserts = new DessertFactory();
 		
 		Appertizer salad = (Appertizer) appertizers.createMeal("salad", "good for your health", 0, vegetable);
 		MainCourse steak = (MainCourse) maincourses.createMeal("salad", "also good for you", vegetable);

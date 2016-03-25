@@ -1,0 +1,17 @@
+package commandinterface;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+import users.StaffUser;
+
+public class test1 {
+	StaffUser waiter = new StaffUser("Bob", "Red", "bobred", "123456");
+	CommandConsole cc = new CommandConsole();
+	
+	
+	@Test
+	public void test() {
+		cc.insertChef("Bob", "Red", "bobred", "123456");
+	}
+
+}

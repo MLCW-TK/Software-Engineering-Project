@@ -6,7 +6,7 @@ import ingredients.Ingredient;
 public class RemoveIngredient implements MealBehavior {
 
 	@Override
-	public void behavior(Meal meal, Ingredient ingredient, double quantity) {
+	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {
 		if (meal.ingredients.contains(ingredient)){
 			meal.ingredients.remove(ingredient);
 			meal.extraIngredientsPrice -= CustomUtilities.round(ingredient.getTotalprice(),2);

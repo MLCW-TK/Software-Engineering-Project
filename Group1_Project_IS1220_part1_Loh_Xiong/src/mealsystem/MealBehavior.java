@@ -3,5 +3,5 @@ package mealsystem;
 import ingredients.Ingredient;
 
 public interface MealBehavior {
-	void behavior(Meal meal, Ingredient ingredient, double Quantity);
+	void behavior(AbstractMeal meal, Ingredient ingredient, double Quantity);
 }
