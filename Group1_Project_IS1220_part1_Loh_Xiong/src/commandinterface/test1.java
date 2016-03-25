@@ -42,6 +42,159 @@ public class test1 {
 		System.out.println("*** Tests saveMeal ***");
 		cc.saveMeal();
 		System.out.println("");
+		
+		// add 20 different meals
+		// 2
+		System.out.print("*** Tests adding 20 different meals ***\n");
+		cc.createMeal("Chicken salad", 5.00);
+		cc.addIngredient("Thousand island dressing", 10);
+		cc.addIngredient("Sugar", 10);
+		cc.addIngredient("Fried chicken", 100);
+		cc.addIngredient("Lettuce", 100);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");
+		// 3
+		cc.createMeal("Fried beef with onion", 15.00);
+		cc.addIngredient("Beef", 100);
+		cc.addIngredient("Sugar", 20);
+		cc.addIngredient("Onion", 100);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");
+		// 4 check's if Chinese characters are recognized :)
+		cc.createMeal("拔丝汤圆", 15.00);
+		cc.addIngredient("汤圆", 100);
+		cc.addIngredient("Sugar", 50);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");	
+		// 5
+		cc.createMeal("Chili and fish head", 30.00);
+		cc.addIngredient("Fish head", 200);
+		cc.addIngredient("Chili", 100);
+		cc.addIngredient("Tofu", 100);
+		cc.addIngredient("Seeweed", 80);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");
+		// 6
+		cc.createMeal("Laksa", 5.00);
+		cc.addIngredient("Bee hoon", 100);
+		cc.addIngredient("Chili source", 50);
+		cc.addIngredient("Curry", 50);	
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");
+		// 7
+		cc.createMeal("Chicken rice", 3.00);
+		cc.addIngredient("Chicken", 50);
+		cc.addIngredient("Rice", 100);
+		cc.addIngredient("Cucumber", 10);	
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");
+		// 8
+		cc.createMeal("Ayam penyet", 5.00);
+		cc.addIngredient("Chicken", 200);
+		cc.addIngredient("Rice", 100);
+		cc.addIngredient("Chili source", 30);
+		cc.addIngredient("Lettuce", 5);
+		cc.addIngredient("Cucumber", 10);
+		cc.addIngredient("Tomato", 10);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");
+		// 9
+		cc.createMeal("Rojak", 5.00);
+		cc.addIngredient("Oyster", 50);
+		cc.addIngredient("Eggs", 50);
+		cc.addIngredient("Potato", 50);
+		cc.addIngredient("Chili", 10);
+		cc.addIngredient("Cucumber", 10);
+		cc.addIngredient("Tomato", 10);
+		cc.addIngredient("Onion", 10);
+		cc.addIngredient("Green onion", 2);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");
+		// 10
+		cc.createMeal("Roti prata", 1.00);
+		cc.addIngredient("Prata", 100);
+		cc.addIngredient("Eggs", 50);
+		cc.addIngredient("Curry", 20);
+		cc.addIngredient("Sugar", 20);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");
+		// 11
+		cc.createMeal("Fried tomato and eggs", 5.00);
+		cc.addIngredient("Tomato", 100);
+		cc.addIngredient("Eggs", 100);
+		cc.addIngredient("Salt", 10);
+		cc.addIngredient("Sugar", 20);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");
+		// 12
+		cc.createMeal("Meat ball soup", 9.50);
+		cc.addIngredient("Meat ball", 100);
+		cc.addIngredient("Tomato", 100);
+		cc.addIngredient("Eggs", 100);
+		cc.addIngredient("Salt", 10);
+		cc.addIngredient("Sugar", 20);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");			
+		// 13
+		cc.createMeal("鱼香肉丝", 14.50);
+		cc.addIngredient("Pork", 100);
+		cc.addIngredient("Tree fungus", 100);
+		cc.addIngredient("Mushroom", 50);
+		cc.addIngredient("Salt", 10);
+		cc.addIngredient("Sugar", 20);
+		cc.addIngredient("Green onion", 5);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");	
+		// 14
+		cc.createMeal("Meal14", 14.00);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");	
+		// 15
+		cc.createMeal("Meal15", 15.00);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");	
+		// 16
+		cc.createMeal("Meal16", 16.00);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");	
+		// 17
+		cc.createMeal("Meal17", 17.00);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");	
+		// 18
+		cc.createMeal("Meal18", 18.00);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");	
+		// 19
+		cc.createMeal("Meal19", 19.00);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");	
+		// 20
+		cc.createMeal("Meal20", 20.00);
+		cc.currentMeal();
+		cc.saveMeal();
+		System.out.println("");	
+		
+		System.out.println("Test listIngredients...");
+
 	}
 
 	
