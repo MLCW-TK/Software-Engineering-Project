@@ -1,7 +1,5 @@
 package commandinterface;
 
-import java.util.Scanner;
-
 import ingredients.Ingredient;
 import ingredients.IngredientFactory;
 import mealsystem.AbstractMeal;
@@ -10,7 +8,6 @@ import mealsystem.MealFactory;
 import users.*;
 
 public class CommandConsole {
-	private static Scanner sc = new Scanner(System.in);
 	// Login commands
 	public ClientUser registerClient(String firstname, String lastname, String username, String password){
 		ClientUser newUser = new ClientUser(firstname, lastname, username, password);
@@ -87,22 +84,4 @@ public class CommandConsole {
 		return ClientConsole.currentMeal;
 	}
 	
-	public Meal saveMeal(){
-		if (!(ClientConsole.currentUser instanceof StaffUser)){
-			throw new RuntimeException("Insufficient previledges to access this command");
-		}
-		if ((ClientConsole.currentMeal.equals(null))){
-			throw new RuntimeException("currentMeal is empty!");
-		}
-		
-		System.out.println("Would you like to confirm your order?");
-		String input = sc.nextLine();
-		if (input.equalsIgnoreCase("YES")){
-			ClientConsole.meals.add(ClientConsole.currentMeal);
-			ClientConsole.currentMeal.equals(null);
-			return ClientConsole.currentMeal;
-		} else {
-			return ClientConsole.currentMeal;
-		}
-	}
 }

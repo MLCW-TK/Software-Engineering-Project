@@ -39,9 +39,7 @@ public class test1 {
 		cc.currentMeal();
 		System.out.println("");
 		
-		System.out.println("*** Tests saveMeal ***");
-		cc.saveMeal();
-		System.out.println("");
+		
 	}
 
 	
