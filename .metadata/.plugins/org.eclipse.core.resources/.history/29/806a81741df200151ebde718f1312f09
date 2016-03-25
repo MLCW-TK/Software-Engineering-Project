@@ -39,7 +39,7 @@ public class CommandConsole{
 				}
 			}
 			
-			re1.addUser(cl.registerClient(data[0], data[1], data[2], data[3]));
+			re1.addUser(cl.register_user(data[0], data[1], data[2], data[3]));
 			System.out.println("User successfully created!");
 			System.out.println("Please login from the main menu");
 			System.out.println("");
@@ -60,7 +60,7 @@ public class CommandConsole{
 			}
 		}
 		
-		re1.addUser(cl.insertChef(data[0], data[1], data[2], data[3]));
+		re1.addUser(cl.insert_chef(data[0], data[1], data[2], data[3]));
 		System.out.println("User successfully created!");
 		System.out.println("Please login from the main menu");
 		System.out.println("");
@@ -120,50 +120,46 @@ public class CommandConsole{
 	// Main program
 	public static void main(String[] args) throws Exception {
 		String input = new String();
-		while (globalPhase){
-			while (loginPhase) {
-				System.out.println("Welcome to our restaurant!");
-				System.out.println("To register, please enter: registerClient <firstname, lastname, username, password>");
-				System.out.println("To login, please enter: login <username, password>");
-				// Note that a secret method insertChef is included in the system
-				// Only "Special Users" would be made known of this feature
-				System.out.println("(please type 'exit' to exit)");
-				input = sc.nextLine();
-							
-				//Stop the loop
-				if (input.equalsIgnoreCase("EXIT")){
-					System.out.print("Thanks for dining with us!");
-					globalPhase = false;
-					return;}
-				
-				if (input.equals("")){
-					System.out.println("Wrong inputs detected. Please try again.");
-					System.out.println("");
-					continue;
-				}
-				
-				try{
-					loginInputTreatment(input);	
-				} catch (RuntimeException e){
-					System.out.println(e.getMessage());
-					System.out.println("");
-				}
-				
-			} while (loggedinPhase){
-				System.out.println("Welcome, " + currentUser.getFirstname() + " " + 
-					currentUser.getLastname() + "!" + " " + "(" + currentUser.getUsertype() + ")");
-				System.out.println("(You may type 'logout' to log out at any time)");
-				input = sc.nextLine();
-				if (input.equalsIgnoreCase("LOGOUT")){
-					System.out.println("Thank you for your time today!");
-					System.out.println("You have been logged out");
-					System.out.println("");
-					loginPhase = true;
-					loggedinPhase = false;
-					continue;
-				}
-				
+		while ()
+		while (loginPhase) {
+			System.out.println("Welcome to our restaurant!");
+			System.out.println("To register, please enter: registerClient <firstname, lastname, username, password>");
+			System.out.println("To login, please enter: login <username, password>");
+			// Note that a secret method insertChef is included in the system
+			// Only "Special Users" would be made known of this feature
+			System.out.println("(please type 'exit' to exit)");
+			input = sc.nextLine();
+						
+			//Stop the loop
+			if (input.equalsIgnoreCase("EXIT")){
+				System.out.print("Thanks for dining with us!");
+				return;}
+			
+			if (input.equals("")){
+				System.out.println("Wrong inputs detected. Please try again.");
+				System.out.println("");
+				continue;
 			}
+			
+			try{
+				loginInputTreatment(input);	
+			} catch (RuntimeException e){
+				System.out.println(e.getMessage());
+			}
+			
+		} while (loggedinPhase){
+			System.out.println("Welcome, " + currentUser.getFirstname() + " " + 
+				currentUser.getLastname() + "!" + " " + "(" + currentUser.getUsertype() + ")");
+			System.out.println("(You may type 'logout' to log out at any time)");
+			input = sc.nextLine();
+			if (input.equalsIgnoreCase("LOGOUT")){
+				System.out.println("Thank you for your time today!");
+				System.out.println("You have been logged out");
+				loginPhase = true;
+				loggedinPhase = false;
+				continue;
+			}
+			
 		}
 	}
 }

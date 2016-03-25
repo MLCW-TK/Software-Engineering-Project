@@ -26,3 +26,5 @@
 1458863321392	Delete element
 1458863372355	Rename type 'LoginCommandConsole'
 1458863380005	Rename type 'LoginCommandList'
+1458864664346	Rename method 'register_user'
+1458864681435	Rename method 'insert_chef'

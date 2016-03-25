@@ -39,7 +39,7 @@ public class CommandConsole{
 				}
 			}
 			
-			re1.addUser(cl.registerClient(data[0], data[1], data[2], data[3]));
+			re1.addUser(cl.register_user(data[0], data[1], data[2], data[3]));
 			System.out.println("User successfully created!");
 			System.out.println("Please login from the main menu");
 			System.out.println("");
@@ -60,7 +60,7 @@ public class CommandConsole{
 			}
 		}
 		
-		re1.addUser(cl.insertChef(data[0], data[1], data[2], data[3]));
+		re1.addUser(cl.insert_chef(data[0], data[1], data[2], data[3]));
 		System.out.println("User successfully created!");
 		System.out.println("Please login from the main menu");
 		System.out.println("");
@@ -133,7 +133,6 @@ public class CommandConsole{
 				//Stop the loop
 				if (input.equalsIgnoreCase("EXIT")){
 					System.out.print("Thanks for dining with us!");
-					globalPhase = false;
 					return;}
 				
 				if (input.equals("")){
@@ -146,7 +145,6 @@ public class CommandConsole{
 					loginInputTreatment(input);	
 				} catch (RuntimeException e){
 					System.out.println(e.getMessage());
-					System.out.println("");
 				}
 				
 			} while (loggedinPhase){
@@ -157,7 +155,6 @@ public class CommandConsole{
 				if (input.equalsIgnoreCase("LOGOUT")){
 					System.out.println("Thank you for your time today!");
 					System.out.println("You have been logged out");
-					System.out.println("");
 					loginPhase = true;
 					loggedinPhase = false;
 					continue;

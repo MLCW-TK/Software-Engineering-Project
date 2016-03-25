@@ -39,7 +39,7 @@ public class CommandConsole{
 				}
 			}
 			
-			re1.addUser(cl.registerClient(data[0], data[1], data[2], data[3]));
+			re1.addUser(cl.register_user(data[0], data[1], data[2], data[3]));
 			System.out.println("User successfully created!");
 			System.out.println("Please login from the main menu");
 			System.out.println("");
@@ -60,7 +60,7 @@ public class CommandConsole{
 			}
 		}
 		
-		re1.addUser(cl.insertChef(data[0], data[1], data[2], data[3]));
+		re1.addUser(cl.insert_chef(data[0], data[1], data[2], data[3]));
 		System.out.println("User successfully created!");
 		System.out.println("Please login from the main menu");
 		System.out.println("");
