@@ -1,14 +1,23 @@
 package commandinterface;
 
+import java.io.ByteArrayInputStream;
 import java.util.Scanner;
 
+import java.io.InputStream;
+
+import users.ClientUser;
 import users.StaffUser;
 
 public class test1 {
+	// This is for tests where inputs are necessary
+	static InputStream stdin = System.in;
+	
 	// Waiter Bob Red
 	static StaffUser waiter = new StaffUser("Bob", "Red", "bobred", "123456");
 	static CommandConsole cc = new CommandConsole();
 	private static Scanner sc = new Scanner(System.in);
+
+	private static Scanner customscan;
 	
 	public static void main(String[] args){
 		System.out.println("Satisfying Prerequisites....");
@@ -42,7 +51,7 @@ public class test1 {
 		System.out.println("*** Tests saveMeal ***");
 		cc.saveMeal();
 		System.out.println("");
-		/*
+
 		// add 20 different meals
 		// 2
 		System.out.print("*** Tests adding 20 different meals ***\n");
@@ -192,12 +201,66 @@ public class test1 {
 		cc.currentMeal();
 		cc.saveMeal();
 		System.out.println("");	
-		*/
-		System.out.println("Test listIngredients for existing meal...");
+		// 21
+		cc.createMeal("Meal21", 21.00);
+		cc.currentMeal();
+		cc.saveMeal();
+		
+		System.out.println("----------");
+		System.out.println("All 20 meals added.");
+		System.out.println("----------");
+		System.out.println("");
+		
+		System.out.println("Test listIngredients");
+		System.out.println("----------");
 		cc.listIngredients("Raclette");
-		System.out.println("Test listIngredients for non-existing meal...");
-		cc.listIngredients("Raclettefoo");
-	}
 
+		// not necessary i think
+		//		System.out.println("Test listIngredients for non-existing meal...");
+//		cc.listIngredients("Raclettefoo");
+
+		System.out.println("");
+		System.out.println("Test logout");
+		System.out.println("----------");
+		cc.logout();
+		
+		System.out.println("");
+		System.out.println("Press ENTER to get access the next phase of tests");
+		sc.nextLine();
+		
+		System.out.println("Test registerClient");
+		System.out.println("----------");
+		cc.registerClient("Mario", "Rossi", "Mario", "345678");
+		System.out.println("");
+		
+		/*
+		 Commented out because too damn long
+		System.out.println("Test addContact (Email)");
+		System.out.println("----------");
+		System.out.println("Username = Mario, Password = 345678, Option = 1");
+		cc.addContactInfo("kyd1992@gmail.com");
+		System.out.println("");
+		
+		System.out.println("Test addContact (Phone Number)");
+		System.out.println("----------");
+		System.out.println("Username = Mario, Password = 345678, Option = 2, Type = PhoneNumber");
+		cc.addContactInfo("98182241");
+		System.out.println("");
+		*/
+		
+		System.out.println("Test associateCard");
+		System.out.println("----------");
+		ClientUser mario = ClientConsole.re1.getUserFromUserName("Mario");
+		cc.associateCard("Mario",  "BasicFidelityCard");
+		cc.associateCard("Mario",  "PointFidelityCard");
+		cc.associateCard("Mario", "LotteryFidelityCard");
+		try {
+			// this is supposed to fail, because DummyFidelityCard does not exist
+			cc.associateCard("Mario", "DummyFidelityCard");
+		} catch (RuntimeException e){
+			// do nothing. we need to keep testing.
+		}
+		
+	}
 	
 }

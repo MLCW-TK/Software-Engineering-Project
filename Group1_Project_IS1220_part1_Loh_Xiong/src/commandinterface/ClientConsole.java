@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 
+import cardfidelitysystem.FidelityCardFactory;
 import coresystem.RestaurantSystem;
 import ingredients.Ingredient;
 import mealsystem.AbstractMeal;
@@ -20,6 +21,8 @@ public class ClientConsole{
 	private static CommandConsole cl = new CommandConsole();
 	static ClientUser currentUser;
 	static Meal currentMeal;
+	static protected FidelityCardFactory fcf = new FidelityCardFactory();
+	
 	
 	static boolean globalPhase = true;
 	static boolean loginPhase = true;
@@ -42,8 +45,10 @@ public class ClientConsole{
 			}
 			
 			cl.registerClient(data[0], data[1], data[2], data[3]);
-			System.out.println("Please login from the main menu");
-			System.out.println("");
+			System.out.println("Congratulations! Account successfully created");
+			System.out.println("You may now use 'addContactInfo <contactInfo>' to add new contact information");
+			System.out.println("You may now use 'associateCard <username, cardtype> to associate your fidelity card");
+			System.out.println("You may also login now with 'login <username, password>'");
 	}
 
 	public static void insertChef(String input) throws RuntimeException{
@@ -91,21 +96,71 @@ public class ClientConsole{
 			loggedinPhase = true;
 	}
 	
+	public static void addContactInfo(String input){
+		String data = input.substring("addContactInfo".length()+2, input.length()-1);
+		try {
+			cl.addContactInfo(data);
+		} catch (Exception e){
+			throw new RuntimeException(e.getMessage());
+		}
+	}
+	
+	public static void associateCard(String input){
+		String command = input.substring("associateCard".length()+2, input.length()-1);
+		String data[] = command.split(",");
+		
+		if (data.length < 2){
+			System.out.println("Please enter valid commands");
+			throw new RuntimeException("Eg. associateCard <username,cardType>");
+		}
+		
+		for (int i = 0; i < 2; i++){
+			data[i].replaceAll("\\s", "");
+		}
+		
+		System.out.println("For verification purposes, please enter your password");
+		String password = sc.nextLine();
+		try {
+			re1.validateUser(data[0], password);
+		} catch (RuntimeException e){
+			System.out.println("User does not exist. Please try the command again");
+			return;
+		}
+		
+		try {
+			cl.associateCard(data[0], data[1]);
+		} catch (RuntimeException e){
+			return;
+		}
+	}
+	
 	public static void loginInputTreatment(String input){
 		int strlength = input.length();
 		String lastLetter = input.substring(strlength-1, strlength);
 		
-		
+		// register client
 		if ((input.length()>=17)&&((input.substring(0,16)).equals("registerClient <"))&&(lastLetter.equals(">"))){
 			registerUser(input);
 			return;}
 		
+		// login user
 		if ((input.length()>=8)&&((input.substring(0,7).equals("login <"))&&(lastLetter.equals(">")))){
 			loginUser(input);
 			return;}
 		
+		// insert chef
 		if ((input.length()>=13)&&((input.substring(0,12).equals("insertChef <"))&&(lastLetter.equals(">")))){
 			insertChef(input);
+			return;}
+		
+		// add contact info
+		if ((input.length()>="addContactInfo <".length()+1)&&((input.substring(0,"addContactInfo <".length())).equals("addContactInfo <"))&&(lastLetter.equals(">"))){
+			addContactInfo(input);
+			return;}
+		
+		// associate card
+		if ((input.length()>="associateCard <".length()+1)&&((input.substring(0,"associateCard <".length())).equals("associateCard <"))&&(lastLetter.equals(">"))){
+			associateCard(input);
 			return;}
 		
 		System.out.println("Wrong inputs detected. Please try again.");
@@ -170,10 +225,16 @@ public class ClientConsole{
 	}
 	
 	public static void saveMeal(String input){
-		try {
-			currentMeal = cl.saveMeal();
-		} catch (RuntimeException e){
-			throw new RuntimeException(e.getMessage());
+		System.out.println("Would you like to save your meal? (yes/no)");
+		String input1 = sc.nextLine();
+		if (input1.equalsIgnoreCase("YES")){
+			try {
+				currentMeal = cl.saveMeal();
+			} catch (RuntimeException e){
+				throw new RuntimeException(e.getMessage());
+			}			
+		} else{
+			cl.currentMeal();
 		}
 	}
 	
@@ -190,30 +251,46 @@ public class ClientConsole{
 			throw new RuntimeException(e.getMessage());
 		}
 	}
+	
+	public static void logout(String input){
+		try {
+			cl.logout();
+		} catch (Exception e){
+			throw new RuntimeException(e.getMessage());
+		}
+	}
+	
+
+	
 	public static void operationsInputTreatment(String input){
 		int strlength = input.length();
 		String lastLetter = input.substring(strlength-1, strlength);
 
-		
+		// create meal
 		if ((input.length()>="createMeal <".length()+1)&&((input.substring(0,"createMeal <".length())).equals("createMeal <"))&&(lastLetter.equals(">"))){
 			createMeal(input);
 			return;}
-		
+		// add ingredient
 		if ((input.length()>="addIngredient <".length()+1)&&((input.substring(0,"addIngredient <".length())).equals("addIngredient <"))&&(lastLetter.equals(">"))){
 			addIngredient(input);
 			return;}
-
+		// checks current meal
 		if ((input.length()=="currentMeal <".length()+1)&&((input.substring(0,"currentMeal <".length())).equals("currentMeal <"))&&(lastLetter.equals(">"))){
 			currentMeal(input);
 			return;}
-		
+		// saves meal
 		if ((input.length()=="saveMeal <".length()+1)&&((input.substring(0,"saveMeal <".length())).equals("saveMeal <"))&&(lastLetter.equals(">"))){
 			saveMeal(input);
 			return;}
-		
+		// list ingredients
 		if ((input.length()>="listIngredients <".length()+1)&&((input.substring(0,"listIngredients <".length())).equals("listIngredients <"))&&(lastLetter.equals(">"))){
 			listIngredients(input);
 			return;}
+		// logout
+		if ((input.length()=="logout <".length()+1)&&((input.substring(0,"logout <".length())).equals("logout <"))&&(lastLetter.equals(">"))){
+			logout(input);
+			return;}
+		
 	}
 	
 	// Main program
@@ -259,18 +336,22 @@ public class ClientConsole{
 					System.out.println("Welcome, " + currentUser.getFirstname() + " " + 
 							currentUser.getLastname() + "!" + " " + "(" + currentUser.getUsertype() + ")");
 					System.out.println("You may type -help to see the available commands.");
-					System.out.println("(You may type 'logout' to log out at any time)");
+					
+					// Logout is now a function
+//					System.out.println("(You may type 'logout' to log out at any time)");
 					loggedinMessagePrinted = true;
 				}
 				input = sc.nextLine();
-				if (input.equalsIgnoreCase("LOGOUT")){
-					System.out.println("Thank you for your time today!");
-					System.out.println("You have been logged out");
-					System.out.println("");
-					loginPhase = true;
-					loggedinPhase = false;
-					continue;
-				}
+				
+				//Logout is now a function
+//				if (input.equalsIgnoreCase("LOGOUT")){
+//					System.out.println("Thank you for your time today!");
+//					System.out.println("You have been logged out");
+//					System.out.println("");
+//					loginPhase = true;
+//					loggedinPhase = false;
+//					continue;
+//				}
 				if (input.equalsIgnoreCase("-help")){
 					if (currentUser.getUsertype().equals("Staff")){
 						String staffOperations = new String();

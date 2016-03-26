@@ -297,8 +297,9 @@ public abstract class AbstractMeal{
 		String s = "Meal: "+ this.getName();
 		s+="\nIngredients:\n";
 		for(Ingredient ingredient : this.ingredients){
-			s+=ingredient.getName()+" "+ingredient.getQuantity()+"g\n";
+			s+=ingredient.getQuantity()+"g "+ ingredient.getName() + "\n";
 		}
+		s = s.substring(0,s.length()-1);
 		System.out.println(s);
 	}
 	

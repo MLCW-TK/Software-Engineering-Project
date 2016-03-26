@@ -20,6 +20,13 @@ public class LotteryFidelityCard extends FidelityCard{
 	 */
 	public LotteryFidelityCard(User owner, int percentage){
 		super(owner, percentage);
+		name = "BasicFidelityCard";
+	}
+	
+	public LotteryFidelityCard(User owner){
+		super(owner);
+		this.percentage = 5;
+		name = "LotteryFidelityCard";
 	}
 	
 	public void setPercentage(int percentage){

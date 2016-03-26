@@ -9,6 +9,7 @@ public class BasicFidelityCard extends FidelityCard {
 	 */
 	public BasicFidelityCard(User owner){
 		super(owner);
+		name = "BasicFidelityCard";
 	}
 
 	/**

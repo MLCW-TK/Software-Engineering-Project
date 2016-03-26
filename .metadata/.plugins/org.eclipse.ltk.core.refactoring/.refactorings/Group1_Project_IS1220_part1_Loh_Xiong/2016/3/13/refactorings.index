@@ -34,3 +34,5 @@
 1458867655189	Rename type 'Meal'
 1458867932988	Rename type 'MealFactory'
 1458871280007	Rename local variable 'ingrc'
+1458996390156	Convert local variable 'customscan' to field
+1458999776205	Rename local variable 'name'

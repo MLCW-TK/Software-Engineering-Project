@@ -40,6 +40,33 @@ public class RestaurantSystem implements Publisher{
 		return user_list;
 	}
 	
+	public ClientUser getUserFromUserName(String USERNAME){
+		for (ClientUser obj : this.user_list){
+			if (obj.getUsername().equals(USERNAME)){
+				return obj;
+			}
+		}
+		return null;
+	}
+	
+	public ClientUser validateUser(String USERNAME, String PASSWORD){
+		ClientUser user = null;
+		for (ClientUser obj : this.user_list){
+			if (obj.getUsername().equals(USERNAME) && obj.getPassword().equals(PASSWORD)){
+				if (user instanceof StaffUser){
+					user = (StaffUser) obj;
+				} else {
+					user = (ClientUser) obj;
+				}
+			}
+		}
+		if (user.equals(null)){
+			throw new RuntimeException("User not found!");
+		} else {
+			return user;
+		}
+	}
+	
 	public void addUser(ClientUser newUser){
 		user_list.add(newUser);
 	}

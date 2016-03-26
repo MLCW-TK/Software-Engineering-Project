@@ -13,11 +13,11 @@ public class PointFidelityCard extends FidelityCard{
 	double totalAmountProcessed;
 	int discountTickets = 0;
 	boolean canGetDiscount = false;
-	double discountRate = 0.10;
-	
+	double discountRate = 0.10;	
 	public PointFidelityCard(User owner){
 		super(owner);
 		owner.setCanReceiveSpecialOffers(false);
+		name = "PointFidelityCard";
 
 	}
 

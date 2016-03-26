@@ -100,6 +100,11 @@ public abstract class User implements Subscriber{
 	
 	
 	// getters and setters
+	
+	public void setFidelityCardByString(String name){
+		
+	}
+	
 	public void setFidelityCard(FidelityCard fidelitycard){
 		this.membershipCard = fidelitycard;
 	}
@@ -295,6 +300,7 @@ public abstract class User implements Subscriber{
 	public void setBirthday(Date date){this.birthday = date;}
 	
 	public Date getBirthday(){return this.birthday;}
+	
 	
 	public void setReceiveBirthdayOffer(Boolean bool){
 		if(this.getReceiveUpdates()){

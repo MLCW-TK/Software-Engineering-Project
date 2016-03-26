@@ -2,6 +2,7 @@ package commandinterface;
 
 import java.util.Scanner;
 
+import cardfidelitysystem.FidelityCard;
 import ingredients.Ingredient;
 import ingredients.IngredientFactory;
 import mealsystem.AbstractMeal;
@@ -31,14 +32,83 @@ public class CommandConsole {
 		throw new RuntimeException("No user found!");
 	}
 	
+	public FidelityCard associateCard(String username, String cardType){
+		ClientUser user = ClientConsole.re1.getUserFromUserName(username);
+		try {
+			ClientConsole.fcf.createFidelityCard(cardType, user);
+		} catch (RuntimeException e){
+			System.out.println(cardType + " does not exist");
+			System.out.println(username + " is now holding " + user.getFidelityCard().getCardName());
+			throw new RuntimeException();
+		}
+		FidelityCard fc = ClientConsole.fcf.createFidelityCard(cardType, user);
+		user.setFidelityCard(fc);
+		System.out.println(username + " is now holding " + user.getFidelityCard().getCardName());
+		return fc;
+	}
+	
 	public StaffUser insertChef(String firstname, String lastname, String username, String password){
 		StaffUser newUser = new StaffUser(firstname, lastname, username, password);
 		ClientConsole.re1.addUser(newUser);
+		System.out.println("Staff '" + username + "' sucessfully created!");
 		return newUser;
 	}
 	
 	// ClientUser commands
+	public void logout(){
+		ClientConsole.loginPhase = true;
+		ClientConsole.loggedinPhase = false;
+		String username = ClientConsole.currentUser.getUsername();
+		ClientConsole.currentUser = null;
+		System.out.println("'" + username + "' has logged out");
+		return;
+	}
 	
+	public void addContactInfo(String input){
+		System.out.println("In order to use this function, you would be required to log in temporarily");
+		System.out.println("Please enter your username");
+		String username = sc.nextLine();
+		System.out.println("Please enter your password");
+		String password = sc.nextLine();
+		try {
+			ClientConsole.re1.validateUser(username, password);
+		} catch (RuntimeException e){
+			System.out.println("Invalid User/Password");
+			addContactInfo(input);
+		}
+		
+		ClientUser loginuser = (ClientUser) ClientConsole.re1.validateUser(username, password);
+		
+		Boolean addOption = true;
+		do{
+		System.out.println("Please select an option below (only numbers allowed): ");
+		System.out.println("1. Add an email address");
+		System.out.println("2. Add a custom contact detail");
+		System.out.println("3. Exit");
+		String input1 = sc.nextLine();
+			switch(input1){
+		case "1":
+			loginuser.setEmail(input);
+			System.out.println("Email address successfuly added!");
+			addOption = false;
+			break;
+		case "2":
+			System.out.println("Please type a contact field category");
+			String contactInfo = sc.nextLine();
+			loginuser.getContactHash().put(contactInfo, input);
+			addOption = false;
+			break;
+		case "3":
+			addOption = false;
+			break;
+		default:
+			System.out.println("Wrong input selected. Please try again");
+			continue;
+			}
+		} while (addOption);
+		
+		
+	}
 	
 	// StaffUser commands
 	public Meal createMeal(String name, double price){
@@ -95,15 +165,16 @@ public class CommandConsole {
 			throw new RuntimeException("currentMeal is empty!");
 		}
 		
-		System.out.println("Would you like to confirm your order? (yes/no)");
-		String input = sc.nextLine();
-		if (input.equalsIgnoreCase("YES")){
-			ClientConsole.meals.add(ClientConsole.currentMeal);
-			ClientConsole.currentMeal.equals(null);
-			return ClientConsole.currentMeal;
-		} else {
-			return ClientConsole.currentMeal;
-		}
+//		System.out.println("Would you like to confirm your order? (yes/no)");
+//		String input = sc.nextLine();
+//		if (input.equalsIgnoreCase("YES")){
+		ClientConsole.meals.add(ClientConsole.currentMeal);
+		ClientConsole.currentMeal = null;
+		System.out.println("Meal saved!");
+		return ClientConsole.currentMeal;
+//		} else {
+//			return ClientConsole.currentMeal;
+//		}
 	}
 
 	public void listIngredients(String meal){
@@ -117,7 +188,8 @@ public class CommandConsole {
 		if (!bool){
 			System.out.println("This meal does not exist yet. You may want to check your spelling or create this meal.");
 			System.out.println("To create a meal: createmeal <name, price>");
-		}
-		
+		}		
 	}
+	
+	
 }
