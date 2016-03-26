@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
 <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
 <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
-<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="CustomUtilities.DeepClone"/>
 <fullyQualifiedTypeName name="CardFidelitySystem.FidelityCard"/>
@@ -20,16 +19,13 @@
 <fullyQualifiedTypeName name="Users.User"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="CardFidelitySystem.BasicFidelityCard"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="CustomUtilities.Round"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.TreeMap"/>
 <fullyQualifiedTypeName name="CustomUtilities.CustomUtilities"/>
 <fullyQualifiedTypeName name="users.User"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="users.ClientUser"/>
 <fullyQualifiedTypeName name="users.StaffUser"/>
 <fullyQualifiedTypeName name="mealsystem.Meal"/>
 <fullyQualifiedTypeName name="mealsystem.MealFactory"/>
@@ -37,4 +33,11 @@
 <fullyQualifiedTypeName name="ingredients.IngredientFactory"/>
 <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.portable.InputStream"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+<fullyQualifiedTypeName name="cardfidelitysystem.FidelityCard"/>
+<fullyQualifiedTypeName name="cardfidelitysystem.FidelityCardFactory"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="users.ClientUser"/>
 </qualifiedTypeNameHistroy>
