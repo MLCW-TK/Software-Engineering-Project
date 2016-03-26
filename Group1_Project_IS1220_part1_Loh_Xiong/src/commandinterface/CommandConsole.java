@@ -46,6 +46,25 @@ public class CommandConsole {
 		System.out.println(username + " is now holding " + user.getFidelityCard().getCardName());
 		return fc;
 	}
+//	public static void associateAgreement <username, agreement>
+	public void associateAgreement(String username, String agreement) {
+		ClientUser user = ClientConsole.re1.getUserFromUserName(username);
+		if (agreement.equalsIgnoreCase("update")){
+			try {
+				user.registerUpdates();
+			} catch (RuntimeException e){
+				throw new RuntimeException();
+			}
+		}
+		if (agreement.equalsIgnoreCase("birthday")){
+			try {
+				user.registerBirthday();
+			} catch (RuntimeException e){
+				throw new RuntimeException();
+			}
+		}
+			
+	}
 	
 	public StaffUser insertChef(String firstname, String lastname, String username, String password){
 		StaffUser newUser = new StaffUser(firstname, lastname, username, password);
@@ -190,6 +209,8 @@ public class CommandConsole {
 			System.out.println("To create a meal: createmeal <name, price>");
 		}		
 	}
+
+
 	
 	
 }

@@ -233,8 +233,8 @@ public class test1 {
 		cc.registerClient("Mario", "Rossi", "Mario", "345678");
 		System.out.println("");
 		
-		/*
-		 Commented out because too damn long
+		
+		/*Commented out because too damn long
 		System.out.println("Test addContact (Email)");
 		System.out.println("----------");
 		System.out.println("Username = Mario, Password = 345678, Option = 1");
@@ -261,6 +261,14 @@ public class test1 {
 			// do nothing. we need to keep testing.
 		}
 		
+		System.out.println("Test associateAggrement");
+		System.out.println("----------");
+		System.out.println("Test option update");
+		System.out.println("----------");
+		cc.associateAgreement("Mario", "update");
+		System.out.println("Test option birthday");
+		System.out.println("----------");
+		cc.associateAgreement("Mario", "birthday");
 	}
 	
 }

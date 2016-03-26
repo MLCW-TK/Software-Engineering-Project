@@ -329,10 +329,13 @@ public abstract class User implements Subscriber{
 		System.out.println("Would you like to receive our special offers on your birthday?(Type 'yes' to accept.)");
 		Scanner sc = new Scanner(System.in);
 		String response = sc.nextLine();
-		if (!response.equalsIgnoreCase("YES")){this.receive_birthdayOffer=false;}
+		if (!response.equalsIgnoreCase("YES")){
+			this.receive_birthdayOffer=false;
+			System.out.println("You have chosen not to receive birthday offers.");}
 		else{
 			this.recordBirthday();
 			this.setReceiveBirthdayOffer(true);
+			System.out.println("You will receive a special offer on your birthday!");
 		}	
 	}
 	

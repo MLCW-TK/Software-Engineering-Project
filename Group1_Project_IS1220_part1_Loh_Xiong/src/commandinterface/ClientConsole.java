@@ -134,6 +134,36 @@ public class ClientConsole{
 		}
 	}
 	
+//	public static void associateAgreement <username, agreement>
+	public static void associateAgreement(String input){
+		String command = input.substring("associateAgreement".length()+2, input.length()-1);
+		String data[] = command.split(",");
+		
+		if (data.length < 2){
+			System.out.println("Please enter valid commands");
+			throw new RuntimeException("Eg. associateAgreement <username, agreement>");
+		}
+		
+		for (int i = 0; i < 2; i++){
+			data[i].replaceAll("\\s", "");
+		}
+		
+		System.out.println("For verification purposes, please enter your password");
+		String password = sc.nextLine();
+		try {
+			re1.validateUser(data[0], password);
+		} catch (RuntimeException e){
+			System.out.println("User does not exist. Please try the command again");
+			return;
+		}
+		
+		try {
+			cl.associateAgreement(data[0], data[1]);
+		} catch (RuntimeException e){
+			return;
+		}
+	}
+		
 	public static void loginInputTreatment(String input){
 		int strlength = input.length();
 		String lastLetter = input.substring(strlength-1, strlength);
@@ -163,6 +193,9 @@ public class ClientConsole{
 			associateCard(input);
 			return;}
 		
+		if ((input.length()>="associateAgreement <".length()+1)&&((input.substring(0,"associateAgreement <".length())).equals("associateAgreement <"))&&(lastLetter.equals(">"))){
+			associateCard(input);
+			return;}
 		System.out.println("Wrong inputs detected. Please try again.");
 		System.out.println("");
 	}
@@ -321,7 +354,34 @@ public class ClientConsole{
 					System.out.println("");
 					continue;
 				}
-
+				
+				// -help commands
+				if (input.equalsIgnoreCase("-help")){
+					String loginOperations = new String();
+					loginOperations+="Here are the possible login operations:\n"
+							+"registerClient <firstname, lastname, username, password>			:	to register.\n"
+							+"login <username, password>										:	to login with an existing account.\n"
+							+"addContactInfo <contactInfo>										:	add a contact information to your account.\n"
+							+"associateCard <userName, cardType>								:	associate a fidelity card to your account. Type '-cardType' for the possible card types.\n"
+							+"associateAgreement <username, agreement>							:	configure your agreement options. Type '-agreement' for the possible agreement settings.\n";
+					System.out.print(loginOperations);
+				
+				}
+				if (input.equalsIgnoreCase("-cardType")){
+					String cardTypes = new String();
+					cardTypes+="Currently available card types are: \n"
+							+"BasicFidelityCard\n"
+							+"PointFidelityCard\n"
+							+"LotteryFidelityCard\n";
+					System.out.print(cardTypes);
+				}
+				if (input.equalsIgnoreCase("-agreement")){
+					String agreement = new String();
+					agreement+="You may chose to set on the following agreements: \n"
+							+"update	:	you will receive update from us.\n"
+							+"birthday	:	you will receive birthday special offers.\n";
+					System.out.print(agreement);
+				}
 				
 				try{
 					loginInputTreatment(input);	
