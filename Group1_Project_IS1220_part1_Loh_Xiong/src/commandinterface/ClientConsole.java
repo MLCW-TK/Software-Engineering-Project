@@ -115,7 +115,7 @@ public class ClientConsole{
 		}
 		
 		for (int i = 0; i < 2; i++){
-			data[i].replaceAll("\\s", "");
+			data[i]=data[i].replaceAll("\\s", "");
 		}
 		
 		System.out.println("For verification purposes, please enter your password");
@@ -145,7 +145,7 @@ public class ClientConsole{
 		}
 		
 		for (int i = 0; i < 2; i++){
-			data[i].replaceAll("\\s", "");
+			data[i]=data[i].replaceAll("\\s+", "");
 		}
 		
 		System.out.println("For verification purposes, please enter your password");
@@ -194,7 +194,7 @@ public class ClientConsole{
 			return;}
 		
 		if ((input.length()>="associateAgreement <".length()+1)&&((input.substring(0,"associateAgreement <".length())).equals("associateAgreement <"))&&(lastLetter.equals(">"))){
-			associateCard(input);
+			associateAgreement(input);
 			return;}
 		System.out.println("Wrong inputs detected. Please try again.");
 		System.out.println("");
