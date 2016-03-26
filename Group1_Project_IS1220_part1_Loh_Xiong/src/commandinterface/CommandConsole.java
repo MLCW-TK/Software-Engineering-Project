@@ -195,7 +195,7 @@ public class CommandConsole {
 //			return ClientConsole.currentMeal;
 //		}
 	}
-
+	// ClientUser commands
 	public void listIngredients(String meal){
 		boolean bool = false;
 		for (AbstractMeal aMeal : ClientConsole.meals){
@@ -210,7 +210,11 @@ public class CommandConsole {
 		}		
 	}
 
-
+	//selectMeal<mealName, quantity>
+	public void selectMeal(String mealName, int quantity){
+		
+	}
+	
 	
 	
 }

@@ -269,6 +269,14 @@ public class test1 {
 		System.out.println("Test option birthday");
 		System.out.println("----------");
 		cc.associateAgreement("Mario", "birthday");
+		
+		System.out.println("Test client login");
+		System.out.println("----------");
+		cc.login("Mario", "345678");
+		
+		System.out.println("Test listIngredient for clients");
+		System.out.println("----------");
+		cc.listIngredients("Raclette");
 	}
 	
 }

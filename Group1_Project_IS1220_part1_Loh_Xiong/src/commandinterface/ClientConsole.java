@@ -285,6 +285,28 @@ public class ClientConsole{
 		}
 	}
 	
+	public static void selectMeal(String input){
+		String command = input.substring("selectMeal".length()+2, input.length()-1);
+		String[] data = command.split(",");
+
+		
+		if (data.length < 2){
+			System.out.println("Please enter valid commands");
+			throw new RuntimeException("Eg. selectMeal <name, quantity>");				
+		}
+		
+		for (int i = 0; i < 2; i++){
+			data[i]=data[i].replaceAll("\\s+", "");
+		}
+		
+		int quantity = Integer.parseInt(data[1]);
+		
+		try {
+			cl.selectMeal(data[0], quantity);
+		} catch (RuntimeException e){
+			throw new RuntimeException(e.getMessage());
+		}
+	}
 	public static void logout(String input){
 		try {
 			cl.logout();
@@ -319,11 +341,15 @@ public class ClientConsole{
 		if ((input.length()>="listIngredients <".length()+1)&&((input.substring(0,"listIngredients <".length())).equals("listIngredients <"))&&(lastLetter.equals(">"))){
 			listIngredients(input);
 			return;}
+		// selectMeal
+		if ((input.length()>="selectMeal <".length()+1)&&((input.substring(0,"selectMeal <".length())).equals("selectMeal <"))&&(lastLetter.equals(">"))){
+			selectMeal(input);
+			return;}
 		// logout
 		if ((input.length()=="logout <".length()+1)&&((input.substring(0,"logout <".length())).equals("logout <"))&&(lastLetter.equals(">"))){
 			logout(input);
 			return;}
-		
+
 	}
 	
 	// Main program
