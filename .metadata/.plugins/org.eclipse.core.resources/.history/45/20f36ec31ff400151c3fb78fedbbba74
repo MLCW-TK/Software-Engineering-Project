@@ -220,7 +220,7 @@ public class CommandConsole {
 				selected_meal = (Meal) obj;
 			} 
 		}
-		if (selected_meal == null){
+		if (selected_meal.equals(null)){
 			throw new RuntimeException(mealName + " not found!");
 		}
 		
@@ -238,7 +238,7 @@ public class CommandConsole {
 				selected_meal = (Meal) obj;
 			} 
 		}
-		if (selected_meal== null){
+		if (selected_meal.equals(null)){
 			throw new RuntimeException(mealName + " not found! Please select a meal");
 		}
 

@@ -147,7 +147,7 @@ public class CommandConsole {
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
 			throw new RuntimeException("Insufficient previledges to access this command");
 		}
-		if ((ClientConsole.currentMeal == null)){
+		if ((ClientConsole.currentMeal.equals(null))){
 			throw new RuntimeException("currentMeal is empty!");
 		}
 		IngredientFactory ingrfac = new IngredientFactory();
@@ -162,7 +162,7 @@ public class CommandConsole {
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
 			throw new RuntimeException("Insufficient previledges to access this command");
 		}
-		if ((ClientConsole.currentMeal == null)){
+		if ((ClientConsole.currentMeal.equals(null))){
 			throw new RuntimeException("currentMeal is empty!");
 		}
 		
@@ -180,7 +180,7 @@ public class CommandConsole {
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
 			throw new RuntimeException("Insufficient previledges to access this command");
 		}
-		if ((ClientConsole.currentMeal ==null)){
+		if ((ClientConsole.currentMeal.equals(null))){
 			throw new RuntimeException("currentMeal is empty!");
 		}
 		
@@ -220,7 +220,7 @@ public class CommandConsole {
 				selected_meal = (Meal) obj;
 			} 
 		}
-		if (selected_meal == null){
+		if (selected_meal.equals(null)){
 			throw new RuntimeException(mealName + " not found!");
 		}
 		
@@ -238,7 +238,7 @@ public class CommandConsole {
 				selected_meal = (Meal) obj;
 			} 
 		}
-		if (selected_meal== null){
+		if (selected_meal.equals(null)){
 			throw new RuntimeException(mealName + " not found! Please select a meal");
 		}
 
