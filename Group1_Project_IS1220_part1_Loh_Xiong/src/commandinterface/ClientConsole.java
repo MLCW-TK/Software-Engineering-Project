@@ -5,11 +5,14 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 import cardfidelitysystem.FidelityCardFactory;
+
 import coresystem.RestaurantSystem;
-import ingredients.Ingredient;
+
 import mealsystem.AbstractMeal;
 import mealsystem.Meal;
+
 import orders.Order;
+
 import users.ClientUser;
 
 public class ClientConsole{
@@ -22,6 +25,8 @@ public class ClientConsole{
 	static ClientUser currentUser;
 	static Meal currentMeal;
 	static protected FidelityCardFactory fcf = new FidelityCardFactory();
+
+
 	static Meal editedMeal = null;
 	
 	
@@ -442,16 +447,17 @@ public class ClientConsole{
 //					continue;
 //				}
 				if (input.equalsIgnoreCase("-help")){
-					if (currentUser.getUsertype().equals("Staff")){
-						String staffOperations = new String();
-						staffOperations+="Here are the operations only available to staff users:\n"
-								+"createMeal <name, price>			:	to create a meal with name and price set.\n"
-								+"addIngredient <name, quantity>	:	add an ingredient to the current meal, with quantity set in grams.\n"
-								+"currentMeal <>					:	print a summary of the current meal.\n"
-								+"saveMeal <>						:	save the curren meal.\n"
-								+"listIngredients <name>			:	list the ingredients of a chosen meal\n";
-						System.out.print(staffOperations);
-					}
+                                    if (currentUser.getUsertype().equals("Staff")){
+                                        String staffOperations = new String();
+                                        staffOperations += "Here are the operations only available to staff users:\n"
+                                            +"createMeal <name, price>			:	to create a meal with name and price set.\n"
+                                            +"addIngredient <name, quantity>	:	add an ingredient to the current meal, with quantity set in grams.\n"
+                                            +"currentMeal <>					:	print a summary of the current meal.\n"
+                                            +"saveMeal <>						:	save the curren meal.\n"
+                                            +"listIngredients <name>			:	list the ingredients of a chosen meal\n";
+                                        System.out.print(staffOperations);
+                                    }
+					
 				}
 					
 				

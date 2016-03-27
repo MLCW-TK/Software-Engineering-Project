@@ -292,6 +292,15 @@ public class test1 {
 		System.out.println("----------");
 		cc.personalizeMeal("Raclette", "Cheese", 10);
 		System.out.println("");
+		System.out.println("Test meal selection");
+		System.out.println("----------");
+		cc.selectMeal("Raclette", 1);
+		System.out.println("");
+		
+		System.out.println("Test meal personalization with quantity = 0");
+		System.out.println("----------");
+		cc.personalizeMeal("Raclette", "Cheese", 0);
+		System.out.println("");
 		
 		System.out.println("Adding two additional 'standard' meals");
 		System.out.println("----------");

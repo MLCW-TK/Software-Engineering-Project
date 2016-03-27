@@ -213,6 +213,7 @@ public class CommandConsole {
 
 	//selectMeal<mealName, quantity>
 	public void selectMeal(String mealName, int quantity){
+            
 		Meal selected_meal = null;
 		for (AbstractMeal obj : ClientConsole.meals){
 			if (obj.getName().equals(mealName)){
