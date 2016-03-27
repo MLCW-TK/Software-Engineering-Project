@@ -1,9 +1,11 @@
 package orders;
 
 import customutilities.CustomUtilities;
-import mealsystem.AbstractMeal;
+import ingredients.Ingredient;
+import mealsystem.*;
 import users.User;
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 import cardfidelitysystem.BasicFidelityCard;
@@ -11,12 +13,15 @@ import cardfidelitysystem.LotteryFidelityCard;
 import cardfidelitysystem.PointFidelityCard;
 
 public class Order{
+	DecimalFormat df = new DecimalFormat("#.00"); 
 	Stack<String> SummarySequence;
 	ArrayList<ArrayList<Object>> orderSequence;
 	HashMap<AbstractMeal, Integer> meal_count;
 	ArrayList<ArrayList<Object>> specialOfferOrderSequence;
+	ArrayList<AbstractMeal> unprocessedOrders = new ArrayList<AbstractMeal>();
 	double total_transaction;
-	
+	ArrayList<AbstractMeal> savedOrders = new ArrayList<AbstractMeal>();
+	ArrayList<AbstractMeal> editedOrders = new ArrayList<AbstractMeal>();
 	/**
 	 * Constructor Order
 	 */
@@ -26,6 +31,62 @@ public class Order{
 		this.specialOfferOrderSequence = new ArrayList<ArrayList<Object>>();
 		this.SummarySequence = new Stack<String>();
 	}
+	
+	public void saveOrder(){
+		this.savedOrders.addAll(unprocessedOrders);
+		for (AbstractMeal meal : savedOrders){
+			total_transaction += meal.getPrice();
+		}
+	}
+	
+	public ArrayList<AbstractMeal> getSavedOrder(){
+		return this.savedOrders;
+	}
+	
+	public void addPersonalizedMeal(AbstractMeal meal){
+		this.editedOrders.add(meal);
+	}
+	
+	public void selectMeal(AbstractMeal meal, int count){
+		for (int i = 0; i < count; i++){
+			unprocessedOrders.add(meal);	
+		}
+	}
+	
+	public ArrayList<AbstractMeal> getUnprocessedOrders(){
+		return unprocessedOrders;
+	}
+	
+	public AbstractMeal personalizeMeal(AbstractMeal meal, Ingredient ingredient, int quantity){
+		// If meal already contains ingredient
+		if (meal.getIngredients().contains(ingredient)){
+			// if we set the quantity = 0, means he wants to remove the ingredient
+			if (quantity == 0){
+				meal.setBehavior(new RemoveIngredient());
+				meal.executeBehavior(ingredient, 0);
+			} else {
+				Meal newinstance = (Meal) meal.createnewinstance();
+				Ingredient new_ingredient = ingredient.createnewinstance();
+				new_ingredient.setQuantity(new_ingredient.original_quantity+quantity);
+				newinstance.getIngredients().remove(ingredient);
+				newinstance.getIngredients().add(new_ingredient);
+				return newinstance;
+//				meal.setBehavior(new ChangeIngredient());
+//				meal.executeBehavior(ingredient, quantity);
+			}
+		} else {
+			meal.setBehavior(new AddIngredient());
+			meal.executeBehavior(ingredient, quantity);
+		}
+		
+		Meal newinstance = (Meal) meal.createnewinstance();
+		newinstance.setPersonalizedBool(true);
+		meal.setBehavior(new NormalBehavior());
+		meal.executeBehavior(null, 0);
+		return newinstance;
+	}
+	
+	
 	
 	/**
 	 * Add orders to the orderSequence
@@ -111,10 +172,12 @@ public class Order{
 	
 	public String Summary(){
 		String s = new String();
-		while (!SummarySequence.isEmpty()){
-			s += SummarySequence.pop();
+		int i = 0;
+		for (AbstractMeal obj : this.getSavedOrder()){
+			s += obj.getName() + " " + obj.getIngredientsString() + ", $" + obj.getStringPrice();
+			s += "\n";
 		}
-		s += "Total transaction cost: " + CustomUtilities.round(total_transaction,2);
+		s += "Total price: " + df.format(total_transaction);
 		return s;
 	}
 

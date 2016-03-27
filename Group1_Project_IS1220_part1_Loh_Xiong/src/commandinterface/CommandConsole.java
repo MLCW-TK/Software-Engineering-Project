@@ -187,6 +187,7 @@ public class CommandConsole {
 //		System.out.println("Would you like to confirm your order? (yes/no)");
 //		String input = sc.nextLine();
 //		if (input.equalsIgnoreCase("YES")){
+		ClientConsole.currentMeal.setFinalDefaultIngredients();
 		ClientConsole.meals.add(ClientConsole.currentMeal);
 		ClientConsole.currentMeal = null;
 		System.out.println("Meal saved!");
@@ -212,9 +213,58 @@ public class CommandConsole {
 
 	//selectMeal<mealName, quantity>
 	public void selectMeal(String mealName, int quantity){
+		Meal selected_meal = null;
+		for (AbstractMeal obj : ClientConsole.meals){
+			if (obj.getName().equals(mealName)){
+				selected_meal = (Meal) obj;
+			} 
+		}
+		if (selected_meal.equals(null)){
+			throw new RuntimeException(mealName + " not found!");
+		}
 		
+		ClientConsole.currentUser.getCurrentOrder().selectMeal(selected_meal, quantity);	
+		for (int i = 0; i < quantity; i++){
+			System.out.println(mealName + " selected");	
+		}
 	}
 	
+	public Meal personalizeMeal(String mealName, String IngredientName, int quantity){
+		Meal selected_meal = null;
+		Ingredient selected_ingredient = null;
+		for (AbstractMeal obj : ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders()){
+			if (obj.getName().equals(mealName) && !obj.getPersonalizedBool()){
+				selected_meal = (Meal) obj;
+			} 
+		}
+		if (selected_meal.equals(null)){
+			throw new RuntimeException(mealName + " not found! Please select a meal");
+		}
+
+		for (Ingredient obj : selected_meal.getIngredients()){
+			if (obj.getName().equals(IngredientName)){
+				selected_ingredient = obj.createnewinstance();
+			}
+		}
+		
+		if (selected_ingredient.equals(null)){
+			selected_ingredient = new Ingredient(IngredientName, quantity);
+		}
+		
+		Meal personalizedmeal = (Meal) ClientConsole.currentUser.getCurrentOrder().personalizeMeal(selected_meal, selected_ingredient, quantity);
+		ClientConsole.currentUser.getCurrentOrder().addPersonalizedMeal(personalizedmeal);
+		int index = ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().indexOf(selected_meal);
+		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().remove(selected_meal);
+		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().add(index, personalizedmeal);
+			
+		System.out.println(mealName + " personalized");
+		return personalizedmeal;
+	}
 	
-	
+	public void saveOrder(){
+		ClientConsole.currentUser.getCurrentOrder().saveOrder();
+		ClientConsole.currentUser.getOrders().add(ClientConsole.currentUser.getCurrentOrder());
+		System.out.println(ClientConsole.currentUser.getCurrentOrder().Summary());
+		
+	}
 }

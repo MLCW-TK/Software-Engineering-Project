@@ -1,7 +1,11 @@
 package commandinterface;
 
 import java.io.ByteArrayInputStream;
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import mealsystem.AbstractMeal;
+import mealsystem.Meal;
 
 import java.io.InputStream;
 
@@ -246,7 +250,6 @@ public class test1 {
 		System.out.println("Username = Mario, Password = 345678, Option = 2, Type = PhoneNumber");
 		cc.addContactInfo("98182241");
 		System.out.println("");
-		*/
 		
 		System.out.println("Test associateCard");
 		System.out.println("----------");
@@ -260,16 +263,17 @@ public class test1 {
 		} catch (RuntimeException e){
 			// do nothing. we need to keep testing.
 		}
-		
+
 		System.out.println("Test associateAggrement");
 		System.out.println("----------");
 		System.out.println("Test option update");
 		System.out.println("----------");
 		cc.associateAgreement("Mario", "update");
+		System.out.println("");
 		System.out.println("Test option birthday");
 		System.out.println("----------");
 		cc.associateAgreement("Mario", "birthday");
-		
+		*/
 		System.out.println("Test client login");
 		System.out.println("----------");
 		cc.login("Mario", "345678");
@@ -277,6 +281,26 @@ public class test1 {
 		System.out.println("Test listIngredient for clients");
 		System.out.println("----------");
 		cc.listIngredients("Raclette");
+		System.out.println("");
+		
+		System.out.println("Test meal selection");
+		System.out.println("----------");
+		cc.selectMeal("Raclette", 1);
+		System.out.println("");
+		
+		System.out.println("Test meal personalization");
+		System.out.println("----------");
+		cc.personalizeMeal("Raclette", "Cheese", 10);
+		System.out.println("");
+		
+		System.out.println("Adding two additional 'standard' meals");
+		System.out.println("----------");
+		cc.selectMeal("Raclette", 2);
+		System.out.println("");
+		
+		System.out.println("Saving order and printing summary...");
+		System.out.println("----------");
+		cc.saveOrder();
+		
+		}
 	}
-	
-}

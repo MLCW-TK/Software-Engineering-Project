@@ -596,3 +596,13 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/Enjoy-your-me
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 !SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2016-03-26 16:42:29.861
 !MESSAGE Cannot determine URI for '/Enjoy-your-meal-system/src/users/StaffUser.java'.
+!SESSION 2016-03-26 22:10:23.544 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/mathiasloh/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/mathiasloh/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2016-03-26 22:10:43.240
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

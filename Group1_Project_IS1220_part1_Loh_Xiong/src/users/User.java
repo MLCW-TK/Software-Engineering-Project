@@ -21,6 +21,7 @@ public abstract class User implements Subscriber{
 	boolean receive_birthdayOffer = false;
 	private String receive_address = this.email;
 	protected int amount_spent;
+	protected Order currentOrder = new Order();
 	protected ArrayList<Order> userOrders = new ArrayList<Order>();
 	protected boolean canReceiveSpecialOffers = true;
 	protected FidelityCard membershipCard = new BasicFidelityCard(this);
@@ -103,6 +104,9 @@ public abstract class User implements Subscriber{
 	
 	public void setFidelityCardByString(String name){
 		
+	}
+	public Order getCurrentOrder(){
+		return this.currentOrder;
 	}
 	
 	public void setFidelityCard(FidelityCard fidelitycard){
