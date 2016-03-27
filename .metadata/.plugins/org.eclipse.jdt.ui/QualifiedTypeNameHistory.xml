@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="java.math.RoundingMode"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="enjoyyourmeal.Meals.Meals"/>
+<fullyQualifiedTypeName name="enjoyyourmeal.Meals.Ingredient"/>
+<fullyQualifiedTypeName name="java.util.Observable"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
+<fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="CustomUtilities.DeepClone"/>
+<fullyQualifiedTypeName name="CardFidelitySystem.FidelityCard"/>
+<fullyQualifiedTypeName name="Orders.Order"/>
+<fullyQualifiedTypeName name="Users.User"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="CardFidelitySystem.BasicFidelityCard"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="CustomUtilities.Round"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="CustomUtilities.CustomUtilities"/>
+<fullyQualifiedTypeName name="users.User"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="users.StaffUser"/>
+<fullyQualifiedTypeName name="mealsystem.MealFactory"/>
+<fullyQualifiedTypeName name="ingredients.IngredientFactory"/>
+<fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.portable.InputStream"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+<fullyQualifiedTypeName name="cardfidelitysystem.FidelityCard"/>
+<fullyQualifiedTypeName name="cardfidelitysystem.FidelityCardFactory"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="users.ClientUser"/>
+<fullyQualifiedTypeName name="ingredients.Ingredient"/>
+<fullyQualifiedTypeName name="mealsystem.Meal"/>
+<fullyQualifiedTypeName name="commandinterface.ClientConsole"/>
+</qualifiedTypeNameHistroy>

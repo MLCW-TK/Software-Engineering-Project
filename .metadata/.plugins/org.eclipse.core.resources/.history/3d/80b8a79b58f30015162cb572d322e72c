@@ -1,0 +1,18 @@
+package cardfidelitysystem;
+
+import users.ClientUser;
+
+public class FidelityCardFactory {
+	public FidelityCard createFidelityCard(String name, ClientUser user){
+		if (name == "BasicFidelityCard"){
+			return new BasicFidelityCard(user);
+		}
+		if (name == "LotteryFidelityCard"){
+			return new LotteryFidelityCard(user);
+		}
+		if (name == "PointFidelityCard"){
+			return new PointFidelityCard(user);
+		}
+		throw new RuntimeException("No cardtype found!");
+	}
+}

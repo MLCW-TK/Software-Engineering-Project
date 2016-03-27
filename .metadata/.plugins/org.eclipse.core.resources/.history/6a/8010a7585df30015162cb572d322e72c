@@ -1,0 +1,21 @@
+package cardfidelitysystem;
+
+import java.util.HashMap;
+
+import users.ClientUser;
+
+public class FidelityCardFactory {
+	HashMap<String, FidelityCard> cardtypes = new HashMap<String, FidelityCard>();
+
+	
+	public FidelityCard createFidelityCard(String cardName, ClientUser user){
+		cardtypes.put("BasicFidelityCard", new BasicFidelityCard(user));
+		cardtypes.put("LotteryFidelityCard", new LotteryFidelityCard(user));
+		cardtypes.put("PointFidelityCard", new PointFidelityCard(user));
+		
+		if (cardtypes.containsKey(cardtypes)){
+			return cardtypes.get(cardtypes);
+		}
+		throw new RuntimeException("No cardtype found!");
+	}
+}

@@ -1,0 +1,38 @@
+1458435306194	Rename type 'Basic'
+1458435453362	Delete element
+1458435466804	Delete element
+1458436875179	Rename type 'Appertizers'
+1458436927043	Rename type 'Meals'
+1458437234513	Rename package 'CardFidelitySystem'
+1458437249832	Rename package 'CoreSystem'
+1458437264217	Rename package 'MealSystem'
+1458438007289	Move compilation units
+1458439449152	Delete element
+1458440501464	Rename type 'DefaultIngredientBehavior'
+1458441213559	Rename type 'Round'
+1458441901091	Rename type 'MoreIngredientBehavior'
+1458443613200	Rename type 'AddMoreIngredientBehavior'
+1458443623965	Rename type 'RemoveIngredientBehavior'
+1458443648377	Rename type 'RemoveBehavior'
+1458443765936	Rename type 'ChangeIngredientBehavior'
+1458468793650	Rename package 'Orders'
+1458468803472	Rename package 'Users'
+1458468955029	Rename package 'CustomUtilities'
+1458476507195	Delete element
+1458847447233	Rename type 'CommandConsole'
+1458861593585	Rename method 'inputTreatment'
+1458862209362	Rename type 'CommandConsole'
+1458862223081	Rename type 'CommandList'
+1458863321392	Delete element
+1458863372355	Rename type 'LoginCommandConsole'
+1458863380005	Rename type 'LoginCommandList'
+1458864664346	Rename method 'register_user'
+1458864681435	Rename method 'insert_chef'
+1458865734926	Rename type 'CommandConsole'
+1458865743251	Rename type 'CommandList'
+1458866278415	Delete element
+1458867655189	Rename type 'Meal'
+1458867932988	Rename type 'MealFactory'
+1458871280007	Rename local variable 'ingrc'
+1458996390156	Convert local variable 'customscan' to field
+1458999776205	Rename local variable 'name'
