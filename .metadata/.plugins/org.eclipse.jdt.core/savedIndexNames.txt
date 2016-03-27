@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.127+/Users/mathiasloh/Downloads/Software-Engineering-Project-master/.metadata/.plugins/org.eclipse.jdt.core
 1181824530.index
 2737811096.index
@@ -28,3 +29,9 @@ INDEX VERSION 1.127+/Users/mathiasloh/Downloads/Software-Engineering-Project-mas
 3266567714.index
 2492596494.index
 3422679912.index
+=======
+INDEX VERSION 1.127+/Users/Xiong/Work/Study/ECP/SoftwareEngineering/Project/Software-Engineering-Project/.metadata/.plugins/org.eclipse.jdt.core
+3558833520.index
+3119578000.index
+2462049519.index
+>>>>>>> 37e232836025391d7f32ab1ee5186fa11547a131

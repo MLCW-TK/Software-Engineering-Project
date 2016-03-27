@@ -8925,6 +8925,7 @@ java.lang.NullPointerException
 	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:159)
 	at java.lang.Thread.run(Thread.java:745)
 >>>>>>> 1b43eaeda952f49cd0ec095608459191630d220e
+<<<<<<< HEAD
 !SESSION 2016-03-27 14:51:14.624 -----------------------------------------------
 eclipse.buildId=4.5.2.M20160212-1500
 java.version=1.8.0_71
@@ -8958,3 +8959,5 @@ java.io.FileNotFoundException:
 	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:372)
 	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:332)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+=======
+>>>>>>> 37e232836025391d7f32ab1ee5186fa11547a131

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
+<<<<<<< HEAD
 <entry loc="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home" stamp="1452616872000"/>
+=======
+<entry loc="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home" stamp="1452622829000"/>
+>>>>>>> 37e232836025391d7f32ab1ee5186fa11547a131
 <entry loc="C:\Program Files\Java\jre1.8.0_73" stamp="1457510031167"/>
 <entry loc="/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home" stamp="1450827128000"/>
 </dirs>

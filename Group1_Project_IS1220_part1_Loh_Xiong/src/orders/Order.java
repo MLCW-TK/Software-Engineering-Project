@@ -37,10 +37,13 @@ public class Order{
 		for (AbstractMeal meal : savedOrders){
 			total_transaction += meal.getPrice();
 		}
+<<<<<<< HEAD
 		this.savedOrders.addAll(editedOrders);
 		for (AbstractMeal meal : savedOrders){
 			total_transaction += meal.getPrice();
 		}
+=======
+>>>>>>> 37e232836025391d7f32ab1ee5186fa11547a131
 	}
 	
 	public ArrayList<AbstractMeal> getSavedOrder(){
@@ -66,11 +69,16 @@ public class Order{
 		if (meal.getIngredients().contains(ingredient)){
 			// if we set the quantity = 0, means he wants to remove the ingredient
 			if (quantity == 0){
+<<<<<<< HEAD
 				Meal newinstance = (Meal) meal.createnewinstance();
 				newinstance.setBehavior(new RemoveIngredient());
 				newinstance.executeBehavior(ingredient, 0);
 				newinstance.setPersonalizedBool(true);
 				return newinstance;
+=======
+				meal.setBehavior(new RemoveIngredient());
+				meal.executeBehavior(ingredient, 0);
+>>>>>>> 37e232836025391d7f32ab1ee5186fa11547a131
 			} else {
 				Meal newinstance = (Meal) meal.createnewinstance();
 				Ingredient new_ingredient = ingredient.createnewinstance();
@@ -83,12 +91,24 @@ public class Order{
 //				meal.executeBehavior(ingredient, quantity);
 			}
 		} else {
+<<<<<<< HEAD
 			Meal newinstance = (Meal) meal.createnewinstance();
 			newinstance.setBehavior(new AddIngredient());
 			newinstance.executeBehavior(ingredient, quantity);
 			newinstance.setPersonalizedBool(true);
 			return newinstance;
 		}
+=======
+			meal.setBehavior(new AddIngredient());
+			meal.executeBehavior(ingredient, quantity);
+		}
+		
+		Meal newinstance = (Meal) meal.createnewinstance();
+		newinstance.setPersonalizedBool(true);
+		meal.setBehavior(new NormalBehavior());
+		meal.executeBehavior(null, 0);
+		return newinstance;
+>>>>>>> 37e232836025391d7f32ab1ee5186fa11547a131
 	}
 	
 	
