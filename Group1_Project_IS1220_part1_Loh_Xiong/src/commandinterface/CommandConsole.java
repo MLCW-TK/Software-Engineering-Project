@@ -254,17 +254,16 @@ public class CommandConsole {
 		
 		Meal personalizedmeal = (Meal) ClientConsole.currentUser.getCurrentOrder().personalizeMeal(selected_meal, selected_ingredient, quantity);
 		ClientConsole.currentUser.getCurrentOrder().addPersonalizedMeal(personalizedmeal);
-<<<<<<< HEAD
+
 //		int index = ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().indexOf(selected_meal);
 		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().remove(selected_meal);
 //		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().add(index, personalizedmeal);
 //			
-=======
-		int index = ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().indexOf(selected_meal);
-		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().remove(selected_meal);
-		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().add(index, personalizedmeal);
+
+//		int index = ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().indexOf(selected_meal);
+//		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().remove(selected_meal);
+//		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().add(index, personalizedmeal);
 			
->>>>>>> 37e232836025391d7f32ab1ee5186fa11547a131
 		System.out.println(mealName + " personalized");
 		return personalizedmeal;
 	}
