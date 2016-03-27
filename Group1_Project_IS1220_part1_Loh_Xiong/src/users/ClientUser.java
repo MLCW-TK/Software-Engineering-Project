@@ -68,4 +68,10 @@ public class ClientUser extends User{
 		return this.user_type;
 	}
 
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

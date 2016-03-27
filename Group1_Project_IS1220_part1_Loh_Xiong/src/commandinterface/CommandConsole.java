@@ -293,5 +293,9 @@ public class CommandConsole {
         ClientConsole.re1.notifyBirthday();
     }
 
-
+    // Here I believe that this function will change the specialPrice if it is identical to the already set specialPrice.
+	public void notifyAd(String message, String mealName, double specialPrice) {
+        putInSpecialOffer(mealName,specialPrice);
+        ClientConsole.re1.notifySubscriber(message, mealName);
+	}
 }

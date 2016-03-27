@@ -327,7 +327,10 @@ public class test1 {
         cc.putInSpecialOffer("Raclette", 9.00);
 
         //notifyAd <message, mealName, specialPrice>
-		
+        System.out.println("Test notifyAd");
+        System.out.println("----------");
+        cc.notifyAd("YOLO!", "Raclette", 8.99);
+
 		}
 
 	}

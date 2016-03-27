@@ -14,6 +14,7 @@ import users.StaffUser;
 import users.User;
 
 public class RestaurantSystem implements Publisher{
+    String message = "";
 	String name;
 	boolean registration_phase = true;
 	boolean user_phase = true;
@@ -372,6 +373,32 @@ public class RestaurantSystem implements Publisher{
 		
 		
 	}
+
+
+	@Override
+	public void notifySubscriber(String message, String mealName) {
+		String offers = "";
+		String screenMessage = "";
+		if(!this.getMeal_list().isEmpty()){
+            for(AbstractMeal meal : this.getMeal_list()){
+                if(meal.getName().equalsIgnoreCase(mealName)&&meal.isSpecialOffer()){
+                        offers = offers+"Meal: "+meal.getName()+"\n"
+                            +"Special price: "+meal.getSpecialPrice()+"$\n";
+                }
+            }
+			for(Subscriber sub :  this.getSubscriber_list()){
+					String userMessage = "From: "+this.getRestaurantName()+"\n"
+							+"To: "+((User)sub).getReceiveAddress() +"\n"
+							+message
+							+"\n"+offers+"\n";
+					screenMessage = userMessage;
+			}
+			System.out.println(screenMessage);
+		}
+		else{System.out.println("Meal_list is empty!");}
+	}
+	
+
 	
 	// modified from notifySubscribers()
 	public void notifyBirthday(){
@@ -462,5 +489,13 @@ public class RestaurantSystem implements Publisher{
 
 	}
 //EndRegion
+
+	public void setMessage(String message) {
+            this.message = message;
+	}
+
+	public String getMessage() {
+            return this.message;
+	}
 	
 }

@@ -354,8 +354,30 @@ public class ClientConsole{
 			throw new RuntimeException(e.getMessage());
 		}
 	}
+    // notifyAd <message, mealName, specialPrice>
+     public static void notifyAd(String input){
+		String command = input.substring("notifyAd ".length()+2, input.length()-1);
+		String[] data = command.split(",");
 
-    
+		
+		if (data.length < 3){
+			System.out.println("Please enter valid commands");
+			throw new RuntimeException("Eg. notifyAd  <message, mealName, specialPrice>");				
+		}
+		
+		for (int i = 0; i < 3; i++){
+			data[i]=data[i].replaceAll("\\s+", "");
+		}
+		
+		double specialPrice = Double.parseDouble(data[2]);
+		
+		try {
+                    cl.notifyAd (data[0], data[1], specialPrice);
+		} catch (RuntimeException e){
+			throw new RuntimeException(e.getMessage());
+		}
+	}
+   
 	public static void logout(String input){
 		try {
 			cl.logout();
@@ -403,6 +425,11 @@ public class ClientConsole{
 		if ((input.length()>="putInSpecialOffer <".length()+1)&&((input.substring(0,"putInSpecialOffer <".length())).equals("putInSpecialOffer <"))&&(lastLetter.equals(">"))){
 			selectMeal(input);
 			return;}
+                // notifyAd <message, mealName, specialPrice>
+                if ((input.length()>="notifyAd <".length()+1)&&((input.substring(0,"notifyAd <".length())).equals("notifyAd <"))&&(lastLetter.equals(">"))){
+			selectMeal(input);
+			return;}
+
 		// logout
 		if ((input.length()=="logout <".length()+1)&&((input.substring(0,"logout <".length())).equals("logout <"))&&(lastLetter.equals(">"))){
 			logout(input);
