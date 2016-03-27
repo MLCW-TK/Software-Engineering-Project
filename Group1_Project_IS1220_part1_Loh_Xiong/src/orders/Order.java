@@ -70,6 +70,7 @@ public class Order{
 				new_ingredient.setQuantity(new_ingredient.original_quantity+quantity);
 				newinstance.getIngredients().remove(ingredient);
 				newinstance.getIngredients().add(new_ingredient);
+				newinstance.setPersonalizedBool(true);
 				return newinstance;
 //				meal.setBehavior(new ChangeIngredient());
 //				meal.executeBehavior(ingredient, quantity);
