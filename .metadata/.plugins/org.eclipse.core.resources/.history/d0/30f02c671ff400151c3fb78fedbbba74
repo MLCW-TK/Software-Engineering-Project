@@ -307,8 +307,6 @@ public class test1 {
 		cc.selectMeal("Raclette", 2);
 		System.out.println("");
 		
-		cc.personalizeMeal("Raclette", "penis", 69);
-		
 		System.out.println("Saving order and printing summary...");
 		System.out.println("----------");
 		cc.saveOrder();

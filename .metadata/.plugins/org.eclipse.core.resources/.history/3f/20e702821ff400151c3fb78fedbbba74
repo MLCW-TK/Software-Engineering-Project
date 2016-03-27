@@ -248,7 +248,7 @@ public class CommandConsole {
 			}
 		}
 		
-		if (selected_ingredient == null){
+		if (selected_ingredient.equals(null)){
 			selected_ingredient = new Ingredient(IngredientName, quantity);
 		}
 		
