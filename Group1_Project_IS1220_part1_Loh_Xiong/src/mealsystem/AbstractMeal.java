@@ -25,9 +25,10 @@ public abstract class AbstractMeal{
 	HashSet<Ingredient> ingredients = new HashSet<Ingredient>();
 	MealBehavior behavior = new NormalBehavior();
 	DecimalFormat df = new DecimalFormat("#.00"); 
-
+	Boolean personalized = false;
+	
 	double default_price;
-	static HashSet<Ingredient> default_ingredients;
+	static HashSet<Ingredient> default_ingredients = new HashSet<Ingredient>();
 	
 	/**
 	 * 
@@ -35,6 +36,7 @@ public abstract class AbstractMeal{
 	 * @param description
 	 * @param ingredients
 	 */
+	
 	public AbstractMeal(String name, String description, Ingredient ...ingredients){
 		this.name = name;
 		for (Ingredient obj : ingredients){
@@ -98,10 +100,36 @@ public abstract class AbstractMeal{
 		this.ingredients.add(e);
 	}
 	
+	public AbstractMeal createnewinstance(){
+		Ingredient[] editedIngredients = new Ingredient[this.ingredients.size()];
+		this.ingredients.toArray(editedIngredients);
+		AbstractMeal meal = new Meal(this.name, this.description, this.price, this.behavior, editedIngredients);
+		return meal;
+	}
+	
+	public void setFinalDefaultIngredients(){
+		this.default_price = this.price;
+		if (!ingredients.isEmpty()){
+			for (Ingredient obj : ingredients){
+				IngredientFactory s = new IngredientFactory();
+				final Ingredient ss = s.createIngredient(obj.getName(), obj.getQuantity());
+				default_ingredients.add(ss);
+			}
+		}
+	}
+	
 	/**
 	 * getTotalIngredientPrice to 2 decimal places, i.e. to cents
 	 * @return
 	 */
+	public void setPersonalizedBool(Boolean bool){
+		this.personalized = bool;
+	}
+	
+	public Boolean getPersonalizedBool(){
+		return this.personalized;
+	}
+	
 	public double getTotalIngredientPrice(){
 		return CustomUtilities.round(this.totalIngredientsPrice,2);
 	}
@@ -224,9 +252,19 @@ public abstract class AbstractMeal{
 		for (Ingredient obj : ingredients){
 			s.put(obj.getName(), obj.getQuantity());
 		}
-		s.toString();
-
-		return s.toString();
+		String ss = s.toString();
+		String items[] = ss.split(",");
+		items[0] = items[0].substring(1, items[0].length());
+		items[items.length-1] = items[items.length-1].substring(0, items[items.length-1].length()-1);
+		
+		String output = new String();
+		output += "(";
+		for (String elem : items){
+			output += elem + "g, ";
+		}
+		output = output.substring(0, output.length()-2);
+		output += ")";
+		return output;
 	}
 	
 	public void setBehavior(MealBehavior b){

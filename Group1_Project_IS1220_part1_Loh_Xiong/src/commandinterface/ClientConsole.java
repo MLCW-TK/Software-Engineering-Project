@@ -27,6 +27,9 @@ public class ClientConsole{
 	static protected FidelityCardFactory fcf = new FidelityCardFactory();
 
 
+	static Meal editedMeal = null;
+	
+	
 	static boolean globalPhase = true;
 	static boolean loginPhase = true;
 	static boolean loggedinPhase = false;
@@ -318,7 +321,7 @@ public class ClientConsole{
 		}
 	}
 	
-
+	
 	
 	public static void operationsInputTreatment(String input){
 		int strlength = input.length();
@@ -352,6 +355,8 @@ public class ClientConsole{
 		if ((input.length()=="logout <".length()+1)&&((input.substring(0,"logout <".length())).equals("logout <"))&&(lastLetter.equals(">"))){
 			logout(input);
 			return;}
+		
+		
 
 	}
 	

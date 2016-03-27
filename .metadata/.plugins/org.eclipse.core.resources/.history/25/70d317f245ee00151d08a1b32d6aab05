@@ -1,5 +1,0 @@
-package mealsystem;
-
-public interface MealBehavior {
-	
-}

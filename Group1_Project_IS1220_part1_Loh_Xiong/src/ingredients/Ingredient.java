@@ -18,8 +18,6 @@ public class Ingredient {
 		this.original_quantity = this.quantity;
 	}
 	
-
-	
 	public Ingredient(String name, double quantity, double priceperquantity){
 		this.name = name;
 		this.quantity = quantity;
@@ -33,9 +31,14 @@ public class Ingredient {
 		}
 	}
 	
+	public Ingredient createnewinstance(){
+		return new Ingredient(this.name, this.quantity);
+	}
+	
 	public double getOriginalQuantity(){
 		return original_quantity;
 	}
+	
 	
 	public void addQuantity(double quantity){
 		this.quantity = quantity;

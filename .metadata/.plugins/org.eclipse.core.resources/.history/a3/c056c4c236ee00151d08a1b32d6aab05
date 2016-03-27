@@ -1,5 +1,0 @@
-package CardFidelitySystem;
-
-public interface FidelityCardBehavior {
-	public boolean useFeature();
-}

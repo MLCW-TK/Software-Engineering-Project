@@ -9,6 +9,10 @@ public class Meal extends AbstractMeal {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Meal(String name, String description, double price, MealBehavior behavior, Ingredient[] ingredients){
+		super(name, description, price, behavior, ingredients);
+	}
+	
 	public Meal(String name, String description, Ingredient[] ingredients) {
 		super(name, description, ingredients);
 	}
