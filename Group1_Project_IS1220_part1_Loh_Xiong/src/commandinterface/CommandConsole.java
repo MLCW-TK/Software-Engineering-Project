@@ -136,7 +136,7 @@ public class CommandConsole {
 		} else {
 			MealFactory mealfac = new MealFactory();
 			Meal tempMeal = (Meal) mealfac.createMeal(name, price);
-			ClientConsole.meals.add(tempMeal);
+			ClientConsole.re1.getMeal_list().add(tempMeal);
 			System.out.println("Meal '" + tempMeal.getName() + "' is added to the system");
 			ClientConsole.currentMeal = tempMeal;
 			return tempMeal;
@@ -147,7 +147,7 @@ public class CommandConsole {
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
 			throw new RuntimeException("Insufficient previledges to access this command");
 		}
-		if ((ClientConsole.currentMeal.equals(null))){
+		if ((ClientConsole.currentMeal == null)){
 			throw new RuntimeException("currentMeal is empty!");
 		}
 		IngredientFactory ingrfac = new IngredientFactory();
@@ -162,7 +162,7 @@ public class CommandConsole {
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
 			throw new RuntimeException("Insufficient previledges to access this command");
 		}
-		if ((ClientConsole.currentMeal.equals(null))){
+		if ((ClientConsole.currentMeal == null)){
 			throw new RuntimeException("currentMeal is empty!");
 		}
 		
@@ -180,7 +180,7 @@ public class CommandConsole {
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
 			throw new RuntimeException("Insufficient previledges to access this command");
 		}
-		if ((ClientConsole.currentMeal.equals(null))){
+		if ((ClientConsole.currentMeal ==null)){
 			throw new RuntimeException("currentMeal is empty!");
 		}
 		
@@ -188,7 +188,7 @@ public class CommandConsole {
 //		String input = sc.nextLine();
 //		if (input.equalsIgnoreCase("YES")){
 		ClientConsole.currentMeal.setFinalDefaultIngredients();
-		ClientConsole.meals.add(ClientConsole.currentMeal);
+		ClientConsole.re1.getMeal_list().add(ClientConsole.currentMeal);
 		ClientConsole.currentMeal = null;
 		System.out.println("Meal saved!");
 		return ClientConsole.currentMeal;
@@ -196,10 +196,24 @@ public class CommandConsole {
 //			return ClientConsole.currentMeal;
 //		}
 	}
+	
+	public void putInSpecialOffer(String mealName, double price) {
+        if (!(ClientConsole.currentUser instanceof StaffUser)){
+			throw new RuntimeException("Insufficient previledges to access this command");
+		}
+        for (AbstractMeal meal : ClientConsole.re1.getMeal_list()){
+        	if(meal.getName().equals(mealName)){
+        		meal.setSpecialPrice(price);
+        		meal.setSpecialOfferToggle(true);
+        	}
+        }
+            
+
+	}
 	// ClientUser commands
 	public void listIngredients(String meal){
 		boolean bool = false;
-		for (AbstractMeal aMeal : ClientConsole.meals){
+		for (AbstractMeal aMeal : ClientConsole.re1.getMeal_list()){
 			if (aMeal.getName().equalsIgnoreCase(meal)){
 				aMeal.printIngredients();
 				bool = true;
@@ -215,12 +229,12 @@ public class CommandConsole {
 	public void selectMeal(String mealName, int quantity){
             
 		Meal selected_meal = null;
-		for (AbstractMeal obj : ClientConsole.meals){
+		for (AbstractMeal obj : ClientConsole.re1.getMeal_list()){
 			if (obj.getName().equals(mealName)){
 				selected_meal = (Meal) obj;
 			} 
 		}
-		if (selected_meal.equals(null)){
+		if (selected_meal == null){
 			throw new RuntimeException(mealName + " not found!");
 		}
 		
@@ -238,7 +252,7 @@ public class CommandConsole {
 				selected_meal = (Meal) obj;
 			} 
 		}
-		if (selected_meal.equals(null)){
+		if (selected_meal== null){
 			throw new RuntimeException(mealName + " not found! Please select a meal");
 		}
 
@@ -248,15 +262,21 @@ public class CommandConsole {
 			}
 		}
 		
-		if (selected_ingredient.equals(null)){
+		if (selected_ingredient == null){
 			selected_ingredient = new Ingredient(IngredientName, quantity);
 		}
 		
 		Meal personalizedmeal = (Meal) ClientConsole.currentUser.getCurrentOrder().personalizeMeal(selected_meal, selected_ingredient, quantity);
 		ClientConsole.currentUser.getCurrentOrder().addPersonalizedMeal(personalizedmeal);
-		int index = ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().indexOf(selected_meal);
+
+//		int index = ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().indexOf(selected_meal);
 		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().remove(selected_meal);
-		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().add(index, personalizedmeal);
+//		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().add(index, personalizedmeal);
+//			
+
+//		int index = ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().indexOf(selected_meal);
+//		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().remove(selected_meal);
+//		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().add(index, personalizedmeal);
 			
 		System.out.println(mealName + " personalized");
 		return personalizedmeal;
@@ -268,4 +288,10 @@ public class CommandConsole {
 		System.out.println(ClientConsole.currentUser.getCurrentOrder().Summary());
 		
 	}
+    public void notifyBirthday(){
+    	ClientConsole.re1.refresh();
+        ClientConsole.re1.notifyBirthday();
+    }
+
+
 }

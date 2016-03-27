@@ -274,118 +274,6 @@ public class RestaurantSystem implements Publisher{
 			 */
 			ClientUser newUser = new ClientUser(first_name, last_name, username, password, email, contact_details);
 			newUser.registerUpdates();
-	//		System.out.println("Would you like to receive updates? ('yes', or press 'enter' to skip)");
-	//		String response = sc2.nextLine();
-	//		if (response.equalsIgnoreCase("YES")){
-	//			newUser.setReceiveUpdates(true);
-	//			newUser.setReceiveAddress(email);
-	//			/** 
-	//			 * Checks if either email or contact details were given
-	//			 * If none were given, prompt the user to give either email address or contact address
-	//			 * If other contacts were given, asks the user to specify the receive method.
-	//			 */
-	//			if (email.equals("")){
-	//				if (contact_details.isEmpty()){
-	//					while (newUser.getEmail().equals("") && newUser.getContactHash().isEmpty()){
-	//						System.out.println("No contact details found");
-	//						System.out.println("Where would you like us to send you updates?");
-	//						System.out.println("Type '1' to enter an email address, or '2' to enter other contact details manually");
-	//						String ans = sc2.nextLine();
-	//						switch(ans){
-	//						case "1":
-	//							System.out.println("Please enter your email address: ");
-	//							email = sc2.nextLine();
-	//							if (email.equals("")){
-	//								continue;
-	//							} else {
-	//								newUser.setEmail(email);
-	//								newUser.setReceiveAddress(email);
-	//								System.out.println("We will send you updates by email from now on");
-	//								break;
-	//							}
-	//						case "2":
-	//							System.out.println("Please enter a contact field description");
-	//							String value1 = sc2.nextLine();
-	//							System.out.println("Please enter a contact field value");
-	//							String value2 = sc2.nextLine();
-	//							if (value1.equals("") || value2.equals("")){
-	//								continue;
-	//							}
-	//							contact_details.put(value1, value2);
-	//							newUser.setReceiveAddress(newUser.getContactHash().get(value1));
-	//							System.out.println("We will send updates to " + value1 + " from now on");
-	//							break;
-	//							
-	//						default:
-	//							System.out.println("Invalid input. Please try again");
-	//							break;
-	//						}
-	//					}
-	//				}
-	//					else{
-	//						while (newUser.getReceiveAddress().equals("")){
-	//							System.out.println("No email address set for updates notification");
-	//							System.out.println("Type '1' if you would like to add an email address to receive updates, or type '2' if you like to choose from other contact details");
-	//							String NotifyResponse = sc2.nextLine();
-	//							switch(NotifyResponse){
-	//							case "1":
-	//								System.out.println("Please enter an email address");
-	//								email = sc2.nextLine();
-	//								if (email.equals("")){
-	//									continue;
-	//								} else {
-	//									newUser.setEmail(email);
-	//									newUser.setReceiveAddress(email);
-	//									System.out.println("Email updated. You will receive email updates from now on");
-	//									break;
-	//								}
-	//							case "2":
-	//								System.out.println("Please choose from the list below");
-	//								System.out.println(newUser.getContactKeys());
-	//								String ContactKey = sc2.nextLine();
-	//						
-	//								while (true){
-	//									if (newUser.getContactHash().containsKey(ContactKey)){
-	//										newUser.setReceiveAddress(newUser.getContactValue(ContactKey));
-	//										System.out.println("We will send updates to " + ContactKey + " from now on");
-	//										break;
-	//									}
-	//									else{
-	//										System.out.println("Wrong input selected. Please try again");
-	//										ContactKey = sc2.nextLine();
-	//									}
-	//								}
-	//								break;
-	//							default:
-	//								System.out.println("Invalid response. Please try again");
-	//								break;
-	//							}
-	//						}
-	//						}
-	//				}else {
-	//					if (!newUser.getContactHash().isEmpty()){
-	//						System.out.println("Would you like to change how you would like to receive updates? (yes/no, default = email)");
-	//						String response2 = sc2.nextLine();
-	//							if (response2.equalsIgnoreCase("YES")){
-	//								System.out.println("Please enter one of your contact types shown below");
-	//								System.out.println(newUser.getContactKeys());
-	//								String ContactKey = sc2.nextLine();
-	//							while (true){
-	//								if (newUser.getContactHash().containsKey(ContactKey)){
-	//									newUser.setReceiveAddress(newUser.getContactValue(ContactKey));
-	//									break;
-	//								}
-	//								else{
-	//									System.out.println("Wrong input selected. Please try again");
-	//									ContactKey = sc2.nextLine();
-	//								}
-	//							}	
-	//						}
-	//					} else {
-	//						System.out.println("We will send you email updates if any!");
-	//					}
-	//				}
-	//		}
 			newUser.registerBirthday();
 			
 			System.out.println("Would you like to save this account? (yes/no)");
@@ -443,7 +331,7 @@ public class RestaurantSystem implements Publisher{
 		return this.subscriber_list;
 	}
 	
-	HashSet<AbstractMeal> getMeal_list(){
+	public HashSet<AbstractMeal> getMeal_list(){
 		return this.meal_list;
 	}
 //Region - update
@@ -482,6 +370,27 @@ public class RestaurantSystem implements Publisher{
 		}
 		else{System.out.println("Meal_list is empty!");}
 		
+		
+	}
+	
+	// modified from notifySubscribers()
+	public void notifyBirthday(){
+		String offers = "";
+		String screenMessage = "";
+		if(!this.getMeal_list().isEmpty()){
+			offers = this.allMealOffer();
+			for(Subscriber sub :  this.getSubscriber_list()){
+				if(((User)sub).birthdayIsToday()){	
+					String userMessage = "From: "+this.getRestaurantName()+"\n"
+							+"To: "+((User)sub).getReceiveAddress() +"\n"
+							+"Message: "+birthdayOffer(sub)+"\n";
+					screenMessage = screenMessage + userMessage;
+				}
+			}
+
+			System.out.println(screenMessage);
+		}
+		else{System.out.println("Meal_list is empty!");}
 		
 	}
 
