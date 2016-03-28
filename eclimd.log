@@ -30,3 +30,15 @@
 2016-03-27 14:28:00,501 INFO  [org.eclim.eclipse.EclimDaemon] Stopping plugin org.eclim.core
 2016-03-27 14:28:00,502 INFO  [org.eclim.plugin.core.CorePlugin] Stopping plugin org.eclim.jdt
 2016-03-27 14:28:00,503 INFO  [org.eclim.eclipse.EclimDaemon] Eclim stopped.
+2016-03-27 15:23:02,893 INFO  [org.eclim.eclipse.EclimDaemon] Workspace: /Users/Xiong/Work/Study/ECP/SoftwareEngineering/Project/Software-Engineering-Project
+2016-03-27 15:23:02,896 INFO  [org.eclim.eclipse.EclimDaemon] Home: /opt/homebrew-cask/Caskroom/eclipse-ide/4.5.1/Eclipse.app/Contents/Eclipse/plugins/org.eclim_2.5.0/
+2016-03-27 15:23:02,896 INFO  [org.eclim.eclipse.EclimDaemon] Starting eclim...
+2016-03-27 15:23:02,912 INFO  [org.eclim.eclipse.EclimDaemon] Loading plugin org.eclim
+2016-03-27 15:23:02,915 INFO  [org.eclim.eclipse.EclimDaemon] Loading plugin org.eclim.core
+2016-03-27 15:23:03,075 INFO  [org.eclim.plugin.core.CorePlugin] Loading eclim plugins...
+2016-03-27 15:23:03,084 INFO  [org.eclim.plugin.core.CorePlugin] Loading plugin org.eclim.jdt
+2016-03-27 15:23:03,085 INFO  [org.eclim.plugin.core.CorePlugin] Plugins loaded.
+2016-03-27 15:23:03,085 INFO  [org.eclim.eclipse.EclimDaemon] Loaded plugin org.eclim.core
+2016-03-27 15:23:03,087 INFO  [org.eclim.eclipse.EclimDaemon] Waiting on running jobs before starting eclimd...
+2016-03-27 15:23:05,088 INFO  [org.eclim.eclipse.EclimDaemon] Jobs finished.
+2016-03-27 15:23:05,089 INFO  [org.eclim.eclipse.EclimDaemon] Eclim Server Started on: 127.0.0.1:9091

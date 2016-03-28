@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 
+import javax.management.RuntimeErrorException;
+
 import cardfidelitysystem.FidelityCardFactory;
 
 import coresystem.RestaurantSystem;
@@ -313,6 +315,69 @@ public class ClientConsole{
 			throw new RuntimeException(e.getMessage());
 		}
 	}
+
+    public static void notifyBirthday(String input){
+        String command = input.substring("notifyBirthday".length()+2, input.length()-1);
+
+        if (!command.equals("")){
+		System.out.println("Please enter valid commands");
+		throw new RuntimeException("Eg. notifyBirthday <>");				
+	    }
+        try{
+            cl.notifyBirthday();
+        }catch(RuntimeErrorException e){
+            throw new RuntimeException(e.getMessage());
+        }
+
+
+    }
+    // putInSpecialOffer <mealName, price>
+    public static void putInSpecialOffer(String input){
+		String command = input.substring("putInSpecialOffer ".length()+2, input.length()-1);
+		String[] data = command.split(",");
+
+		
+		if (data.length < 2){
+			System.out.println("Please enter valid commands");
+			throw new RuntimeException("Eg. putInSpecialOffer  <mealName, price>");				
+		}
+		
+		for (int i = 0; i < 2; i++){
+			data[i]=data[i].replaceAll("\\s+", "");
+		}
+		
+		double price = Double.parseDouble(data[1]);
+		
+		try {
+			cl.putInSpecialOffer (data[0], price);
+		} catch (RuntimeException e){
+			throw new RuntimeException(e.getMessage());
+		}
+	}
+    // notifyAd <message, mealName, specialPrice>
+     public static void notifyAd(String input){
+		String command = input.substring("notifyAd ".length()+2, input.length()-1);
+		String[] data = command.split(",");
+
+		
+		if (data.length < 3){
+			System.out.println("Please enter valid commands");
+			throw new RuntimeException("Eg. notifyAd  <message, mealName, specialPrice>");				
+		}
+		
+		for (int i = 0; i < 3; i++){
+			data[i]=data[i].replaceAll("\\s+", "");
+		}
+		
+		double specialPrice = Double.parseDouble(data[2]);
+		
+		try {
+                    cl.notifyAd (data[0], data[1], specialPrice);
+		} catch (RuntimeException e){
+			throw new RuntimeException(e.getMessage());
+		}
+	}
+   
 	public static void logout(String input){
 		try {
 			cl.logout();
@@ -351,6 +416,20 @@ public class ClientConsole{
 		if ((input.length()>="selectMeal <".length()+1)&&((input.substring(0,"selectMeal <".length())).equals("selectMeal <"))&&(lastLetter.equals(">"))){
 			selectMeal(input);
 			return;}
+        // notifyBirthday
+        if ((input.length()>="notifyBirthday <".length()+1)&&((input.substring(0,"notifyBirthday <".length())).equals("notifyBirthday <"))&&(lastLetter.equals(">"))){
+			notifyBirthday(input);
+			return;}
+
+        // putInSpecialOffer <mealName, price>
+		if ((input.length()>="putInSpecialOffer <".length()+1)&&((input.substring(0,"putInSpecialOffer <".length())).equals("putInSpecialOffer <"))&&(lastLetter.equals(">"))){
+			selectMeal(input);
+			return;}
+                // notifyAd <message, mealName, specialPrice>
+                if ((input.length()>="notifyAd <".length()+1)&&((input.substring(0,"notifyAd <".length())).equals("notifyAd <"))&&(lastLetter.equals(">"))){
+			selectMeal(input);
+			return;}
+
 		// logout
 		if ((input.length()=="logout <".length()+1)&&((input.substring(0,"logout <".length())).equals("logout <"))&&(lastLetter.equals(">"))){
 			logout(input);

@@ -136,7 +136,7 @@ public class CommandConsole {
 		} else {
 			MealFactory mealfac = new MealFactory();
 			Meal tempMeal = (Meal) mealfac.createMeal(name, price);
-			ClientConsole.meals.add(tempMeal);
+			ClientConsole.re1.getMeal_list().add(tempMeal);
 			System.out.println("Meal '" + tempMeal.getName() + "' is added to the system");
 			ClientConsole.currentMeal = tempMeal;
 			return tempMeal;
@@ -188,7 +188,7 @@ public class CommandConsole {
 //		String input = sc.nextLine();
 //		if (input.equalsIgnoreCase("YES")){
 		ClientConsole.currentMeal.setFinalDefaultIngredients();
-		ClientConsole.meals.add(ClientConsole.currentMeal);
+		ClientConsole.re1.getMeal_list().add(ClientConsole.currentMeal);
 		ClientConsole.currentMeal = null;
 		System.out.println("Meal saved!");
 		return ClientConsole.currentMeal;
@@ -196,10 +196,24 @@ public class CommandConsole {
 //			return ClientConsole.currentMeal;
 //		}
 	}
+	
+	public void putInSpecialOffer(String mealName, double price) {
+        if (!(ClientConsole.currentUser instanceof StaffUser)){
+			throw new RuntimeException("Insufficient previledges to access this command");
+		}
+        for (AbstractMeal meal : ClientConsole.re1.getMeal_list()){
+        	if(meal.getName().equals(mealName)){
+        		meal.setSpecialPrice(price);
+        		meal.setSpecialOfferToggle(true);
+        	}
+        }
+            
+
+	}
 	// ClientUser commands
 	public void listIngredients(String meal){
 		boolean bool = false;
-		for (AbstractMeal aMeal : ClientConsole.meals){
+		for (AbstractMeal aMeal : ClientConsole.re1.getMeal_list()){
 			if (aMeal.getName().equalsIgnoreCase(meal)){
 				aMeal.printIngredients();
 				bool = true;
@@ -215,7 +229,7 @@ public class CommandConsole {
 	public void selectMeal(String mealName, int quantity){
             
 		Meal selected_meal = null;
-		for (AbstractMeal obj : ClientConsole.meals){
+		for (AbstractMeal obj : ClientConsole.re1.getMeal_list()){
 			if (obj.getName().equals(mealName)){
 				selected_meal = (Meal) obj;
 			} 
@@ -273,5 +287,15 @@ public class CommandConsole {
 		ClientConsole.currentUser.getOrders().add(ClientConsole.currentUser.getCurrentOrder());
 		System.out.println(ClientConsole.currentUser.getCurrentOrder().Summary());
 		
+	}
+    public void notifyBirthday(){
+    	ClientConsole.re1.refresh();
+        ClientConsole.re1.notifyBirthday();
+    }
+
+    // Here I believe that this function will change the specialPrice if it is identical to the already set specialPrice.
+	public void notifyAd(String message, String mealName, double specialPrice) {
+        putInSpecialOffer(mealName,specialPrice);
+        ClientConsole.re1.notifySubscriber(message, mealName);
 	}
 }

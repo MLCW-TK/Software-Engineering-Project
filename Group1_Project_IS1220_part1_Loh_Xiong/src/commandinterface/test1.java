@@ -263,7 +263,8 @@ public class test1 {
 		} catch (RuntimeException e){
 			// do nothing. we need to keep testing.
 		}
-
+		*/
+		
 		System.out.println("Test associateAggrement");
 		System.out.println("----------");
 		System.out.println("Test option update");
@@ -273,7 +274,7 @@ public class test1 {
 		System.out.println("Test option birthday");
 		System.out.println("----------");
 		cc.associateAgreement("Mario", "birthday");
-		*/
+
 		System.out.println("Test client login");
 		System.out.println("----------");
 		cc.login("Mario", "345678");
@@ -313,5 +314,23 @@ public class test1 {
 		System.out.println("----------");
 		cc.saveOrder();
 		
+		System.out.println("Test notifyBirthday");
+		System.out.println("----------");
+		cc.notifyBirthday();
+		
+		System.out.println("bobred login");
+		System.out.println("----------");
+		cc.login("bobred", "123456");
+		
+        System.out.println("Test set special price");
+		System.out.println("----------");
+        cc.putInSpecialOffer("Raclette", 9.00);
+
+        //notifyAd <message, mealName, specialPrice>
+        System.out.println("Test notifyAd");
+        System.out.println("----------");
+        cc.notifyAd("YOLO!", "Raclette", 8.99);
+
 		}
+
 	}

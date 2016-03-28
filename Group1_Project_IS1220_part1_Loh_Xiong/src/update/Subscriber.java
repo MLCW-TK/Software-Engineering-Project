@@ -11,4 +11,5 @@ public interface Subscriber {
 	public boolean getReceiveUpdates();
 	public void setBirthday(Date date);
 	public Date getBirthday();
+	public void update();
 }
