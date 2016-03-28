@@ -6,12 +6,13 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="select" key="selection"/>
+		<item value="== null" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value=".equals(null)"/>
 			<item value="select"/>
 			<item value="clientuser"/>
 			<item value="getIngredi"/>
@@ -19,9 +20,9 @@
 			<item value="df."/>
 			<item value="price"/>
 			<item value="Personalize"/>
-			<item value="personalize"/>
 		</list>
 		<list key="replacehistory">
+			<item value="== null"/>
 			<item value="CustomUtilities.round"/>
 			<item value="CustomUtilities.round()"/>
 			<item value="public final class ExampleUtilities{&#x0A;    // Example Utility method&#x0A;    public static int foo(int i, int j){&#x0A;        int val;&#x0A;&#x0A;        //Do stuff&#x0A;&#x0A;        return val;&#x0A;    }&#x0A;&#x0A;    // Example Utility method overloaded&#x0A;    public static float foo(float i, float j)&#x0A;        float val;&#x0A;&#x0A;        //Do stuff&#x0A;&#x0A;        return val;&#x0A;    }&#x0A;&#x0A;    // Example Utility method calling private method&#x0A;    public static long bar(int p){&#x0A;        return hid(p) * hid(p);&#x0A;    }&#x0A;&#x0A;    // Example private method&#x0A;    private static long hid(int i){&#x0A;        return i * 2 + 1;&#x0A;    }&#x0A;}&#x0A;"/>
