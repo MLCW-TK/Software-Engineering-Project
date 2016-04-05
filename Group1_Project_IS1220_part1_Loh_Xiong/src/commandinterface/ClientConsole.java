@@ -381,7 +381,7 @@ public class ClientConsole{
 	public static void logout(String input){
 		try {
 			cl.logout();
-                        System.out.p
+                        System.out.println("You have logged out.");
 		} catch (Exception e){
 			throw new RuntimeException(e.getMessage());
 		}
