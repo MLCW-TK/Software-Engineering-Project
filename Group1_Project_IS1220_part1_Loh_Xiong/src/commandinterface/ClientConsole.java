@@ -525,7 +525,7 @@ public class ClientConsole{
 //					loggedinPhase = false;
 //					continue;
 //				}
-				if (input.equalsIgnoreCase("-help")){
+				if (input.equalsIgnoreCase("-HELP")){
                                     if (currentUser.getUsertype().equals("Staff")){
                                         String staffOperations = new String();
                                         staffOperations += "Here are the operations only available to staff users:\n"
