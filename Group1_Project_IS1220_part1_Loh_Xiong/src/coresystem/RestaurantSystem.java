@@ -24,6 +24,7 @@ public class RestaurantSystem implements Publisher{
 	public HashSet<AbstractMeal> meal_list = new HashSet<AbstractMeal>();
 	public String birthdaySpecialOffer = "30% discount!";
 	public double birthdayOffer = 0.3;
+	private String staffKey = "EYMSresto";
 	/**
 	 * This is the constructor of RestaurantSystem.
 	 * @param restaurant_name
@@ -309,6 +310,16 @@ public class RestaurantSystem implements Publisher{
 		}
 	}	
 	
+	public void register(String firstname, String lastname, String username, String password, String email, String dob, String staffKey){
+		if (staffKey.equals(this.staffKey)){
+			User newStaff = new StaffUser(firstname, lastname, username, password, email);
+			this.addUser((ClientUser) newStaff);
+		}
+		if (!staffKey.equals(this.staffKey)){
+			User newClient = new ClientUser(firstname, lastname, username, password, email);
+			this.addUser((ClientUser) newClient);
+		}
+	}
 	public ClientUser login(String username, String password){
 		ClientUser result;
 		for (ClientUser users : user_list){

@@ -1,6 +1,7 @@
 package gui;
 
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,28 +23,12 @@ import users.ClientUser;
 
 
 public class HomeGUI extends JFrame{
-
+	static RestaurantSystem res = new RestaurantSystem("EYMS");
 	// system initialization
-	static RestaurantSystem re1 = new RestaurantSystem("our restaurant!");
-	static ArrayList<Order> orders = new ArrayList<Order>();
-	static HashSet<AbstractMeal> meals = new HashSet<AbstractMeal>();;
-	static HashSet<String> ingredients = new HashSet<String>();
-	static Scanner sc = new Scanner(System.in);
-	private static CommandConsole cl = new CommandConsole();
-	static ClientUser currentUser;
-	static Meal currentMeal;
-	static protected FidelityCardFactory fcf = new FidelityCardFactory();
-
-
-	static Meal editedMeal = null;
-	
-	
-	static boolean globalPhase = true;
-	static boolean loginPhase = true;
-	static boolean loggedinPhase = false;
 	
 
-    
+	
+	
     public static void main(String[] args){
         new HomeGUI();
     }
@@ -57,7 +42,7 @@ public class HomeGUI extends JFrame{
     
 
     public HomeGUI(){
-        this.setSize(900,600);
+        this.setSize(350,300);
 
         Toolkit tlk = Toolkit.getDefaultToolkit();
         Dimension dim = tlk.getScreenSize();
@@ -73,10 +58,9 @@ public class HomeGUI extends JFrame{
 
         this.setTitle("EYMS - Home");
 
-        JPanel loginPan = new JPanel();
-        this.add(loginPan);
 
-        JLabel usernameL = new JLabel("User name");
+
+        JLabel usernameL = new JLabel("Username");
 
         usernameF = new JTextField(20);
         usernameF.setText("username");
@@ -95,22 +79,39 @@ public class HomeGUI extends JFrame{
         ListenForButton registerListen = new ListenForButton();
         registerB.addActionListener(registerListen);
 
-        display = new JTextArea(30,60);
+        display = new JTextArea(10,25);
 
-        loginPan.add(usernameL);
-        loginPan.add(usernameF);
-        loginPan.add(passwordL);
-        loginPan.add(passwordF);
-        loginPan.add(loginB);
-        loginPan.add(registerB);
-        loginPan.add(display);
+        
+        JPanel homePan = new JPanel();
+        this.add(homePan);
 
-
-
-
+        
+        
+        homePan.add(usernameL);
+        homePan.add(usernameF);
+        homePan.add(passwordL);
+        homePan.add(passwordF);
+        homePan.add(loginB);
+        homePan.add(registerB);
+        homePan.add(display);
+        
+        
+//        GroupLayout groupLay = new GroupLayout(homePan);
+//        homePan.setLayout(groupLay);
+//        GroupLayout.Group usernameG = groupLay.createSequentialGroup();
+//        usernameG.addComponent(usernameL);
+//        usernameG.addComponent(usernameF);
+//        usernameG.addComponent(passwordL);
+//        usernameG.addComponent(passwordF);
+//        usernameG.addComponent(loginB);
+//        usernameG.addComponent(registerB);
+//        usernameG.addComponent(display);
+//        groupLay.setVerticalGroup(usernameG);
 
         this.setVisible(true);
     }
+    
+    
     // Implement listeners
     private class ListenForButton implements ActionListener {
 
@@ -122,9 +123,12 @@ public class HomeGUI extends JFrame{
             	String username = usernameF.getText();
             	String password = passwordF.getText();
             	try{
-            		ClientUser client = cl.login(username, password);
+            	
+            		ClientUser client = res.login(username, password);
+                    display.append(client.getUsername()+" has logged in...");
+                    LogInGUI logInGUI = new LogInGUI(client);
             	}catch(RuntimeException r){
-            		display.append("User does not exist!\n");
+            		display.setText("Wrong username or password!\n");
             	}
             }
             if(e.getSource() == registerB){
