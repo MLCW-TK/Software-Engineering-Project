@@ -48,7 +48,7 @@ public class PointFidelityCard extends FidelityCard{
 		this.totalAmountProcessed += amount;
 		this.points += amount/10;
 		
-		if (this.points > 100){
+		if (this.points >= 100){
 			discountTickets++;
 			canGetDiscount = true;
 			this.points = this.points - 100;

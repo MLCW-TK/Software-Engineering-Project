@@ -395,6 +395,7 @@ public class RestaurantSystem implements Publisher{
                 if(meal.getName().equalsIgnoreCase(mealName)&&meal.isSpecialOffer()){
                         offers = offers+"Meal: "+meal.getName()+"\n"
                             +"Special price: "+meal.getSpecialPrice()+"$\n";
+                        break;
                 }
             }
 			for(Subscriber sub :  this.getSubscriber_list()){

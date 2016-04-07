@@ -198,6 +198,7 @@ public class CommandConsole {
 	}
 
 	public void putInSpecialOffer(String mealName, double price) {
+            boolean b = false;
         if (!(ClientConsole.currentUser instanceof StaffUser)){
 			throw new RuntimeException("Insufficient previledges to access this command");
 		}
@@ -205,51 +206,56 @@ public class CommandConsole {
         	if(meal.getName().equals(mealName)){
         		meal.setSpecialPrice(price);
         		meal.setSpecialOfferToggle(true);
+                        b = true;
         	}
+        }
+        if (!b){
+            System.out.println(mealName+" does not exist!\n")
         }
 
 
 	}
-	// ClientUser commands
-	public void listIngredients(String meal){
+
+	// clientuser commands
+	public void listingredients(string meal){
 		boolean bool = false;
-		for (AbstractMeal aMeal : ClientConsole.re1.getMeal_list()){
-			if (aMeal.getName().equalsIgnoreCase(meal)){
-				aMeal.printIngredients();
+		for (abstractmeal ameal : clientconsole.re1.getmeal_list()){
+			if (ameal.getname().equalsignorecase(meal)){
+				ameal.printingredients();
 				bool = true;
 			}
 		}
 		if (!bool){
-			System.out.println("This meal does not exist yet. You may want to check your spelling or create this meal.");
-			System.out.println("To create a meal: createmeal <name, price>");
+			system.out.println("this meal does not exist yet. you may want to check your spelling or create this meal.");
+			system.out.println("to create a meal: createmeal <name, price>");
 		}
 	}
 
-	//selectMeal<mealName, quantity>
-	public void selectMeal(String mealName, int quantity){
+	//selectmeal<mealname, quantity>
+	public void selectmeal(string mealname, int quantity){
 
-		Meal selected_meal = null;
-		for (AbstractMeal obj : ClientConsole.re1.getMeal_list()){
-			if (obj.getName().equals(mealName)){
-				selected_meal = (Meal) obj;
+		meal selected_meal = null;
+		for (abstractmeal obj : clientconsole.re1.getmeal_list()){
+			if (obj.getname().equals(mealname)){
+				selected_meal = (meal) obj;
 			}
 		}
 		if (selected_meal == null){
-			throw new RuntimeException(mealName + " not found!");
+			throw new runtimeexception(mealname + " not found!");
 		}
 
-		ClientConsole.currentUser.getCurrentOrder().selectMeal(selected_meal, quantity);
+		clientconsole.currentuser.getcurrentorder().selectmeal(selected_meal, quantity);
 		for (int i = 0; i < quantity; i++){
-			System.out.println(mealName + " selected");
+			system.out.println(mealname + " selected");
 		}
 	}
 
-	public Meal personalizeMeal(String mealName, String IngredientName, int quantity){
-		Meal selected_meal = null;
-		Ingredient selected_ingredient = null;
-		for (AbstractMeal obj : ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders()){
-			if (obj.getName().equals(mealName) && !obj.getPersonalizedBool()){
-				selected_meal = (Meal) obj;
+	public meal personalizemeal(string mealname, string ingredientname, int quantity){
+		meal selected_meal = null;
+		ingredient selected_ingredient = null;
+		for (abstractmeal obj : clientconsole.currentuser.getcurrentorder().getunprocessedorders()){
+			if (obj.getname().equals(mealname) && !obj.getpersonalizedbool()){
+				selected_meal = (meal) obj;
 			}
 		}
 		if (selected_meal== null){

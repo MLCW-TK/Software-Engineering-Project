@@ -30,28 +30,28 @@ public class ClientConsole{
 
 
 	static Meal editedMeal = null;
-	
-	
+
+
 	static boolean globalPhase = true;
 	static boolean loginPhase = true;
 	static boolean loggedinPhase = false;
-	
+
 	// Login Commands
 	public static void registerUser(String input) throws RuntimeException{
 			String command = input.substring(16,input.length()-1);
 			String[] data = command.split(",");
-			
+
 			if (data.length < 4){
 				System.out.println("Please enter valid commands");
-				throw new RuntimeException("Eg. registerClient <firstname,lastname,username,password>");				
+                                throw new RuntimeException("Eg. registerClient <firstname,lastname,username,password>");
 			}
-			
+
 			for (int i = 0; i < 4; i++){
 				if (data[i].substring(0, 1).equals(" ")){
 					data[i] = data[i].substring(1, data[i].length());
 				}
 			}
-			
+
 			cl.registerClient(data[0], data[1], data[2], data[3]);
 			System.out.println("Congratulations! Account successfully created");
 			System.out.println("You may now use 'addContactInfo <contactInfo>' to add new contact information");
@@ -62,48 +62,48 @@ public class ClientConsole{
 	public static void insertChef(String input) throws RuntimeException{
 		String command = input.substring(12,input.length()-1);
 		String[] data = command.split(",");
-		
+
 		if (data.length < 4){
 			System.out.println("Please enter valid commands");
-			throw new RuntimeException("Eg. insertChef <firstname,lastname,username,password>");				
+			throw new RuntimeException("Eg. insertChef <firstname,lastname,username,password>");
 		}
-		
+
 		for (int i = 0; i < 4; i++){
 			if (data[i].substring(0, 1).equals(" ")){
 				data[i] = data[i].substring(1, data[i].length());
 			}
 		}
-		
+
 		cl.insertChef(data[0], data[1], data[2], data[3]);
 		System.out.println("Please login from the main menu");
 		System.out.println("");
 }
-	
+
 	public static void loginUser(String input){
 			String command = input.substring(7,input.length()-1);
 			String[] data = command.split(",");
-			
+
 			if (data.length < 2){
 				System.out.println("Please enter valid commands");
 				throw new RuntimeException("Eg. login <username,password>");
 			}
-			
+
 			for (int i = 0; i < 2; i++){
 				if (data[i].substring(0, 1).equals(" ")){
 					data[i] = data[i].substring(1, data[i].length());
 				}
 			}
-			
+
 			try{
 				currentUser = cl.login(data[0], data[1]);
 			} catch (RuntimeException e){
 				throw new RuntimeException("Invalid username/password. Please try again");
 			}
-			
+
 			loginPhase = false;
 			loggedinPhase = true;
 	}
-	
+
 	public static void addContactInfo(String input){
 		String data = input.substring("addContactInfo".length()+2, input.length()-1);
 		try {
@@ -204,8 +204,12 @@ public class ClientConsole{
 		if ((input.length()>="associateAgreement <".length()+1)&&((input.substring(0,"associateAgreement <".length())).equals("associateAgreement <"))&&(lastLetter.equals(">"))){
 			associateAgreement(input);
 			return;}
-		System.out.println("Wrong inputs detected. Please try again.");
-		System.out.println("");
+		else{
+			if (!input.equalsIgnoreCase("-help")){
+				System.out.println("Wrong inputs detected. Please try again.");
+				System.out.println("");
+			}
+		}
 	}
 
 	// ClientUser commands
@@ -359,22 +363,23 @@ public class ClientConsole{
 		String command = input.substring("notifyAd ".length()+2, input.length()-1);
 		String[] data = command.split(",");
 
-		
-		if (data.length < 3){
-			System.out.println("Please enter valid commands");
-			throw new RuntimeException("Eg. notifyAd  <message, mealName, specialPrice>");				
-		}
-		
-		for (int i = 0; i < 3; i++){
-			data[i]=data[i].replaceAll("\\s+", "");
-		}
-		
-		double specialPrice = Double.parseDouble(data[2]);
-		
-		try {
-                    cl.notifyAd (data[0], data[1], specialPrice);
-		} catch (RuntimeException e){
-			throw new RuntimeException(e.getMessage());
+		if (!(data.length==0)){
+			if (data.length < 3){
+				System.out.println("Please enter valid commands");
+				throw new RuntimeException("Eg. notifyAd  <message, mealName, specialPrice>");				
+			}
+			
+			for (int i = 0; i < 3; i++){
+				data[i]=data[i].replaceAll("\\s+", "");
+			}
+			
+			double specialPrice = Double.parseDouble(data[2]);
+			
+			try {
+	            cl.notifyAd (data[0], data[1], specialPrice);
+			} catch (RuntimeException e){
+				throw new RuntimeException(e.getMessage());
+			}
 		}
 	}
    
@@ -391,53 +396,59 @@ public class ClientConsole{
 	
 	public static void operationsInputTreatment(String input){
 		int strlength = input.length();
-		String lastLetter = input.substring(strlength-1, strlength);
+		if (!(strlength == 0)){
+			String lastLetter = input.substring(strlength-1, strlength);
 
-		// create meal
-		if ((input.length()>="createMeal <".length()+1)&&((input.substring(0,"createMeal <".length())).equals("createMeal <"))&&(lastLetter.equals(">"))){
-			createMeal(input);
-			return;}
-		// add ingredient
-		if ((input.length()>="addIngredient <".length()+1)&&((input.substring(0,"addIngredient <".length())).equals("addIngredient <"))&&(lastLetter.equals(">"))){
-			addIngredient(input);
-			return;}
-		// checks current meal
-		if ((input.length()=="currentMeal <".length()+1)&&((input.substring(0,"currentMeal <".length())).equals("currentMeal <"))&&(lastLetter.equals(">"))){
-			currentMeal(input);
-			return;}
-		// saves meal
-		if ((input.length()=="saveMeal <".length()+1)&&((input.substring(0,"saveMeal <".length())).equals("saveMeal <"))&&(lastLetter.equals(">"))){
-			saveMeal(input);
-			return;}
-		// list ingredients
-		if ((input.length()>="listIngredients <".length()+1)&&((input.substring(0,"listIngredients <".length())).equals("listIngredients <"))&&(lastLetter.equals(">"))){
-			listIngredients(input);
-			return;}
-		// selectMeal
-		if ((input.length()>="selectMeal <".length()+1)&&((input.substring(0,"selectMeal <".length())).equals("selectMeal <"))&&(lastLetter.equals(">"))){
-			selectMeal(input);
-			return;}
-        // notifyBirthday
-        if ((input.length()>="notifyBirthday <".length()+1)&&((input.substring(0,"notifyBirthday <".length())).equals("notifyBirthday <"))&&(lastLetter.equals(">"))){
-			notifyBirthday(input);
-			return;}
 
-        // putInSpecialOffer <mealName, price>
-		if ((input.length()>="putInSpecialOffer <".length()+1)&&((input.substring(0,"putInSpecialOffer <".length())).equals("putInSpecialOffer <"))&&(lastLetter.equals(">"))){
-			selectMeal(input);
-			return;}
-                // notifyAd <message, mealName, specialPrice>
-                if ((input.length()>="notifyAd <".length()+1)&&((input.substring(0,"notifyAd <".length())).equals("notifyAd <"))&&(lastLetter.equals(">"))){
-			selectMeal(input);
-			return;}
-
-		// logout
-		if ((input.length()=="logout <".length()+1)&&((input.substring(0,"logout <".length())).equals("logout <"))&&(lastLetter.equals(">"))){
-			logout(input);
-			return;}
-		
-		
-
+			// create meal
+			if ((input.length()>="createMeal <".length()+1)&&((input.substring(0,"createMeal <".length())).equals("createMeal <"))&&(lastLetter.equals(">"))){
+				createMeal(input);
+				return;}
+			// add ingredient
+			if ((input.length()>="addIngredient <".length()+1)&&((input.substring(0,"addIngredient <".length())).equals("addIngredient <"))&&(lastLetter.equals(">"))){
+				addIngredient(input);
+				return;}
+			// checks current meal
+			if ((input.length()=="currentMeal <".length()+1)&&((input.substring(0,"currentMeal <".length())).equals("currentMeal <"))&&(lastLetter.equals(">"))){
+				currentMeal(input);
+				return;}
+			// saves meal
+			if ((input.length()=="saveMeal <".length()+1)&&((input.substring(0,"saveMeal <".length())).equals("saveMeal <"))&&(lastLetter.equals(">"))){
+				saveMeal(input);
+				return;}
+			// list ingredients
+			if ((input.length()>="listIngredients <".length()+1)&&((input.substring(0,"listIngredients <".length())).equals("listIngredients <"))&&(lastLetter.equals(">"))){
+				listIngredients(input);
+				return;}
+			// selectMeal
+			if ((input.length()>="selectMeal <".length()+1)&&((input.substring(0,"selectMeal <".length())).equals("selectMeal <"))&&(lastLetter.equals(">"))){
+				selectMeal(input);
+				return;}
+	        // notifyBirthday
+	        if ((input.length()>="notifyBirthday <".length()+1)&&((input.substring(0,"notifyBirthday <".length())).equals("notifyBirthday <"))&&(lastLetter.equals(">"))){
+				notifyBirthday(input);
+				return;}
+	
+	        // putInSpecialOffer <mealName, price>
+			if ((input.length()>="putInSpecialOffer <".length()+1)&&((input.substring(0,"putInSpecialOffer <".length())).equals("putInSpecialOffer <"))&&(lastLetter.equals(">"))){
+				selectMeal(input);
+				return;}
+	                // notifyAd <message, mealName, specialPrice>
+	                if ((input.length()>="notifyAd <".length()+1)&&((input.substring(0,"notifyAd <".length())).equals("notifyAd <"))&&(lastLetter.equals(">"))){
+				selectMeal(input);
+				return;}
+	
+			// logout
+			if ((input.length()=="logout <".length()+1)&&((input.substring(0,"logout <".length())).equals("logout <"))&&(lastLetter.equals(">"))){
+				logout(input);
+				return;}
+			
+			// -help
+			if (!input.equalsIgnoreCase("-help")){
+				System.out.println("Wrong inputs detected. Please type -help to see available commands.");
+				System.out.println("");
+			}
+		}
 	}
 	
 	// Main program
@@ -451,6 +462,7 @@ public class ClientConsole{
 					System.out.println("Welcome to our restaurant!");
 					System.out.println("To register, please enter: registerClient <firstname, lastname, username, password>");
 					System.out.println("To login, please enter: login <username, password>");
+                    System.out.println("Type -help for help");
 					// Note that a secret method insertChef is included in the system
 					// Only "Special Users" would be made known of this feature
 					System.out.println("(please type 'exit' to exit)");	
@@ -464,7 +476,7 @@ public class ClientConsole{
 					return;}
 				
 				if (input.equals("")){
-					System.out.println("Wrong inputs detected. Please try again.");
+					System.out.println("Wrong inputs detected. Please type -help for help.");
 					System.out.println("");
 					continue;
 				}
@@ -474,10 +486,13 @@ public class ClientConsole{
 					String loginOperations = new String();
 					loginOperations+="Here are the possible login operations:\n"
 							+"registerClient <firstname, lastname, username, password>			:	to register.\n"
-							+"login <username, password>										:	to login with an existing account.\n"
-							+"addContactInfo <contactInfo>										:	add a contact information to your account.\n"
-							+"associateCard <userName, cardType>								:	associate a fidelity card to your account. Type '-cardType' for the possible card types.\n"
-							+"associateAgreement <username, agreement>							:	configure your agreement options. Type '-agreement' for the possible agreement settings.\n";
+							+"login <username, password>							:	to login with an existing account.\n"
+							+"addContactInfo <contactInfo>							:	add a contact information to your account.\n"
+							+"associateCard <userName, cardType>						:	associate a fidelity card to your account. Type '-cardType' for the possible card types.\n"
+							+"associateAgreement <username, agreement>					:	configure your agreement options. Type '-agreement' for the possible agreement settings.\n"
+                                                        +"-cardType                                                                     :       show available card types.\n"
+                                                        +"-agreement                                                                    :       show possibile agreements.\n"
+                                                        +"";
 					System.out.print(loginOperations);
 				
 				}
@@ -496,13 +511,14 @@ public class ClientConsole{
 							+"birthday	:	you will receive birthday special offers.\n";
 					System.out.print(agreement);
 				}
-				
+
 				try{
 					loginInputTreatment(input);	
 				} catch (RuntimeException e){
 					System.out.println(e.getMessage());
 					System.out.println("");
 				}
+
 				
 			}
 			while (loggedinPhase){
@@ -510,13 +526,13 @@ public class ClientConsole{
 					System.out.println("Welcome, " + currentUser.getFirstname() + " " + 
 							currentUser.getLastname() + "!" + " " + "(" + currentUser.getUsertype() + ")");
 					System.out.println("You may type -help to see the available commands.");
-					
+
 					// Logout is now a function
 //					System.out.println("(You may type 'logout' to log out at any time)");
 					loggedinMessagePrinted = true;
 				}
 				input = sc.nextLine();
-				
+
 				//Logout is now a function
 //				if (input.equalsIgnoreCase("LOGOUT")){
 //					System.out.println("Thank you for your time today!");
@@ -529,18 +545,32 @@ public class ClientConsole{
 				if (input.equalsIgnoreCase("-HELP")){
                                     if (currentUser.getUsertype().equals("Staff")){
                                         String staffOperations = new String();
-                                        staffOperations += "Here are the operations only available to staff users:\n"
-                                            +"createMeal <name, price>			:	to create a meal with name and price set.\n"
-                                            +"addIngredient <name, quantity>	:	add an ingredient to the current meal, with quantity set in grams.\n"
-                                            +"currentMeal <>					:	print a summary of the current meal.\n"
-                                            +"saveMeal <>						:	save the curren meal.\n"
-                                            +"listIngredients <name>			:	list the ingredients of a chosen meal\n";
+                                        staffOperations += "Here are the operations only available to staff users:\n\n"
+                                            +"createMeal <name, price>			         :	to create a meal with name and price set.\n"
+                                            +"addIngredient <name, quantity>	                 :	add an ingredient to the current meal, with quantity set in grams.\n"
+                                            +"currentMeal <>				         :	print a summary of the current meal.\n"
+                                            +"saveMeal <>				         :	save the curren meal.\n"
+                                            +"listIngredients <name>			         :	list the ingredients of a chosen meal\n"
+                                            +"notifyBirthday <>                                  :       to notify clients whoes birthday is today about the birthday offers.\n"
+                                            +"notifyAd <message, mealName, specialPrice>         :       send ads about a special price of chosen meal.\n";
+
                                         System.out.print(staffOperations);
                                     }
-					
+                                    String clientOperations = new String();
+                                    clientOperations += "Here are the operations available to both client and staff users:\n\n"
+                                        +"addContactInfo <contact>                                :   follow a procedure to add your contact.\n"
+                                        +"listingredients <meal>                                  :   list the ingredients of a chosen meal.\n"
+                                        +"selectmeal <mealname, quantity>                         :   select a certain quantity of the meal.\n"
+                                        +"personalizemeal <mealname, ingredientname, quantity>    :   add certain amoung the chosen ingredient to the meal. quantity = 0 means remove this ingredient.\n"
+                                        +"saveOrder <>                                            :   save your current order.\n";
+
+                                    System.out.print(clientOperations);
+
+                                    
+
 				}
-					
-				
+
+
 				try{
 					operationsInputTreatment(input);
 				} catch (RuntimeException e){
@@ -548,6 +578,7 @@ public class ClientConsole{
 					System.out.println("");
 				}
 				
+
 			}
 		}
 	}
