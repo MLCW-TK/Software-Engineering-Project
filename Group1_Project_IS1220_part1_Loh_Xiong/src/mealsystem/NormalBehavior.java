@@ -8,12 +8,12 @@ public class NormalBehavior implements MealBehavior {
 
 	@Override
 	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {
-		meal.setPrice(meal.default_price);
-		meal.ingredients = new HashSet<Ingredient>();
-		for (Ingredient obj : meal.default_ingredients){
+		meal.setPrice(meal.getDefaultprice());
+		meal.setIngredients(new HashSet<Ingredient>());
+		for (Ingredient obj : meal.getDefault_ingredients()){
 			obj.setQuantity(obj.getOriginalQuantity());
 		}
-		meal.ingredients.addAll(meal.default_ingredients);
+		meal.getIngredients().addAll(meal.getDefault_ingredients());
 		meal.extraIngredientsPrice = 0;
 		meal.totalIngredientsPrice = meal.updatePrices();
 	}

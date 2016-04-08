@@ -14,21 +14,21 @@ import ingredients.Ingredient;
 import ingredients.IngredientFactory;
 
 public abstract class AbstractMeal{
-	String name;
+	private String name;
 	double totalIngredientsPrice;
 	double extraIngredientsPrice;
-	double price;
-	String stringPrice;
-	double specialPrice;
-	String description = "";
-	boolean specialOfferToggle = false;
-	HashSet<Ingredient> ingredients = new HashSet<Ingredient>();
-	MealBehavior behavior = new NormalBehavior();
-	DecimalFormat df = new DecimalFormat("#.00"); 
-	Boolean personalized = false;
+	private double price;
+	private String stringPrice;
+	private double specialPrice;
+	private String description = "";
+	private boolean specialOfferToggle = false;
+	private HashSet<Ingredient> ingredients = new HashSet<Ingredient>();
+	private MealBehavior behavior = new NormalBehavior();
+	private DecimalFormat df = new DecimalFormat("#.00"); 
+	private Boolean personalized = false;
 	
-	double default_price;
-	static HashSet<Ingredient> default_ingredients = new HashSet<Ingredient>();
+	private double default_price;
+	private static HashSet<Ingredient> default_ingredients = new HashSet<Ingredient>();
 	
 	/**
 	 * 
@@ -36,25 +36,41 @@ public abstract class AbstractMeal{
 	 * @param description
 	 * @param ingredients
 	 */
-	
 	public AbstractMeal(String name, String description, Ingredient ...ingredients){
-		this.name = name;
+                this.setName(name);
 		for (Ingredient obj : ingredients){
-			this.ingredients.add(obj);
+			this.getIngredients().add(obj);
 		}
-		this.description = description;
-		this.extraIngredientsPrice = 0;
-		this.totalIngredientsPrice = updatePrices();
-		this.price = this.totalIngredientsPrice;
+		this.setDescription(description);
+		this.setExtraingredientsprice(0);
+		this.setTotalingredientsprice(updatePrices());
+		this.setPrice(this.getTotalIngredientPrice());
 		
-		this.default_price = this.price;
+		this.setDefault_price(this.getPrice());
 		for (Ingredient obj : ingredients){
 			IngredientFactory s = new IngredientFactory();
 			final Ingredient ss = s.createIngredient(obj.getName(), obj.getQuantity(), obj.getPriceperquantity());
-			default_ingredients.add(ss);
+			this.getDefault_ingredients().add(ss);
 		}
 	}
 	
+	private void setDefault_price(double price2) {
+            this.default_price = price2;
+		
+	}
+
+	private void setTotalingredientsprice(double updatePrices) {
+            this.totalIngredientsPrice = updatePrices;	
+	}
+
+	private void setExtraingredientsprice(int i) {
+            this.extraIngredientsPrice = i;
+	}
+
+	private void setName(String name2) {
+            this.name = name2;	
+	}
+
 	/**
 	 * constructor Meals, specifying the price
 	 * @param name
@@ -63,54 +79,60 @@ public abstract class AbstractMeal{
 	 * @param ingredients
 	 */
 	public AbstractMeal(String name, String description, double price, Ingredient ...ingredients){
-		this.name = name;
+        this.setName(name);
 		for (Ingredient obj : ingredients){
-			this.ingredients.add(obj);
+			this.getIngredients().add(obj);
 		}
-		this.description = description;
-		this.price = price;
-		this.extraIngredientsPrice = 0;
-		this.totalIngredientsPrice = updatePrices();
-		
-		this.default_price = this.price;
-		this.default_ingredients = this.ingredients;
+		this.setDescription(description);
+		this.setPrice(price);
+		this.setExtraingredientsprice(0);
+		this.setTotalingredientsprice(updatePrices());
+
+		this.setDefault_price(this.getPrice());
+		this.setDefault_ingredients(this.getIngredients());
 	}
 	
+	private void setDefault_ingredients(HashSet<Ingredient> ingredients2) {
+            this.default_ingredients = ingredients2;	
+	}
+
 	public AbstractMeal(String name, String description, double price, MealBehavior behavior, Ingredient ...ingredients){
-		this.name = name;
+		this.setName(name);
 		for (Ingredient obj : ingredients){
 			this.ingredients.add(obj);
 		}
-		this.description = description;
-		this.price = price;
-		this.extraIngredientsPrice = 0;
-		this.totalIngredientsPrice = updatePrices();
-		this.behavior = behavior;
+		this.setDescription(description);
+		this.setPrice(price);
+		this.setExtraingredientsprice(0);
+		this.setTotalingredientsprice(this.updatePrices());
+		this.setBehavior(behavior);
 		
-		this.default_price = this.price;
-		this.default_ingredients = this.ingredients;
+		this.setDefault_price(this.getPrice());
+		this.setDefault_ingredients(this.getIngredients());
 	}
 	
 	public AbstractMeal(String name, double price){
-		this.name = name;
-		this.price = price;
+		this.setName(name);
+		this.setPrice(price);
 	}
 	
 	public void insertInitialIngredients(Ingredient e){
 		this.ingredients.add(e);
 	}
 	
-	public AbstractMeal createnewinstance(){
-		Ingredient[] editedIngredients = new Ingredient[this.ingredients.size()];
-		this.ingredients.toArray(editedIngredients);
-		AbstractMeal meal = new Meal(this.name, this.description, this.price, this.behavior, editedIngredients);
+	public AbstractMeal createNewInstance(){
+		Ingredient[] editedIngredients = new Ingredient[this.getIngredients().size()];
+		this.getIngredients().toArray(editedIngredients);
+		AbstractMeal meal = new Meal(this.getName(), this.getDescription(), this.getPrice(), this.getBehavior(), editedIngredients);
 		return meal;
 	}
 	
+	private MealBehavior getBehavior() {return this.behavior;}
+
 	public void setFinalDefaultIngredients(){
-		this.default_price = this.price;
-		if (!ingredients.isEmpty()){
-			for (Ingredient obj : ingredients){
+		this.setDefault_price(this.getPrice());
+		if (!this.getIngredients().isEmpty()){
+			for (Ingredient obj : this.getIngredients()){
 				IngredientFactory s = new IngredientFactory();
 				final Ingredient ss = s.createIngredient(obj.getName(), obj.getQuantity());
 				default_ingredients.add(ss);
@@ -184,14 +206,16 @@ public abstract class AbstractMeal{
 	public void setPrice(double price){
 		this.price = price;
 	}
+
+	
 	/** 
 	 * returns special price if the meal is on special offer
 	 * else return price;
 	 * @return
 	 */
 	public double getSpecialPrice() {
-		if (isSpecialOffer()){
-			return CustomUtilities.round(specialPrice,2);
+		if (this.isSpecialOffer()){
+			return CustomUtilities.round(this.specialPrice,2);
 		} else {
 			return getPrice();
 		}
@@ -202,16 +226,16 @@ public abstract class AbstractMeal{
 	 * @param specialPrice
 	 */
 	public void setSpecialPrice(double specialPrice) {
-		if (isSpecialOffer() && this.price>=specialPrice){
+		if (isSpecialOffer() && this.getPrice()>=specialPrice){
 			this.specialPrice = specialPrice;
 		} else {
-			this.specialPrice = this.price;
+			this.specialPrice = this.getPrice();
 		}
 	}
 
 
 	public String getDescription() {
-		return description;
+		return this.description;
 	}
 
 
@@ -275,54 +299,7 @@ public abstract class AbstractMeal{
 		this.behavior.behavior(this, ingredient, quantity);
 	}
 	
-	/**
-	 * add an extra ingredient
-	 * @param ingredient
-	 */
-//	public void addIngredient(Ingredient ingredient){
-//		if (ingredients.contains(ingredient)){
-//			throw new RuntimeException("Ingredient already exist!");
-//		} else {
-//			ingredients.add(ingredient);
-//			this.extraIngredientsPrice += CustomUtilities.round(ingredient.getTotalprice(),2);
-//			this.totalIngredientsPrice += CustomUtilities.round(this.extraIngredientsPrice,2);
-//		}
-//	}
-//	
-//	
-//	public void removeIngredient(Ingredient ingredient){
-//		if (ingredients.contains(ingredient)){
-//			ingredients.remove(ingredient);
-//			this.extraIngredientsPrice -= CustomUtilities.round(ingredient.getTotalprice(),2);
-//			this.totalIngredientsPrice -= CustomUtilities.round(this.extraIngredientsPrice,2);
-//		} else {
-//			throw new RuntimeException("Ingredient does not exist!");
-//		}
-//	}
-//	
-//	public void changeIngredientQuantity(Ingredient ingredient, double quantity){
-//		if (ingredients.contains(ingredient)){
-//			if (ingredient.getQuantity() + quantity < 0){
-//				throw new RuntimeException("Quantity cannot be less than 0!");
-//			} else {
-//				double quantity_changed = quantity - ingredient.getQuantity();
-//				ingredient.setQuantity(quantity);
-//				this.extraIngredientsPrice += CustomUtilities.round((quantity_changed)*ingredient.priceperquantity,2);
-//				this.totalIngredientsPrice += CustomUtilities.round(this.extraIngredientsPrice,2);
-//			}
-//			
-//		} else {
-//			throw new RuntimeException("Ingredient not found!");
-//		}
-//	}
-//
-//	public static double round(double value, int places) {
-//	    if (places < 0) throw new IllegalArgumentException();
-//
-//	    BigDecimal bd = new BigDecimal(value);
-//	    bd = bd.setScale(places, RoundingMode.HALF_UP);
-//	    return bd.doubleValue();
-//	}
+
 	
 	public String toString(){
 		String s = new String();
@@ -334,7 +311,7 @@ public abstract class AbstractMeal{
 	public void printIngredients(){
 		String s = "Meal: "+ this.getName();
 		s+="\nIngredients:\n";
-		for(Ingredient ingredient : this.ingredients){
+		for(Ingredient ingredient : this.getIngredients()){
 			s+=ingredient.getQuantity()+"g "+ ingredient.getName() + "\n";
 		}
 		s = s.substring(0,s.length()-1);
@@ -349,9 +326,9 @@ public abstract class AbstractMeal{
 	public boolean equals(Object o){
 		if (o instanceof AbstractMeal){
 			AbstractMeal c1 = (AbstractMeal) o; 
-			return (c1.getName().equals(this.name) && c1.getClass().equals(o.getClass()));
+			return (c1.getName().equals(this.getName()) && c1.getClass().equals(this.getClass()));
 		}
-		return false;
+		else{return false;}
 	}
 	
 	/**
@@ -366,6 +343,23 @@ public abstract class AbstractMeal{
         	code += h;
         }
 		return code;
+	}
+
+	public double getextraIngredientsPrice() {
+		return this.extraIngredientsPrice;
+	}
+
+	public double getDefaultprice() {
+		return this.default_price;
+	}
+
+	public void setIngredients(HashSet<Ingredient> hashSet) {
+		this.ingredients = hashSet;
+		
+	}
+
+	public HashSet<Ingredient> getDefault_ingredients() {
+		return this.default_ingredients;
 	}
 	
 }

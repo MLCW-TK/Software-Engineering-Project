@@ -14,7 +14,7 @@ public class IngredientTest {
 	public void testConstructorsAndEquivalence(){
 		Ingredient TestIngredient1 = new Ingredient("test1", 1.56);
 		assertTrue(TestIngredient1 instanceof Ingredient);
-		assertTrue(TestIngredient1.getQuantity() == 1);
+		assertTrue(TestIngredient1.getQuantity() == 1.56);
 		assertTrue(TestIngredient1.getTotalprice() == TestIngredient1.getPriceperquantity()*TestIngredient1.getQuantity());
 		assertTrue(TestIngredient1.getName() == "test1");
 		Ingredient TestIngredient2 = new Ingredient("test1", 1.56);

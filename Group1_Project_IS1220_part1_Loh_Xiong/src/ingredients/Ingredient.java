@@ -5,25 +5,27 @@ import java.math.BigDecimal;
 import customutilities.CustomUtilities;
 
 public class Ingredient {
-	public String name;
-	public double quantity;
-	public double priceperquantity = 0;
-	public double totalprice = 0;
-	public double original_quantity;
+	private String name;
+	private double quantity;
+	private double priceperquantity = 0;
+	private double totalprice = 0;
+	private double original_quantity;
 
 	
 	public Ingredient(String name, double quantity){
-		this.name = name;
-		this.quantity = quantity;
-		this.original_quantity = this.quantity;
+		this.setName(name);
+		this.setQuantity(quantity);
+		this.setOriginal_Quantity(quantity);
 	}
 	
+
+
 	public Ingredient(String name, double quantity, double priceperquantity){
-		this.name = name;
-		this.quantity = quantity;
-		this.priceperquantity = priceperquantity;
+		this.setName(name);
+		this.setQuantity(quantity);
+		this.setPriceperquantity(priceperquantity);
 		this.totalprice = CustomUtilities.round(this.priceperquantity * this.quantity,2);
-		this.original_quantity = this.quantity;
+		this.setOriginal_Quantity(this.getQuantity());
 
 		
 		if (this.quantity < 0){
@@ -33,6 +35,12 @@ public class Ingredient {
 	
 	public Ingredient createnewinstance(){
 		return new Ingredient(this.name, this.quantity);
+	}
+	
+	
+	public void setOriginal_Quantity(double quantity) {
+		this.original_quantity = quantity;
+		
 	}
 	
 	public double getOriginalQuantity(){
@@ -67,11 +75,11 @@ public class Ingredient {
 		return totalprice;
 	}
 
-	protected void setTotalprice(double totalprice) {
+	public void setTotalprice(double totalprice) {
 		this.totalprice = CustomUtilities.round(totalprice,2);
 	}
 
-	protected void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 

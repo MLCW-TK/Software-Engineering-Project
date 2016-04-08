@@ -13,15 +13,15 @@ import cardfidelitysystem.LotteryFidelityCard;
 import cardfidelitysystem.PointFidelityCard;
 
 public class Order{
-	DecimalFormat df = new DecimalFormat("#.00"); 
-	Stack<String> SummarySequence;
-	ArrayList<ArrayList<Object>> orderSequence;
-	HashMap<AbstractMeal, Integer> meal_count;
-	ArrayList<ArrayList<Object>> specialOfferOrderSequence;
-	ArrayList<AbstractMeal> unprocessedOrders = new ArrayList<AbstractMeal>();
-	double total_transaction;
-	ArrayList<AbstractMeal> savedOrders = new ArrayList<AbstractMeal>();
-	ArrayList<AbstractMeal> editedOrders = new ArrayList<AbstractMeal>();
+	private DecimalFormat df = new DecimalFormat("#.00"); 
+	private Stack<String> SummarySequence;
+	private ArrayList<ArrayList<Object>> orderSequence;
+	private HashMap<AbstractMeal, Integer> meal_count;
+	private ArrayList<ArrayList<Object>> specialOfferOrderSequence;
+	private ArrayList<AbstractMeal> unprocessedOrders = new ArrayList<AbstractMeal>();
+	private double total_transaction;
+	private ArrayList<AbstractMeal> savedOrders = new ArrayList<AbstractMeal>();
+	private ArrayList<AbstractMeal> editedOrders = new ArrayList<AbstractMeal>();
 	/**
 	 * Constructor Order
 	 */
@@ -68,15 +68,15 @@ public class Order{
 			// if we set the quantity = 0, means he wants to remove the ingredient
 			if (quantity == 0){
 
-				Meal newinstance = (Meal) meal.createnewinstance();
+				Meal newinstance = (Meal) meal.createNewInstance();
 				newinstance.setBehavior(new RemoveIngredient());
 				newinstance.executeBehavior(ingredient, 0);
 				newinstance.setPersonalizedBool(true);
 				return newinstance;
 			} else {
-				Meal newinstance = (Meal) meal.createnewinstance();
+				Meal newinstance = (Meal) meal.createNewInstance();
 				Ingredient new_ingredient = ingredient.createnewinstance();
-				new_ingredient.setQuantity(new_ingredient.original_quantity+quantity);
+				new_ingredient.setQuantity(new_ingredient.getOriginalQuantity()+quantity);
 				newinstance.getIngredients().remove(ingredient);
 				newinstance.getIngredients().add(new_ingredient);
 				newinstance.setPersonalizedBool(true);
@@ -86,7 +86,7 @@ public class Order{
 			}
 		} else {
 
-			Meal newinstance = (Meal) meal.createnewinstance();
+			Meal newinstance = (Meal) meal.createNewInstance();
 			newinstance.setBehavior(new AddIngredient());
 			newinstance.executeBehavior(ingredient, quantity);
 			newinstance.setPersonalizedBool(true);

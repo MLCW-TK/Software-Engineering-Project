@@ -24,7 +24,7 @@ public class Meal extends AbstractMeal {
 	public boolean equals(Object o){
 		if (o instanceof Meal){
 			Meal c1 = (Meal) o; 
-			return (c1.getName().equals(this.name));
+			return (c1.getName().equals(this.getName()));
 		}
 		return false;
 	}
@@ -35,8 +35,8 @@ public class Meal extends AbstractMeal {
 	@Override
 	public int hashCode(){
     	int code = 0;
-        for (int i=0; i < this.name.length(); i++){
-        	char c = this.name.charAt(i);
+        for (int i=0; i < this.getName().length(); i++){
+        	char c = this.getName().charAt(i);
         	int h = 41+((int)c+i)*(19+i);
         	code += h;
         }

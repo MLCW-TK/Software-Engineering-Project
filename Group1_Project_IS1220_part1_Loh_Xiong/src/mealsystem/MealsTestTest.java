@@ -12,27 +12,78 @@ import ingredients.Ingredient;
 import ingredients.IngredientFactory;
 
 public class MealsTestTest {
-
+	private static final String Exception = null;
+	AbstractMealFactory appertizers = new AppertizerFactory();
+	AbstractMealFactory maincourses = new MainCourseFactory();
+	AbstractMealFactory desserts = new DessertFactory();
+	
+	IngredientFactory ingredient = new IngredientFactory();
+	Ingredient vegetable = ingredient.createIngredient("vegetable", 1, 1.15);
+	
+	Appertizer salad = (Appertizer) appertizers.createMeal("salad", "good for your health", 0, vegetable);
+	MainCourse steak = (MainCourse) maincourses.createMeal("salad", "also good for you", vegetable);
+	Dessert icecream = (Dessert) desserts.createMeal("icecream", "good for you", 10, vegetable);
+	HashSet<AbstractMeal> meal_list = new HashSet<AbstractMeal>();
+	
+	
 	@Test
-	public void test() {
-		AbstractMealFactory appertizers = new AppertizerFactory();
-		AbstractMealFactory maincourses = new MainCourseFactory();
-		AbstractMealFactory desserts = new DessertFactory();
-		
-		IngredientFactory ingredient = new IngredientFactory();
-		Ingredient vegetable = ingredient.createIngredient("vegetable", 1, 1.15);
-		
-		Appertizer salad = (Appertizer) appertizers.createMeal("salad", "good for your health", 0, vegetable);
-		MainCourse steak = (MainCourse) maincourses.createMeal("salad", "also good for you", vegetable);
-		Dessert icecream = (Dessert) desserts.createMeal("icecream", "good for you", 10, vegetable);
-		HashSet meal_list = new HashSet<AbstractMeal>();
-		
+	public void testMealsDistinguishedNotOnlyByName() {
 		assertTrue(!salad.equals(steak));
+	}
+	
+	
+	@Test
+	public void testMeal_ListSize(){
 		meal_list.add(salad);
 		meal_list.add(steak);
 		meal_list.add(icecream);
 		assertTrue(meal_list.size() == 3);
-		
+	}
+	
+	
+	@Test
+	public void testSettingSpecialProceHigherThanPriceShouldGiveDefaultPrice(){
+		icecream.setSpecialPrice(100000);
+		assertTrue(icecream.getSpecialPrice()==10);
+	}
+	@Test
+	public void testGetSpecialPriceReturnSpecialPriceWhenOnSpecialOffer(){
+		icecream.setSpecialOfferToggle(true);
+		icecream.setSpecialPrice(8);
+		assertTrue(icecream.getSpecialPrice()==8);
 	}
 
+	@Test(expected = RuntimeException.class)
+	public void testAddExistingIngredientsReturnException(){
+		steak.setBehavior(new AddIngredient());
+		HashSet<Ingredient> origin = steak.getIngredients();
+		steak.executeBehavior(vegetable, 1);
+		HashSet<Ingredient> current = steak.getIngredients();
+		assertTrue(origin.equals(current));
+	}
+	
+	@Test(expected = RuntimeException.class)
+	public void testRemoveNonExistingIngredientsReturnException(){
+		steak.setBehavior(new RemoveIngredient());
+		HashSet<Ingredient> origin = steak.getIngredients();
+		Ingredient eggs = ingredient.createIngredient("eggs", 1, 1.15);
+		steak.executeBehavior(eggs, 1);
+		HashSet<Ingredient> current = steak.getIngredients();
+		assertTrue(origin.equals(current));
+	}
+	
+	@Test
+	public void testNormalBehavoirReturnsEverythingToNormal(){
+		HashSet<Ingredient> origin = steak.getIngredients();
+		steak.setBehavior(new AddIngredient());
+		Ingredient eggs = ingredient.createIngredient("eggs", 1, 1.15);
+		steak.executeBehavior(eggs, 1);
+		HashSet<Ingredient> temp = steak.getIngredients();
+		assertTrue(origin!=temp);
+		steak.setBehavior(new NormalBehavior());
+		steak.executeBehavior(vegetable, 1);
+		HashSet<Ingredient> fin = steak.getIngredients();
+		assertTrue(origin==fin);
+		
+	}
 }
