@@ -398,13 +398,13 @@ public class RestaurantSystem implements Publisher{
                         break;
                 }
             }
-			for(Subscriber sub :  this.getSubscriber_list()){
+            for(Subscriber sub :  this.getSubscriber_list()){
 					String userMessage = "From: "+this.getRestaurantName()+"\n"
 							+"To: "+((User)sub).getReceiveAddress() +"\n"
 							+message
 							+"\n"+offers+"\n";
 					screenMessage = userMessage;
-			}
+            }
 			System.out.println(screenMessage);
 		}
 		else{System.out.println("Meal_list is empty!");}

@@ -1,0 +1,126 @@
+
+ClientConsole.java,5058
+package commandinterface;commandinterface1,0
+public class ClientConsole{ClientConsole20,346
+	static RestaurantSystem re1 = new RestaurantSystem("our restaurant!");re121,374
+	static RestaurantSystem re1 = new RestaurantSystem("our restaurant!");ClientConsole.re121,374
+	static ArrayList<Order> orders = new ArrayList<Order>();orders22,446
+	static ArrayList<Order> orders = new ArrayList<Order>();ClientConsole.orders22,446
+	static HashSet<AbstractMeal> meals = new HashSet<AbstractMeal>();;meals23,504
+	static HashSet<AbstractMeal> meals = new HashSet<AbstractMeal>();;ClientConsole.meals23,504
+	static HashSet<String> ingredients = new HashSet<String>();ingredients24,572
+	static HashSet<String> ingredients = new HashSet<String>();ClientConsole.ingredients24,572
+	static Scanner sc = new Scanner(System.in);sc25,633
+	static Scanner sc = new Scanner(System.in);ClientConsole.sc25,633
+	private static CommandConsole cl = new CommandConsole();cl26,678
+	private static CommandConsole cl = new CommandConsole();ClientConsole.cl26,678
+	static ClientUser currentUser;currentUser27,736
+	static ClientUser currentUser;ClientConsole.currentUser27,736
+	static Meal currentMeal;currentMeal28,768
+	static Meal currentMeal;ClientConsole.currentMeal28,768
+	static protected FidelityCardFactory fcf = new FidelityCardFactory();fcf29,794
+	static protected FidelityCardFactory fcf = new FidelityCardFactory();ClientConsole.fcf29,794
+	static Meal editedMeal = null;editedMeal32,867
+	static Meal editedMeal = null;ClientConsole.editedMeal32,867
+	static boolean globalPhase = true;globalPhase35,901
+	static boolean globalPhase = true;ClientConsole.globalPhase35,901
+	static boolean loginPhase = true;loginPhase36,937
+	static boolean loginPhase = true;ClientConsole.loginPhase36,937
+	static boolean loggedinPhase = false;loggedinPhase37,972
+	static boolean loggedinPhase = false;ClientConsole.loggedinPhase37,972
+	public static void registerUser(String input) throws RuntimeException{registerUser40,1031
+	public static void registerUser(String input) throws RuntimeException{ClientConsole.registerUser40,1031
+	public static void insertChef(String input) throws RuntimeException{insertChef62,1984
+	public static void insertChef(String input) throws RuntimeException{ClientConsole.insertChef62,1984
+	public static void loginUser(String input){loginUser82,2600
+	public static void loginUser(String input){ClientConsole.loginUser82,2600
+	public static void addContactInfo(String input){addContactInfo107,3262
+	public static void addContactInfo(String input){ClientConsole.addContactInfo107,3262
+	public static void associateCard(String input){associateCard116,3509
+	public static void associateCard(String input){ClientConsole.associateCard116,3509
+	public static void associateAgreement(String input){associateAgreement146,4368
+	public static void associateAgreement(String input){ClientConsole.associateAgreement146,4368
+	public static void loginInputTreatment(String input){loginInputTreatment175,5188
+	public static void loginInputTreatment(String input){ClientConsole.loginInputTreatment175,5188
+	public static void addIngredient(String input){addIngredient216,6661
+	public static void addIngredient(String input){ClientConsole.addIngredient216,6661
+	public static void createMeal(String input){createMeal241,7297
+	public static void createMeal(String input){ClientConsole.createMeal241,7297
+	public static void currentMeal(String input){currentMeal264,7909
+	public static void currentMeal(String input){ClientConsole.currentMeal264,7909
+	public static void saveMeal(String input){saveMeal272,8073
+	public static void saveMeal(String input){ClientConsole.saveMeal272,8073
+	public static void listIngredients(String input){listIngredients286,8428
+	public static void listIngredients(String input){ClientConsole.listIngredients286,8428
+	public static void selectMeal(String input){selectMeal300,8841
+	public static void selectMeal(String input){ClientConsole.selectMeal300,8841
+    public static void notifyBirthday(String input){notifyBirthday323,9423
+    public static void notifyBirthday(String input){ClientConsole.notifyBirthday323,9423
+    public static void putInSpecialOffer(String input){putInSpecialOffer339,9923
+    public static void putInSpecialOffer(String input){ClientConsole.putInSpecialOffer339,9923
+     public static void notifyAd(String input){notifyAd362,10588
+     public static void notifyAd(String input){ClientConsole.notifyAd362,10588
+	public static void logout(String input){logout386,11263
+	public static void logout(String input){ClientConsole.logout386,11263
+	public static void operationsInputTreatment(String input){operationsInputTreatment397,11482
+	public static void operationsInputTreatment(String input){ClientConsole.operationsInputTreatment397,11482
+	public static void main(String[] args) throws Exception {main455,14080
+	public static void main(String[] args) throws Exception {ClientConsole.main455,14080
+
+CommandConsole.java,3322
+package commandinterface;commandinterface1,0
+public class CommandConsole {CommandConsole13,267
+	private static Scanner sc = new Scanner(System.in);sc14,297
+	private static Scanner sc = new Scanner(System.in);CommandConsole.sc14,297
+	public ClientUser registerClient(String firstname, String lastname, String username, String password){registerClient16,369
+	public ClientUser registerClient(String firstname, String lastname, String username, String password){CommandConsole.registerClient16,369
+	public ClientUser login(String username, String password){login23,687
+	public ClientUser login(String username, String password){CommandConsole.login23,687
+	public FidelityCard associateCard(String username, String cardType){associateCard35,1077
+	public FidelityCard associateCard(String username, String cardType){CommandConsole.associateCard35,1077
+	public void associateAgreement(String username, String agreement) {associateAgreement50,1769
+	public void associateAgreement(String username, String agreement) {CommandConsole.associateAgreement50,1769
+	public StaffUser insertChef(String firstname, String lastname, String username, String password){insertChef69,2231
+	public StaffUser insertChef(String firstname, String lastname, String username, String password){CommandConsole.insertChef69,2231
+	public void logout(){logout77,2563
+	public void logout(){CommandConsole.logout77,2563
+	public void addContactInfo(String input){addContactInfo86,2830
+	public void addContactInfo(String input){CommandConsole.addContactInfo86,2830
+	public Meal createMeal(String name, double price){createMeal133,4240
+	public Meal createMeal(String name, double price){CommandConsole.createMeal133,4240
+	public Ingredient addIngredient(String name, double quantity){addIngredient146,4763
+	public Ingredient addIngredient(String name, double quantity){CommandConsole.addIngredient146,4763
+	public Meal currentMeal(){currentMeal161,5456
+	public Meal currentMeal(){CommandConsole.currentMeal161,5456
+	public Meal saveMeal(){saveMeal179,6139
+	public Meal saveMeal(){CommandConsole.saveMeal179,6139
+	public void putInSpecialOffer(String mealName, double price) {putInSpecialOffer200,6856
+	public void putInSpecialOffer(String mealName, double price) {CommandConsole.putInSpecialOffer200,6856
+	public void listingredients(string meal){listingredients220,7472
+	public void listingredients(string meal){CommandConsole.listingredients220,7472
+	public void selectmeal(string mealname, int quantity){selectmeal235,7944
+	public void selectmeal(string mealname, int quantity){CommandConsole.selectmeal235,7944
+	public meal personalizemeal(string mealname, string ingredientname, int quantity){personalizemeal253,8440
+	public meal personalizemeal(string mealname, string ingredientname, int quantity){CommandConsole.personalizemeal253,8440
+	public void saveOrder(){saveOrder291,10098
+	public void saveOrder(){CommandConsole.saveOrder291,10098
+    public void notifyBirthday(){notifyBirthday297,10354
+    public void notifyBirthday(){CommandConsole.notifyBirthday297,10354
+	public void notifyAd(String message, String mealName, double specialPrice) {notifyAd303,10595
+	public void notifyAd(String message, String mealName, double specialPrice) {CommandConsole.notifyAd303,10595
+
+test1.java,861
+package commandinterface;commandinterface1,0
+public class test1 {test115,255
+	static InputStream stdin = System.in;stdin17,325
+	static InputStream stdin = System.in;test1.stdin17,325
+	static StaffUser waiter = new StaffUser("Bob", "Red", "bobred", "123456");waiter20,385
+	static StaffUser waiter = new StaffUser("Bob", "Red", "bobred", "123456");test1.waiter20,385
+	static CommandConsole cc = new CommandConsole();cc21,461
+	static CommandConsole cc = new CommandConsole();test1.cc21,461
+	private static Scanner sc = new Scanner(System.in);sc22,511
+	private static Scanner sc = new Scanner(System.in);test1.sc22,511
+	private static Scanner customscan;customscan24,565
+	private static Scanner customscan;test1.customscan24,565
+	public static void main(String[] args){main26,603
+	public static void main(String[] args){test1.main26,603

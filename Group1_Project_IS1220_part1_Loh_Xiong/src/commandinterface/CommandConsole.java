@@ -210,52 +210,52 @@ public class CommandConsole {
         	}
         }
         if (!b){
-            System.out.println(mealName+" does not exist!\n")
+            System.out.println(mealName+" does not exist!\n");
         }
 
 
 	}
 
-	// clientuser commands
-	public void listingredients(string meal){
+	// clientUser commands
+	public void listIngredients(String meal){
 		boolean bool = false;
-		for (abstractmeal ameal : clientconsole.re1.getmeal_list()){
-			if (ameal.getname().equalsignorecase(meal)){
-				ameal.printingredients();
+		for (AbstractMeal ameal : ClientConsole.re1.getMeal_list()){
+			if (ameal.getName().equalsIgnoreCase(meal)){
+				ameal.printIngredients();
 				bool = true;
 			}
 		}
 		if (!bool){
-			system.out.println("this meal does not exist yet. you may want to check your spelling or create this meal.");
-			system.out.println("to create a meal: createmeal <name, price>");
+			System.out.println("this meal does not exist yet. you may want to check your spelling or create this meal.");
+			System.out.println("to create a meal: createmeal <name, price>");
 		}
 	}
 
-	//selectmeal<mealname, quantity>
-	public void selectmeal(string mealname, int quantity){
+	//selectMeal<mealname, quantity>
+	public void selectMeal(String mealname, int quantity){
 
-		meal selected_meal = null;
-		for (abstractmeal obj : clientconsole.re1.getmeal_list()){
-			if (obj.getname().equals(mealname)){
-				selected_meal = (meal) obj;
+		Meal selected_meal = null;
+		for (AbstractMeal obj : ClientConsole.re1.getMeal_list()){
+			if (obj.getName().equals(mealname)){
+				selected_meal = (Meal) obj;
 			}
 		}
 		if (selected_meal == null){
-			throw new runtimeexception(mealname + " not found!");
+			throw new RuntimeException(mealname + " not found!");
 		}
 
-		clientconsole.currentuser.getcurrentorder().selectmeal(selected_meal, quantity);
+		ClientConsole.currentUser.getCurrentOrder().selectMeal(selected_meal, quantity);
 		for (int i = 0; i < quantity; i++){
-			system.out.println(mealname + " selected");
+			System.out.println(mealname + " selected");
 		}
 	}
 
-	public meal personalizemeal(string mealname, string ingredientname, int quantity){
-		meal selected_meal = null;
-		ingredient selected_ingredient = null;
-		for (abstractmeal obj : clientconsole.currentuser.getcurrentorder().getunprocessedorders()){
-			if (obj.getname().equals(mealname) && !obj.getpersonalizedbool()){
-				selected_meal = (meal) obj;
+	public Meal personalizeMeal(String mealName, String IngredientName, int quantity){
+		Meal selected_meal = null;
+		Ingredient selected_ingredient = null;
+		for (AbstractMeal obj : ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders()){
+			if (obj.getName().equals(mealName) && !obj.getPersonalizedBool()){
+				selected_meal = (Meal) obj;
 			}
 		}
 		if (selected_meal== null){
