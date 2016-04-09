@@ -278,6 +278,7 @@ public class CommandConsole {
 		ClientConsole.currentUser.getCurrentOrder().saveOrder();
 		ClientConsole.currentUser.getOrders().add(ClientConsole.currentUser.getCurrentOrder());
 		System.out.println(ClientConsole.currentUser.getCurrentOrder().Summary());
+//		ClientConsole.currentUser.getCurrentOrder().clearOrders();
 
 	}
 	public void notifyBirthday(){

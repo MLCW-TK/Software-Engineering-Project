@@ -1,6 +1,6 @@
 insertChef <Bob, Red, bobred, 123456>
 login <bobred, 123456>
-createMeal <Raclette, 10>
+createMeal <Raclette, 1000>
 addIngredient <cheese, 90>
 addIngredient <ham, 40>
 addIngredient <potatoes, 50>
@@ -24,5 +24,18 @@ putInSpecialoffer <Raclette, 7>
 notifyAd <Raclette on special offer!, Raclette, 7>
 logout <>
 login <Bario, 345678>
+selectMeal <Raclette, 1>
+saveOrder <>
+logout <>
+login <Pario, 345678>
+selectMeal <Raclette, 1>
+saveOrder <>
+selectMeal <Raclette, 1>
+saveOrder <>
+logout <>
+login <Lario, 345678>
+selectMeal <Raclette, 1>
+saveOrder <>
+logout <>
 exit
 quit

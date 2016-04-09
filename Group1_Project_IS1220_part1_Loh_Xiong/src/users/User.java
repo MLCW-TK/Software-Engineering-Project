@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 import cardfidelitysystem.BasicFidelityCard;
 import cardfidelitysystem.FidelityCard;
+import cardfidelitysystem.PointFidelityCard;
+import mealsystem.AbstractMeal;
 import orders.Order;
 import update.Subscriber;
 
@@ -21,7 +23,7 @@ public abstract class User implements Subscriber{
 	boolean receive_birthdayOffer = false;
 	private String receive_address = this.email;
 	protected int amount_spent;
-	protected Order currentOrder = new Order();
+	protected Order currentOrder = new Order(this);
 	protected ArrayList<Order> userOrders = new ArrayList<Order>();
 	protected boolean canReceiveSpecialOffers = true;
 	protected FidelityCard membershipCard = new BasicFidelityCard(this);
@@ -446,6 +448,59 @@ public abstract class User implements Subscriber{
 		s = s.substring(0, s.length()-2);
 		return s;
 	}
+	
+	
+	/*
+	public void useCardfeature(){
+		String cardtype = this.getFidelityCard().getCardName();
+		switch(cardtype){
+		case "BasicFidelityCard":
+			this.getFidelityCard().useFeature();
+//			for (AbstractMeal m : this.getCurrentOrder().getUnprocessedOrders()){
+//				if (m.isSpecialOffer()){m.setPrice(m.getSpecialPrice());}
+//			}
+//			for (AbstractMeal m : this.getCurrentOrder().getEditedOrders()){
+//				if (m.isSpecialOffer()){m.setPrice(m.getSpecialPrice());}
+//			}
+			break;
+		case "LotteryFidelityCard":
+			// set the first meal as free
+			if (this.getFidelityCard().useFeature()){
+				try{
+					ArrayList<AbstractMeal> l = new ArrayList<AbstractMeal>();
+					l.addAll(this.getCurrentOrder().getUnprocessedOrders());
+					l.addAll(this.getCurrentOrder().getEditedOrders());
+					l.get(0).setPrice(0);
+				}catch(Exception e){}
+			}
+			break;
+		case "PointFidelityCard":
+			try{
+				PointFidelityCard c = (PointFidelityCard) this.getFidelityCard();
+				if (this.getFidelityCard().useFeature()){
+					for (AbstractMeal m : this.getCurrentOrder().getUnprocessedOrders()){
+						m.setPrice(m.getPrice()*(1-c.getDiscountRate()));
+					}
+					for (AbstractMeal m : this.getCurrentOrder().getEditedOrders()){
+						m.setPrice(m.getPrice()*(1-c.getDiscountRate()));
+					}
+				}
+				for (AbstractMeal m : this.getCurrentOrder().getUnprocessedOrders()){
+					c.Add_Cash_as_Points(m.getPrice());
+				}
+				for (AbstractMeal m : this.getCurrentOrder().getEditedOrders()){
+					c.Add_Cash_as_Points(m.getPrice());
+				}
+			}catch(Exception e){System.out.println(e.getMessage());}
+			break;
+		}
+		
+	}
+	*/
+	
+	
+	
+	
 	// Equals and hash
 	/**
 	 * Check if the user_name is the same

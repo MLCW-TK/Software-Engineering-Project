@@ -289,7 +289,7 @@ public class ClientConsole{
 			} catch (RuntimeException e){
 				throw new RuntimeException(e.getMessage());
 			}
-		}catch(Exception e){throw new RuntimeException();}
+		}catch(Exception e){System.out.println(e.getMessage());;}
 	}
 	// personalizemeal
 	public static void personalizeMeal(String input){
@@ -321,7 +321,7 @@ public class ClientConsole{
 		try {
 			cl.saveOrder();
 		} catch (RuntimeException e){
-			throw new RuntimeException(e.getMessage());
+			System.out.println(e.getMessage());
 		}
 	}
 

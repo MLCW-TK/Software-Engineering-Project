@@ -7,6 +7,9 @@ import users.User;
 import java.text.DecimalFormat;
 import java.util.*;
 
+import cardfidelitysystem.FidelityCard;
+import cardfidelitysystem.PointFidelityCard;
+
 
 public class Order{
 	private DecimalFormat df = new DecimalFormat("#.00"); 
@@ -14,8 +17,9 @@ public class Order{
 	private double total_transaction;
 	private ArrayList<AbstractMeal> savedOrders;
 	private ArrayList<AbstractMeal> editedOrders;
-	
-	
+	private User orderedby;
+
+
 	/**
 	 * Constructor Order
 	 * unprocessedOrders = unpersonalized, selected orders
@@ -27,31 +31,71 @@ public class Order{
 		this.savedOrders = new ArrayList<AbstractMeal>();
 		this.editedOrders = new ArrayList<AbstractMeal>();
 	}
-	
+
+	public Order(User user) {
+		this.setOrderedby(user);
+		this.unprocessedOrders = new ArrayList<AbstractMeal>();
+		this.savedOrders = new ArrayList<AbstractMeal>();
+		this.editedOrders = new ArrayList<AbstractMeal>();
+	}
+
 	/**
 	 * Adds unprocessedOrders to savedOrders
 	 * Adds editedOrders to savedOrders
 	 */
 	public void saveOrder(){
+		this.total_transaction = 0;
 		this.savedOrders.addAll(unprocessedOrders);
+		this.savedOrders.addAll(editedOrders);
+		FidelityCard fc = this.getOrderedby().getFidelityCard();
 		for (AbstractMeal meal : savedOrders){
-			total_transaction += meal.getPrice();
+			if (fc.getCardName().equals("BasicFidelityCard")){
+				if(this.getOrderedby().getCanReceiveSpecialOffers() && meal.isSpecialOffer()){
+					total_transaction += meal.getSpecialPrice();
+				}else{total_transaction += meal.getPrice();}
+			}
+			if (fc.getCardName().equals("LotteryFidelityCard")){
+				if (fc.useFeature()){
+					total_transaction += 0;
+				}else{
+					total_transaction += meal.getPrice();
+				}
+
+			}
+		}
+		if (fc.getCardName().equals("PointFidelityCard")){
+			if (fc.useFeature()){
+				for (AbstractMeal meal2 : this.getSavedOrder()){
+					total_transaction += (meal2.getPrice()*(1-((PointFidelityCard)fc).getDiscountRate()));
+				}
+			}else{
+				for (AbstractMeal meal2 : this.getSavedOrder()){
+					total_transaction += meal2.getPrice();
+				}
+			}
+			((PointFidelityCard)fc).Add_Cash_as_Points(total_transaction);
 		}
 
-		this.savedOrders.addAll(editedOrders);
-		for (AbstractMeal meal : savedOrders){
-			total_transaction += meal.getPrice();
-		}
+		this.clearOrders();
 	}
-	
+
+	public void clearOrders(){
+		this.setUnprocessedOrders(new ArrayList<AbstractMeal>());
+		this.setEditedOrders(new ArrayList<AbstractMeal>());
+
+	}
+
+	public void setSavedOrder(ArrayList<AbstractMeal> o){this.savedOrders = o;}
+
 	public ArrayList<AbstractMeal> getSavedOrder(){
 		return this.savedOrders;
 	}
-	
+
 	public void addPersonalizedMeal(AbstractMeal meal){
 		this.editedOrders.add(meal);
+		this.unprocessedOrders.remove(meal);
 	}
-	
+
 	/**
 	 * Selects meal
 	 * @param meal
@@ -62,11 +106,20 @@ public class Order{
 			unprocessedOrders.add(meal);	
 		}
 	}
-	
+
+
+	public void setUnprocessedOrders(ArrayList<AbstractMeal> o){this.unprocessedOrders = o;}
+
 	public ArrayList<AbstractMeal> getUnprocessedOrders(){
 		return unprocessedOrders;
 	}
-	
+
+	public void setEditedOrders(ArrayList<AbstractMeal> o){this.editedOrders = o;}
+
+	public ArrayList<AbstractMeal> getEditedOrders(){
+		return editedOrders;
+	}
+
 	public AbstractMeal personalizeMeal(AbstractMeal meal, Ingredient ingredient, int quantity){
 		// If meal already contains ingredient
 		if (meal.getIngredients().contains(ingredient)){
@@ -80,7 +133,7 @@ public class Order{
 				newinstance.setPersonalizedBool(true);
 				// returns new meal instance
 				return newinstance;
-			// else, he wants to change ingredient count
+				// else, he wants to change ingredient count
 			} else {
 				// Creates a new meal instance
 				// Creates a new ingredient instance (ingredients are independent instances!!)
@@ -94,7 +147,7 @@ public class Order{
 				newinstance.setPersonalizedBool(true);
 				return newinstance;
 			}
-		// else, ingredient is not present. hence we add the ingredient!
+			// else, ingredient is not present. hence we add the ingredient!
 		} else {
 			// Again, creates a new instance
 			Meal newinstance = (Meal) meal.createNewInstance();
@@ -106,21 +159,11 @@ public class Order{
 			return newinstance;
 		}
 	}
-	
+
 	public double getTotalTransaction(){return this.total_transaction;}
-	
-	
-	public void useCardfeature(User user){
-		String cardtype = user.getFidelityCard().getCardName();
-		switch(cardtype){
-		case "BasicFidelityCard":
-			break;
-		case "LotteryFidelityCard":
-			if (user.getFidelityCard().useFeature()){
-				this.
-			}
-		}
-	}
+
+
+
 	/**
 	 * Prints out a string containing the summary of orders saved
 	 */
@@ -133,9 +176,17 @@ public class Order{
 		s += "Total price: " + df.format(total_transaction);
 		return s;
 	}
-	
-	
 
-	
+	public User getOrderedby() {
+		return orderedby;
+	}
+
+	public void setOrderedby(User user) {
+		this.orderedby = user;
+	}
+
+
+
+
 
 }
