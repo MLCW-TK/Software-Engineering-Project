@@ -31,8 +31,8 @@ public class TestRegister {
 			content = reader.readLine();
 			
 			//Stop the loop
-			if (content.equalsIgnoreCase("EXIT")){
-				System.out.print("Bye!");
+			if (content.equalsIgnoreCase("quit")){
+				System.out.print("The test has finished. Bye!");
 				return;
 			}
 			

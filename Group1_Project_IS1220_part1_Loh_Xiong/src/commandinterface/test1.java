@@ -269,11 +269,11 @@ public class test1 {
 		System.out.println("----------");
 		System.out.println("Test option update");
 		System.out.println("----------");
-		cc.associateAgreement("Mario", "update");
+		cc.associateAgreement("Mario","345678", "update");
 		System.out.println("");
 		System.out.println("Test option birthday");
 		System.out.println("----------");
-		cc.associateAgreement("Mario", "birthday");
+		cc.associateAgreement("Mario", "345678", "birthday", "09/04/1993");
 
 		System.out.println("Test client login");
 		System.out.println("----------");

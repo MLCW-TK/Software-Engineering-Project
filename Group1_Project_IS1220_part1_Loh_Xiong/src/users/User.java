@@ -181,123 +181,155 @@ public abstract class User implements Subscriber{
 		return last_name;
 	}
 	
+	public boolean addContact(String type, String detail){
+		try{
+			this.contact.put(type, detail);
+			return true;
+		}catch(Exception e){
+			return false;
+		}
+	}
+	
+	
+	public void registerUpdates(String type){
+		if (this.getContactHash().isEmpty()){
+			System.out.println("Please provide your contact details first.");
+		}
+		else{
+			try{
+				this.setReceiveUpdates(true);
+				this.setReceiveAddress(this.getContactValue(type));
+			}
+			catch(Exception e){throw new RuntimeException();}
+		}
+	}
 	/**
-	 * Ask the user if he wants to receive updates, and register with instructions.
+	 * allow the user to receive updates
 	 */
 	public void registerUpdates(){
-		System.out.println("Would you like to receive updates? ('yes', or press 'enter' to skip)");
-		Scanner sc2 = new Scanner(System.in);
-		String response = sc2.nextLine();
-		if (response.equalsIgnoreCase("YES")){
-			this.setReceiveUpdates(true);
-			this.setReceiveAddress(email);
-			/** 
-			 * Checks if either email or contact details were given
-			 * If none were given, prompt the user to give either email address or contact address
-			 * If other contacts were given, asks the user to specify the receive method.
-			 */
-			if (email.equals("")){
-				if (this.contact.isEmpty()){
-					while (this.getEmail().equals("") && this.getContactHash().isEmpty()){
-						System.out.println("No contact details found");
-						System.out.println("Where would you like us to send you updates?");
-						System.out.println("Type '1' to enter an email address, or '2' to enter other contact details manually");
-						String ans = sc2.nextLine();
-						switch(ans){
-						case "1":
-							System.out.println("Please enter your email address: ");
-							email = sc2.nextLine();
-							if (email.equals("")){
-								continue;
-							} else {
-								this.setEmail(email);
-								this.setReceiveAddress(email);
-								System.out.println("We will send you updates by email from now on");
-								break;
-							}
-						case "2":
-							System.out.println("Please enter a contact field description");
-							String value1 = sc2.nextLine();
-							System.out.println("Please enter a contact field value");
-							String value2 = sc2.nextLine();
-							if (value1.equals("") || value2.equals("")){
-								continue;
-							}
-							this.contact.put(value1, value2);
-							this.setReceiveAddress(this.getContactHash().get(value1));
-							System.out.println("We will send updates to " + value1 + " from now on");
-							break;
-							
-						default:
-							System.out.println("Invalid input. Please try again");
-							break;
-						}
-					}
-				}
-					else{
-						while (this.getReceiveAddress().equals("")){
-							System.out.println("No email address set for updates notification");
-							System.out.println("Type '1' if you would like to add an email address to receive updates, or type '2' if you like to choose from other contact details");
-							String NotifyResponse = sc2.nextLine();
-							switch(NotifyResponse){
-							case "1":
-								System.out.println("Please enter an email address");
-								email = sc2.nextLine();
-								if (email.equals("")){
-									continue;
-								} else {
-									this.setEmail(email);
-									this.setReceiveAddress(email);
-									System.out.println("Email updated. You will receive email updates from now on");
-									break;
-								}
-							case "2":
-								System.out.println("Please choose from the list below");
-								System.out.println(this.getContactKeys());
-								String ContactKey = sc2.nextLine();
-						
-								while (true){
-									if (this.getContactHash().containsKey(ContactKey)){
-										this.setReceiveAddress(this.getContactValue(ContactKey));
-										System.out.println("We will send updates to " + ContactKey + " from now on");
-										break;
-									}
-									else{
-										System.out.println("Wrong input selected. Please try again");
-										ContactKey = sc2.nextLine();
-									}
-								}
-								break;
-							default:
-								System.out.println("Invalid response. Please try again");
-								break;
-							}
-						}
-						}
-				}else {
-					if (!this.getContactHash().isEmpty()){
-						System.out.println("Would you like to change how you would like to receive updates? (yes/no, default = email)");
-						String response2 = sc2.nextLine();
-							if (response2.equalsIgnoreCase("YES")){
-								System.out.println("Please enter one of your contact types shown below");
-								System.out.println(this.getContactKeys());
-								String ContactKey = sc2.nextLine();
-							while (true){
-								if (this.getContactHash().containsKey(ContactKey)){
-									this.setReceiveAddress(this.getContactValue(ContactKey));
-									break;
-								}
-								else{
-									System.out.println("Wrong input selected. Please try again");
-									ContactKey = sc2.nextLine();
-								}
-							}	
-						}
-					} else {
-						System.out.println("We will send you email updates if any!");
-					}
-				}
+		if (this.getContactHash().isEmpty()){
+			System.out.println("Please provide your contact details first.");
 		}
+		else{
+			try{
+				this.setReceiveUpdates(true);
+				this.setReceiveAddress(this.getEmail());
+			}
+			catch(Exception e){throw new RuntimeException();}
+		}
+//		System.out.println("Would you like to receive updates? ('yes', or press 'enter' to skip)");
+//		Scanner sc2 = new Scanner(System.in);
+//		String response = sc2.nextLine();
+//		if (response.equalsIgnoreCase("YES")){
+//			this.setReceiveUpdates(true);
+//			this.setReceiveAddress(email);
+//			/** 
+//			 * Checks if either email or contact details were given
+//			 * If none were given, prompt the user to give either email address or contact address
+//			 * If other contacts were given, asks the user to specify the receive method.
+//			 */
+//			if (email.equals("")){
+//				if (this.contact.isEmpty()){
+//					while (this.getEmail().equals("") && this.getContactHash().isEmpty()){
+//						System.out.println("No contact details found");
+//						System.out.println("Where would you like us to send you updates?");
+//						System.out.println("Type '1' to enter an email address, or '2' to enter other contact details manually");
+//						String ans = sc2.nextLine();
+//						switch(ans){
+//						case "1":
+//							System.out.println("Please enter your email address: ");
+//							email = sc2.nextLine();
+//							if (email.equals("")){
+//								continue;
+//							} else {
+//								this.setEmail(email);
+//								this.setReceiveAddress(email);
+//								System.out.println("We will send you updates by email from now on");
+//								break;
+//							}
+//						case "2":
+//							System.out.println("Please enter a contact field description");
+//							String value1 = sc2.nextLine();
+//							System.out.println("Please enter a contact field value");
+//							String value2 = sc2.nextLine();
+//							if (value1.equals("") || value2.equals("")){
+//								continue;
+//							}
+//							this.contact.put(value1, value2);
+//							this.setReceiveAddress(this.getContactHash().get(value1));
+//							System.out.println("We will send updates to " + value1 + " from now on");
+//							break;
+//							
+//						default:
+//							System.out.println("Invalid input. Please try again");
+//							break;
+//						}
+//					}
+//				}
+//					else{
+//						while (this.getReceiveAddress().equals("")){
+//							System.out.println("No email address set for updates notification");
+//							System.out.println("Type '1' if you would like to add an email address to receive updates, or type '2' if you like to choose from other contact details");
+//							String NotifyResponse = sc2.nextLine();
+//							switch(NotifyResponse){
+//							case "1":
+//								System.out.println("Please enter an email address");
+//								email = sc2.nextLine();
+//								if (email.equals("")){
+//									continue;
+//								} else {
+//									this.setEmail(email);
+//									this.setReceiveAddress(email);
+//									System.out.println("Email updated. You will receive email updates from now on");
+//									break;
+//								}
+//							case "2":
+//								System.out.println("Please choose from the list below");
+//								System.out.println(this.getContactKeys());
+//								String ContactKey = sc2.nextLine();
+//						
+//								while (true){
+//									if (this.getContactHash().containsKey(ContactKey)){
+//										this.setReceiveAddress(this.getContactValue(ContactKey));
+//										System.out.println("We will send updates to " + ContactKey + " from now on");
+//										break;
+//									}
+//									else{
+//										System.out.println("Wrong input selected. Please try again");
+//										ContactKey = sc2.nextLine();
+//									}
+//								}
+//								break;
+//							default:
+//								System.out.println("Invalid response. Please try again");
+//								break;
+//							}
+//						}
+//						}
+//				}else {
+//					if (!this.getContactHash().isEmpty()){
+//						System.out.println("Would you like to change how you would like to receive updates? (yes/no, default = email)");
+//						String response2 = sc2.nextLine();
+//							if (response2.equalsIgnoreCase("YES")){
+//								System.out.println("Please enter one of your contact types shown below");
+//								System.out.println(this.getContactKeys());
+//								String ContactKey = sc2.nextLine();
+//							while (true){
+//								if (this.getContactHash().containsKey(ContactKey)){
+//									this.setReceiveAddress(this.getContactValue(ContactKey));
+//									break;
+//								}
+//								else{
+//									System.out.println("Wrong input selected. Please try again");
+//									ContactKey = sc2.nextLine();
+//								}
+//							}	
+//						}
+//					} else {
+//						System.out.println("We will send you email updates if any!");
+//					}
+//				}
+//		}
 	}
 
 	//Region - birthday
@@ -328,19 +360,22 @@ public abstract class User implements Subscriber{
 	
 	/**
 	 * Ask the user if he wants to receive birthday special offer, and register with instructions.
+	 * @param date 
 	 */
+	public void registerBirthday(String date){
+		try {
+			this.recordBirthday(date);
+			this.setReceiveBirthdayOffer(true);
+		}catch(RuntimeException e){throw new RuntimeException();}
+
+	}
 	public void registerBirthday(){
-		System.out.println("Would you like to receive our special offers on your birthday?(Type 'yes' to accept.)");
-		Scanner sc = new Scanner(System.in);
-		String response = sc.nextLine();
-		if (!response.equalsIgnoreCase("YES")){
-			this.receive_birthdayOffer=false;
-			System.out.println("You have chosen not to receive birthday offers.");}
-		else{
+		try {
 			this.recordBirthday();
 			this.setReceiveBirthdayOffer(true);
-			System.out.println("You will receive a special offer on your birthday!");
-		}	
+		}catch(RuntimeException e){
+			throw new RuntimeException();
+		}
 	}
 	
 	/**
@@ -369,6 +404,24 @@ public abstract class User implements Subscriber{
 			}
 		}while(this.birthday.equals(new Date(1000,1,1)));
 		
+	}
+	public void recordBirthday(String birthdayString){
+		if(birthdayString.length()==10){
+			try{
+				int day = Integer.parseInt(birthdayString.substring(0, 2));
+				int month = Integer.parseInt(birthdayString.substring(3, 5));
+				int year = Integer.parseInt(birthdayString.substring(6, 10));
+				if(day>0 && day<32 && month>0 && month<13 && year>1000 && year < 10000){
+					Date temp = new Date(year-1900, month-1, day);
+					this.birthday = temp;
+				}
+				else{System.out.println("Birthday formate is unrecognized, please follow the dd/mm/yyyy format.(e.g. 21/07/1993)");}
+			}catch(Exception e){
+				System.out.println("Birthday formate is unrecognized, please follow the dd/mm/yyyy format.(e.g. 21/07/1993)");}
+		}
+		else{
+			System.out.println("Birthday formate is unrecognized, please follow the dd/mm/yyyy format.(e.g. 21/07/1993)");
+		}
 	}
 	
 	public boolean birthdayIsToday(){

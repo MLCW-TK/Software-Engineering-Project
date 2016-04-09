@@ -32,8 +32,8 @@ public class CommandConsole {
 		throw new RuntimeException("No user found!");
 	}
 
-	public FidelityCard associateCard(String username, String cardType){
-		ClientUser user = ClientConsole.re1.getUserFromUserName(username);
+    public FidelityCard associateCard(String username, String password, String cardType){
+        ClientUser user = ClientConsole.re1.validateUser(username, password);
 		try {
 			ClientConsole.fcf.createFidelityCard(cardType, user);
 		} catch (RuntimeException e){
@@ -46,24 +46,39 @@ public class CommandConsole {
 		System.out.println(username + " is now holding " + user.getFidelityCard().getCardName());
 		return fc;
 	}
-//	public static void associateAgreement <username, agreement>
-	public void associateAgreement(String username, String agreement) {
-		ClientUser user = ClientConsole.re1.getUserFromUserName(username);
+//	public static void associateAgreement <username, password, agreement>
+	public void associateAgreement(String username, String password, String agreement) {
+		ClientUser user = ClientConsole.re1.validateUser(username, password);
 		if (agreement.equalsIgnoreCase("update")){
 			try {
 				user.registerUpdates();
+				System.out.println("Success!");
 			} catch (RuntimeException e){
 				throw new RuntimeException();
 			}
 		}
 		if (agreement.equalsIgnoreCase("birthday")){
+			System.out.println("Please add specification of your birthday");
+		}
+
+	}
+	
+	public void associateAgreement(String username, String password, String agreement, String modifier){
+		ClientUser user = ClientConsole.re1.validateUser(username, password);
+		if (agreement.equalsIgnoreCase("update")){
 			try {
-				user.registerBirthday();
-			} catch (RuntimeException e){
+				user.registerUpdates(modifier);
+				System.out.println("Success!");
+			}catch(RuntimeException e){
 				throw new RuntimeException();
 			}
 		}
-
+		if (agreement.equalsIgnoreCase("birthday")){
+			try {
+				user.registerBirthday(modifier);
+				System.out.println("Success!");
+			}catch(RuntimeException e){throw new RuntimeException();}
+		}
 	}
 
 	public StaffUser insertChef(String firstname, String lastname, String username, String password){
@@ -83,48 +98,47 @@ public class CommandConsole {
 		return;
 	}
 
-	public void addContactInfo(String input){
-		System.out.println("In order to use this function, you would be required to log in temporarily");
-		System.out.println("Please enter your username");
-		String username = sc.nextLine();
-		System.out.println("Please enter your password");
-		String password = sc.nextLine();
+	public void addContactInfo(String username, String password, String type, String detail){
 		try {
 			ClientConsole.re1.validateUser(username, password);
+			ClientUser loginuser = (ClientUser) ClientConsole.re1.validateUser(username, password);
+			Boolean addOption = true;
+			if (type.equalsIgnoreCase("email")){
+				loginuser.setEmail(detail);
+			}
+			else{
+				loginuser.addContact(type, detail);
+			}
 		} catch (RuntimeException e){
 			System.out.println("Invalid User/Password");
-			addContactInfo(input);
 		}
 
-		ClientUser loginuser = (ClientUser) ClientConsole.re1.validateUser(username, password);
-
-		Boolean addOption = true;
-		do{
-		System.out.println("Please select an option below (only numbers allowed): ");
-		System.out.println("1. Add an email address");
-		System.out.println("2. Add a custom contact detail");
-		System.out.println("3. Exit");
-		String input1 = sc.nextLine();
-			switch(input1){
-		case "1":
-			loginuser.setEmail(input);
-			System.out.println("Email address successfuly added!");
-			addOption = false;
-			break;
-		case "2":
-			System.out.println("Please type a contact field category");
-			String contactInfo = sc.nextLine();
-			loginuser.getContactHash().put(contactInfo, input);
-			addOption = false;
-			break;
-		case "3":
-			addOption = false;
-			break;
-		default:
-			System.out.println("Wrong input selected. Please try again");
-			continue;
-			}
-		} while (addOption);
+//		do{
+//		System.out.println("Please select an option below (only numbers allowed): ");
+//		System.out.println("1. Add an email address");
+//		System.out.println("2. Add a custom contact detail");
+//		System.out.println("3. Exit");
+//		String input1 = sc.nextLine();
+//			switch(type){
+//		case "1":
+//			loginuser.setEmail(input);
+//			System.out.println("Email address successfuly added!");
+//			addOption = false;
+//			break;
+//		case "2":
+//			System.out.println("Please type a contact field category");
+//			String contactInfo = sc.nextLine();
+//			loginuser.getContactHash().put(contactInfo, input);
+//			addOption = false;
+//			break;
+//		case "3":
+//			addOption = false;
+//			break;
+//		default:
+//			System.out.println("Wrong input selected. Please try again");
+//			continue;
+//			}
+//		} while (addOption);
 
 
 	}

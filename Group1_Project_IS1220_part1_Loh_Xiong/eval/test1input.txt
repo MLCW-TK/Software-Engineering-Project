@@ -130,5 +130,23 @@ saveMeal <>
 listIngredients <Raclette>
 logout <>
 registerClient <Mario, Rossi, Mario, 345678>
-
-EXIT
+addContactInfo <Mario, 345678, email, mario@email.com>
+addContactInfo <Mario, 345677, phone number, 06 12 34 56 78>
+addContactInfo <Mario, 345678, phone number, 06 12 34 56 78>
+-cardType
+associateCard <Mario, 345678, BasicFidelityCard>
+-agreement
+associateAgreement <Mario, 345678, update>
+associateAgreement <Mario, 345678, update, phone number>
+associateAgreement <Mario, 345678, birthday, 09/04/1993>
+login <Mario, 345678>
+listIngredients <Raclette>
+selectMeal <Raclette, 1>
+personalizeMeal <Raclette, cheese, 10>
+personalizeMeal <Raclette, cheese, 0>
+selectMeal <Raclette, 2>
+saveOrder <>
+logout <>
+login <bobred, 123456>
+notifyBirthday <>
+quit
