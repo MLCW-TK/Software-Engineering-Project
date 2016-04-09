@@ -54,9 +54,6 @@ public class ClientConsole{
 
 			cl.registerClient(data[0], data[1], data[2], data[3]);
 			System.out.println("Congratulations! Account successfully created");
-			System.out.println("You may now use 'addContactInfo <contactInfo>' to add new contact information");
-			System.out.println("You may now use 'associateCard <username, cardtype> to associate your fidelity card");
-			System.out.println("You may also login now with 'login <username, password>'");
 	}
 
 	public static void insertChef(String input) throws RuntimeException{
@@ -171,7 +168,9 @@ public class ClientConsole{
 			return;
 		}
 	}
-		
+	
+	
+	/*	
 	public static void loginInputTreatment(String input){
 		int strlength = input.length();
 		String lastLetter = input.substring(strlength-1, strlength);
@@ -211,7 +210,9 @@ public class ClientConsole{
 			}
 		}
 	}
-
+	*/
+	
+	
 	// ClientUser commands
 	public static void addIngredient(String input){
 		String command = input.substring(15, input.length()-1);
@@ -397,9 +398,35 @@ public class ClientConsole{
 	public static void operationsInputTreatment(String input){
 		int strlength = input.length();
 		if (!(strlength == 0)){
-			String lastLetter = input.substring(strlength-1, strlength);
-
-
+			String lastLetter = input.substring(strlength-1, strlength);			
+			// register client
+			if ((input.length()>=17)&&((input.substring(0,16)).equals("registerClient <"))&&(lastLetter.equals(">"))){
+				registerUser(input);
+				return;}
+			
+			// login user
+			if ((input.length()>=8)&&((input.substring(0,7).equals("login <"))&&(lastLetter.equals(">")))){
+				loginUser(input);
+				return;}
+			
+			// insert chef
+			if ((input.length()>=13)&&((input.substring(0,12).equals("insertChef <"))&&(lastLetter.equals(">")))){
+				insertChef(input);
+				return;}
+			
+			// add contact info
+			if ((input.length()>="addContactInfo <".length()+1)&&((input.substring(0,"addContactInfo <".length())).equals("addContactInfo <"))&&(lastLetter.equals(">"))){
+				addContactInfo(input);
+				return;}
+			
+			// associate card
+			if ((input.length()>="associateCard <".length()+1)&&((input.substring(0,"associateCard <".length())).equals("associateCard <"))&&(lastLetter.equals(">"))){
+				associateCard(input);
+				return;}
+			
+			if ((input.length()>="associateAgreement <".length()+1)&&((input.substring(0,"associateAgreement <".length())).equals("associateAgreement <"))&&(lastLetter.equals(">"))){
+				associateAgreement(input);
+				return;}
 			// create meal
 			if ((input.length()>="createMeal <".length()+1)&&((input.substring(0,"createMeal <".length())).equals("createMeal <"))&&(lastLetter.equals(">"))){
 				createMeal(input);
@@ -444,10 +471,13 @@ public class ClientConsole{
 				return;}
 			
 			// -help
-			if (!input.equalsIgnoreCase("-help")){
-				System.out.println("Wrong inputs detected. Please type -help to see available commands.");
-				System.out.println("");
+			else{
+				if (!input.equalsIgnoreCase("-help")){
+					System.out.println("Wrong inputs detected. Please type -help to see available commands.");
+					System.out.println("");
+				}
 			}
+			
 		}
 	}
 	
@@ -513,7 +543,7 @@ public class ClientConsole{
 				}
 
 				try{
-					loginInputTreatment(input);	
+					operationsInputTreatment(input);	
 				} catch (RuntimeException e){
 					System.out.println(e.getMessage());
 					System.out.println("");

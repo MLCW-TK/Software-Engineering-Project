@@ -1,0 +1,2 @@
+registerClient <Arron, Bush, ArronB, 12345>
+-help
