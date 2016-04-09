@@ -79,11 +79,11 @@ public class JMealsTest {
 		Ingredient eggs = ingredient.createIngredient("eggs", 1, 1.15);
 		steak.executeBehavior(eggs, 1);
 		HashSet<Ingredient> temp = steak.getIngredients();
-		assertTrue(origin!=temp);
+		assertTrue(!origin.equals(temp));
 		steak.setBehavior(new NormalBehavior());
 		steak.executeBehavior(vegetable, 1);
 		HashSet<Ingredient> fin = steak.getIngredients();
-		assertTrue(origin==fin);
+		assertTrue(origin.equals(fin));
 	}
 	
 	
