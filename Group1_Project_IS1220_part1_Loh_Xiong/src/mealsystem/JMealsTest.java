@@ -11,7 +11,7 @@ import org.junit.Test;
 import ingredients.Ingredient;
 import ingredients.IngredientFactory;
 
-public class MealsTestTest {
+public class JMealsTest {
 	private static final String Exception = null;
 	AbstractMealFactory meals = new MealFactory();
 	
@@ -78,6 +78,7 @@ public class MealsTestTest {
 		
 		steak2.setBehavior(new AddIngredient());
 		Ingredient eggs = ingredient.createIngredient("eggs", 1, 1.15);
+<<<<<<< HEAD:Group1_Project_IS1220_part1_Loh_Xiong/src/mealsystem/MealsTestTest.java
 		steak2.executeBehavior(eggs, 1);
 		
 		HashSet<Ingredient> temp = steak2.getIngredients();
@@ -92,5 +93,21 @@ public class MealsTestTest {
 		HashSet<Ingredient> fin = steak2.getIngredients();
 		assertTrue(origin.equals(fin));
 		
+=======
+		steak.executeBehavior(eggs, 1);
+		HashSet<Ingredient> temp = steak.getIngredients();
+		assertTrue(origin!=temp);
+		steak.setBehavior(new NormalBehavior());
+		steak.executeBehavior(vegetable, 1);
+		HashSet<Ingredient> fin = steak.getIngredients();
+		assertTrue(origin==fin);
+	}
+	
+	
+	@Test(expected = RuntimeException.class)
+	public void testChangeIngredientToBelowZeroReturnException(){
+		steak.setBehavior(new ChangeIngredient());
+		steak.executeBehavior(vegetable, -20);
+>>>>>>> 1acaa167d6890cbeec375cf6d323e0d9dac95feb:Group1_Project_IS1220_part1_Loh_Xiong/src/mealsystem/JMealsTest.java
 	}
 }

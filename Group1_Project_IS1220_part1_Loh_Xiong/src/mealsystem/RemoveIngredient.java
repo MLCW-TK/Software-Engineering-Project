@@ -5,6 +5,9 @@ import ingredients.Ingredient;
 
 public class RemoveIngredient implements MealBehavior {
 
+	/**
+	 * remove a chosen ingredient from the meal.
+	 */
 	@Override
 	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {
 		if (meal.getIngredients().contains(ingredient)){
