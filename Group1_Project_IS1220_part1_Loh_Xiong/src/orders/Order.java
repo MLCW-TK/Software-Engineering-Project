@@ -94,13 +94,26 @@ public class Order{
 		}
 	}
 	
-	
+	public double getTotalTransaction(){return this.total_transaction;}
 	
 	/**
-	 * Add orders to the orderSequence
-	 * @param meal
-	 * @param user
-	 * @param count
+	 * Prints out a string containing the summary of orders saved
+	 */
+	public String Summary(){
+		String s = new String();
+		int i = 0;
+		for (AbstractMeal obj : this.getSavedOrder()){
+			s += obj.getName() + " " + obj.getIngredientsString() + ", $" + obj.getStringPrice();
+			s += "\n";
+		}
+		s += "Total price: " + df.format(total_transaction);
+		return s;
+	}
+	
+	
+	/*
+	 * This function is used to simulate testing only!
+	 * Not a core function!
 	 */
 	public void Add_order(AbstractMeal meal, User user, int count){
 		// Creates a list of all orders
@@ -169,24 +182,5 @@ public class Order{
 
 	}
 	
-	public double getTotalTransaction(){return this.total_transaction;}
-	
-	
-	public void Add_order_specialoffer(AbstractMeal meal, User user, int count){
-		for (int i = 0; i<count; i++){
-			
-		}
-	}
-	
-	public String Summary(){
-		String s = new String();
-		int i = 0;
-		for (AbstractMeal obj : this.getSavedOrder()){
-			s += obj.getName() + " " + obj.getIngredientsString() + ", $" + obj.getStringPrice();
-			s += "\n";
-		}
-		s += "Total price: " + df.format(total_transaction);
-		return s;
-	}
 
 }

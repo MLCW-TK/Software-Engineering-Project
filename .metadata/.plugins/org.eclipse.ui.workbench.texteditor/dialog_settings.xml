@@ -6,22 +6,23 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="== null" key="selection"/>
+		<item value="Meal" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="AbstractMeal"/>
+			<item value="createMeal"/>
+			<item value="create"/>
+			<item value="getDefault_ingredients"/>
+			<item value="this.getDefault_ingredients()"/>
 			<item value=".equals(null)"/>
 			<item value="select"/>
 			<item value="clientuser"/>
-			<item value="getIngredi"/>
-			<item value="df"/>
-			<item value="df."/>
-			<item value="price"/>
-			<item value="Personalize"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Meal"/>
 			<item value="== null"/>
 			<item value="CustomUtilities.round"/>
 			<item value="CustomUtilities.round()"/>

@@ -2,7 +2,7 @@ package mealsystem;
 
 import ingredients.Ingredient;
 
-public class Appertizer extends AbstractMeal{
+public class Appertizer extends Meal{
 
 	public Appertizer(String name, String description, double price, Ingredient[] ingredients) {
 		super(name, description, price, ingredients);

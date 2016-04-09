@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.papyrus.infra.emf.providers.EMFGraphicalContentProvider_history__uml:Type:type">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+				<item value="platform:/resource/ProjectUML/model.uml#_kXy_4O6jEeWjqrXASGzHzw"/>
+				<item value="platform:/resource/ProjectUML/model.uml#_wDNhUO6nEeWuI9I3apyqwA"/>
+			</list>
+		</section>
+	</section>
 	<section name="org.eclipse.papyrus.infra.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/ProjectUML/model.uml:uml:Type:type">
 		<section name="History">
 			<list key="PreviousSelection">

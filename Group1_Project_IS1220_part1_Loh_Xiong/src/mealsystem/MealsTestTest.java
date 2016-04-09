@@ -13,16 +13,14 @@ import ingredients.IngredientFactory;
 
 public class MealsTestTest {
 	private static final String Exception = null;
-	AbstractMealFactory appertizers = new AppertizerFactory();
-	AbstractMealFactory maincourses = new MainCourseFactory();
-	AbstractMealFactory desserts = new DessertFactory();
+	AbstractMealFactory meals = new MealFactory();
 	
 	IngredientFactory ingredient = new IngredientFactory();
 	Ingredient vegetable = ingredient.createIngredient("vegetable", 1, 1.15);
 	
-	Appertizer salad = (Appertizer) appertizers.createMeal("salad", "good for your health", 0, vegetable);
-	MainCourse steak = (MainCourse) maincourses.createMeal("salad", "also good for you", vegetable);
-	Dessert icecream = (Dessert) desserts.createMeal("icecream", "good for you", 10, vegetable);
+	Meal salad = (Meal) meals.createMeal("salad", "good for your health", 0, vegetable);
+	Meal steak = (Meal) meals.createMeal("steak", "also good for you", vegetable);
+	Meal icecream = (Meal) meals.createMeal("icecream", "good for you", 10, vegetable);
 	HashSet<AbstractMeal> meal_list = new HashSet<AbstractMeal>();
 	
 	
@@ -75,15 +73,24 @@ public class MealsTestTest {
 	@Test
 	public void testNormalBehavoirReturnsEverythingToNormal(){
 		HashSet<Ingredient> origin = steak.getIngredients();
-		steak.setBehavior(new AddIngredient());
+		// Steak will forever be a "blueprint". We need to create new instance for it
+		Meal steak2 = (Meal) steak.createNewInstance();
+		
+		steak2.setBehavior(new AddIngredient());
 		Ingredient eggs = ingredient.createIngredient("eggs", 1, 1.15);
-		steak.executeBehavior(eggs, 1);
-		HashSet<Ingredient> temp = steak.getIngredients();
-		assertTrue(origin!=temp);
-		steak.setBehavior(new NormalBehavior());
-		steak.executeBehavior(vegetable, 1);
-		HashSet<Ingredient> fin = steak.getIngredients();
-		assertTrue(origin==fin);
+		steak2.executeBehavior(eggs, 1);
+		
+		HashSet<Ingredient> temp = steak2.getIngredients();
+		System.out.println(origin.toString());
+		System.out.println(temp.toString());
+		assertTrue(!origin.equals(temp));
+		
+		steak2.setBehavior(new NormalBehavior());
+		steak2.executeBehavior(vegetable, 1);
+		
+		
+		HashSet<Ingredient> fin = steak2.getIngredients();
+		assertTrue(origin.equals(fin));
 		
 	}
 }
