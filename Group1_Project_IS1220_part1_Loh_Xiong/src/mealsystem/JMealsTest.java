@@ -91,5 +91,15 @@ public class JMealsTest {
 		
 		HashSet<Ingredient> fin = steak2.getIngredients();
 		assertTrue(origin.equals(fin));
+<<<<<<< HEAD
+=======
+	}
+		
+
+	@Test(expected = RuntimeException.class)
+	public void testChangeIngredientToBelowZeroReturnException(){
+		steak.setBehavior(new ChangeIngredient());
+		steak.executeBehavior(vegetable, -20);
+>>>>>>> a227fd74f2f9f3d599b075e4ef4db7338c831db4
 	}
 }

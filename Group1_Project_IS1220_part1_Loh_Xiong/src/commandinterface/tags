@@ -1,0 +1,68 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ClientConsole	ClientConsole.java	/^public class ClientConsole{$/;"	c
+CommandConsole	CommandConsole.java	/^public class CommandConsole {$/;"	c
+addContactInfo	ClientConsole.java	/^	public static void addContactInfo(String input){$/;"	m	class:ClientConsole
+addContactInfo	CommandConsole.java	/^	public void addContactInfo(String username, String password, String type, String detail){$/;"	m	class:CommandConsole
+addIngredient	ClientConsole.java	/^	public static void addIngredient(String input){$/;"	m	class:ClientConsole
+addIngredient	CommandConsole.java	/^	public Ingredient addIngredient(String name, double quantity){$/;"	m	class:CommandConsole
+associateAgreement	ClientConsole.java	/^	public static void associateAgreement(String input){$/;"	m	class:ClientConsole
+associateAgreement	CommandConsole.java	/^	public void associateAgreement(String username, String agreement) {$/;"	m	class:CommandConsole
+associateCard	ClientConsole.java	/^	public static void associateCard(String input){$/;"	m	class:ClientConsole
+associateCard	CommandConsole.java	/^	public FidelityCard associateCard(String username, String cardType){$/;"	m	class:CommandConsole
+cc	test1.java	/^	static CommandConsole cc = new CommandConsole();$/;"	f	class:test1
+cl	ClientConsole.java	/^	private static CommandConsole cl = new CommandConsole();$/;"	f	class:ClientConsole	file:
+commandinterface	ClientConsole.java	/^package commandinterface;$/;"	p
+commandinterface	CommandConsole.java	/^package commandinterface;$/;"	p
+commandinterface	test1.java	/^package commandinterface;$/;"	p
+createMeal	ClientConsole.java	/^	public static void createMeal(String input){$/;"	m	class:ClientConsole
+createMeal	CommandConsole.java	/^	public Meal createMeal(String name, double price){$/;"	m	class:CommandConsole
+currentMeal	ClientConsole.java	/^	public static void currentMeal(String input){$/;"	m	class:ClientConsole
+currentMeal	ClientConsole.java	/^	static Meal currentMeal;$/;"	f	class:ClientConsole
+currentMeal	CommandConsole.java	/^	public Meal currentMeal(){$/;"	m	class:CommandConsole
+currentUser	ClientConsole.java	/^	static ClientUser currentUser;$/;"	f	class:ClientConsole
+customscan	test1.java	/^	private static Scanner customscan;$/;"	f	class:test1	file:
+editedMeal	ClientConsole.java	/^	static Meal editedMeal = null;$/;"	f	class:ClientConsole
+fcf	ClientConsole.java	/^	static protected FidelityCardFactory fcf = new FidelityCardFactory();$/;"	f	class:ClientConsole
+globalPhase	ClientConsole.java	/^	static boolean globalPhase = true;$/;"	f	class:ClientConsole
+ingredients	ClientConsole.java	/^	static HashSet<String> ingredients = new HashSet<String>();$/;"	f	class:ClientConsole
+insertChef	ClientConsole.java	/^	public static void insertChef(String input) throws RuntimeException{$/;"	m	class:ClientConsole
+insertChef	CommandConsole.java	/^	public StaffUser insertChef(String firstname, String lastname, String username, String password){$/;"	m	class:CommandConsole
+listIngredients	ClientConsole.java	/^	public static void listIngredients(String input){$/;"	m	class:ClientConsole
+listIngredients	CommandConsole.java	/^	public void listIngredients(String meal){$/;"	m	class:CommandConsole
+loggedinPhase	ClientConsole.java	/^	static boolean loggedinPhase = false;$/;"	f	class:ClientConsole
+login	CommandConsole.java	/^	public ClientUser login(String username, String password){$/;"	m	class:CommandConsole
+loginPhase	ClientConsole.java	/^	static boolean loginPhase = true;$/;"	f	class:ClientConsole
+loginUser	ClientConsole.java	/^	public static void loginUser(String input){$/;"	m	class:ClientConsole
+logout	ClientConsole.java	/^	public static void logout(String input){$/;"	m	class:ClientConsole
+logout	CommandConsole.java	/^	public void logout(){$/;"	m	class:CommandConsole
+main	ClientConsole.java	/^	public static void main(String[] args) throws Exception {$/;"	m	class:ClientConsole
+main	test1.java	/^	public static void main(String[] args){$/;"	m	class:test1
+meals	ClientConsole.java	/^	static HashSet<AbstractMeal> meals = new HashSet<AbstractMeal>();;$/;"	f	class:ClientConsole
+notifyAd	ClientConsole.java	/^     public static void notifyAd(String input){$/;"	m	class:ClientConsole
+notifyAd	CommandConsole.java	/^	public void notifyAd(String message, String mealName, double specialPrice) {$/;"	m	class:CommandConsole
+notifyBirthday	ClientConsole.java	/^    public static void notifyBirthday(String input){$/;"	m	class:ClientConsole
+notifyBirthday	CommandConsole.java	/^    public void notifyBirthday(){$/;"	m	class:CommandConsole
+operationsInputTreatment	ClientConsole.java	/^	public static void operationsInputTreatment(String input){$/;"	m	class:ClientConsole
+orders	ClientConsole.java	/^	static ArrayList<Order> orders = new ArrayList<Order>();$/;"	f	class:ClientConsole
+personalizeMeal	CommandConsole.java	/^	public Meal personalizeMeal(String mealName, String IngredientName, int quantity){$/;"	m	class:CommandConsole
+putInSpecialOffer	ClientConsole.java	/^    public static void putInSpecialOffer(String input){$/;"	m	class:ClientConsole
+putInSpecialOffer	CommandConsole.java	/^	public void putInSpecialOffer(String mealName, double price) {$/;"	m	class:CommandConsole
+re1	ClientConsole.java	/^	static RestaurantSystem re1 = new RestaurantSystem("our restaurant!");$/;"	f	class:ClientConsole
+registerClient	CommandConsole.java	/^	public ClientUser registerClient(String firstname, String lastname, String username, String password){$/;"	m	class:CommandConsole
+registerUser	ClientConsole.java	/^	public static void registerUser(String input) throws RuntimeException{$/;"	m	class:ClientConsole
+saveMeal	ClientConsole.java	/^	public static void saveMeal(String input){$/;"	m	class:ClientConsole
+saveMeal	CommandConsole.java	/^	public Meal saveMeal(){$/;"	m	class:CommandConsole
+saveOrder	CommandConsole.java	/^	public void saveOrder(){$/;"	m	class:CommandConsole
+sc	ClientConsole.java	/^	static Scanner sc = new Scanner(System.in);$/;"	f	class:ClientConsole
+sc	CommandConsole.java	/^	private static Scanner sc = new Scanner(System.in);$/;"	f	class:CommandConsole	file:
+sc	test1.java	/^	private static Scanner sc = new Scanner(System.in);$/;"	f	class:test1	file:
+selectMeal	ClientConsole.java	/^	public static void selectMeal(String input){$/;"	m	class:ClientConsole
+selectMeal	CommandConsole.java	/^	public void selectMeal(String mealname, int quantity){$/;"	m	class:CommandConsole
+stdin	test1.java	/^	static InputStream stdin = System.in;$/;"	f	class:test1
+test1	test1.java	/^public class test1 {$/;"	c
+waiter	test1.java	/^	static StaffUser waiter = new StaffUser("Bob", "Red", "bobred", "123456");$/;"	f	class:test1
