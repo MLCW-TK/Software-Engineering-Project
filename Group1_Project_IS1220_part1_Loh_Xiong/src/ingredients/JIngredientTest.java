@@ -7,7 +7,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class IngredientTest {
+public class JIngredientTest {
 	Ingredient TestIngredient = new Ingredient("test1", 1, 1.56);
 	
 	@Test

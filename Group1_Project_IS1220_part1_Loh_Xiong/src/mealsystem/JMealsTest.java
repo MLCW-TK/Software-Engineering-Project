@@ -11,7 +11,7 @@ import org.junit.Test;
 import ingredients.Ingredient;
 import ingredients.IngredientFactory;
 
-public class MealsTestTest {
+public class JMealsTest {
 	private static final String Exception = null;
 	AbstractMealFactory appertizers = new AppertizerFactory();
 	AbstractMealFactory maincourses = new MainCourseFactory();
@@ -84,6 +84,12 @@ public class MealsTestTest {
 		steak.executeBehavior(vegetable, 1);
 		HashSet<Ingredient> fin = steak.getIngredients();
 		assertTrue(origin==fin);
-		
+	}
+	
+	
+	@Test(expected = RuntimeException.class)
+	public void testChangeIngredientToBelowZeroReturnException(){
+		steak.setBehavior(new ChangeIngredient());
+		steak.executeBehavior(vegetable, -20);
 	}
 }

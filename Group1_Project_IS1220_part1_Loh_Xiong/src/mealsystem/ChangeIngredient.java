@@ -4,7 +4,9 @@ import customutilities.CustomUtilities;
 import ingredients.Ingredient;
 
 public class ChangeIngredient implements MealBehavior {
-
+	/**
+	 * change the quantity of an existing ingredient by "quantity" amount
+	 */
 	@Override
 	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {
 		if (meal.getIngredients().contains(ingredient)){
