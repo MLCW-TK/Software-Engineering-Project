@@ -31,22 +31,25 @@ public class CommandConsole {
 
 		throw new RuntimeException("No user found!");
 	}
-
-    public FidelityCard associateCard(String username, String password, String cardType){
-        ClientUser user = ClientConsole.re1.validateUser(username, password);
-		try {
-			ClientConsole.fcf.createFidelityCard(cardType, user);
-		} catch (RuntimeException e){
-			System.out.println(cardType + " does not exist");
-			System.out.println(username + " is now holding " + user.getFidelityCard().getCardName());
-			throw new RuntimeException();
-		}
+	
+	/**
+	 * Create a fidelity card of chosen type and associate it to the user.
+	 * @param username
+	 * @param password
+	 * @param cardType
+	 * @return
+	 */
+	public void associateCard(String username, String password, String cardType){
+		try{
+		ClientUser user = ClientConsole.re1.validateUser(username, password);
 		FidelityCard fc = ClientConsole.fcf.createFidelityCard(cardType, user);
 		user.setFidelityCard(fc);
 		System.out.println(username + " is now holding " + user.getFidelityCard().getCardName());
-		return fc;
+		}catch(Exception e){System.out.println(e.getMessage());}
 	}
-//	public static void associateAgreement <username, password, agreement>
+	
+	
+	//	public static void associateAgreement <username, password, agreement>
 	public void associateAgreement(String username, String password, String agreement) {
 		ClientUser user = ClientConsole.re1.validateUser(username, password);
 		if (agreement.equalsIgnoreCase("update")){
@@ -62,7 +65,7 @@ public class CommandConsole {
 		}
 
 	}
-	
+
 	public void associateAgreement(String username, String password, String agreement, String modifier){
 		ClientUser user = ClientConsole.re1.validateUser(username, password);
 		if (agreement.equalsIgnoreCase("update")){
@@ -121,7 +124,7 @@ public class CommandConsole {
 			System.out.println("Meal '" + tempMeal.getName() + "' is added to the system");
 			ClientConsole.currentMeal = tempMeal;
 			return tempMeal;
-                }
+		}
 	}
 
 	public Ingredient addIngredient(String name, double quantity){
@@ -165,36 +168,36 @@ public class CommandConsole {
 			throw new RuntimeException("currentMeal is empty!");
 		}
 
-//		System.out.println("Would you like to confirm your order? (yes/no)");
-//		String input = sc.nextLine();
-//		if (input.equalsIgnoreCase("YES")){
+		//		System.out.println("Would you like to confirm your order? (yes/no)");
+		//		String input = sc.nextLine();
+		//		if (input.equalsIgnoreCase("YES")){
 		ClientConsole.currentMeal.setFinalDefaultIngredients();
 		ClientConsole.re1.getMeal_list().add(ClientConsole.currentMeal.createNewInstance());
 		ClientConsole.currentMeal = null;
 		System.out.println("Meal saved!");
 		return ClientConsole.currentMeal;
-//		} else {
-//			return ClientConsole.currentMeal;
-//		}
+		//		} else {
+		//			return ClientConsole.currentMeal;
+		//		}
 	}
 
 	public void putInSpecialOffer(String mealName, double price) {
-            boolean b = false;
-        if (!(ClientConsole.currentUser instanceof StaffUser)){
+		boolean b = false;
+		if (!(ClientConsole.currentUser instanceof StaffUser)){
 			throw new RuntimeException("Insufficient previledges to access this command");
 		}
-        for (AbstractMeal meal : ClientConsole.re1.getMeal_list()){
-        	if(meal.getName().equals(mealName)){
-        		try{
-        			meal.setSpecialOfferToggle(true);
-        			meal.setSpecialPrice(price);
-        			b = true;
-        		}catch(Exception e){System.out.println(e.getMessage());}
-        	}
-        }
-        if (!b){
-            System.out.println(mealName+" does not exist!\n");
-        }
+		for (AbstractMeal meal : ClientConsole.re1.getMeal_list()){
+			if(meal.getName().equals(mealName)){
+				try{
+					meal.setSpecialOfferToggle(true);
+					meal.setSpecialPrice(price);
+					b = true;
+				}catch(Exception e){System.out.println(e.getMessage());}
+			}
+		}
+		if (!b){
+			System.out.println(mealName+" does not exist!\n");
+		}
 
 
 	}
@@ -258,14 +261,14 @@ public class CommandConsole {
 		Meal personalizedmeal = (Meal) ClientConsole.currentUser.getCurrentOrder().personalizeMeal(selected_meal, selected_ingredient, quantity);
 		ClientConsole.currentUser.getCurrentOrder().addPersonalizedMeal(personalizedmeal);
 
-//		int index = ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().indexOf(selected_meal);
+		//		int index = ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().indexOf(selected_meal);
 		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().remove(selected_meal);
-//		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().add(index, personalizedmeal);
-//
+		//		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().add(index, personalizedmeal);
+		//
 
-//		int index = ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().indexOf(selected_meal);
-//		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().remove(selected_meal);
-//		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().add(index, personalizedmeal);
+		//		int index = ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().indexOf(selected_meal);
+		//		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().remove(selected_meal);
+		//		ClientConsole.currentUser.getCurrentOrder().getUnprocessedOrders().add(index, personalizedmeal);
 
 		System.out.println(mealName + " personalized");
 		return personalizedmeal;
@@ -277,15 +280,16 @@ public class CommandConsole {
 		System.out.println(ClientConsole.currentUser.getCurrentOrder().Summary());
 
 	}
-    public void notifyBirthday(){
-    	ClientConsole.re1.refresh();
-        ClientConsole.re1.notifyBirthday();
-    }
+	public void notifyBirthday(){
+		ClientConsole.re1.refresh();
+		ClientConsole.re1.notifyBirthday();
+	}
 
-    // Here I believe that this function will change the specialPrice if it is identical to the already set specialPrice.
+	// Here I believe that this function will change the specialPrice if it is identical to the already set specialPrice.
 	public void notifyAd(String message, String mealName, double specialPrice) {
-        putInSpecialOffer(mealName, specialPrice);
-        ClientConsole.re1.notifySubscriber(message, mealName);
+		putInSpecialOffer(mealName, specialPrice);
+		ClientConsole.re1.refresh();
+		ClientConsole.re1.notifySubscriber(message, mealName);
 	}
 
 	public void listMeals() {

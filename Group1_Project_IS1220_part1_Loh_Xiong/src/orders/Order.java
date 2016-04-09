@@ -2,6 +2,7 @@ package orders;
 
 import ingredients.Ingredient;
 import mealsystem.*;
+import users.User;
 
 import java.text.DecimalFormat;
 import java.util.*;
@@ -108,6 +109,18 @@ public class Order{
 	
 	public double getTotalTransaction(){return this.total_transaction;}
 	
+	
+	public void useCardfeature(User user){
+		String cardtype = user.getFidelityCard().getCardName();
+		switch(cardtype){
+		case "BasicFidelityCard":
+			break;
+		case "LotteryFidelityCard":
+			if (user.getFidelityCard().useFeature()){
+				this.
+			}
+		}
+	}
 	/**
 	 * Prints out a string containing the summary of orders saved
 	 */

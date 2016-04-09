@@ -41,10 +41,13 @@ listMeals <>
 listIngredients <Raclette>
 selectMeal <Raclette, 1>
 personalizeMeal <Raclette, cheese, 10>
+selectMeal <Raclette, 1>
 personalizeMeal <Raclette, cheese, 0>
 selectMeal <Raclette, 2>
 saveOrder <>
 logout <>
 login <bobred, 123456>
+putInSpecialOffer <Raclette, 7>
+notifyAd <Raclette on 30% off today!, Raclette, 7>
 notifyBirthday <>
 quit

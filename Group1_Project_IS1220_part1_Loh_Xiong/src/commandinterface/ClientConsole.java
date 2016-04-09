@@ -291,31 +291,40 @@ public class ClientConsole{
 			}
 		}catch(Exception e){throw new RuntimeException();}
 	}
-    // personalizemeal
-        public static void selectMeal(String input){
+	// personalizemeal
+	public static void personalizeMeal(String input){
 		try{
-			String command = input.substring("selectMeal".length()+2, input.length()-1);
+			String command = input.substring("personalizeMeal".length()+2, input.length()-1);
 			String[] data = command.split(",");
 
 
-			if (data.length < 2){
+			if (data.length != 3){
 				System.out.println("Please enter valid commands");
-				throw new RuntimeException("Eg. selectMeal <name, quantity>");				
+				throw new RuntimeException("Eg. personalizeMeal <name, quantity>");				
 			}
 
-			for (int i = 0; i < 2; i++){
+			for (int i = 0; i < 3; i++){
 				data[i]=data[i].replaceAll("\\s+", "");
 			}
 
-			int quantity = Integer.parseInt(data[1]);
+			int quantity = Integer.parseInt(data[2]);
 
 			try {
-				cl.selectMeal(data[0], quantity);
+				cl.personalizeMeal(data[0], data[1],quantity);
 			} catch (RuntimeException e){
 				throw new RuntimeException(e.getMessage());
 			}
-		}catch(Exception e){throw new RuntimeException();}
+		}catch(Exception e){System.out.println(e.getMessage());}
 	}
+
+	public static void saveOrder(String input){
+		try {
+			cl.saveOrder();
+		} catch (RuntimeException e){
+			throw new RuntimeException(e.getMessage());
+		}
+	}
+
 
 	public static void notifyBirthday(String input){
 		String command = input.substring("notifyBirthday".length()+2, input.length()-1);
@@ -334,7 +343,7 @@ public class ClientConsole{
 	}
 	// putInSpecialOffer <mealName, price>
 	public static void putInSpecialOffer(String input){
-		String command = input.substring("putInSpecialOffer ".length()+2, input.length()-1);
+		String command = input.substring("putInSpecialOffer".length()+2, input.length()-1);
 		String[] data = command.split(",");
 
 
@@ -358,7 +367,7 @@ public class ClientConsole{
 	// notifyAd <message, mealName, specialPrice>
 	public static void notifyAd(String input){
 		try{
-			String command = input.substring("notifyAd ".length()+2, input.length()-1);
+			String command = input.substring("notifyAd".length()+2, input.length()-1);
 			String[] data = command.split(",");
 			if (!(data.length==0)){
 				if (data.length < 3){
@@ -366,7 +375,7 @@ public class ClientConsole{
 					throw new RuntimeException("Eg. notifyAd  <message, mealName, specialPrice>");				
 				}
 
-				for (int i = 0; i < 3; i++){
+				for (int i = 1; i < 3; i++){
 					data[i]=data[i].replaceAll("\\s+", "");
 				}
 
@@ -472,11 +481,15 @@ public class ClientConsole{
 				selectMeal(input);
 				executed = true;
 				return;}
-                        // personalizeMeal
+			// personalizeMeal
 			if ((input.length()>="personalizeMeal <".length()+1)&&((input.substring(0,"personalizeMeal <".length())).equals("personalizeMeal <"))&&(lastLetter.equals(">"))){
 				personalizeMeal(input);
 				executed = true;
 				return;}
+			// saveOrder
+			if ((input.length()>="saveOrder <".length()+1)&&((input.substring(0,"saveOrder <".length())).equals("saveOrder <"))&&(lastLetter.equals(">"))){
+				saveOrder(input);
+				executed = true;}
 
 
 			// notifyBirthday
@@ -615,10 +628,8 @@ public class ClientConsole{
 					System.out.println("");
 					executed = true;
 					return;
-				}}
-
-
-
+				}
+			}
 		}
 	}
 

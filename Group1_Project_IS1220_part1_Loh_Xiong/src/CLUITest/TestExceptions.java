@@ -13,7 +13,7 @@ public class TestExceptions {
 	public static void main(String[] args) throws Exception {
 		//readPaths for files to read
 
-		String readPath = "eval/test2input.txt";
+		String readPath = "eval/eval_2.txt";
 
 		//Initiate the file to read
 
@@ -40,7 +40,6 @@ public class TestExceptions {
 					continue;
 				}
 			 */
-			System.out.println("Testing command:");
 			System.out.println(content);
 			ClientConsole.operationsInputTreatment(content);
 			System.out.println("\nType 'enter' to continue.");

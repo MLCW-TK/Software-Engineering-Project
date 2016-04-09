@@ -10,13 +10,13 @@ import java.util.Scanner;
 import commandinterface.ClientConsole;
 import commandinterface.CommandConsole;
 
-public class TestAllCorrectCases {
+public class TestFidelityCardsEffects {
 	static Scanner scanner = new Scanner(System.in);
 	
 	public static void main(String[] args) throws Exception {
 		//readPaths for files to read
 		
-		String readPath = "eval/eval_1.txt";
+		String readPath = "eval/eval_3.txt";
 	    
 	    //Initiate the file to read
 	    
