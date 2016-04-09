@@ -52,10 +52,10 @@ public class CommandConsole {
 		if (agreement.equalsIgnoreCase("update")){
 			try {
 				user.registerUpdates();
-				System.out.println("Success!");
 			} catch (RuntimeException e){
 				throw new RuntimeException();
 			}
+			if (user.getCanReceiveSpecialOffers()){System.out.println("Success!");}
 		}
 		if (agreement.equalsIgnoreCase("birthday")){
 			System.out.println("Please add specification of your birthday");
@@ -68,7 +68,6 @@ public class CommandConsole {
 		if (agreement.equalsIgnoreCase("update")){
 			try {
 				user.registerUpdates(modifier);
-				System.out.println("Success!");
 			}catch(RuntimeException e){
 				throw new RuntimeException();
 			}
@@ -76,7 +75,6 @@ public class CommandConsole {
 		if (agreement.equalsIgnoreCase("birthday")){
 			try {
 				user.registerBirthday(modifier);
-				System.out.println("Success!");
 			}catch(RuntimeException e){throw new RuntimeException();}
 		}
 	}
@@ -100,9 +98,7 @@ public class CommandConsole {
 
 	public void addContactInfo(String username, String password, String type, String detail){
 		try {
-			ClientConsole.re1.validateUser(username, password);
 			ClientUser loginuser = (ClientUser) ClientConsole.re1.validateUser(username, password);
-			Boolean addOption = true;
 			if (type.equalsIgnoreCase("email")){
 				loginuser.setEmail(detail);
 			}
@@ -112,35 +108,6 @@ public class CommandConsole {
 		} catch (RuntimeException e){
 			System.out.println("Invalid User/Password");
 		}
-
-//		do{
-//		System.out.println("Please select an option below (only numbers allowed): ");
-//		System.out.println("1. Add an email address");
-//		System.out.println("2. Add a custom contact detail");
-//		System.out.println("3. Exit");
-//		String input1 = sc.nextLine();
-//			switch(type){
-//		case "1":
-//			loginuser.setEmail(input);
-//			System.out.println("Email address successfuly added!");
-//			addOption = false;
-//			break;
-//		case "2":
-//			System.out.println("Please type a contact field category");
-//			String contactInfo = sc.nextLine();
-//			loginuser.getContactHash().put(contactInfo, input);
-//			addOption = false;
-//			break;
-//		case "3":
-//			addOption = false;
-//			break;
-//		default:
-//			System.out.println("Wrong input selected. Please try again");
-//			continue;
-//			}
-//		} while (addOption);
-
-
 	}
 
 	// StaffUser commands
@@ -159,7 +126,7 @@ public class CommandConsole {
 
 	public Ingredient addIngredient(String name, double quantity){
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
-			throw new RuntimeException("Insufficient previledges to access this command");
+			System.out.println("Insufficient previledges to access this command");
 		}
 		if ((ClientConsole.currentMeal == null)){
 			throw new RuntimeException("currentMeal is empty!");
@@ -202,7 +169,7 @@ public class CommandConsole {
 //		String input = sc.nextLine();
 //		if (input.equalsIgnoreCase("YES")){
 		ClientConsole.currentMeal.setFinalDefaultIngredients();
-		ClientConsole.re1.getMeal_list().add(ClientConsole.currentMeal);
+		ClientConsole.re1.getMeal_list().add(ClientConsole.currentMeal.createNewInstance());
 		ClientConsole.currentMeal = null;
 		System.out.println("Meal saved!");
 		return ClientConsole.currentMeal;
@@ -218,9 +185,11 @@ public class CommandConsole {
 		}
         for (AbstractMeal meal : ClientConsole.re1.getMeal_list()){
         	if(meal.getName().equals(mealName)){
-        		meal.setSpecialPrice(price);
-        		meal.setSpecialOfferToggle(true);
-                        b = true;
+        		try{
+        			meal.setSpecialOfferToggle(true);
+        			meal.setSpecialPrice(price);
+        			b = true;
+        		}catch(Exception e){System.out.println(e.getMessage());}
         	}
         }
         if (!b){
@@ -315,7 +284,11 @@ public class CommandConsole {
 
     // Here I believe that this function will change the specialPrice if it is identical to the already set specialPrice.
 	public void notifyAd(String message, String mealName, double specialPrice) {
-        putInSpecialOffer(mealName,specialPrice);
+        putInSpecialOffer(mealName, specialPrice);
         ClientConsole.re1.notifySubscriber(message, mealName);
+	}
+
+	public void listMeals() {
+		System.out.println(ClientConsole.re1.printMeal_list());
 	}
 }

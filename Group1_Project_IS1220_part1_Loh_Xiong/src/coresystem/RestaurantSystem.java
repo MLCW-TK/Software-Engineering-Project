@@ -398,6 +398,9 @@ public class RestaurantSystem implements Publisher{
                         break;
                 }
             }
+		}else{System.out.println("Meal_list is empty!");}
+		
+		if (!this.getSubscriber_list().isEmpty()){
             for(Subscriber sub :  this.getSubscriber_list()){
 					String userMessage = "From: "+this.getRestaurantName()+"\n"
 							+"To: "+((User)sub).getReceiveAddress() +"\n"
@@ -406,8 +409,7 @@ public class RestaurantSystem implements Publisher{
 					screenMessage = userMessage;
             }
 			System.out.println(screenMessage);
-		}
-		else{System.out.println("Meal_list is empty!");}
+		}else{System.out.println("No subscriber!");}
 	}
 	
 
@@ -508,6 +510,16 @@ public class RestaurantSystem implements Publisher{
 
 	public String getMessage() {
             return this.message;
+	}
+
+	
+	// print a list of meals
+	public String printMeal_list() {
+		String mealString = "";
+		for (AbstractMeal meal : this.getMeal_list()){
+			mealString +="Name: "+meal.getName()+"\n"+"$"+meal.getPrice()+"\n"+meal.getDescription()+"\n\n";
+		};
+		return mealString;
 	}
 	
 }

@@ -1,0 +1,26 @@
+-help
+registerChef <Arron, Brown, ArronB, 12345>
+insertChef <Bob, Red, bobred, 123456>
+login <bobred, 123456>
+notifyAd <>
+notifyAd <Hey! check out this!, Roasted Dinasour, 0.2>
+addIngredient <chicken, 100>
+createMeal <Roasted_Chicken, 4>
+addIngredient <chicken, 100>
+currentMeal <>
+saveMeal <>
+notifyAd <Hey! check out this!, Roasted_Chicken, 5>
+logout
+logout <>
+registerClient <Claire, Dump, ClaireD, 234567>
+addContactInfo <ClaireD, I forgot pass word, claire@gmail.com>
+addContactInfo <ClaireD, I forgot pass word, email, claire@gmail.com>
+addContactInfo <ClaireD, 234567, email, claire@gmail.com>
+associateAgreement <ClaireD, 234567, birthday, 1994/04/10>
+associateAgreement <ClaireD, 234567, update>
+associateAgreement <ClaireD, 234567, birthday, 1994/04/10>
+associateAgreement <ClaireD, 234567, birthday, 09/04/1994>
+listIngredients <icecream>
+createMeal <icecream, 0.01>
+listMeals <>
+quit

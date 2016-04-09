@@ -207,16 +207,14 @@ public abstract class User implements Subscriber{
 	 * allow the user to receive updates
 	 */
 	public void registerUpdates(){
-		if (this.getContactHash().isEmpty()){
-			System.out.println("Please provide your contact details first.");
-		}
-		else{
+		if (!this.getEmail().equals(null)){
 			try{
 				this.setReceiveUpdates(true);
 				this.setReceiveAddress(this.getEmail());
 			}
 			catch(Exception e){throw new RuntimeException();}
-		}
+
+		}else{System.out.println("Please provide your contact details first.");}
 //		System.out.println("Would you like to receive updates? ('yes', or press 'enter' to skip)");
 //		Scanner sc2 = new Scanner(System.in);
 //		String response = sc2.nextLine();

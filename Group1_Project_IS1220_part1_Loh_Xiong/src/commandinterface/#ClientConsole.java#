@@ -292,15 +292,15 @@ public class ClientConsole{
 		}catch(Exception e){throw new RuntimeException();}
 	}
     // personalizemeal
-        public static void selectMeal(String input){
+        public static void personalizeMeal(String input){
 		try{
-			String command = input.substring("selectMeal".length()+2, input.length()-1);
+			String command = input.substring("personalizeMeal".length()+2, input.length()-1);
 			String[] data = command.split(",");
 
 
-			if (data.length < 2){
+			if (data.length != 2){
 				System.out.println("Please enter valid commands");
-				throw new RuntimeException("Eg. selectMeal <name, quantity>");				
+				throw new RuntimeException("Eg. personalizeMeal <name, quantity>");				
 			}
 
 			for (int i = 0; i < 2; i++){
@@ -310,7 +310,7 @@ public class ClientConsole{
 			int quantity = Integer.parseInt(data[1]);
 
 			try {
-				cl.selectMeal(data[0], quantity);
+				cl.personalizeMeal(data[0], quantity);
 			} catch (RuntimeException e){
 				throw new RuntimeException(e.getMessage());
 			}
