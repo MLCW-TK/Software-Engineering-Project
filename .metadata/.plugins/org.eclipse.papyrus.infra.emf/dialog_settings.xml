@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.papyrus.infra.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/ProjectUML/model.uml:uml:Property:redefinedProperty">
+	</section>
+	<section name="org.eclipse.papyrus.infra.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/ProjectUML/model.uml:uml:Constraint:postcondition">
+	</section>
 	<section name="org.eclipse.papyrus.infra.emf.providers.EMFGraphicalContentProvider_history__uml:Type:type">
 		<section name="History">
 			<list key="PreviousSelection">
@@ -12,6 +16,7 @@
 	<section name="org.eclipse.papyrus.infra.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/ProjectUML/model.uml:uml:Type:type">
 		<section name="History">
 			<list key="PreviousSelection">
+				<item value="platform:/resource/ProjectUML/model.uml#_wDNhUO6nEeWuI9I3apyqwA"/>
 				<item value="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
 				<item value="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
 			</list>

@@ -1,11 +1,16 @@
 package orders;
 
+import customutilities.CustomUtilities;
 import ingredients.Ingredient;
 import mealsystem.*;
+import users.User;
 
 import java.text.DecimalFormat;
 import java.util.*;
 
+import cardfidelitysystem.BasicFidelityCard;
+import cardfidelitysystem.LotteryFidelityCard;
+import cardfidelitysystem.PointFidelityCard;
 
 public class Order{
 	private DecimalFormat df = new DecimalFormat("#.00"); 
@@ -71,37 +76,29 @@ public class Order{
 		if (meal.getIngredients().contains(ingredient)){
 			// if we set the quantity = 0, means he wants to remove the ingredient
 			if (quantity == 0){
-				// Creates a new meal instance
-				// remove ingredients
+
 				Meal newinstance = (Meal) meal.createNewInstance();
 				newinstance.setBehavior(new RemoveIngredient());
 				newinstance.executeBehavior(ingredient, 0);
 				newinstance.setPersonalizedBool(true);
-				// returns new meal instance
 				return newinstance;
-			// else, he wants to change ingredient count
 			} else {
-				// Creates a new meal instance
-				// Creates a new ingredient instance (ingredients are independent instances!!)
 				Meal newinstance = (Meal) meal.createNewInstance();
 				Ingredient new_ingredient = ingredient.createnewinstance();
 				new_ingredient.setQuantity(new_ingredient.getOriginalQuantity()+quantity);
-				// removes old ingredient in new instance
-				// adds new edited ingredient quantity in new instance
 				newinstance.getIngredients().remove(ingredient);
 				newinstance.getIngredients().add(new_ingredient);
 				newinstance.setPersonalizedBool(true);
 				return newinstance;
+//				meal.setBehavior(new ChangeIngredient());
+//				meal.executeBehavior(ingredient, quantity);
 			}
-		// else, ingredient is not present. hence we add the ingredient!
 		} else {
-			// Again, creates a new instance
+
 			Meal newinstance = (Meal) meal.createNewInstance();
-			// executes behavior
 			newinstance.setBehavior(new AddIngredient());
 			newinstance.executeBehavior(ingredient, quantity);
 			newinstance.setPersonalizedBool(true);
-			// returns new instance
 			return newinstance;
 		}
 	}

@@ -1,11 +1,16 @@
 package orders;
 
+import customutilities.CustomUtilities;
 import ingredients.Ingredient;
 import mealsystem.*;
+import users.User;
 
 import java.text.DecimalFormat;
 import java.util.*;
 
+import cardfidelitysystem.BasicFidelityCard;
+import cardfidelitysystem.LotteryFidelityCard;
+import cardfidelitysystem.PointFidelityCard;
 
 public class Order{
 	private DecimalFormat df = new DecimalFormat("#.00"); 
