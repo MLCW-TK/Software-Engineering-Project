@@ -2,21 +2,21 @@ package mealsystem;
 
 import ingredients.Ingredient;
 
-public class MainCourseFactory extends AbstractMealFactory{
+public class MainCourseFactory extends MealFactory{
 
 	@Override
-	public AbstractMeal createMeal(String name, String description, Ingredient... ingredients) {
+	public Meal createMeal(String name, String description, Ingredient... ingredients) {
 		return new MainCourse(name, description, ingredients);
 	}
 
 	@Override
-	public AbstractMeal createMeal(String name, String description, double price, Ingredient... ingredients) {
+	public Meal createMeal(String name, String description, double price, Ingredient... ingredients) {
 		// TODO Auto-generated method stub
 		return new MainCourse(name, description, price, ingredients);
 	}
 
 	@Override
-	public AbstractMeal createMeal(String name, double price){
+	public Meal createMeal(String name, double price){
 		return new Appertizer(name, price);
 	}
 }

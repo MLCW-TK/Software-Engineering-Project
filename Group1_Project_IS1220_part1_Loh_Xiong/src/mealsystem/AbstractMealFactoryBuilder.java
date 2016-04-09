@@ -3,7 +3,7 @@ package mealsystem;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MealFactoryBuilder {
+public class AbstractMealFactoryBuilder {
 	public static Map<String,AbstractMealFactory> buildFactory() {
 		Map<String, AbstractMealFactory> m = new HashMap<String, AbstractMealFactory>();
 		m.put("Appertizer", new AppertizerFactory());

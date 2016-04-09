@@ -2,7 +2,7 @@ package mealsystem;
 
 import ingredients.Ingredient;
 
-public class Dessert extends AbstractMeal{
+public class Dessert extends Meal{
 
 	public Dessert(String name, String description, double price, Ingredient[] ingredients) {
 		super(name, description, price, ingredients);

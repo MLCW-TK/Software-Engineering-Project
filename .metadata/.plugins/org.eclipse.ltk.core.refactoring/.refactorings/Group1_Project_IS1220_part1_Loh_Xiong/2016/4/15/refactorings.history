@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;mealsystem.MealFactoryBuilder&apos; to &apos;AbstractMealFactoryBuilder&apos;&#x0A;- Original project: &apos;Group1_Project_IS1220_part1_Loh_Xiong&apos;&#x0A;- Original element: &apos;mealsystem.MealFactoryBuilder&apos;&#x0A;- Renamed element: &apos;mealsystem.AbstractMealFactoryBuilder&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MealFactoryBuilder&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;mealsystem{MealFactoryBuilder.java[MealFactoryBuilder" matchStrategy="1" name="AbstractMealFactoryBuilder" qualified="false" references="true" similarDeclarations="false" stamp="1460194885615" textual="false" version="1.0"/>
+</session>

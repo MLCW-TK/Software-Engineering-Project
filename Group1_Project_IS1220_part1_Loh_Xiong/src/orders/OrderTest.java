@@ -14,6 +14,7 @@ import mealsystem.Dessert;
 import mealsystem.DessertFactory;
 import mealsystem.MainCourse;
 import mealsystem.MainCourseFactory;
+import mealsystem.MealFactory;
 import mealsystem.AbstractMealFactory;
 import mealsystem.NormalBehavior;
 import users.*;
@@ -37,35 +38,19 @@ public class OrderTest {
 		 * Loads all predefined meals
 		 * Constructors: Meal(String name, String description, Ingredients args(ingredients))
 		 */
-		AbstractMealFactory appertizers = new AppertizerFactory();
-		AbstractMealFactory maincourses = new MainCourseFactory();
-		AbstractMealFactory desserts = new DessertFactory();
+	
+		AbstractMealFactory meal = new MealFactory();
+		MealFactory appertizers = new AppertizerFactory();
+		MealFactory maincourses = new MainCourseFactory();
+		MealFactory desserts = new DessertFactory();
 		
 		Appertizer salad = (Appertizer) appertizers.createMeal("salad", "good for your health", 1, vegetable);
 		MainCourse steak = (MainCourse) maincourses.createMeal("salad", "also good for you", vegetable);
 		Dessert icecream = (Dessert) desserts.createMeal("icecream", "good for you", 10, vegetable);
 		
-		
-		Ordersystem.Add_order(salad, Mathias, 1);
-		
-		salad.setBehavior(new AddIngredient());
-		salad.executeBehavior(meat, 1);
-		Ordersystem.Add_order(salad, Mathias, 1);
-		
-		salad.setBehavior(new ChangeIngredient());
-		salad.executeBehavior(vegetable, 1);
-		Ordersystem.Add_order(salad, Mathias, 1);
-		
-		salad.setBehavior(new NormalBehavior());
-		salad.executeBehavior(null, 0);
-		Ordersystem.Add_order(salad, Mathias, 1);
-		
-		salad.setBehavior(new ChangeIngredient());
-		salad.executeBehavior(vegetable, 1);
-		Ordersystem.Add_order(salad, Mathias, 1);
-		
-		System.out.println(Ordersystem.Summary());
-		fail("lol");
+		// Tests for personalizeMeal
+		// Tests for selectMeal
+		// Tests for saveOrder
 	}
 
 }

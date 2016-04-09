@@ -27,7 +27,6 @@
 <fullyQualifiedTypeName name="users.User"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="users.StaffUser"/>
-<fullyQualifiedTypeName name="mealsystem.MealFactory"/>
 <fullyQualifiedTypeName name="ingredients.IngredientFactory"/>
 <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -41,4 +40,5 @@
 <fullyQualifiedTypeName name="ingredients.Ingredient"/>
 <fullyQualifiedTypeName name="mealsystem.Meal"/>
 <fullyQualifiedTypeName name="commandinterface.ClientConsole"/>
+<fullyQualifiedTypeName name="mealsystem.MealFactory"/>
 </qualifiedTypeNameHistroy>
