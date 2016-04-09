@@ -43,7 +43,9 @@ public class TestRegister {
 				continue;
 			}
 			*/
+			System.out.println(content);
 			ClientConsole.operationsInputTreatment(content);
+			System.out.println("\nType 'enter' to continue.");
 			scanner.nextLine();
 
 		}

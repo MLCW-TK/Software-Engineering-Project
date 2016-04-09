@@ -1,2 +1,134 @@
-registerClient <Arron, Bush, ArronB, 12345>
 -help
+insertChef <Bob, Red, bobred, 123456>
+login <bobred, 123456>
+createMeal <Raclette, 10>
+addIngredient <cheese, 90>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette1, 10>
+addIngredient <sugar, 90>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette2, 20>
+addIngredient <sugar, 80>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette3, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette4, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette5, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette6, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette7, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette8, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette9, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette10,10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette11, 10>
+addIngredient <sugar, 90>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette12, 10>
+addIngredient <sugar, 80>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette13,10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette14, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette15, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette16, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette17, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette18, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette19, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <Raclette20, 10>
+addIngredient <sugar, 70>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+listIngredients <Raclette>
+logout <>
+registerClient <Mario, Rossi, Mario, 345678>
+
+EXIT

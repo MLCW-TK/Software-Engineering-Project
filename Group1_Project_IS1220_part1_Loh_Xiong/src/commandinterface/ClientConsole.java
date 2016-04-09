@@ -170,48 +170,6 @@ public class ClientConsole{
 	}
 	
 	
-	/*	
-	public static void loginInputTreatment(String input){
-		int strlength = input.length();
-		String lastLetter = input.substring(strlength-1, strlength);
-		
-		// register client
-		if ((input.length()>=17)&&((input.substring(0,16)).equals("registerClient <"))&&(lastLetter.equals(">"))){
-			registerUser(input);
-			return;}
-		
-		// login user
-		if ((input.length()>=8)&&((input.substring(0,7).equals("login <"))&&(lastLetter.equals(">")))){
-			loginUser(input);
-			return;}
-		
-		// insert chef
-		if ((input.length()>=13)&&((input.substring(0,12).equals("insertChef <"))&&(lastLetter.equals(">")))){
-			insertChef(input);
-			return;}
-		
-		// add contact info
-		if ((input.length()>="addContactInfo <".length()+1)&&((input.substring(0,"addContactInfo <".length())).equals("addContactInfo <"))&&(lastLetter.equals(">"))){
-			addContactInfo(input);
-			return;}
-		
-		// associate card
-		if ((input.length()>="associateCard <".length()+1)&&((input.substring(0,"associateCard <".length())).equals("associateCard <"))&&(lastLetter.equals(">"))){
-			associateCard(input);
-			return;}
-		
-		if ((input.length()>="associateAgreement <".length()+1)&&((input.substring(0,"associateAgreement <".length())).equals("associateAgreement <"))&&(lastLetter.equals(">"))){
-			associateAgreement(input);
-			return;}
-		else{
-			if (!input.equalsIgnoreCase("-help")){
-				System.out.println("Wrong inputs detected. Please try again.");
-				System.out.println("");
-			}
-		}
-	}
-	*/
-	
 	
 	// ClientUser commands
 	public static void addIngredient(String input){
@@ -271,17 +229,11 @@ public class ClientConsole{
 	}
 	
 	public static void saveMeal(String input){
-		System.out.println("Would you like to save your meal? (yes/no)");
-		String input1 = sc.nextLine();
-		if (input1.equalsIgnoreCase("YES")){
 			try {
 				currentMeal = cl.saveMeal();
 			} catch (RuntimeException e){
-				throw new RuntimeException(e.getMessage());
+				throw new RuntimeException(e.getMessage());                
 			}			
-		} else{
-			cl.currentMeal();
-		}
 	}
 	
 	public static void listIngredients(String input){
@@ -451,12 +403,12 @@ public class ClientConsole{
 			if ((input.length()>="selectMeal <".length()+1)&&((input.substring(0,"selectMeal <".length())).equals("selectMeal <"))&&(lastLetter.equals(">"))){
 				selectMeal(input);
 				return;}
-	        // notifyBirthday
-	        if ((input.length()>="notifyBirthday <".length()+1)&&((input.substring(0,"notifyBirthday <".length())).equals("notifyBirthday <"))&&(lastLetter.equals(">"))){
+                        // notifyBirthday
+                        if ((input.length()>="notifyBirthday <".length()+1)&&((input.substring(0,"notifyBirthday <".length())).equals("notifyBirthday <"))&&(lastLetter.equals(">"))){
 				notifyBirthday(input);
 				return;}
 	
-	        // putInSpecialOffer <mealName, price>
+                        // putInSpecialOffer <mealName, price>
 			if ((input.length()>="putInSpecialOffer <".length()+1)&&((input.substring(0,"putInSpecialOffer <".length())).equals("putInSpecialOffer <"))&&(lastLetter.equals(">"))){
 				selectMeal(input);
 				return;}
@@ -469,14 +421,57 @@ public class ClientConsole{
 			if ((input.length()=="logout <".length()+1)&&((input.substring(0,"logout <".length())).equals("logout <"))&&(lastLetter.equals(">"))){
 				logout(input);
 				return;}
-			
+		                    //Stop the loop
+                        if (input.equalsIgnoreCase("EXIT")){
+                                System.out.print("Thanks for dining with us!");
+                                globalPhase = false;
+                                return;}
+
+                        if (input.equals("")){
+                                System.out.println("Wrong inputs detected. Please type -help for help.");
+                                System.out.println("");
+                        }
+
+                        // -help commands
+                        if (input.equalsIgnoreCase("-help")){
+                                String loginOperations = new String();
+                                loginOperations+="Here are the possible login operations:\n"
+                                                +"registerClient <firstname, lastname, username, password>			:	to register.\n"
+                                                +"login <username, password>							:	to login with an existing account.\n"
+                                                +"addContactInfo <contactInfo>							:	add a contact information to your account.\n"
+                                                +"associateCard <userName, cardType>						:	associate a fidelity card to your account. Type '-cardType' for the possible card types.\n"
+                                                +"associateAgreement <username, agreement>					:	configure your agreement options. Type '-agreement' for the possible agreement settings.\n"
+                                                +"-cardType                                                                     :       show available card types.\n"
+                                                +"-agreement                                                                    :       show possibile agreements.\n"
+                                                +"";
+                                System.out.print(loginOperations);
+
+                        }
+                        if (input.equalsIgnoreCase("-cardType")){
+                                String cardTypes = new String();
+                                cardTypes+="Currently available card types are: \n"
+                                                +"BasicFidelityCard\n"
+                                                +"PointFidelityCard\n"
+                                                +"LotteryFidelityCard\n";
+                                System.out.print(cardTypes);
+                        }
+                        if (input.equalsIgnoreCase("-agreement")){
+                                String agreement = new String();
+                                agreement+="You may chose to set on the following agreements: \n"
+                                                +"update	:	you will receive update from us.\n"
+                                                +"birthday	:	you will receive birthday special offers.\n";
+                                System.out.print(agreement);
+                        }
+	
 			// -help
 			else{
 				if (!input.equalsIgnoreCase("-help")){
 					System.out.println("Wrong inputs detected. Please type -help to see available commands.");
 					System.out.println("");
 				}
-			}
+                        }
+
+
 			
 		}
 	}
@@ -499,48 +494,6 @@ public class ClientConsole{
 					loginMessagePrinted = true;
 				}
 				input = sc.nextLine();
-				//Stop the loop
-				if (input.equalsIgnoreCase("EXIT")){
-					System.out.print("Thanks for dining with us!");
-					globalPhase = false;
-					return;}
-				
-				if (input.equals("")){
-					System.out.println("Wrong inputs detected. Please type -help for help.");
-					System.out.println("");
-					continue;
-				}
-				
-				// -help commands
-				if (input.equalsIgnoreCase("-help")){
-					String loginOperations = new String();
-					loginOperations+="Here are the possible login operations:\n"
-							+"registerClient <firstname, lastname, username, password>			:	to register.\n"
-							+"login <username, password>							:	to login with an existing account.\n"
-							+"addContactInfo <contactInfo>							:	add a contact information to your account.\n"
-							+"associateCard <userName, cardType>						:	associate a fidelity card to your account. Type '-cardType' for the possible card types.\n"
-							+"associateAgreement <username, agreement>					:	configure your agreement options. Type '-agreement' for the possible agreement settings.\n"
-                                                        +"-cardType                                                                     :       show available card types.\n"
-                                                        +"-agreement                                                                    :       show possibile agreements.\n"
-                                                        +"";
-					System.out.print(loginOperations);
-				
-				}
-				if (input.equalsIgnoreCase("-cardType")){
-					String cardTypes = new String();
-					cardTypes+="Currently available card types are: \n"
-							+"BasicFidelityCard\n"
-							+"PointFidelityCard\n"
-							+"LotteryFidelityCard\n";
-					System.out.print(cardTypes);
-				}
-				if (input.equalsIgnoreCase("-agreement")){
-					String agreement = new String();
-					agreement+="You may chose to set on the following agreements: \n"
-							+"update	:	you will receive update from us.\n"
-							+"birthday	:	you will receive birthday special offers.\n";
-					System.out.print(agreement);
-				}
 
 				try{
 					operationsInputTreatment(input);	
