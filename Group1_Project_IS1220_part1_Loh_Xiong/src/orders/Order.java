@@ -22,9 +22,12 @@ public class Order{
 	private double total_transaction;
 	private ArrayList<AbstractMeal> savedOrders;
 	private ArrayList<AbstractMeal> editedOrders;
+	private static Stack<AbstractMeal> meal_as_it_is = new Stack<AbstractMeal>();
+	private static Stack<AbstractMeal> meal_as_modified = new Stack<AbstractMeal>();
+	private static Stack<AbstractMeal> meal_only_on_sale = new Stack<AbstractMeal>();
 	private static Stack<AbstractMeal> orders_as_it_is = new Stack<AbstractMeal>();
 	private static Stack<AbstractMeal> orders_modified = new Stack<AbstractMeal>();
-	private static HashMap<AbstractMeal, Integer> orders_most_modified = new HashMap<AbstractMeal, Integer>();
+//	private static HashMap<AbstractMeal, Integer> orders_most_modified = new HashMap<AbstractMeal, Integer>();
 	private static Stack<AbstractMeal> orders_when_special_offer = new Stack<AbstractMeal>();
 	private User orderedby;
 
@@ -56,7 +59,7 @@ public class Order{
 		Order.getOrders_as_it_is().addAll(unprocessedOrders);
 //		 Saves order according to number of times modified
 		Order.getOrders_modified().addAll(editedOrders);
-		addToModifiedMap(this.editedOrders);
+//		addToModifiedMap(this.editedOrders);
 		FidelityCard fc = this.getOrderedby().getFidelityCard();
 		for (AbstractMeal meal : savedOrders){
 			if (fc.getCardName().equals("BasicFidelityCard")){
@@ -90,7 +93,11 @@ public class Order{
 		this.clearOrders();
 	}
 	
-	
+
+	/**
+	 * calculate the asItIsCount, asModifiedCount and justOnSaleCount
+	 * of all meals in the RestaurantSystem's meal_list
+	 */
 	public static void generateStatistics(){
 		for (AbstractMeal a : ClientConsole.re1.getMeal_list()){
 			a.setAsItIsCount(0);
@@ -113,106 +120,106 @@ public class Order{
 			}
 		}
 	}
-	
+
+	/**
+	 * return a String of the meals that are mostly modified when ordered
+	 * @return
+	 */
 	public static String showMealAsMostModified(){
-//		Map<String, Integer> stringlist = new HashMap<String, Integer>();
-//		String s = new String();
-//		for (AbstractMeal meal : getOrders_most_modified().keySet()){
-//			stringlist.put(meal.getName(), getOrders_most_modified().get(meal));
-//		}
-//		
-//		Map<String, Integer> sortedStringList = new TreeMap<String, Integer>(stringlist);
-//		int i = 1;
-//		for (Map.Entry<String, Integer> entry : sortedStringList.entrySet()) {
-//			s += i + ": " + entry.getKey() + ", Modified: " + entry.getValue() + " time(s) \n"; 
-//			i+=1;
-//		}
-//		
-//		return s;
-		
+		Order.setMeal_as_modified(new Stack<AbstractMeal>());
 		String s = new String();
 		Order.generateStatistics();
 		for (AbstractMeal m : ClientConsole.re1.getMeal_list()){
 			if (m.getAsModifiedCount() >= m.getAsItIsCount()&& m.getAsModifiedCount() >= m.getJustOnSaleCount()){
 				s += m.getName()+": "+m.getAsModifiedCount() +"\n";
+				Order.getMeal_as_modified().add(m);
 			}
 		}
 		return s;
-		
-
 	}
 	
 
-	
+	/**
+	 * return a String of the meals that are mostly ordered as they are
+	 * @return
+	 */
 	public static String showMealsAsItIs(){
-//		int i = 1;
-//		for (AbstractMeal obj : Order.getOrders_as_it_is()){
-//			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
-//			s += "\n";
-//			i+=1;
-//		}
+		Order.setMeal_as_it_is(new Stack<AbstractMeal>());
 		String s = new String();
 		Order.generateStatistics();
 		for (AbstractMeal m : ClientConsole.re1.getMeal_list()){
 			if (m.getAsItIsCount() >= m.getAsModifiedCount()&& m.getAsItIsCount() >= m.getJustOnSaleCount()){
 				s += m.getName()+": "+m.getAsItIsCount() +"\n";
+				Order.getMeal_as_it_is().add(m);
 			}
 		}
 		return s;
-
-
 	}
-	
+
+	/**
+	 * return a string of the meal that are mostly ordered when they are on sale
+	 * @return
+	 */
 	public static String showMealJustOnSale(){
+		Order.setMeal_only_on_sale(new Stack<AbstractMeal>());
 		String s = new String();
 		Order.generateStatistics();
 		for (AbstractMeal m : ClientConsole.re1.getMeal_list()){
 			if (m.getJustOnSaleCount() >= m.getAsModifiedCount()&& m.getJustOnSaleCount() >= m.getAsItIsCount()){
 				s += m.getName()+": "+m.getJustOnSaleCount() +"\n";
+				Order.getMeal_only_on_sale().add(m);
 			}
 		}
 		return s;
-
-//		String s = new String();
-//		int i = 1;
-//		for (AbstractMeal obj : getOrders_when_special_offer()){
-//			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
-//			s += "\n";
-//			i+=1;
-//		}
-//		
-//		return s;
 	}
-	
+
+	/**
+	 * reset all static data
+	 */
 	public static void resetAllStaticData(){
 		setOrders_as_it_is(new Stack<AbstractMeal>());
-		setOrders_most_modified(new HashMap<AbstractMeal, Integer>());
+		setOrders_modified(new Stack<AbstractMeal>());
+//		setOrders_most_modified(new HashMap<AbstractMeal, Integer>());
 		setOrders_when_special_offer(new Stack<AbstractMeal>());
 	}
+//	
+//	public void addToModifiedMap(ArrayList<AbstractMeal> mealArray){
+//		for (AbstractMeal item : mealArray){
+//			if (!Order.getOrders_most_modified().containsKey(item)){
+//				Order.getOrders_most_modified().put(item, 1);
+//			}
+//			else {
+//				Order.getOrders_most_modified().put(item, Order.getOrders_most_modified().get(item)+1);
+//			}
+//		}
+//	}
 	
-	public void addToModifiedMap(ArrayList<AbstractMeal> mealArray){
-		for (AbstractMeal item : mealArray){
-			if (!Order.getOrders_most_modified().containsKey(item)){
-				Order.getOrders_most_modified().put(item, 1);
-			}
-			else {
-				Order.getOrders_most_modified().put(item, Order.getOrders_most_modified().get(item)+1);
-			}
-		}
-	}
-	
+	/**
+	 * clear the orders
+	 */
 	public void clearOrders(){
 		this.setUnprocessedOrders(new ArrayList<AbstractMeal>());
 		this.setEditedOrders(new ArrayList<AbstractMeal>());
 
 	}
 
+	/**
+	 * SavedOrder setter
+	 * @param o
+	 */
 	public void setSavedOrder(ArrayList<AbstractMeal> o){this.savedOrders = o;}
 
-	public ArrayList<AbstractMeal> getSavedOrder(){
-		return this.savedOrders;
-	}
+	/**
+	 * savedOrder getter
+	 * @return
+	 */
+	public ArrayList<AbstractMeal> getSavedOrder(){return this.savedOrders;}
 
+	/**
+	 * add a personalized meal,
+	 * transfer this meal from unprocessedOrders to editedOrders
+	 * @param meal
+	 */
 	public void addPersonalizedMeal(AbstractMeal meal){
 		this.editedOrders.add(meal);
 		this.unprocessedOrders.remove(meal);
@@ -230,18 +237,38 @@ public class Order{
 	}
 
 
+	/**
+	 * unprocessedOrders setter
+	 * @param o
+	 */
 	public void setUnprocessedOrders(ArrayList<AbstractMeal> o){this.unprocessedOrders = o;}
 
-	public ArrayList<AbstractMeal> getUnprocessedOrders(){
-		return unprocessedOrders;
-	}
+	/**
+	 * unprocessedOrders getter
+	 * @return
+	 */
+	public ArrayList<AbstractMeal> getUnprocessedOrders(){return unprocessedOrders;}
 
+	/**
+	 * editedorders setter
+	 * @param o
+	 */
 	public void setEditedOrders(ArrayList<AbstractMeal> o){this.editedOrders = o;}
 
-	public ArrayList<AbstractMeal> getEditedOrders(){
-		return editedOrders;
-	}
+	/**
+	 * editedOrders getter
+	 * @return
+	 */
+	public ArrayList<AbstractMeal> getEditedOrders(){return editedOrders;}
 
+	/**
+	 * personalizeMeal
+	 * by modifying the quantity of certain ingredient
+	 * @param meal
+	 * @param ingredient
+	 * @param quantity
+	 * @return
+	 */
 	public AbstractMeal personalizeMeal(AbstractMeal meal, Ingredient ingredient, int quantity){
 		// If meal already contains ingredient
 		if (meal.getIngredients().contains(ingredient)){
@@ -282,6 +309,10 @@ public class Order{
 		}
 	}
 
+	/**
+	 * total_transaction getter
+	 * @return
+	 */
 	public double getTotalTransaction(){return this.total_transaction;}
 
 
@@ -299,44 +330,91 @@ public class Order{
 		return s;
 	}
 
-	public User getOrderedby() {
-		return orderedby;
+	/**
+	 * orderedBy getter
+	 * return the user who made the order
+	 * @return
+	 */
+	public User getOrderedby() {return orderedby;}
+
+	/**
+	 * orderedBy setter
+	 * @param user
+	 */
+	public void setOrderedby(User user) {this.orderedby = user;}
+
+	/**
+	 * orders_as_it_is getter
+	 * @return
+	 */
+	public static Stack<AbstractMeal> getOrders_as_it_is() {return orders_as_it_is;}
+
+	/**
+	 * orders_as_it_is setter
+	 * @param orders_as_it_is
+	 */
+	public static void setOrders_as_it_is(Stack<AbstractMeal> orders_as_it_is) {Order.orders_as_it_is = orders_as_it_is;}
+
+//	/**
+//	 * 
+//	 * @return
+//	 */
+//	public static HashMap<AbstractMeal, Integer> getOrders_most_modified() {
+//		return orders_most_modified;
+//	}
+
+//	/**
+//	 * orderd_most_modified setter
+//	 * @param orders_most_modified
+//	 */
+//	public static void setOrders_most_modified(HashMap<AbstractMeal, Integer> orders_most_modified) {Order.orders_most_modified = orders_most_modified;}
+
+	/**
+	 * orders_when_special_offer getter
+	 * @return
+	 */
+	public static Stack<AbstractMeal> getOrders_when_special_offer() {return orders_when_special_offer;}
+
+	/**
+	 * orders_when_special_offer setter
+	 * @param orders_when_special_offer
+	 */
+	public static void setOrders_when_special_offer(Stack<AbstractMeal> orders_when_special_offer) {Order.orders_when_special_offer = orders_when_special_offer;}
+
+	/**
+	 * orders_modified getter 
+	 * @return
+	 */
+	public static Stack<AbstractMeal> getOrders_modified() {return orders_modified;}
+
+	/**
+	 * orders_modified setter
+	 * @param orders_modified
+	 */
+	public static void setOrders_modified(Stack<AbstractMeal> orders_modified) {Order.orders_modified = orders_modified;}
+
+	public static Stack<AbstractMeal> getMeal_as_it_is() {
+		return meal_as_it_is;
 	}
 
-	public void setOrderedby(User user) {
-		this.orderedby = user;
+	public static void setMeal_as_it_is(Stack<AbstractMeal> meal_as_it_is) {
+		Order.meal_as_it_is = meal_as_it_is;
 	}
 
-	public static Stack<AbstractMeal> getOrders_as_it_is() {
-		return orders_as_it_is;
+	public static Stack<AbstractMeal> getMeal_as_modified() {
+		return meal_as_modified;
 	}
 
-	public static void setOrders_as_it_is(Stack<AbstractMeal> orders_as_it_is) {
-		Order.orders_as_it_is = orders_as_it_is;
+	public static void setMeal_as_modified(Stack<AbstractMeal> meal_as_modified) {
+		Order.meal_as_modified = meal_as_modified;
 	}
 
-	public static HashMap<AbstractMeal, Integer> getOrders_most_modified() {
-		return orders_most_modified;
+	public static Stack<AbstractMeal> getMeal_only_on_sale() {
+		return meal_only_on_sale;
 	}
 
-	public static void setOrders_most_modified(HashMap<AbstractMeal, Integer> orders_most_modified) {
-		Order.orders_most_modified = orders_most_modified;
-	}
-
-	public static Stack<AbstractMeal> getOrders_when_special_offer() {
-		return orders_when_special_offer;
-	}
-
-	public static void setOrders_when_special_offer(Stack<AbstractMeal> orders_when_special_offer) {
-		Order.orders_when_special_offer = orders_when_special_offer;
-	}
-
-	public static Stack<AbstractMeal> getOrders_modified() {
-		return orders_modified;
-	}
-
-	public static void setOrders_modified(Stack<AbstractMeal> orders_modified) {
-		Order.orders_modified = orders_modified;
+	public static void setMeal_only_on_sale(Stack<AbstractMeal> meal_only_on_sale) {
+		Order.meal_only_on_sale = meal_only_on_sale;
 	}
 
 

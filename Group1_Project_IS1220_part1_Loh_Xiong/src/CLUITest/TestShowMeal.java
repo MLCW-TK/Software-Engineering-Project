@@ -1,15 +1,18 @@
 package CLUITest;
 
 import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.Console;
 import java.io.File;
 import java.io.FileReader;
 import java.util.Scanner;
 
 import commandinterface.ClientConsole;
-import commandinterface.CommandConsole;
 
+/**
+ * This test is designed to show that our system can correctly show the meals
+ * with certian criteria.
+ * @author Xiong
+ *
+ */
 public class TestShowMeal {
         static Scanner scanner = new Scanner(System.in);
 

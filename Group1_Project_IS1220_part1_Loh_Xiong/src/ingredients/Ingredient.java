@@ -1,9 +1,12 @@
 package ingredients;
 
-import java.math.BigDecimal;
-
 import customutilities.CustomUtilities;
 
+/**
+ * Ingredient class
+ * @author Xiong
+ *
+ */
 public class Ingredient {
 	private String name;
 	private double quantity;
@@ -11,7 +14,11 @@ public class Ingredient {
 	private double totalprice = 0;
 	private double original_quantity;
 
-	
+	/**
+	 * Ingredient constructor
+	 * @param name
+	 * @param quantity
+	 */
 	public Ingredient(String name, double quantity){
 		this.setName(name);
 		this.setQuantity(quantity);
@@ -20,6 +27,12 @@ public class Ingredient {
 	
 
 
+	/**
+	 * Ingredient constructor, with priceperquantity set
+	 * @param name
+	 * @param quantity
+	 * @param priceperquantity
+	 */
 	public Ingredient(String name, double quantity, double priceperquantity){
 		this.setName(name);
 		this.setQuantity(quantity);
@@ -33,26 +46,46 @@ public class Ingredient {
 		}
 	}
 	
+	/**
+	 * create a new instance of identical ingredient
+	 * @return
+	 */
 	public Ingredient createnewinstance(){
 		return new Ingredient(this.name, this.quantity);
 	}
 	
-	
+	/**
+	 * Original_quantity setter
+	 * @param quantity
+	 */
 	public void setOriginal_Quantity(double quantity) {
 		this.original_quantity = quantity;
 		
 	}
-	
+	 
+	/**
+	 * OriginalQuantity getter
+	 * @return
+	 */
 	public double getOriginalQuantity(){
 		return original_quantity;
 	}
 	
-	
+	/**
+	 * add a certain quantity to this ingredient
+	 * and update the total price accordingly
+	 * @param quantity
+	 */
 	public void addQuantity(double quantity){
 		this.quantity = quantity;
 		this.totalprice = CustomUtilities.round(priceperquantity * this.quantity,2);
 	}
 	
+	/**
+	 * remove certain quantity from this ingredient,
+	 * and update the total price accordingly
+	 * @param quantity
+	 */
 	public void removeQuantity(double quantity){
 		if (this.quantity-quantity < 0){
 			throw new RuntimeException("Quantity cannot be less than 0");
@@ -62,27 +95,53 @@ public class Ingredient {
 		}
 	}
 
+	/**
+	 * Pricerperquanttiy getter
+	 * @return
+	 */
 	public double getPriceperquantity() {
 		return priceperquantity;
 	}
 
+	
+	/**
+	 * Priceperquantity setter
+	 * @param priceperquantity
+	 */
 	public void setPriceperquantity(double priceperquantity) {
 		this.priceperquantity = priceperquantity;
 	}
 
+	/**
+	 * return total price with two decimal places
+	 * @return
+	 */
 	public double getTotalprice() {
 		this.totalprice = CustomUtilities.round(this.quantity*this.priceperquantity,2);
 		return totalprice;
 	}
 
+	/**
+	 * totalPrice setter
+	 * @param totalprice
+	 */
 	public void setTotalprice(double totalprice) {
 		this.totalprice = CustomUtilities.round(totalprice,2);
 	}
 
+	/**
+	 * name setter
+	 * @param name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * quantity setter
+	 * update total price accordingly
+	 * @param quantity
+	 */
 	public void setQuantity(double quantity) {
 		if (quantity >= 0){
 			this.quantity = quantity;
@@ -92,10 +151,19 @@ public class Ingredient {
 		}
 	}
 
+	
+	/**
+	 * name getter
+	 * @return
+	 */
 	public String getName(){
 		return this.name;
 	}
 	
+	/**
+	 * quantity getter
+	 * @return
+	 */
 	public double getQuantity(){
 		return this.quantity;
 	}
@@ -114,10 +182,10 @@ public class Ingredient {
 		}
 		return false;
 	}
+	
 	/**
 	 * overridden hashCode method
 	 */
-	
 	@Override
 	public int hashCode(){
     	int code = 0;

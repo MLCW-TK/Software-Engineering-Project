@@ -10,6 +10,13 @@ import java.util.Scanner;
 import commandinterface.ClientConsole;
 import commandinterface.CommandConsole;
 
+
+/**
+ * This test is dedicated to demonstrate the effect of fidelity cards
+ * To see the effect of lottery fidelity card, you may wish to set the percentage higher...
+ * @author Xiong
+ *
+ */
 public class TestFidelityCardsEffects {
 	static Scanner scanner = new Scanner(System.in);
 	

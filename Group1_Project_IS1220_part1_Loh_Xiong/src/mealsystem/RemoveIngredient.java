@@ -4,6 +4,12 @@ package mealsystem;
 import customutilities.CustomUtilities;
 import ingredients.Ingredient;
 
+/**
+ * Remove Ingredient class
+ * this is a realization of the MealBehavior interface
+ * @author Xiong
+ *
+ */
 public class RemoveIngredient implements MealBehavior {
 
 	/**

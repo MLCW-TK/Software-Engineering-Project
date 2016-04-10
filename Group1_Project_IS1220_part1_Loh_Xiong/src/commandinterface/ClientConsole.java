@@ -30,7 +30,7 @@ public class ClientConsole {
 	static HashSet<AbstractMeal> meals = new HashSet<AbstractMeal>();;
 	static HashSet<String> ingredients = new HashSet<String>();
 	static Scanner sc = new Scanner(System.in);
-	private static CommandConsole cl = new CommandConsole();
+	static CommandConsole cl = new CommandConsole();
 	static ClientUser currentUser;
 	static Meal currentMeal;
 	static protected FidelityCardFactory fcf = new FidelityCardFactory();

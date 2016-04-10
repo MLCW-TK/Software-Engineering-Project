@@ -7,6 +7,13 @@ import java.util.Scanner;
 
 import commandinterface.ClientConsole;
 
+/**
+ * This test serves to show that our design has concern for usual mis-manipulations
+ * It is meant to try as many kinds of wrong input as possible to show that the exceptions
+ * are well handled.
+ * @author Xiong
+ *
+ */
 public class TestExceptions {
 	static Scanner scanner = new Scanner(System.in);
 

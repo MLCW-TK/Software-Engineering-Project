@@ -4,6 +4,11 @@ package mealsystem;
 import java.util.HashMap;
 import java.util.Map;
 
+/**not used
+ * a factory of AbstractMealFactory
+ * @author Xiong
+ *
+ */
 public class AbstractMealFactoryBuilder {
 	public static Map<String,AbstractMealFactory> buildFactory() {
 		Map<String, AbstractMealFactory> m = new HashMap<String, AbstractMealFactory>();

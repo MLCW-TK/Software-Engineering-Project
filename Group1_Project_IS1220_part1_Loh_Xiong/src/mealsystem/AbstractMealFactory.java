@@ -3,6 +3,11 @@ package mealsystem;
 
 import ingredients.Ingredient;
 
+/**
+ * AbstractMealFactory class
+ * @author Xiong
+ *
+ */
 public abstract class AbstractMealFactory {
 	/**
 	 * 

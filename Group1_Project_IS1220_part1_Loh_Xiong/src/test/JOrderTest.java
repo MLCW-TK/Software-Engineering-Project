@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import commandinterface.ClientConsole;
 import ingredients.Ingredient;
 import ingredients.IngredientFactory;
 import mealsystem.AddIngredient;
@@ -47,8 +48,9 @@ public class JOrderTest {
 	Appertizer salad = (Appertizer) appertizers.createMeal("salad", "good for your health", 1, vegetable);
 	MainCourse steak = (MainCourse) maincourses.createMeal("salad", "also good for you", vegetable);
 	Dessert icecream = (Dessert) desserts.createMeal("icecream", "good for you", 10, vegetable);
-
 	
+	
+		
 	@Test
 	public void testSaveOrderGiveCorrectTotalTransactionWithoutPersonalization(){
 		order.selectMeal(icecream, 1);
@@ -84,53 +86,74 @@ public class JOrderTest {
 		Order.resetAllStaticData();
 	}
 	
-	@Test
-	public void testOrderAsItIs(){
-		Order.resetAllStaticData();
-		Order order1 = new Order(mathias);
-		Meal pers = (Meal) order1.personalizeMeal(steak, meat, 100);
-		order1.addPersonalizedMeal(pers);
-		order1.saveOrder();
-		Order order2 = new Order(mathias);
-		order2.selectMeal(steak, 3);
-		order2.saveOrder();
-		assertTrue(Order.getOrders_as_it_is().size() == 4);
-		System.out.println("Order as it is...");
-		System.out.println(Order.showMealsAsItIs());
-
-	}
+	/*
+	 * The test for showing the meals according to criteria requires access to the core system.
+	 * The class Order is not given such privilege hence the test cannot be done in JUnit without
+	 * running the entire programme.
+	 * We have chosen to write the test in the CLUITest package, as TestShowMeal.java
+	 * 
+	 */
 	
-	@Test
-	public void testOrderMostModified(){
-		Meal meal = (Meal) order.personalizeMeal(steak, meat, 100);
-		order.addPersonalizedMeal(meal);
-		order.addPersonalizedMeal(meal);
-		order.addPersonalizedMeal(meal);
-		order.saveOrder();
-		Meal meal1 = (Meal) order.personalizeMeal(icecream, meat, 100);
-		order.addPersonalizedMeal(meal1);
-		order.addPersonalizedMeal(meal1);
-		order.addPersonalizedMeal(meal1);
-		order.addPersonalizedMeal(meal1);
-		order.addPersonalizedMeal(meal1);
-		order.saveOrder();
-		assertTrue(Order.getOrders_most_modified().get(meal)==3);
-		assertTrue(Order.getOrders_most_modified().get(meal1)==5);
-		System.out.println("Order as most modified...");
-		System.out.println(Order.showMealAsMostModified());
-	}
-
-	@Test
-	public void testOrderJustOnSale(){
-		icecream.setSpecialOfferToggle(true);
-		icecream.setSpecialPrice(1000);
-		order.selectMeal(icecream, 2);
-		order.saveOrder();
-		assertTrue(Order.getOrders_when_special_offer().size()==2);
-		icecream.setSpecialOfferToggle(false);
-		order.selectMeal(icecream, 3);
-		assertTrue(Order.getOrders_when_special_offer().size()==2);
-		System.out.println("Order as it is on sale...");
-		System.out.println(Order.showMealJustOnSale());
-	}
+	
+//	@Test
+//	public void testOrderAsItIs(){
+//		Order.resetAllStaticData();
+//		Order order1 = new Order(mathias);
+//		Meal pers = (Meal) order1.personalizeMeal(steak, meat, 100);
+//		order1.addPersonalizedMeal(pers);
+//		order1.saveOrder();
+//		Order order2 = new Order(mathias);
+//		order2.selectMeal(salad, 1);
+//		order2.saveOrder();
+//		System.out.println(Order.getMeal_as_it_is().toString());
+//		assertTrue(Order.getMeal_as_it_is().contains(salad));
+//		assertTrue(!Order.getMeal_as_it_is().contains(steak));
+////		Order.resetAllStaticData();
+////		Order order1 = new Order(mathias);
+////		Meal pers = (Meal) order1.personalizeMeal(steak, meat, 100);
+////		order1.addPersonalizedMeal(pers);
+////		order1.saveOrder();
+////		Order order2 = new Order(mathias);
+////		order2.selectMeal(steak, 3);
+////		order2.saveOrder();
+////		assertTrue(Order.getOrders_as_it_is().size() == 4);
+////		System.out.println("Order as it is...");
+////		System.out.println(Order.showMealsAsItIs());
+//
+//	}
+//	
+//	@Test
+//	public void testOrderMostModified(){
+//		Meal meal = (Meal) order.personalizeMeal(steak, meat, 100);
+//		order.addPersonalizedMeal(meal);
+//		order.addPersonalizedMeal(meal);
+//		order.addPersonalizedMeal(meal);
+//		order.saveOrder();
+//		Meal meal1 = (Meal) order.personalizeMeal(icecream, meat, 100);
+//		order.addPersonalizedMeal(meal1);
+//		order.addPersonalizedMeal(meal1);
+//		order.addPersonalizedMeal(meal1);
+//		order.addPersonalizedMeal(meal1);
+//		order.addPersonalizedMeal(meal1);
+//		order.saveOrder();
+//		assertTrue(Order.showMealAsMostModified().contains(meal.getName()));
+////		assertTrue(Order.getOrders_most_modified().get(meal)==3);
+////		assertTrue(Order.getOrders_most_modified().get(meal1)==5);
+//		System.out.println("Order as most modified...");
+//		System.out.println(Order.showMealAsMostModified());
+//	}
+//
+//	@Test
+//	public void testOrderJustOnSale(){
+//		icecream.setSpecialOfferToggle(true);
+//		icecream.setSpecialPrice(1000);
+//		order.selectMeal(icecream, 2);
+//		order.saveOrder();
+//		assertTrue(Order.getOrders_when_special_offer().size()==2);
+//		icecream.setSpecialOfferToggle(false);
+//		order.selectMeal(icecream, 3);
+//		assertTrue(Order.getOrders_when_special_offer().size()==2);
+//		System.out.println("Order as it is on sale...");
+//		System.out.println(Order.showMealJustOnSale());
+//	}
 }

@@ -10,6 +10,15 @@ import java.util.Scanner;
 import commandinterface.ClientConsole;
 import commandinterface.CommandConsole;
 
+/**
+ * This test serves to demonstrate the typical functions of our programme.
+ * It is designed with no wrong input.
+ * To see the effect on notifyBirthday <>
+ * you may change the birthday to the day when you execute this test
+ * It is in the eval_1.txt
+ * @author Xiong
+ *
+ */
 public class TestAllCorrectCases {
 	static Scanner scanner = new Scanner(System.in);
 	

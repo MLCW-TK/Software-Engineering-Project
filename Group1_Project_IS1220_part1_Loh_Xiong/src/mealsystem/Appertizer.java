@@ -1,21 +1,47 @@
 package mealsystem;
 
 import ingredients.Ingredient;
-
+/**
+ * Appertizer class
+ * a subclass of Meal class
+ * @author Xiong
+ *
+ */
 public class Appertizer extends Meal{
 
+	/**
+	 * Appertizer constructor
+	 * @param name
+	 * @param description
+	 * @param price
+	 * @param ingredients
+	 */
 	public Appertizer(String name, String description, double price, Ingredient[] ingredients) {
 		super(name, description, price, ingredients);
 	}
 	
+	/**
+	 * Appertizer constructor
+	 * @param name
+	 * @param description
+	 * @param ingredients
+	 */
 	public Appertizer(String name, String description, Ingredient[] ingredients) {
 		super(name, description, ingredients);
 	}
 	
+	/**
+	 * Appertizer constructor
+	 * @param name
+	 * @param price
+	 */
 	public Appertizer(String name, double price){
 		super(name, price);
 	}
 	
+	/**
+	 * check if equal
+	 */
 	@Override
 	public boolean equals(Object o){
 		if (o instanceof Appertizer){

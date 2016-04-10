@@ -5,8 +5,17 @@ import java.util.HashSet;
 
 import ingredients.Ingredient;
 
+/**
+ * NormalBehavior class
+ * this is a realization of the MealBehavior interface
+ * @author Xiong
+ *
+ */
 public class NormalBehavior implements MealBehavior {
 
+	/**
+	 * initialize the meal
+	 */
 	@Override
 	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {
 		meal.setPrice(meal.getDefaultprice());

@@ -3,7 +3,12 @@ package mealsystem;
 import customutilities.*;
 import ingredients.Ingredient;
 
-
+/**
+ * add ingredient to the meal
+ * this is a realization of the MealBehavior interface
+ * @author Xiong
+ *
+ */
 public class AddIngredient implements MealBehavior{
 	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity){
 		if (meal.getIngredients().contains(ingredient)){

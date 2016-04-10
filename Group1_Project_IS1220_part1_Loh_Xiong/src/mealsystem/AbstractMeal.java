@@ -1,18 +1,18 @@
 package mealsystem;
 
-import java.math.BigDecimal;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.TreeMap;
 
 import customutilities.CustomUtilities;
 import ingredients.Ingredient;
 import ingredients.IngredientFactory;
 
+/**
+ * AbstractMeal class
+ * @author Xiong
+ *
+ */
 public abstract class AbstractMeal{
 	private String name;
 	double totalIngredientsPrice;
@@ -34,7 +34,7 @@ public abstract class AbstractMeal{
 	private final HashSet<Ingredient> default_ingredients = new HashSet<Ingredient>();
 	
 	/**
-	 * 
+	 * AbstractMeal constructor 
 	 * @param name
 	 * @param description
 	 * @param ingredients
@@ -57,23 +57,6 @@ public abstract class AbstractMeal{
 //		}
 		
 		this.default_ingredients.addAll(this.getIngredients()); 
-	}
-	
-	private void setDefault_price(double price2) {
-            this.default_price = price2;
-		
-	}
-
-	private void setTotalingredientsprice(double updatePrices) {
-            this.totalIngredientsPrice = updatePrices;	
-	}
-
-	private void setExtraingredientsprice(int i) {
-            this.extraIngredientsPrice = i;
-	}
-
-	private void setName(String name2) {
-            this.name = name2;	
 	}
 
 	/**
@@ -100,6 +83,14 @@ public abstract class AbstractMeal{
 	}
 	
 
+	/**
+	 * AbstractMeal constructor
+	 * @param name
+	 * @param description
+	 * @param price
+	 * @param behavior
+	 * @param ingredients
+	 */
 	public AbstractMeal(String name, String description, double price, MealBehavior behavior, Ingredient ...ingredients){
 		this.setName(name);
 		for (Ingredient obj : ingredients){
@@ -115,15 +106,63 @@ public abstract class AbstractMeal{
 		this.default_ingredients.addAll(this.ingredients);
 	}
 	
+	/**
+	 * AbstractMeal constructor
+	 * @param name
+	 * @param price
+	 */
 	public AbstractMeal(String name, double price){
 		this.setName(name);
 		this.setPrice(price);
 	}
+		
 	
+	/**
+	 * default_price setter
+	 * @param price2
+	 */
+	private void setDefault_price(double price2) {
+            this.default_price = price2;
+		
+	}
+
+	/**
+	 * Totalingredientsprice setter
+	 * @param updatePrices
+	 */
+	private void setTotalingredientsprice(double updatePrices) {
+            this.totalIngredientsPrice = updatePrices;	
+	}
+
+	/**
+	 * Extraingredientsprice setter
+	 * @param i
+	 */
+	private void setExtraingredientsprice(int i) {
+            this.extraIngredientsPrice = i;
+	}
+
+	/**
+	 * name setter
+	 * @param name2
+	 */
+	private void setName(String name2) {
+            this.name = name2;	
+	}
+
+	/**
+	 * add an ingredient to the meal
+	 * @param e
+	 */
 	public void insertInitialIngredients(Ingredient e){
 		this.ingredients.add(e);
 	}
 	
+	
+	/**
+	 * create an identical instance of this AbstractMeal instance
+	 * @return
+	 */
 	public AbstractMeal createNewInstance(){
 		Ingredient[] editedIngredients = new Ingredient[this.getIngredients().size()];
 		this.getIngredients().toArray(editedIngredients);
@@ -131,8 +170,16 @@ public abstract class AbstractMeal{
 		return meal;
 	}
 	
+	/**
+	 * behavior getter
+	 * @return
+	 */
 	private MealBehavior getBehavior() {return this.behavior;}
 
+	/**
+	 * finalDefaultIngredients setter
+	 * 
+	 */
 	public void setFinalDefaultIngredients(){
 		this.setDefault_price(this.getPrice());
 		if (!this.getIngredients().isEmpty()){
@@ -145,17 +192,26 @@ public abstract class AbstractMeal{
 	}
 	
 	/**
-	 * getTotalIngredientPrice to 2 decimal places, i.e. to cents
-	 * @return
+	 * personalizedBoll setter
+	 * @param bool
 	 */
 	public void setPersonalizedBool(Boolean bool){
 		this.personalized = bool;
 	}
 	
+	/**
+	 * personalizedBool getter
+	 * @return
+	 */
 	public Boolean getPersonalizedBool(){
 		return this.personalized;
 	}
 	
+	/**
+	 * totalIngredientPrice getter
+	 * to 2 decimal places
+	 * @return
+	 */
 	public double getTotalIngredientPrice(){
 		return CustomUtilities.round(this.totalIngredientsPrice,2);
 	}
@@ -172,6 +228,12 @@ public abstract class AbstractMeal{
 		return CustomUtilities.round(price,2);
 	}
 	
+	/**
+	 * update the special price by adding a given price
+	 * the lowest value returned is 0.00
+	 * @param price
+	 * @return
+	 */
 	public double updateSpecialPrices(double price){
 		if (this.specialPrice + price < 0){
 			return CustomUtilities.round(0,2);
@@ -181,13 +243,17 @@ public abstract class AbstractMeal{
 		}
 	}
 	
+	/**
+	 * name getter
+	 * @return
+	 */
 	public String getName() {
 		return name;
 	}
 
 	/**
-	 * getPrice of the meal
-	 * else, return normal price with consideration of extra ingredients. 
+	 * get Price of the meal
+	 * if not specified, return normal price with consideration of extra ingredients. 
 	 * @return
 	 */
 	public double getPrice() {
@@ -198,6 +264,10 @@ public abstract class AbstractMeal{
 			}
 	}
 	
+	/**
+	 * return the price as a String
+	 * @return
+	 */
 	public String getStringPrice(){
 		this.stringPrice = df.format(getPrice());
 		return this.stringPrice;
@@ -238,11 +308,19 @@ public abstract class AbstractMeal{
 	}
 
 
+	/**
+	 * description getter
+	 * @return
+	 */
 	public String getDescription() {
 		return this.description;
 	}
 
 
+	/**
+	 * description setter
+	 * @param description
+	 */
 	public void setDescription(String description) {
 		this.description = description;
 	}
@@ -295,16 +373,27 @@ public abstract class AbstractMeal{
 		return output;
 	}
 	
+	/**
+	 * behavior setter
+	 * @param b
+	 */
 	public void setBehavior(MealBehavior b){
 		this.behavior = b;
 	}
 	
+	/**
+	 * execute the behavior
+	 * @param ingredient
+	 * @param quantity
+	 */
 	public void executeBehavior(Ingredient ingredient, Integer quantity){
 		this.behavior.behavior(this, ingredient, quantity);
 	}
 	
 
-	
+	/**
+	 * print a summary of this AbstractMeal object
+	 */
 	public String toString(){
 		String s = new String();
 		s = this.getName()+": "+this.getDescription()+"\n" + "Original price: " + this.getPrice()+"\n"
@@ -312,6 +401,9 @@ public abstract class AbstractMeal{
 		return s;
 	}
 	
+	/**
+	 * print the ingredients
+	 */
 	public void printIngredients(){
 		String s = "Meal: "+ this.getName();
 		s+="\nIngredients:\n";
@@ -349,43 +441,83 @@ public abstract class AbstractMeal{
 		return code;
 	}
 
+	/**
+	 * extraIngredientPrice getter
+	 * @return
+	 */
 	public double getextraIngredientsPrice() {
 		return this.extraIngredientsPrice;
 	}
 
+	/**
+	 * defaultPrice getter
+	 * @return
+	 */
 	public double getDefaultprice() {
 		return this.default_price;
 	}
 
+	/**
+	 * ingredients setter
+	 * @param hashSet
+	 */
 	public void setIngredients(HashSet<Ingredient> hashSet) {
 		this.ingredients = hashSet;
 		
 	}
 
+	/**
+	 * ingredients setter
+	 * @return
+	 */
 	public HashSet<Ingredient> getDefault_ingredients() {
 		return this.default_ingredients;
 	}
 
+	/**
+	 * AsItisCount getter
+	 * @return
+	 */
 	public int getAsItIsCount() {
 		return asItIsCount;
 	}
 
+	/**
+	 * asItIsCount setter
+	 * @param asItIsCount
+	 */
 	public void setAsItIsCount(int asItIsCount) {
 		this.asItIsCount = asItIsCount;
 	}
 
+	/**
+	 * asModifiedCoiunt getter
+	 * @return
+	 */
 	public int getAsModifiedCount() {
 		return asModifiedCount;
 	}
 
+	/**
+	 * asModifiedCount setter
+	 * @param asModifiedCount
+	 */
 	public void setAsModifiedCount(int asModifiedCount) {
 		this.asModifiedCount = asModifiedCount;
 	}
 
+	/**
+	 * justOnSaeCount getter
+	 * @return
+	 */
 	public int getJustOnSaleCount() {
 		return justOnSaleCount;
 	}
 
+	/**
+	 * justOnSaleCount setter
+	 * @param justOnSaleCount
+	 */
 	public void setJustOnSaleCount(int justOnSaleCount) {
 		this.justOnSaleCount = justOnSaleCount;
 	}

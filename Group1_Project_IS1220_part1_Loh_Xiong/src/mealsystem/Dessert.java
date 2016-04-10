@@ -2,21 +2,48 @@ package mealsystem;
 
 import ingredients.Ingredient;
 
+/**
+ * Dessert class
+ * this is a subclass of the Meal class
+ * @author Xiong
+ *
+ */
 public class Dessert extends Meal{
 
+	/**
+	 * Dessert constructor
+	 * @param name
+	 * @param description
+	 * @param price
+	 * @param ingredients
+	 */
 	public Dessert(String name, String description, double price, Ingredient[] ingredients) {
 		super(name, description, price, ingredients);
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * Dessert constructor
+	 * @param name
+	 * @param description
+	 * @param ingredients
+	 */
 	public Dessert(String name, String description, Ingredient[] ingredients) {
 		super(name, description, ingredients);
 	}
 
+	/**
+	 * Dessert constructor
+	 * @param name
+	 * @param price
+	 */
 	public Dessert(String name, double price){
 		super(name, price);
 	}
 	
+	/**
+	 * check if equal
+	 */
 	@Override
 	public boolean equals(Object o){
 		if (o instanceof Dessert){

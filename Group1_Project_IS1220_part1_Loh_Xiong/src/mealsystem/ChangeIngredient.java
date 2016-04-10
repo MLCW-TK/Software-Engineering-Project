@@ -4,6 +4,12 @@ package mealsystem;
 import customutilities.CustomUtilities;
 import ingredients.Ingredient;
 
+/**
+ * ChangeIngredient class
+ * this is a realization of the MealBehavior interface
+ * @author Xiong
+ *
+ */
 public class ChangeIngredient implements MealBehavior {
 	/**
 	 * change the quantity of an existing ingredient by "quantity" amount

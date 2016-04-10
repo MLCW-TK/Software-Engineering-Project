@@ -2,21 +2,48 @@ package mealsystem;
 
 import ingredients.Ingredient;
 
+/**not used yetn
+ * MainCourse class
+ * this is a subclass of Meal
+ * @author Xiong
+ *
+ */
 public class MainCourse extends Meal {
 
+	/**
+	 * MainCourse constructor
+	 * @param name
+	 * @param description
+	 * @param price
+	 * @param ingredients
+	 */
 	public MainCourse(String name, String description, double price, Ingredient[] ingredients) {
 		super(name, description, price, ingredients);
 		// TODO Auto-generated constructor stub
 	}
 	
+	/**
+	 * MainCourse constructor
+	 * @param name
+	 * @param description
+	 * @param ingredients
+	 */
 	public MainCourse(String name, String description, Ingredient[] ingredients) {
 		super(name, description, ingredients);
 	}
 	
+	/**
+	 * MainCourse constructor
+	 * @param name
+	 * @param price
+	 */
 	public MainCourse(String name, double price){
 		super(name, price);
 	}
 	
+	/**
+	 * check if equal
+	 */
 	@Override
 	public boolean equals(Object o){
 		if (o instanceof MainCourse){
