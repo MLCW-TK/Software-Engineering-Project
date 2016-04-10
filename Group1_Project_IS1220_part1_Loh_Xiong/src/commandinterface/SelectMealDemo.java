@@ -1,4 +1,8 @@
-public void selectMeal(String criteria){
+import java.awt.List;
+
+public class Demo{
+	public void selectMeal(String criteria){
+
     List<AbstractMeal> l = new List<AbstractMeal>;
     for (AbstractMeal m : ClientConsole.re1.getMeal_list()){
         switch(criteria){
