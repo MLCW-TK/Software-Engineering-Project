@@ -22,7 +22,6 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="CustomUtilities.Round"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
-<fullyQualifiedTypeName name="java.util.TreeMap"/>
 <fullyQualifiedTypeName name="CustomUtilities.CustomUtilities"/>
 <fullyQualifiedTypeName name="users.User"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
@@ -43,4 +42,5 @@
 <fullyQualifiedTypeName name="mealsystem.AbstractMeal"/>
 <fullyQualifiedTypeName name="mealsystem.Meal"/>
 <fullyQualifiedTypeName name="orders.Order"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
 </qualifiedTypeNameHistroy>

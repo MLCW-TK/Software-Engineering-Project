@@ -18,7 +18,7 @@ public class Order{
 	private ArrayList<AbstractMeal> savedOrders;
 	private ArrayList<AbstractMeal> editedOrders;
 	static Stack<AbstractMeal> orders_as_it_is = new Stack<AbstractMeal>();
-	static HashMap<AbstractMeal, Integer> orders_most_modified = new HashMap<AbstractMeal, Integer>();
+	static TreeMap<AbstractMeal, Integer> orders_most_modified = new TreeMap<AbstractMeal, Integer>();
 	static Stack<AbstractMeal> orders_when_special_offer = new Stack<AbstractMeal>();
 	private User orderedby;
 
@@ -55,7 +55,6 @@ public class Order{
 			if (fc.getCardName().equals("BasicFidelityCard")){
 				if(this.getOrderedby().getCanReceiveSpecialOffers() && meal.isSpecialOffer()){
 					total_transaction += meal.getSpecialPrice();
-					orders_when_special_offer.add(meal);
 				}else{total_transaction += meal.getPrice();}
 			}
 			if (fc.getCardName().equals("LotteryFidelityCard")){
@@ -83,47 +82,19 @@ public class Order{
 		this.clearOrders();
 	}
 	
-	public static String showMealAsMostModified(){
-		Map<String, Integer> stringlist = new HashMap<String, Integer>();
-		String s = new String();
-		for (AbstractMeal meal : orders_most_modified.keySet()){
-			stringlist.put(meal.getName(), orders_most_modified.get(meal));
-		}
-		
-		Map<String, Integer> sortedStringList = new TreeMap<String, Integer>(stringlist);
-		int i = 1;
-		for (Map.Entry<String, Integer> entry : sortedStringList.entrySet()) {
-			s += i + ": " + entry.getKey() + ", Modified: " + entry.getValue() + " time(s) \n"; 
-			i+=1;
-		}
-		
-		return s;
-		
-	}
+	
+
+	
 	
 	public static String showMealsAsItIs(){
 		String s = new String();
-		int i = 1;
 		for (AbstractMeal obj : Order.orders_as_it_is){
-			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
+			s += obj.getName() + " " + obj.getIngredientsString() + ", $" + obj.getStringPrice();
 			s += "\n";
-			i+=1;
 		}
 		
 		return s;
 		
-	}
-	
-	public static String showMealJustOnSale(){
-		String s = new String();
-		int i = 1;
-		for (AbstractMeal obj : orders_when_special_offer){
-			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
-			s += "\n";
-			i+=1;
-		}
-		
-		return s;
 	}
 	
 	protected static void resetAllStaticData(){

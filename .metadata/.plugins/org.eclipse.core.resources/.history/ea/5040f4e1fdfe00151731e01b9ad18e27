@@ -6,6 +6,7 @@ import users.User;
 
 import java.text.DecimalFormat;
 import java.util.*;
+import java.util.Map.Entry;
 
 import cardfidelitysystem.FidelityCard;
 import cardfidelitysystem.PointFidelityCard;
@@ -18,7 +19,7 @@ public class Order{
 	private ArrayList<AbstractMeal> savedOrders;
 	private ArrayList<AbstractMeal> editedOrders;
 	static Stack<AbstractMeal> orders_as_it_is = new Stack<AbstractMeal>();
-	static HashMap<AbstractMeal, Integer> orders_most_modified = new HashMap<AbstractMeal, Integer>();
+	static HashMap<String, Integer> orders_most_modified = new HashMap<String, Integer>();
 	static Stack<AbstractMeal> orders_when_special_offer = new Stack<AbstractMeal>();
 	private User orderedby;
 
@@ -55,7 +56,6 @@ public class Order{
 			if (fc.getCardName().equals("BasicFidelityCard")){
 				if(this.getOrderedby().getCanReceiveSpecialOffers() && meal.isSpecialOffer()){
 					total_transaction += meal.getSpecialPrice();
-					orders_when_special_offer.add(meal);
 				}else{total_transaction += meal.getPrice();}
 			}
 			if (fc.getCardName().equals("LotteryFidelityCard")){
@@ -83,62 +83,41 @@ public class Order{
 		this.clearOrders();
 	}
 	
-	public static String showMealAsMostModified(){
-		Map<String, Integer> stringlist = new HashMap<String, Integer>();
+	public static String showMealaSMostModified(){
+		Map<String, Integer> sortedlist = new TreeMap<String, Integer>(orders_most_modified);
 		String s = new String();
-		for (AbstractMeal meal : orders_most_modified.keySet()){
-			stringlist.put(meal.getName(), orders_most_modified.get(meal));
+		for (Entry<String, Integer> entry : sortedlist.entrySet()) {
+			s +=  "Key: " + entry.getKey() 
+                                      + " Value : " + entry.getValue() + "\n";
 		}
-		
-		Map<String, Integer> sortedStringList = new TreeMap<String, Integer>(stringlist);
-		int i = 1;
-		for (Map.Entry<String, Integer> entry : sortedStringList.entrySet()) {
-			s += i + ": " + entry.getKey() + ", Modified: " + entry.getValue() + " time(s) \n"; 
-			i+=1;
-		}
-		
 		return s;
 		
 	}
 	
 	public static String showMealsAsItIs(){
 		String s = new String();
-		int i = 1;
 		for (AbstractMeal obj : Order.orders_as_it_is){
-			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
+			s += obj.getName() + " " + obj.getIngredientsString() + ", $" + obj.getStringPrice();
 			s += "\n";
-			i+=1;
 		}
 		
 		return s;
 		
-	}
-	
-	public static String showMealJustOnSale(){
-		String s = new String();
-		int i = 1;
-		for (AbstractMeal obj : orders_when_special_offer){
-			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
-			s += "\n";
-			i+=1;
-		}
-		
-		return s;
 	}
 	
 	protected static void resetAllStaticData(){
 		orders_as_it_is = new Stack<AbstractMeal>();
-		orders_most_modified = new HashMap<AbstractMeal, Integer>();
+		orders_most_modified = new HashMap<String, Integer>();
 		orders_when_special_offer = new Stack<AbstractMeal>();
 	}
 	
 	public void addToModifiedMap(ArrayList<AbstractMeal> mealArray){
 		for (AbstractMeal item : mealArray){
-			if (!Order.orders_most_modified.containsKey(item)){
-				Order.orders_most_modified.put(item, 1);
+			if (!Order.orders_most_modified.containsKey(item.getName())){
+				Order.orders_most_modified.put(item.getName(), 1);
 			}
 			else {
-				Order.orders_most_modified.put(item, Order.orders_most_modified.get(item)+1);
+				Order.orders_most_modified.put(item.getName(), Order.orders_most_modified.get(item)+1);
 			}
 		}
 	}
@@ -157,7 +136,7 @@ public class Order{
 
 	public void addPersonalizedMeal(AbstractMeal meal){
 		this.editedOrders.add(meal);
-		this.unprocessedOrders.remove(meal);
+//		this.unprocessedOrders.remove(meal);
 	}
 
 	/**

@@ -55,7 +55,6 @@ public class Order{
 			if (fc.getCardName().equals("BasicFidelityCard")){
 				if(this.getOrderedby().getCanReceiveSpecialOffers() && meal.isSpecialOffer()){
 					total_transaction += meal.getSpecialPrice();
-					orders_when_special_offer.add(meal);
 				}else{total_transaction += meal.getPrice();}
 			}
 			if (fc.getCardName().equals("LotteryFidelityCard")){
@@ -91,10 +90,8 @@ public class Order{
 		}
 		
 		Map<String, Integer> sortedStringList = new TreeMap<String, Integer>(stringlist);
-		int i = 1;
 		for (Map.Entry<String, Integer> entry : sortedStringList.entrySet()) {
-			s += i + ": " + entry.getKey() + ", Modified: " + entry.getValue() + " time(s) \n"; 
-			i+=1;
+			s += "Meal: " + entry.getKey() + ", Times modified and saved: " + entry.getValue() + "\n"; 
 		}
 		
 		return s;
@@ -103,27 +100,13 @@ public class Order{
 	
 	public static String showMealsAsItIs(){
 		String s = new String();
-		int i = 1;
 		for (AbstractMeal obj : Order.orders_as_it_is){
-			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
+			s += obj.getName() + " " + obj.getIngredientsString() + ", $" + obj.getStringPrice();
 			s += "\n";
-			i+=1;
 		}
 		
 		return s;
 		
-	}
-	
-	public static String showMealJustOnSale(){
-		String s = new String();
-		int i = 1;
-		for (AbstractMeal obj : orders_when_special_offer){
-			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
-			s += "\n";
-			i+=1;
-		}
-		
-		return s;
 	}
 	
 	protected static void resetAllStaticData(){

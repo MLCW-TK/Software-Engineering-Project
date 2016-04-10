@@ -92,9 +92,7 @@ public class OrderTest {
 		Order order2 = new Order(mathias);
 		order2.selectMeal(steak, 3);
 		order2.saveOrder();
-		assertTrue(Order.orders_as_it_is.size() == 4);
-		System.out.println("Order as it is...");
-		System.out.println(Order.showMealsAsItIs());
+		assertTrue(Order.orders_as_it_is.size() == 4);	
 
 	}
 	
@@ -114,21 +112,7 @@ public class OrderTest {
 		order.saveOrder();
 		assertTrue(Order.orders_most_modified.get(meal)==3);
 		assertTrue(Order.orders_most_modified.get(meal1)==5);
-		System.out.println("Order as most modified...");
-		System.out.println(Order.showMealAsMostModified());
+		System.out.println(Order.showMealaSMostModified());
 	}
-
-	@Test
-	public void testOrderJustOnSale(){
-		icecream.setSpecialOfferToggle(true);
-		icecream.setSpecialPrice(1000);
-		order.selectMeal(icecream, 2);
-		order.saveOrder();
-		assertTrue(Order.orders_when_special_offer.size()==2);
-		icecream.setSpecialOfferToggle(false);
-		order.selectMeal(icecream, 3);
-		assertTrue(Order.orders_when_special_offer.size()==2);
-		System.out.println("Order as it is on sale...");
-		System.out.println(Order.showMealJustOnSale());
-	}
+	
 }
