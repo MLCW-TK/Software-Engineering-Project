@@ -17,7 +17,11 @@ public class Order{
 	private double total_transaction;
 	private ArrayList<AbstractMeal> savedOrders;
 	private ArrayList<AbstractMeal> editedOrders;
+	static Stack<AbstractMeal> orders_as_it_is = new Stack<AbstractMeal>();
+	static HashMap<AbstractMeal, Integer> orders_most_modified = new HashMap<AbstractMeal, Integer>();
+	static Stack<AbstractMeal> orders_when_special_offer = new Stack<AbstractMeal>();
 	private User orderedby;
+
 
 
 	/**
@@ -25,13 +29,8 @@ public class Order{
 	 * unprocessedOrders = unpersonalized, selected orders
 	 * editedOrders = personalized, selected orders
 	 * savedOrders = unprocessedOrders + editedOrders
+	 * user = user who ordered
 	 */
-	public Order(){
-		this.unprocessedOrders = new ArrayList<AbstractMeal>();
-		this.savedOrders = new ArrayList<AbstractMeal>();
-		this.editedOrders = new ArrayList<AbstractMeal>();
-	}
-
 	public Order(User user) {
 		this.setOrderedby(user);
 		this.unprocessedOrders = new ArrayList<AbstractMeal>();
@@ -47,6 +46,10 @@ public class Order{
 		this.total_transaction = 0;
 		this.savedOrders.addAll(unprocessedOrders);
 		this.savedOrders.addAll(editedOrders);
+//		 Saves orders as it is, in sequence
+		Order.orders_as_it_is.addAll(savedOrders);
+//		 Saves order according to number of times modified
+		addToModifiedMap(this.editedOrders);
 		FidelityCard fc = this.getOrderedby().getFidelityCard();
 		for (AbstractMeal meal : savedOrders){
 			if (fc.getCardName().equals("BasicFidelityCard")){
@@ -78,7 +81,35 @@ public class Order{
 
 		this.clearOrders();
 	}
-
+	
+	public static String showMealsAsItIs(){
+		String s = new String();
+		for (AbstractMeal obj : Order.orders_as_it_is){
+			s += obj.getName() + " " + obj.getIngredientsString() + ", $" + obj.getStringPrice();
+			s += "\n";
+		}
+		
+		return s;
+		
+	}
+	
+	protected static void resetAllStaticData(){
+		orders_as_it_is = new Stack<AbstractMeal>();
+		orders_most_modified = new HashMap<AbstractMeal, Integer>();
+		orders_when_special_offer = new Stack<AbstractMeal>();
+	}
+	
+	public void addToModifiedMap(ArrayList<AbstractMeal> mealArray){
+		for (AbstractMeal item : mealArray){
+			if (!Order.orders_most_modified.containsKey(item)){
+				Order.orders_most_modified.put(item, 1);
+			}
+			else {
+				Order.orders_most_modified.put(item, Order.orders_most_modified.get(item)+1);
+			}
+		}
+	}
+	
 	public void clearOrders(){
 		this.setUnprocessedOrders(new ArrayList<AbstractMeal>());
 		this.setEditedOrders(new ArrayList<AbstractMeal>());

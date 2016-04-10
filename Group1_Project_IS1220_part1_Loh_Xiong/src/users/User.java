@@ -143,6 +143,10 @@ public abstract class User implements Subscriber{
 		return this.email;
 	}
 	
+	public void setCurrentOrder(Order o){
+		this.currentOrder = o;
+	}
+	
 	public HashMap<String, String> getContactHash(){
 		return contact;
 	}

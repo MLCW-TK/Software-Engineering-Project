@@ -1,0 +1,41 @@
+insertChef <Bob, Red, bobred, 123456>
+login <bobred, 123456>
+createMeal <Raclette, 1000>
+addIngredient <cheese, 90>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+logout <>
+registerClient <Bario, Rossi, Bario, 345678>
+associateCard <Bario, 345678, BasicFidelityCard>
+addContactInfo <Bario, 345678, email, Bario_Rossi@email.com>
+associateAgreement <Bario, 345678, update>
+registerClient <Pario, Rossi, Pario, 345678>
+associateCard <Pario, 345678, PointFidelityCard>
+addContactInfo <Pario, 345678, email, Pario_Rossi@email.com>
+associateAgreement <Pario, 345678, update>
+registerClient <Lario, Rossi, Lario, 345678>
+associateCard <Lario, 345678, LotteryFidelityCard>
+addContactInfo <Lario, 345678, email, Lario_Rossi@email.com>
+associateAgreement <Lario, 345678, update>
+login <bobred, 123456>
+putInSpecialoffer <Raclette, 7>
+notifyAd <Raclette on special offer!, Raclette, 7>
+logout <>
+login <Bario, 345678>
+selectMeal <Raclette, 1>
+saveOrder <>
+logout <>
+login <Pario, 345678>
+selectMeal <Raclette, 1>
+saveOrder <>
+selectMeal <Raclette, 1>
+saveOrder <>
+logout <>
+login <Lario, 345678>
+selectMeal <Raclette, 1>
+saveOrder <>
+logout <>
+exit
+quit

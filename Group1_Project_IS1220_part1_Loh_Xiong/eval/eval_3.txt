@@ -20,7 +20,7 @@ associateCard <Lario, 345678, LotteryFidelityCard>
 addContactInfo <Lario, 345678, email, Lario_Rossi@email.com>
 associateAgreement <Lario, 345678, update>
 login <bobred, 123456>
-putInSpecialoffer <Raclette, 7>
+putInSpecialOffer <Raclette, 7>
 notifyAd <Raclette on special offer!, Raclette, 7>
 logout <>
 login <Bario, 345678>

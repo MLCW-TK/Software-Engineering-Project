@@ -8,6 +8,7 @@ import ingredients.IngredientFactory;
 import mealsystem.AbstractMeal;
 import mealsystem.Meal;
 import mealsystem.MealFactory;
+import orders.Order;
 import users.*;
 
 public class CommandConsole {
@@ -278,8 +279,8 @@ public class CommandConsole {
 		ClientConsole.currentUser.getCurrentOrder().saveOrder();
 		ClientConsole.currentUser.getOrders().add(ClientConsole.currentUser.getCurrentOrder());
 		System.out.println(ClientConsole.currentUser.getCurrentOrder().Summary());
-//		ClientConsole.currentUser.getCurrentOrder().clearOrders();
-
+		ClientConsole.currentUser.setCurrentOrder(new Order(ClientConsole.currentUser));
+		
 	}
 	public void notifyBirthday(){
 		ClientConsole.re1.refresh();

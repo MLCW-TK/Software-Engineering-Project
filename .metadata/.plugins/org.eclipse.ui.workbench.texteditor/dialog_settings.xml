@@ -6,20 +6,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Meal" key="selection"/>
+		<item value="TotalTransaction" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="AbstractMeal"/>
-			<item value="createMeal"/>
-			<item value="create"/>
-			<item value="getDefault_ingredients"/>
-			<item value="this.getDefault_ingredients()"/>
-			<item value=".equals(null)"/>
-			<item value="select"/>
-			<item value="clientuser"/>
+			<item value="totaltransaction"/>
+			<item value="getStringPrice"/>
+			<item value="current"/>
+			<item value="getCurrentOrder"/>
+			<item value="saveOrder"/>
+			<item value="putInSpecia"/>
+			<item value="reset"/>
+			<item value="&#x09;public static Stack&lt;AbstractMeal&gt; orders_as_it_is = new Stack&lt;AbstractMeal&gt;();"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Meal"/>

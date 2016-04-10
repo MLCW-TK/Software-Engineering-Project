@@ -38,7 +38,9 @@
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="users.ClientUser"/>
 <fullyQualifiedTypeName name="ingredients.Ingredient"/>
-<fullyQualifiedTypeName name="mealsystem.Meal"/>
 <fullyQualifiedTypeName name="commandinterface.ClientConsole"/>
 <fullyQualifiedTypeName name="mealsystem.MealFactory"/>
+<fullyQualifiedTypeName name="mealsystem.AbstractMeal"/>
+<fullyQualifiedTypeName name="mealsystem.Meal"/>
+<fullyQualifiedTypeName name="orders.Order"/>
 </qualifiedTypeNameHistroy>
