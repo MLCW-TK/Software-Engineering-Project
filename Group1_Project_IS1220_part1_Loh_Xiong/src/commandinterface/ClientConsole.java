@@ -25,7 +25,7 @@ import users.ClientUser;
  *
  */
 public class ClientConsole {
-	static RestaurantSystem re1 = new RestaurantSystem("our restaurant!");
+	public static RestaurantSystem re1 = new RestaurantSystem("our restaurant!");
 	static ArrayList<Order> orders = new ArrayList<Order>();
 	static HashSet<AbstractMeal> meals = new HashSet<AbstractMeal>();;
 	static HashSet<String> ingredients = new HashSet<String>();
