@@ -124,8 +124,7 @@ public class ClientConsole {
 	}
 
 	/**
-	 * add a contact to a user it takes a String in the console e.g.
-	 * addContactInfo <username, password, email, myemail@email.com>
+	 * add a contact to a user it takes a String in the console 
 	 * 
 	 * @param input
 	 */
@@ -180,8 +179,6 @@ public class ClientConsole {
 	// modifier>
 	/**
 	 * associate an agreement to the user it takes in a String from the console
-	 * e.g. associateAgreement <username, password, agreement> or
-	 * associateAgreement <username, password, agreement, modifier>
 	 * 
 	 * @param input
 	 */
@@ -318,7 +315,7 @@ public class ClientConsole {
 	}
 
 	/**
-	 * list the ingredients of a meal Eg. listingredients <mealName>
+	 * list the ingredients of a meal 
 	 * 
 	 * @param input
 	 */
@@ -337,7 +334,7 @@ public class ClientConsole {
 	}
 
 	/**
-	 * select a meal Eg. selectMeal <name, quantity>
+	 * select a meal 
 	 * 
 	 * @param input
 	 */
@@ -371,7 +368,7 @@ public class ClientConsole {
 	// personalizemeal
 	/**
 	 * modify the ingredient quantity of a meal by adding the quantity, quantity
-	 * = 0 means remove Eg. personalizeMeal <name, quantity>
+	 * = 0 means remove 
 	 * 
 	 * @param input
 	 */
@@ -466,7 +463,7 @@ public class ClientConsole {
 	// notifyAd <message, mealName, specialPrice>
 	/**
 	 * notify all subscribed users of the special price of a given meal, with a
-	 * message attached. e.g. notifyAd <message, mealName, specialPrice>
+	 * message attached. 
 	 * 
 	 * @param input
 	 */
@@ -500,7 +497,7 @@ public class ClientConsole {
 
 	/**
 	 * show the Meals according to certain criteria it take in a String from the
-	 * console e.g. showMeal <AsItIs>
+	 * console 
 	 * 
 	 * @param input
 	 */
