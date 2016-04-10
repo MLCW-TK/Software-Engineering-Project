@@ -6,20 +6,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="associateCard" key="selection"/>
+		<item value="showMeal" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="showMeal"/>
+			<item value="asitis"/>
 			<item value="associateCard"/>
 			<item value="associate"/>
 			<item value="add"/>
 			<item value="getName()"/>
 			<item value="addPersonalizedMeal"/>
 			<item value="addtomodified"/>
-			<item value="TreeMap"/>
-			<item value="totaltransaction"/>
 		</list>
 		<list key="replacehistory">
 			<item value="HashMap"/>

@@ -47,7 +47,7 @@ public class Order{
 		this.savedOrders.addAll(unprocessedOrders);
 		this.savedOrders.addAll(editedOrders);
 //		 Saves orders as it is, in sequence
-		Order.getOrders_as_it_is().addAll(savedOrders);
+		Order.getOrders_as_it_is().addAll(unprocessedOrders);
 //		 Saves order according to number of times modified
 		addToModifiedMap(this.editedOrders);
 		FidelityCard fc = this.getOrderedby().getFidelityCard();
