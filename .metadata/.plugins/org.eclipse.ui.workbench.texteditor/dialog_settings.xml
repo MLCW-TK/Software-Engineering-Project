@@ -12,6 +12,7 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="s"/>
 			<item value="showMeal"/>
 			<item value="asitis"/>
 			<item value="associateCard"/>
@@ -19,7 +20,6 @@
 			<item value="add"/>
 			<item value="getName()"/>
 			<item value="addPersonalizedMeal"/>
-			<item value="addtomodified"/>
 		</list>
 		<list key="replacehistory">
 			<item value="HashMap"/>
