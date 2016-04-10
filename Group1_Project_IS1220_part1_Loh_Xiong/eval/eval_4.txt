@@ -25,12 +25,12 @@ associateCard <Bario, 345678, BasicFidelityCard>
 addContactInfo <Bario, 345678, email, Bario_Rossi@email.com>
 associateAgreement <Bario, 345678, update>
 login <Bario, 345678>
-selectMeal <ORaclette, 1>
+selectMeal <ORaclette, 3>
 saveOrder <>
-selectMeal <MRaclette, 1>
+selectMeal <MRaclette, 3>
 personalizeMeal <MRaclette, potatoes, 10>
 saveOrder <>
-selectMeal <SRaclette, 1>
+selectMeal <SRaclette, 3>
 saveOrder <>
 logout <>
 login <bobred, 123456>
