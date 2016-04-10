@@ -11,9 +11,22 @@ import mealsystem.MealFactory;
 import orders.Order;
 import users.*;
 
+/**
+ * all recognized and processed String from ClientConsole are sent here to execute
+ * @author Xiong
+ *
+ */
 public class CommandConsole {
 	private static Scanner sc = new Scanner(System.in);
 	// Login commands
+	/**
+	 * register a ClientUser
+	 * @param firstname
+	 * @param lastname
+	 * @param username
+	 * @param password
+	 * @return
+	 */
 	public ClientUser registerClient(String firstname, String lastname, String username, String password){
 		ClientUser newUser = new ClientUser(firstname, lastname, username, password);
 		ClientConsole.re1.addUser(newUser);
@@ -21,6 +34,12 @@ public class CommandConsole {
 		return newUser;
 	}
 
+	/**
+	 * login
+	 * @param username
+	 * @param password
+	 * @return
+	 */
 	public ClientUser login(String username, String password){
 		for (ClientUser user : ClientConsole.re1.getUserList()){
 			if (user.getUsername().equals(username) && user.getPassword().equals(password)){
@@ -51,6 +70,12 @@ public class CommandConsole {
 	
 	
 	//	public static void associateAgreement <username, password, agreement>
+	/**
+	 * associate an agreement, without modifier
+	 * @param username
+	 * @param password
+	 * @param agreement
+	 */
 	public void associateAgreement(String username, String password, String agreement) {
 		ClientUser user = ClientConsole.re1.validateUser(username, password);
 		if (agreement.equalsIgnoreCase("update")){
@@ -67,6 +92,13 @@ public class CommandConsole {
 
 	}
 
+	/**
+	 * associate an agreement, with modifier
+	 * @param username
+	 * @param password
+	 * @param agreement
+	 * @param modifier
+	 */
 	public void associateAgreement(String username, String password, String agreement, String modifier){
 		ClientUser user = ClientConsole.re1.validateUser(username, password);
 		if (agreement.equalsIgnoreCase("update")){
@@ -83,6 +115,14 @@ public class CommandConsole {
 		}
 	}
 
+	/**
+	 * secret command to create a StaffUser
+	 * @param firstname
+	 * @param lastname
+	 * @param username
+	 * @param password
+	 * @return
+	 */
 	public StaffUser insertChef(String firstname, String lastname, String username, String password){
 		StaffUser newUser = new StaffUser(firstname, lastname, username, password);
 		ClientConsole.re1.addUser(newUser);
@@ -91,6 +131,9 @@ public class CommandConsole {
 	}
 
 	// ClientUser commands
+	/**
+	 * logout
+	 */
 	public void logout(){
 		ClientConsole.loginPhase = true;
 		ClientConsole.loggedinPhase = false;
@@ -100,6 +143,13 @@ public class CommandConsole {
 		return;
 	}
 
+	/**
+	 * add a chosen type of contact information to the user
+	 * @param username
+	 * @param password
+	 * @param type
+	 * @param detail
+	 */
 	public void addContactInfo(String username, String password, String type, String detail){
 		try {
 			ClientUser loginuser = (ClientUser) ClientConsole.re1.validateUser(username, password);
@@ -115,6 +165,12 @@ public class CommandConsole {
 	}
 
 	// StaffUser commands
+	/**
+	 * create a meal with set price
+	 * @param name
+	 * @param price
+	 * @return
+	 */
 	public Meal createMeal(String name, double price){
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
 			throw new RuntimeException("Insufficient previledges to access this command");
@@ -128,6 +184,13 @@ public class CommandConsole {
 		}
 	}
 
+	
+	/**
+	 * add certain quantity of an ingredient to the current meal
+	 * @param name
+	 * @param quantity
+	 * @return
+	 */
 	public Ingredient addIngredient(String name, double quantity){
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
 			System.out.println("Insufficient previledges to access this command");
@@ -143,6 +206,10 @@ public class CommandConsole {
 		return ingr;
 	}
 
+	/**
+	 * show the current meal
+	 * @return
+	 */
 	public Meal currentMeal(){
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
 			throw new RuntimeException("Insufficient previledges to access this command");
@@ -161,6 +228,10 @@ public class CommandConsole {
 		return ClientConsole.currentMeal;
 	}
 
+	/**
+	 * save the current meal
+	 * @return
+	 */
 	public Meal saveMeal(){
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
 			throw new RuntimeException("Insufficient previledges to access this command");
@@ -182,6 +253,11 @@ public class CommandConsole {
 		//		}
 	}
 
+	/**
+	 * put the meal to special offer, set the price
+	 * @param mealName
+	 * @param price
+	 */
 	public void putInSpecialOffer(String mealName, double price) {
 		boolean b = false;
 		if (!(ClientConsole.currentUser instanceof StaffUser)){
@@ -204,6 +280,10 @@ public class CommandConsole {
 	}
 
 	// clientUser commands
+	/**
+	 * list the ingredients of a meal
+	 * @param meal
+	 */
 	public void listIngredients(String meal){
 		boolean bool = false;
 		for (AbstractMeal ameal : ClientConsole.re1.getMeal_list()){
@@ -219,6 +299,11 @@ public class CommandConsole {
 	}
 
 	//selectMeal<mealname, quantity>
+	/**
+	 * select certain quantity of a meal
+	 * @param mealname
+	 * @param quantity
+	 */
 	public void selectMeal(String mealname, int quantity){
 
 		Meal selected_meal = null;
@@ -237,6 +322,14 @@ public class CommandConsole {
 		}
 	}
 
+	/**
+	 * add a certain quantity of an ingredient to the meal
+	 * quantity = 0 means to remove the ingredient
+	 * @param mealName
+	 * @param IngredientName
+	 * @param quantity
+	 * @return
+	 */
 	public Meal personalizeMeal(String mealName, String IngredientName, int quantity){
 		Meal selected_meal = null;
 		Ingredient selected_ingredient = null;
@@ -275,6 +368,9 @@ public class CommandConsole {
 		return personalizedmeal;
 	}
 
+	/**
+	 * save the order
+	 */
 	public void saveOrder(){
 		ClientConsole.currentUser.getCurrentOrder().saveOrder();
 		ClientConsole.currentUser.getOrders().add(ClientConsole.currentUser.getCurrentOrder());
@@ -282,18 +378,31 @@ public class CommandConsole {
 		ClientConsole.currentUser.setCurrentOrder(new Order(ClientConsole.currentUser));
 		
 	}
+	
+	/**
+	 * notify all subscribed users who are on their birthday of the special birthday offer
+	 */
 	public void notifyBirthday(){
 		ClientConsole.re1.refresh();
 		ClientConsole.re1.notifyBirthday();
 	}
 
 	// Here I believe that this function will change the specialPrice if it is identical to the already set specialPrice.
+	/**
+	 * notify all subscribed users of a special offer of a meal, and sent attach a message
+	 * @param message
+	 * @param mealName
+	 * @param specialPrice
+	 */
 	public void notifyAd(String message, String mealName, double specialPrice) {
 		putInSpecialOffer(mealName, specialPrice);
 		ClientConsole.re1.refresh();
 		ClientConsole.re1.notifySubscriber(message, mealName);
 	}
 
+	/**
+	 * list all available meal of the restaurant
+	 */
 	public void listMeals() {
 		System.out.println(ClientConsole.re1.printMeal_list());
 	}

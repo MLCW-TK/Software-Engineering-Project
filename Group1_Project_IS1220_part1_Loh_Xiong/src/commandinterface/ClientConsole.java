@@ -16,7 +16,12 @@ import mealsystem.Meal;
 import orders.Order;
 
 import users.ClientUser;
-
+/**
+ * The CLUI of EYMS
+ * All commands are taken as strings, they are executed in the CommandConsole class
+ * @author Xiong
+ *
+ */
 public class ClientConsole{
 	static RestaurantSystem re1 = new RestaurantSystem("our restaurant!");
 	static ArrayList<Order> orders = new ArrayList<Order>();
@@ -37,6 +42,11 @@ public class ClientConsole{
 	static boolean loggedinPhase = false;
 
 	// Login Commands
+	/**
+	 * register a user, it takes a string in the console
+	 * @param input
+	 * @throws RuntimeException
+	 */
 	public static void registerUser(String input) throws RuntimeException{
 		String command = input.substring(16,input.length()-1);
 		String[] data = command.split(",");
@@ -56,6 +66,12 @@ public class ClientConsole{
 		System.out.println("Congratulations! Account successfully created");
 	}
 
+	/**
+	 * insert a StaffUser.
+	 * it takes a String in the console.
+	 * @param input
+	 * @throws RuntimeException
+	 */
 	public static void insertChef(String input) throws RuntimeException{
 		String command = input.substring(12,input.length()-1);
 		String[] data = command.split(",");
@@ -76,6 +92,11 @@ public class ClientConsole{
 		System.out.println("");
 	}
 
+	/**
+	 * login,
+	 * it takes a String in the console
+	 * @param input
+	 */
 	public static void loginUser(String input){
 		String command = input.substring(7,input.length()-1);
 		String[] data = command.split(",");
@@ -101,6 +122,12 @@ public class ClientConsole{
 		loggedinPhase = true;
 	}
 
+	/**
+	 * add a contact to a user
+	 * it takes a String in the console
+	 * e.g. addContactInfo <username, password, email, myemail@email.com>
+	 * @param input
+	 */
 	public static void addContactInfo(String input){
 		String command = input.substring("addContactInfo".length()+2, input.length()-1);
 		String data[] = command.split(",");
@@ -122,6 +149,12 @@ public class ClientConsole{
 
 	}
 
+	/**
+	 * associate a FidelityCard to the user
+	 * it takes in a String from the console
+	 * associateCard <username, password, cardType>
+	 * @param input
+	 */
 	public static void associateCard(String input){
 		String command = input.substring("associateCard".length()+2, input.length()-1);
 		String data[] = command.split(",");
@@ -144,13 +177,21 @@ public class ClientConsole{
 
 	//	public static void associateAgreement <username, password, agreement>
 	//	public static void associateAgreement <username, password, agreement, modifier>
+	/**
+	 * associate an agreement to the user
+	 * it takes in a String from the console
+	 * e.g. associateAgreement <username, password,  agreement>
+	 * or associateAgreement <username, password,  agreement, modifier>
+	 * @param input
+	 */
 	public static void associateAgreement(String input){
 		String command = input.substring("associateAgreement".length()+2, input.length()-1);
 		String data[] = command.split(",");
 
 		if (data.length < 3){
 			System.out.println("Please enter valid commands");
-			throw new RuntimeException("Eg. associateAgreement <username, password,  agreement>");
+			throw new RuntimeException("Eg. associateAgreement <username, password,  agreement>,\n"
+					+ "or associateAgreement <username, password,  agreement, modfier>");
 		}
 
 		if (data.length == 3){
@@ -182,6 +223,12 @@ public class ClientConsole{
 
 
 	// ClientUser commands
+	/**
+	 * add a certain quantity of ingredient to the current meal
+	 * it takes in a String from the console
+	 * Eg. addIngredient <name, quantity>
+	 * @param input
+	 */
 	public static void addIngredient(String input){
 		String command = input.substring(15, input.length()-1);
 		String[] data = command.split(",");
@@ -207,6 +254,11 @@ public class ClientConsole{
 
 	}
 
+	/**
+	 * create a meal of given name, and set the price
+	 * Eg. createMeal <name, price>
+	 * @param input
+	 */
 	public static void createMeal(String input){
 		String command = input.substring(12,input.length()-1);
 		String[] data = command.split(",");
@@ -230,6 +282,11 @@ public class ClientConsole{
 		}
 	}
 
+	/**
+	 * show the current meal
+	 * it takes in a string in the console
+	 * @param input
+	 */
 	public static void currentMeal(String input){
 		try {
 			cl.currentMeal();
@@ -238,6 +295,10 @@ public class ClientConsole{
 		}
 	}
 
+	/**
+	 * save the current meals
+	 * @param input
+	 */
 	public static void saveMeal(String input){
 		try {
 			currentMeal = cl.saveMeal();
@@ -245,6 +306,11 @@ public class ClientConsole{
 			throw new RuntimeException(e.getMessage());                
 		}			
 	}
+	
+	/**
+	 * list the available meal of the restaurant
+	 * @param input
+	 */
 	public static void listMeals(String input){
 		try {
 			cl.listMeals();
@@ -253,6 +319,11 @@ public class ClientConsole{
 		}
 	}
 
+	/**
+	 * list the ingredients of a meal
+	 * Eg. listingredients <mealName>
+	 * @param input
+	 */
 	public static void listIngredients(String input){
 		String data = input.substring("listIngredients".length()+2,input.length()-1);
 		if (data.contains(",")){
@@ -267,6 +338,11 @@ public class ClientConsole{
 		}
 	}
 
+	/**
+	 * select a meal
+	 * Eg. selectMeal <name, quantity>
+	 * @param input
+	 */
 	public static void selectMeal(String input){
 		try{
 			String command = input.substring("selectMeal".length()+2, input.length()-1);
@@ -291,7 +367,14 @@ public class ClientConsole{
 			}
 		}catch(Exception e){System.out.println(e.getMessage());;}
 	}
+	
+	
 	// personalizemeal
+	/**
+	 * modify the ingredient quantity of a meal by adding the quantity, quantity = 0 means remove
+	 * Eg. personalizeMeal <name, quantity>
+	 * @param input
+	 */
 	public static void personalizeMeal(String input){
 		try{
 			String command = input.substring("personalizeMeal".length()+2, input.length()-1);
@@ -317,6 +400,11 @@ public class ClientConsole{
 		}catch(Exception e){System.out.println(e.getMessage());}
 	}
 
+	
+	/**
+	 * save the order
+	 * @param input
+	 */
 	public static void saveOrder(String input){
 		try {
 			cl.saveOrder();
@@ -326,6 +414,10 @@ public class ClientConsole{
 	}
 
 
+	/**
+	 * notify users who are celebrating their birthday
+	 * @param input
+	 */
 	public static void notifyBirthday(String input){
 		String command = input.substring("notifyBirthday".length()+2, input.length()-1);
 
@@ -342,6 +434,11 @@ public class ClientConsole{
 
 	}
 	// putInSpecialOffer <mealName, price>
+	/**
+	 * put a meal to special offer with a given special price.
+	 * Eg. putInSpecialOffer  <mealName, price>
+	 * @param input
+	 */
 	public static void putInSpecialOffer(String input){
 		String command = input.substring("putInSpecialOffer".length()+2, input.length()-1);
 		String[] data = command.split(",");
@@ -365,6 +462,11 @@ public class ClientConsole{
 		}
 	}
 	// notifyAd <message, mealName, specialPrice>
+	/**
+	 * notify all subscribed users of the special price of a given meal, with a message attached.
+	 * e.g. notifyAd <message, mealName, specialPrice>
+	 * @param input
+	 */
 	public static void notifyAd(String input){
 		try{
 			String command = input.substring("notifyAd".length()+2, input.length()-1);
@@ -394,6 +496,10 @@ public class ClientConsole{
 
 	}
 
+	/**
+	 * logout
+	 * @param input
+	 */
 	public static void logout(String input){
 		try {
 			cl.logout();
@@ -405,6 +511,10 @@ public class ClientConsole{
 
 
 
+	/**
+	 * a function that recognizes the string input in the commend line and let it to be processed by respective function
+	 * @param input
+	 */
 	public static void operationsInputTreatment(String input){
 		boolean executed = false;
 		int strlength = input.length();
@@ -524,6 +634,9 @@ public class ClientConsole{
 				return;}
 
 			// -help commands
+			/**
+			 * according to the identity of the user, print help messages
+			 */
 			if (input.equalsIgnoreCase("-help")&&loginPhase){
 				String loginOperations = new String();
 				loginOperations+="Here are the possible login operations:\n"
@@ -593,6 +706,9 @@ public class ClientConsole{
 
 			}
 
+			/**
+			 * print available FidelityCard types
+			 */
 			if (input.equalsIgnoreCase("-cardType")){
 				String cardTypes = new String();
 				cardTypes+="Currently available card types are: \n"
@@ -606,6 +722,10 @@ public class ClientConsole{
 				executed = true;
 				return;
 			}
+			
+			/**
+			 * print availabe agreements
+			 */
 			if (input.equalsIgnoreCase("-agreement")){
 				String agreement = new String();
 				agreement+="You may chose to set on the following agreements: \n"
@@ -622,6 +742,9 @@ public class ClientConsole{
 
 
 			// error
+			/**
+			 * deal with unrecognized commands
+			 */
 			else{
 				if (!executed){
 					System.out.println("Unrecognized inputs detected. Please type -help to see available commands.");
@@ -634,6 +757,12 @@ public class ClientConsole{
 	}
 
 	// Main program
+	/**
+	 * main program of the CLUI
+	 * it prints the welcome page, and read commands from the user
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		String input = new String();
 		while (globalPhase){
@@ -667,22 +796,9 @@ public class ClientConsole{
 							currentUser.getLastname() + "!" + " " + "(" + currentUser.getUsertype() + ")");
 					System.out.println("You may type -help to see the available commands.");
 
-					// Logout is now a function
-					//					System.out.println("(You may type 'logout' to log out at any time)");
 					loggedinMessagePrinted = true;
 				}
 				input = sc.nextLine();
-
-				//Logout is now a function
-				//				if (input.equalsIgnoreCase("LOGOUT")){
-				//					System.out.println("Thank you for your time today!");
-				//					System.out.println("You have been logged out");
-				//					System.out.println("");
-				//					loginPhase = true;
-				//					loggedinPhase = false;
-				//					continue;
-				//				}
-
 
 				try{
 					operationsInputTreatment(input);

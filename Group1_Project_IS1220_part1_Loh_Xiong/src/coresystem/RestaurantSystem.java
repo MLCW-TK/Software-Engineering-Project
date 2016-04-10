@@ -12,7 +12,11 @@ import update.Subscriber;
 import users.ClientUser;
 import users.StaffUser;
 import users.User;
-
+/**
+ * The core of the restaurant
+ * @author Xiong
+ *
+ */
 public class RestaurantSystem implements Publisher{
 	String message = "";
 	String name;
@@ -25,6 +29,7 @@ public class RestaurantSystem implements Publisher{
 	public String birthdaySpecialOffer = "30% discount!";
 	public double birthdayOffer = 0.3;
 	private String staffKey = "EYMSresto";
+	
 	/**
 	 * This is the constructor of RestaurantSystem.
 	 * @param restaurant_name
@@ -35,13 +40,18 @@ public class RestaurantSystem implements Publisher{
 	}
 
 	/**
-	 * Public method to add a ClientUser object to user_list
-	 * @param newUser
+	 * return the userlist
+	 * @return
 	 */
 	public Set<ClientUser> getUserList(){
 		return user_list;
 	}
 
+	/**
+	 * return the usr that matches the username
+	 * @param USERNAME
+	 * @return
+	 */
 	public ClientUser getUserFromUserName(String USERNAME){
 		for (ClientUser obj : this.user_list){
 			if (obj.getUsername().equals(USERNAME)){
@@ -51,6 +61,12 @@ public class RestaurantSystem implements Publisher{
 		return null;
 	}
 
+	/**
+	 * return the user who have the given username and password
+	 * @param USERNAME
+	 * @param PASSWORD
+	 * @return
+	 */
 	public ClientUser validateUser(String USERNAME, String PASSWORD){
 		ClientUser user = null;
 		for (ClientUser obj : this.user_list){
@@ -69,6 +85,10 @@ public class RestaurantSystem implements Publisher{
 		}
 	}
 
+	/**
+	 * add a new ClientUser to the user_list
+	 * @param newUser
+	 */
 	public void addUser(ClientUser newUser){
 		user_list.add(newUser);
 	}
@@ -86,6 +106,7 @@ public class RestaurantSystem implements Publisher{
 	public boolean getRegistrationPhase(){
 		return this.registration_phase;
 	}
+	
 	/**
 	 * setRegistrationPhase
 	 * @param bool
@@ -93,6 +114,7 @@ public class RestaurantSystem implements Publisher{
 	public void setRegistrationPhase(boolean bool){
 		registration_phase = bool;
 	}
+	
 	/**
 	 * getUserPhase
 	 * @return
@@ -107,6 +129,7 @@ public class RestaurantSystem implements Publisher{
 	public void setUserPhase(boolean bool){
 		user_phase = bool;
 	}
+	
 	/**
 	 * setExit
 	 * @param bool
@@ -114,6 +137,7 @@ public class RestaurantSystem implements Publisher{
 	public void setExit(boolean bool){
 		exit = bool;
 	}
+	
 	/**
 	 * Public method to print users. It prints out the user names and email addresses of all users from user_list.
 	 * If user_list is empty, it prints "None to print".
@@ -310,6 +334,17 @@ public class RestaurantSystem implements Publisher{
 		}
 	}	
 
+	/**Only used in GUI
+	 * register a user
+	 * if the staffKey matches the one in the system, register the user as a StaffUser
+	 * @param firstname
+	 * @param lastname
+	 * @param username
+	 * @param password
+	 * @param email
+	 * @param dob
+	 * @param staffKey
+	 */
 	public void register(String firstname, String lastname, String username, String password, String email, String dob, String staffKey){
 		if (staffKey.equals(this.staffKey)){
 			User newStaff = new StaffUser(firstname, lastname, username, password, email);
@@ -320,6 +355,13 @@ public class RestaurantSystem implements Publisher{
 			this.addUser((ClientUser) newClient);
 		}
 	}
+	
+	/**
+	 * login
+	 * @param username
+	 * @param password
+	 * @return
+	 */
 	public ClientUser login(String username, String password){
 		ClientUser result;
 		for (ClientUser users : user_list){
@@ -335,6 +377,10 @@ public class RestaurantSystem implements Publisher{
 		throw new RuntimeException("No user found!");
 	}
 
+	
+	/** 
+	 * return the user_list
+	 */
 	Set<ClientUser> getUser_list(){
 		return this.user_list;
 	}
@@ -351,11 +397,17 @@ public class RestaurantSystem implements Publisher{
 		return this.meal_list;
 	}
 	//Region - update
+	/**
+	 * subscribe a Subscriber
+	 */
 	@Override
 	public void subscribe(Subscriber sub) {
 		subscriber_list.add(sub);
 	}
 
+	/**
+	 * unsubscribe a Subscriber
+	 */
 	@Override
 	public void unsubscribe(Subscriber unsub) {
 		int ind = (subscriber_list).indexOf(unsub);
@@ -447,7 +499,7 @@ public class RestaurantSystem implements Publisher{
 	}
 
 	/**
-	 * Not used.
+	 * Not used in CLUI, plan to be used in GUI
 	 * The system give a message to the subscriber
 	 * @param sub
 	 */
@@ -503,6 +555,10 @@ public class RestaurantSystem implements Publisher{
 		return message;
 	}
 
+	/**
+	 * setter for birthdaySpecialOffer
+	 * @param offer
+	 */
 	public void setbirthdaySpecialOffer(String offer){this.birthdaySpecialOffer = offer;}
 	public String getbirthdaySpecialOffer(){return this.birthdaySpecialOffer;}
 	

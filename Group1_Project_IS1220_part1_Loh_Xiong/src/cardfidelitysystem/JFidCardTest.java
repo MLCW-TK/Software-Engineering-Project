@@ -40,9 +40,6 @@ public class JFidCardTest {
 		PointFidelityCard f = new PointFidelityCard(user);
 		f.Add_Cash_as_Points(1000);
 		assertTrue(f.discountTickets>=1);
-//		assertTrue(!f.useFeature());
-//		f.useFeature();
-//		assertTrue(f.discountTickets<1);
 	}
 	
 	@Test

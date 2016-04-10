@@ -21,10 +21,17 @@ public class PointFidelityCard extends FidelityCard{
 
 	}
 
+	/**
+	 * getter for discountRate
+	 * @return
+	 */
 	public double getDiscountRate(){
 		return this.discountRate;
 	}
 	
+	/**
+	 * update the totalAmountSpent
+	 */
 	public void update(){
 		totalAmountSpent = 0;
 		for (Order userorder : this.owner.getOrders()){
@@ -32,6 +39,9 @@ public class PointFidelityCard extends FidelityCard{
 		}
 	}
 	
+	/**
+	 * update the points of this PointFidelityCard
+	 */
 	public void updatePoints(){
 		update();
 		double outstandingAmounts = this.totalAmountSpent - this.totalAmountProcessed;
@@ -44,6 +54,11 @@ public class PointFidelityCard extends FidelityCard{
 		}	
 	}
 	
+	
+	/**
+	 * convert an amount of cash to points 
+	 * @param amount
+	 */
 	public void Add_Cash_as_Points(double amount){
 		this.totalAmountProcessed += amount;
 		this.points += amount/10;
