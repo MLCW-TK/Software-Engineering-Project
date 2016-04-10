@@ -26,6 +26,9 @@ public abstract class AbstractMeal{
 	private MealBehavior behavior = new NormalBehavior();
 	private DecimalFormat df = new DecimalFormat("#.00"); 
 	private Boolean personalized = false;
+	private int asItIsCount = 0;
+	private int asModifiedCount = 0;
+	private int justOnSaleCount = 0;
 	
 	private double default_price;
 	private final HashSet<Ingredient> default_ingredients = new HashSet<Ingredient>();
@@ -361,6 +364,30 @@ public abstract class AbstractMeal{
 
 	public HashSet<Ingredient> getDefault_ingredients() {
 		return this.default_ingredients;
+	}
+
+	public int getAsItIsCount() {
+		return asItIsCount;
+	}
+
+	public void setAsItIsCount(int asItIsCount) {
+		this.asItIsCount = asItIsCount;
+	}
+
+	public int getAsModifiedCount() {
+		return asModifiedCount;
+	}
+
+	public void setAsModifiedCount(int asModifiedCount) {
+		this.asModifiedCount = asModifiedCount;
+	}
+
+	public int getJustOnSaleCount() {
+		return justOnSaleCount;
+	}
+
+	public void setJustOnSaleCount(int justOnSaleCount) {
+		this.justOnSaleCount = justOnSaleCount;
 	}
 	
 }

@@ -27,7 +27,11 @@ associateAgreement <Bario, 345678, update>
 login <Bario, 345678>
 selectMeal <ORaclette, 3>
 saveOrder <>
-selectMeal <MRaclette, 3>
+selectMeal <MRaclette, 1>
+personalizeMeal <MRaclette, potatoes, 10>
+selectMeal <MRaclette, 1>
+personalizeMeal <MRaclette, potatoes, 10>
+selectMeal <MRaclette, 1>
 personalizeMeal <MRaclette, potatoes, 10>
 saveOrder <>
 selectMeal <SRaclette, 3>

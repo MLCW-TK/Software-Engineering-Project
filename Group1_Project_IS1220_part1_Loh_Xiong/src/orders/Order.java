@@ -9,8 +9,13 @@ import java.util.*;
 
 import cardfidelitysystem.FidelityCard;
 import cardfidelitysystem.PointFidelityCard;
+import commandinterface.ClientConsole;
 
-
+/**
+ * Order class
+ * @author Xiong
+ *
+ */
 public class Order{
 	private DecimalFormat df = new DecimalFormat("#.00"); 
 	private ArrayList<AbstractMeal> unprocessedOrders;
@@ -18,6 +23,7 @@ public class Order{
 	private ArrayList<AbstractMeal> savedOrders;
 	private ArrayList<AbstractMeal> editedOrders;
 	private static Stack<AbstractMeal> orders_as_it_is = new Stack<AbstractMeal>();
+	private static Stack<AbstractMeal> orders_modified = new Stack<AbstractMeal>();
 	private static HashMap<AbstractMeal, Integer> orders_most_modified = new HashMap<AbstractMeal, Integer>();
 	private static Stack<AbstractMeal> orders_when_special_offer = new Stack<AbstractMeal>();
 	private User orderedby;
@@ -49,6 +55,7 @@ public class Order{
 //		 Saves orders as it is, in sequence
 		Order.getOrders_as_it_is().addAll(unprocessedOrders);
 //		 Saves order according to number of times modified
+		Order.getOrders_modified().addAll(editedOrders);
 		addToModifiedMap(this.editedOrders);
 		FidelityCard fc = this.getOrderedby().getFidelityCard();
 		for (AbstractMeal meal : savedOrders){
@@ -83,47 +90,98 @@ public class Order{
 		this.clearOrders();
 	}
 	
-	public static String showMealAsMostModified(){
-		Map<String, Integer> stringlist = new HashMap<String, Integer>();
-		String s = new String();
-		for (AbstractMeal meal : getOrders_most_modified().keySet()){
-			stringlist.put(meal.getName(), getOrders_most_modified().get(meal));
+	
+	public static void generateStatistics(){
+		for (AbstractMeal a : ClientConsole.re1.getMeal_list()){
+			a.setAsItIsCount(0);
+			for (AbstractMeal b : Order.getOrders_as_it_is()){
+				if (a.getName().equalsIgnoreCase(b.getName())){
+					a.setAsItIsCount(a.getAsItIsCount()+1);
+				}
+			}
+			a.setAsModifiedCount(0);
+			for (AbstractMeal b : Order.getOrders_modified()){
+				if (a.getName().equalsIgnoreCase(b.getName())){
+					a.setAsModifiedCount(a.getAsModifiedCount()+1);
+				}
+			}
+			a.setJustOnSaleCount(0);
+			for (AbstractMeal b : Order.getOrders_when_special_offer()){
+				if (a.getName().equalsIgnoreCase(b.getName())){
+					a.setJustOnSaleCount(a.getJustOnSaleCount()+1);
+				}
+			}
 		}
-		
-		Map<String, Integer> sortedStringList = new TreeMap<String, Integer>(stringlist);
-		int i = 1;
-		for (Map.Entry<String, Integer> entry : sortedStringList.entrySet()) {
-			s += i + ": " + entry.getKey() + ", Modified: " + entry.getValue() + " time(s) \n"; 
-			i+=1;
-		}
-		
-		return s;
-		
 	}
 	
-	public static String showMealsAsItIs(){
-		String s = new String();
-		int i = 1;
-		for (AbstractMeal obj : Order.getOrders_as_it_is()){
-			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
-			s += "\n";
-			i+=1;
-		}
+	public static String showMealAsMostModified(){
+//		Map<String, Integer> stringlist = new HashMap<String, Integer>();
+//		String s = new String();
+//		for (AbstractMeal meal : getOrders_most_modified().keySet()){
+//			stringlist.put(meal.getName(), getOrders_most_modified().get(meal));
+//		}
+//		
+//		Map<String, Integer> sortedStringList = new TreeMap<String, Integer>(stringlist);
+//		int i = 1;
+//		for (Map.Entry<String, Integer> entry : sortedStringList.entrySet()) {
+//			s += i + ": " + entry.getKey() + ", Modified: " + entry.getValue() + " time(s) \n"; 
+//			i+=1;
+//		}
+//		
+//		return s;
 		
+		String s = new String();
+		Order.generateStatistics();
+		for (AbstractMeal m : ClientConsole.re1.getMeal_list()){
+			if (m.getAsModifiedCount() >= m.getAsItIsCount()&& m.getAsModifiedCount() >= m.getJustOnSaleCount()){
+				s += m.getName()+": "+m.getAsModifiedCount() +"\n";
+			}
+		}
 		return s;
 		
+
+	}
+	
+
+	
+	public static String showMealsAsItIs(){
+//		int i = 1;
+//		for (AbstractMeal obj : Order.getOrders_as_it_is()){
+//			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
+//			s += "\n";
+//			i+=1;
+//		}
+		String s = new String();
+		Order.generateStatistics();
+		for (AbstractMeal m : ClientConsole.re1.getMeal_list()){
+			if (m.getAsItIsCount() >= m.getAsModifiedCount()&& m.getAsItIsCount() >= m.getJustOnSaleCount()){
+				s += m.getName()+": "+m.getAsItIsCount() +"\n";
+			}
+		}
+		return s;
+
+
 	}
 	
 	public static String showMealJustOnSale(){
 		String s = new String();
-		int i = 1;
-		for (AbstractMeal obj : getOrders_when_special_offer()){
-			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
-			s += "\n";
-			i+=1;
+		Order.generateStatistics();
+		for (AbstractMeal m : ClientConsole.re1.getMeal_list()){
+			if (m.getJustOnSaleCount() >= m.getAsModifiedCount()&& m.getJustOnSaleCount() >= m.getAsItIsCount()){
+				s += m.getName()+": "+m.getJustOnSaleCount() +"\n";
+			}
 		}
-		
 		return s;
+
+//		String s = new String();
+//		int i = 1;
+//		for (AbstractMeal obj : getOrders_when_special_offer()){
+//			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
+//			s += "\n";
+//			i+=1;
+//		}
+//		
+//		return s;
 	}
 	
 	public static void resetAllStaticData(){
@@ -271,6 +329,14 @@ public class Order{
 
 	public static void setOrders_when_special_offer(Stack<AbstractMeal> orders_when_special_offer) {
 		Order.orders_when_special_offer = orders_when_special_offer;
+	}
+
+	public static Stack<AbstractMeal> getOrders_modified() {
+		return orders_modified;
+	}
+
+	public static void setOrders_modified(Stack<AbstractMeal> orders_modified) {
+		Order.orders_modified = orders_modified;
 	}
 
 
