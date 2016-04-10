@@ -406,4 +406,26 @@ public class CommandConsole {
 	public void listMeals() {
 		System.out.println(ClientConsole.re1.printMeal_list());
 	}
+	
+	/**
+	 * show the meals according to a certain ordering criteria
+	 * @param orderingCriteria
+	 */
+	public void showMeal(String orderingCriteria){
+		if (orderingCriteria.equalsIgnoreCase("JustOnSale")){
+			Order.showMealJustOnSale();
+			return;
+		}
+		if (orderingCriteria.equalsIgnoreCase("AsItIs")){
+			Order.showMealsAsItIs();
+			return;
+		}
+		if (orderingCriteria.equalsIgnoreCase("AsMostModified")){
+			Order.showMealAsMostModified();
+			return;
+		}
+		else{System.out.println("Criteria not found.");}
+		
+	}
+	
 }
