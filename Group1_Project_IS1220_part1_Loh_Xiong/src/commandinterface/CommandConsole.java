@@ -413,15 +413,15 @@ public class CommandConsole {
 	 */
 	public void showMeal(String orderingCriteria){
 		if (orderingCriteria.equalsIgnoreCase("JustOnSale")){
-			Order.showMealJustOnSale();
+			System.out.println(Order.showMealJustOnSale());
 			return;
 		}
 		if (orderingCriteria.equalsIgnoreCase("AsItIs")){
-			Order.showMealsAsItIs();
+			System.out.println(Order.showMealsAsItIs());
 			return;
 		}
 		if (orderingCriteria.equalsIgnoreCase("AsMostModified")){
-			Order.showMealAsMostModified();
+			System.out.println(Order.showMealAsMostModified());
 			return;
 		}
 		else{System.out.println("Criteria not found.");}

@@ -1,4 +1,4 @@
-package orders;
+package jUnittests;
 
 import static org.junit.Assert.*;
 
@@ -18,10 +18,11 @@ import mealsystem.Meal;
 import mealsystem.MealFactory;
 import mealsystem.AbstractMealFactory;
 import mealsystem.NormalBehavior;
+import orders.Order;
 import users.*;
 
 
-public class OrderTest {
+public class JOrderTest {
 	User mathias = new ClientUser("Mathias", "Loh", "mathiasloh", "12345");
 	Order order = new Order(mathias);
 	/**
@@ -92,7 +93,7 @@ public class OrderTest {
 		Order order2 = new Order(mathias);
 		order2.selectMeal(steak, 3);
 		order2.saveOrder();
-		assertTrue(Order.orders_as_it_is.size() == 4);
+		assertTrue(Order.getOrders_as_it_is().size() == 4);
 		System.out.println("Order as it is...");
 		System.out.println(Order.showMealsAsItIs());
 
@@ -112,8 +113,8 @@ public class OrderTest {
 		order.addPersonalizedMeal(meal1);
 		order.addPersonalizedMeal(meal1);
 		order.saveOrder();
-		assertTrue(Order.orders_most_modified.get(meal)==3);
-		assertTrue(Order.orders_most_modified.get(meal1)==5);
+		assertTrue(Order.getOrders_most_modified().get(meal)==3);
+		assertTrue(Order.getOrders_most_modified().get(meal1)==5);
 		System.out.println("Order as most modified...");
 		System.out.println(Order.showMealAsMostModified());
 	}
@@ -124,10 +125,10 @@ public class OrderTest {
 		icecream.setSpecialPrice(1000);
 		order.selectMeal(icecream, 2);
 		order.saveOrder();
-		assertTrue(Order.orders_when_special_offer.size()==2);
+		assertTrue(Order.getOrders_when_special_offer().size()==2);
 		icecream.setSpecialOfferToggle(false);
 		order.selectMeal(icecream, 3);
-		assertTrue(Order.orders_when_special_offer.size()==2);
+		assertTrue(Order.getOrders_when_special_offer().size()==2);
 		System.out.println("Order as it is on sale...");
 		System.out.println(Order.showMealJustOnSale());
 	}

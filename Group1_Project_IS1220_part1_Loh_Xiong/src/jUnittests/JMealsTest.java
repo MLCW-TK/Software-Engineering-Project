@@ -1,4 +1,4 @@
-package mealsystem;
+package jUnittests;
 
 import static org.junit.Assert.*;
 
@@ -10,6 +10,14 @@ import org.junit.Test;
 
 import ingredients.Ingredient;
 import ingredients.IngredientFactory;
+import mealsystem.AbstractMeal;
+import mealsystem.AbstractMealFactory;
+import mealsystem.AddIngredient;
+import mealsystem.ChangeIngredient;
+import mealsystem.Meal;
+import mealsystem.MealFactory;
+import mealsystem.NormalBehavior;
+import mealsystem.RemoveIngredient;
 
 public class JMealsTest {
 	private static final String Exception = null;

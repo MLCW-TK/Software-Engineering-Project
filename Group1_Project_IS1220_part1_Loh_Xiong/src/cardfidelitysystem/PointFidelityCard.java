@@ -88,6 +88,10 @@ public class PointFidelityCard extends FidelityCard{
 		return false;
 		
 	}
+
+	public int getDiscountTickets() {
+		return this.discountTickets;
+	}
 	
 	
 }

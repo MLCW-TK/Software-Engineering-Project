@@ -1,9 +1,12 @@
-package cardfidelitysystem;
+package jUnittests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import cardfidelitysystem.BasicFidelityCard;
+import cardfidelitysystem.LotteryFidelityCard;
+import cardfidelitysystem.PointFidelityCard;
 import users.ClientUser;
 import users.User;
 
@@ -39,7 +42,7 @@ public class JFidCardTest {
 		User user = new ClientUser("firstname", "lastname", "username", "password");
 		PointFidelityCard f = new PointFidelityCard(user);
 		f.Add_Cash_as_Points(1000);
-		assertTrue(f.discountTickets>=1);
+		assertTrue(f.getDiscountTickets()>=1);
 	}
 	
 	@Test
@@ -48,6 +51,6 @@ public class JFidCardTest {
 		PointFidelityCard f = new PointFidelityCard(user);
 		f.Add_Cash_as_Points(1000);
 		assertTrue(f.useFeature());
-		assertTrue(f.discountTickets<1);
+		assertTrue(f.getDiscountTickets()<1);
 	}
 }

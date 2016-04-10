@@ -1,0 +1,41 @@
+insertChef <Bob, Red, bobred, 123456>
+login <bobred, 123456>
+createMeal <ORaclette, 10>
+addIngredient <cheese, 90>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <MRaclette, 10>
+addIngredient <cheese, 90>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+createMeal <SRaclette, 10>
+addIngredient <cheese, 90>
+addIngredient <ham, 40>
+addIngredient <potatoes, 50>
+currentMeal <>
+saveMeal <>
+putInSpecialOffer <SRaclette, 7>
+logout <>
+registerClient <Bario, Rossi, Bario, 345678>
+associateCard <Bario, 345678, BasicFidelityCard>
+addContactInfo <Bario, 345678, email, Bario_Rossi@email.com>
+associateAgreement <Bario, 345678, update>
+login <Bario, 345678>
+selectMeal <ORaclette, 1>
+saveOrder <>
+selectMeal <MRaclette, 1>
+personalizeMeal <MRaclette, potatoes, 10>
+saveOrder <>
+selectMeal <SRaclette, 1>
+saveOrder <>
+logout <>
+login <bobred, 123456>
+showMeal <JustOnSale>
+showMeal <AsItIs>
+showMeal <AsMostModified>
+exit
+quit

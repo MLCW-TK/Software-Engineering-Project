@@ -17,9 +17,9 @@ public class Order{
 	private double total_transaction;
 	private ArrayList<AbstractMeal> savedOrders;
 	private ArrayList<AbstractMeal> editedOrders;
-	static Stack<AbstractMeal> orders_as_it_is = new Stack<AbstractMeal>();
-	static HashMap<AbstractMeal, Integer> orders_most_modified = new HashMap<AbstractMeal, Integer>();
-	static Stack<AbstractMeal> orders_when_special_offer = new Stack<AbstractMeal>();
+	private static Stack<AbstractMeal> orders_as_it_is = new Stack<AbstractMeal>();
+	private static HashMap<AbstractMeal, Integer> orders_most_modified = new HashMap<AbstractMeal, Integer>();
+	private static Stack<AbstractMeal> orders_when_special_offer = new Stack<AbstractMeal>();
 	private User orderedby;
 
 
@@ -47,7 +47,7 @@ public class Order{
 		this.savedOrders.addAll(unprocessedOrders);
 		this.savedOrders.addAll(editedOrders);
 //		 Saves orders as it is, in sequence
-		Order.orders_as_it_is.addAll(savedOrders);
+		Order.getOrders_as_it_is().addAll(savedOrders);
 //		 Saves order according to number of times modified
 		addToModifiedMap(this.editedOrders);
 		FidelityCard fc = this.getOrderedby().getFidelityCard();
@@ -55,7 +55,7 @@ public class Order{
 			if (fc.getCardName().equals("BasicFidelityCard")){
 				if(this.getOrderedby().getCanReceiveSpecialOffers() && meal.isSpecialOffer()){
 					total_transaction += meal.getSpecialPrice();
-					orders_when_special_offer.add(meal);
+					getOrders_when_special_offer().add(meal);
 				}else{total_transaction += meal.getPrice();}
 			}
 			if (fc.getCardName().equals("LotteryFidelityCard")){
@@ -86,8 +86,8 @@ public class Order{
 	public static String showMealAsMostModified(){
 		Map<String, Integer> stringlist = new HashMap<String, Integer>();
 		String s = new String();
-		for (AbstractMeal meal : orders_most_modified.keySet()){
-			stringlist.put(meal.getName(), orders_most_modified.get(meal));
+		for (AbstractMeal meal : getOrders_most_modified().keySet()){
+			stringlist.put(meal.getName(), getOrders_most_modified().get(meal));
 		}
 		
 		Map<String, Integer> sortedStringList = new TreeMap<String, Integer>(stringlist);
@@ -104,7 +104,7 @@ public class Order{
 	public static String showMealsAsItIs(){
 		String s = new String();
 		int i = 1;
-		for (AbstractMeal obj : Order.orders_as_it_is){
+		for (AbstractMeal obj : Order.getOrders_as_it_is()){
 			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
 			s += "\n";
 			i+=1;
@@ -117,7 +117,7 @@ public class Order{
 	public static String showMealJustOnSale(){
 		String s = new String();
 		int i = 1;
-		for (AbstractMeal obj : orders_when_special_offer){
+		for (AbstractMeal obj : getOrders_when_special_offer()){
 			s += i + ": " + obj.getName() + " " + obj.getIngredientsString();
 			s += "\n";
 			i+=1;
@@ -126,19 +126,19 @@ public class Order{
 		return s;
 	}
 	
-	protected static void resetAllStaticData(){
-		orders_as_it_is = new Stack<AbstractMeal>();
-		orders_most_modified = new HashMap<AbstractMeal, Integer>();
-		orders_when_special_offer = new Stack<AbstractMeal>();
+	public static void resetAllStaticData(){
+		setOrders_as_it_is(new Stack<AbstractMeal>());
+		setOrders_most_modified(new HashMap<AbstractMeal, Integer>());
+		setOrders_when_special_offer(new Stack<AbstractMeal>());
 	}
 	
 	public void addToModifiedMap(ArrayList<AbstractMeal> mealArray){
 		for (AbstractMeal item : mealArray){
-			if (!Order.orders_most_modified.containsKey(item)){
-				Order.orders_most_modified.put(item, 1);
+			if (!Order.getOrders_most_modified().containsKey(item)){
+				Order.getOrders_most_modified().put(item, 1);
 			}
 			else {
-				Order.orders_most_modified.put(item, Order.orders_most_modified.get(item)+1);
+				Order.getOrders_most_modified().put(item, Order.getOrders_most_modified().get(item)+1);
 			}
 		}
 	}
@@ -247,6 +247,30 @@ public class Order{
 
 	public void setOrderedby(User user) {
 		this.orderedby = user;
+	}
+
+	public static Stack<AbstractMeal> getOrders_as_it_is() {
+		return orders_as_it_is;
+	}
+
+	public static void setOrders_as_it_is(Stack<AbstractMeal> orders_as_it_is) {
+		Order.orders_as_it_is = orders_as_it_is;
+	}
+
+	public static HashMap<AbstractMeal, Integer> getOrders_most_modified() {
+		return orders_most_modified;
+	}
+
+	public static void setOrders_most_modified(HashMap<AbstractMeal, Integer> orders_most_modified) {
+		Order.orders_most_modified = orders_most_modified;
+	}
+
+	public static Stack<AbstractMeal> getOrders_when_special_offer() {
+		return orders_when_special_offer;
+	}
+
+	public static void setOrders_when_special_offer(Stack<AbstractMeal> orders_when_special_offer) {
+		Order.orders_when_special_offer = orders_when_special_offer;
 	}
 
 

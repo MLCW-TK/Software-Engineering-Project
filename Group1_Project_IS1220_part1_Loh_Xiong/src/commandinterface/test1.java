@@ -12,7 +12,7 @@ import java.io.InputStream;
 import users.ClientUser;
 import users.StaffUser;
 
-public class test1 {
+public class Test1 {
 	// This is for tests where inputs are necessary
 	static InputStream stdin = System.in;
 	

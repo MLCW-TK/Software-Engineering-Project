@@ -1,4 +1,4 @@
-package ingredients;
+package jUnittests;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.Test;
+
+import ingredients.Ingredient;
 
 public class JIngredientTest {
 	Ingredient TestIngredient = new Ingredient("test1", 1, 1.56);

@@ -382,7 +382,7 @@ public class ClientConsole {
 
 			if (data.length != 3) {
 				System.out.println("Please enter valid commands");
-				throw new RuntimeException("Eg. personalizeMeal <name, quantity>");
+				throw new RuntimeException("Eg. personalizeMeal <mealName, ingredient quantity>");
 			}
 
 			for (int i = 0; i < 3; i++) {
@@ -877,4 +877,6 @@ public class ClientConsole {
 			}
 		}
 	}
+
+
 }

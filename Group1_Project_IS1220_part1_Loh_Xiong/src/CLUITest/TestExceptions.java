@@ -50,7 +50,7 @@ public class TestExceptions {
 		//Close readFile
 		reader.close();
 
-		System.out.println("Test1 complete!");
+		System.out.println("Test Exceptions complete!");
 	}
 }
 

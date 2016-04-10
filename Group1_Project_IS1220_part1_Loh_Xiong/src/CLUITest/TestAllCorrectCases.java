@@ -53,6 +53,6 @@ public class TestAllCorrectCases {
 		//Close readFile
 		reader.close();
 		
-		System.out.println("Test1 complete!");
+		System.out.println("Test All Correct Cases complete!");
 	}
 }

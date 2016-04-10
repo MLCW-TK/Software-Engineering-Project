@@ -1,0 +1,2542 @@
+
+doc/allclasses-frame.html,0
+
+doc/allclasses-noframe.html,0
+
+doc/cardfidelitysystem/BasicFidelityCard.html,1163
+<div class="topNav"><a name="navbar.top">navbar.top32,1026
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1194
+<a name="skip.navbar.top">skip.navbar.top89,3010
+<li class="blockList"><a name="field.summary">field.summary127,4083
+<li class="blockList"><a name="fields.inherited.from.class.cardfidelitysystem.FidelityCard">fields.inherited.from.class.cardfidelitysystem.FidelityCard132,4192
+<li class="blockList"><a name="constructor.summary">constructor.summary142,4714
+<li class="blockList"><a name="method.summary">method.summary161,5549
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object179,6665
+<li class="blockList"><a name="constructor.detail">constructor.detail195,7087
+<a name="BasicFidelityCard-users.User-">BasicFidelityCard-users.User-199,7183
+<li class="blockList"><a name="method.detail">method.detail217,7679
+<a name="useFeature--">useFeature--221,7765
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom243,8472
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow247,8649
+<a name="skip.navbar.bottom">skip.navbar.bottom300,10474
+
+doc/cardfidelitysystem/class-use/BasicFidelityCard.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,856
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1024
+<a name="skip.navbar.top">skip.navbar.top68,2281
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2674
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2851
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4117
+
+doc/cardfidelitysystem/class-use/FidelityCard.html,498
+<div class="topNav"><a name="navbar.top">navbar.top26,846
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1014
+<a name="skip.navbar.top">skip.navbar.top68,2256
+<li class="blockList"><a name="cardfidelitysystem">cardfidelitysystem98,3338
+<li class="blockList"><a name="users">users128,5093
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom164,7256
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow168,7433
+<a name="skip.navbar.bottom">skip.navbar.bottom206,8684
+
+doc/cardfidelitysystem/class-use/LotteryFidelityCard.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,860
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1028
+<a name="skip.navbar.top">skip.navbar.top68,2291
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2690
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2867
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4139
+
+doc/cardfidelitysystem/class-use/PointFidelityCard.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,856
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1024
+<a name="skip.navbar.top">skip.navbar.top68,2281
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2674
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2851
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4117
+
+doc/cardfidelitysystem/FidelityCard.html,1211
+<div class="topNav"><a name="navbar.top">navbar.top32,1015
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1183
+<a name="skip.navbar.top">skip.navbar.top89,3102
+<li class="blockList"><a name="field.summary">field.summary127,4357
+<li class="blockList"><a name="constructor.summary">constructor.summary150,5373
+<li class="blockList"><a name="method.summary">method.summary171,6448
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object187,7480
+<li class="blockList"><a name="field.detail">field.detail203,7902
+<a name="owner">owner207,7986
+<a name="percentage">percentage216,8182
+<li class="blockList"><a name="constructor.detail">constructor.detail229,8422
+<a name="FidelityCard-users.User-">FidelityCard-users.User-233,8518
+<a name="FidelityCard-users.User-int-">FidelityCard-users.User-int-242,8759
+<li class="blockList"><a name="method.detail">method.detail256,9131
+<a name="useFeature--">useFeature--260,9217
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom277,9529
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow281,9706
+<a name="skip.navbar.bottom">skip.navbar.bottom334,11634
+
+doc/cardfidelitysystem/LotteryFidelityCard.html,1233
+<div class="topNav"><a name="navbar.top">navbar.top32,1038
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1206
+<a name="skip.navbar.top">skip.navbar.top89,3157
+<li class="blockList"><a name="field.summary">field.summary128,4285
+<li class="blockList"><a name="fields.inherited.from.class.cardfidelitysystem.FidelityCard">fields.inherited.from.class.cardfidelitysystem.FidelityCard133,4394
+<li class="blockList"><a name="constructor.summary">constructor.summary143,4839
+<li class="blockList"><a name="method.summary">method.summary161,5670
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object183,7037
+<li class="blockList"><a name="constructor.detail">constructor.detail199,7459
+<a name="LotteryFidelityCard-users.User-int-">LotteryFidelityCard-users.User-int-203,7555
+<li class="blockList"><a name="method.detail">method.detail222,8126
+<a name="setPercentage-int-">setPercentage-int-226,8212
+<a name="useFeature--">useFeature--235,8407
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom259,9167
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow263,9344
+<a name="skip.navbar.bottom">skip.navbar.bottom316,11304
+
+doc/cardfidelitysystem/package-frame.html,0
+
+doc/cardfidelitysystem/package-summary.html,364
+<div class="topNav"><a name="navbar.top">navbar.top26,786
+<a name="navbar.top.firstrow">navbar.top.firstrow30,954
+<a name="skip.navbar.top">skip.navbar.top68,2146
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom113,3767
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow117,3944
+<a name="skip.navbar.bottom">skip.navbar.bottom155,5145
+
+doc/cardfidelitysystem/package-tree.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,818
+<a name="navbar.top.firstrow">navbar.top.firstrow30,986
+<a name="skip.navbar.top">skip.navbar.top68,2115
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom96,3414
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow100,3591
+<a name="skip.navbar.bottom">skip.navbar.bottom138,4729
+
+doc/cardfidelitysystem/package-use.html,497
+<div class="topNav"><a name="navbar.top">navbar.top26,818
+<a name="navbar.top.firstrow">navbar.top.firstrow30,986
+<a name="skip.navbar.top">skip.navbar.top68,2099
+<li class="blockList"><a name="cardfidelitysystem">cardfidelitysystem96,3082
+<li class="blockList"><a name="users">users113,3817
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom133,4560
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow137,4737
+<a name="skip.navbar.bottom">skip.navbar.bottom175,5859
+
+doc/cardfidelitysystem/PointFidelityCard.html,1383
+<div class="topNav"><a name="navbar.top">navbar.top32,1058
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1226
+<a name="skip.navbar.top">skip.navbar.top89,3049
+<li class="blockList"><a name="field.summary">field.summary128,4182
+<li class="blockList"><a name="fields.inherited.from.class.cardfidelitysystem.FidelityCard">fields.inherited.from.class.cardfidelitysystem.FidelityCard133,4291
+<li class="blockList"><a name="constructor.summary">constructor.summary143,4813
+<li class="blockList"><a name="method.summary">method.summary160,5594
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object196,7755
+<li class="blockList"><a name="constructor.detail">constructor.detail212,8177
+<a name="PointFidelityCard-users.User-">PointFidelityCard-users.User-216,8273
+<li class="blockList"><a name="method.detail">method.detail229,8615
+<a name="getDiscountRate--">getDiscountRate--233,8701
+<a name="update--">update--242,8882
+<a name="updatePoints--">updatePoints--251,9034
+<a name="Add_Cash_as_Points-double-">Add_Cash_as_Points-double-260,9204
+<a name="useFeature--">useFeature--269,9416
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom293,10140
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow297,10317
+<a name="skip.navbar.bottom">skip.navbar.bottom350,12149
+
+doc/constant-values.html,542
+<div class="topNav"><a name="navbar.top">navbar.top26,786
+<a name="navbar.top.firstrow">navbar.top.firstrow30,954
+<a name="skip.navbar.top">skip.navbar.top68,1981
+<div class="constantValuesContainer"><a name="update">update79,2266
+<td class="colFirst"><a name="update.Subscriber.receive_address">update.Subscriber.receive_address94,2892
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom106,3265
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow110,3442
+<a name="skip.navbar.bottom">skip.navbar.bottom148,4478
+
+doc/coresystem/class-use/LoadSystem.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,826
+<a name="navbar.top.firstrow">navbar.top.firstrow30,994
+<a name="skip.navbar.top">skip.navbar.top68,2206
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2554
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2731
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3952
+
+doc/coresystem/class-use/RestaurantSystem.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,838
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1006
+<a name="skip.navbar.top">skip.navbar.top68,2236
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2602
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2779
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4018
+
+doc/coresystem/class-use/RunSystem.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,824
+<a name="navbar.top.firstrow">navbar.top.firstrow30,992
+<a name="skip.navbar.top">skip.navbar.top68,2201
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2546
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2723
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3941
+
+doc/coresystem/LoadSystem.html,1727
+<div class="topNav"><a name="navbar.top">navbar.top32,1036
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1204
+<a name="skip.navbar.top">skip.navbar.top89,3032
+<li class="blockList"><a name="nested.class.summary">nested.class.summary131,3947
+<li class="blockList"><a name="nested.classes.inherited.from.class.java.lang.Thread">nested.classes.inherited.from.class.java.lang.Thread136,4070
+<li class="blockList"><a name="field.summary">field.summary146,4422
+<li class="blockList"><a name="fields.inherited.from.class.java.lang.Thread">fields.inherited.from.class.java.lang.Thread151,4531
+<li class="blockList"><a name="constructor.summary">constructor.summary161,4832
+<li class="blockList"><a name="method.summary">method.summary180,5588
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Thread">methods.inherited.from.class.java.lang.Thread214,7787
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object221,8530
+<li class="blockList"><a name="constructor.detail">constructor.detail237,8942
+<a name="LoadSystem-java.lang.String-">LoadSystem-java.lang.String-241,9038
+<li class="blockList"><a name="method.detail">method.detail259,9462
+<a name="addStaff-users.StaffUser-">addStaff-users.StaffUser-263,9548
+<a name="addIngredient-ingredients.Ingredient-">addIngredient-ingredients.Ingredient-277,9967
+<a name="addMeals-mealsystem.Meal-">addMeals-mealsystem.Meal-291,10444
+<a name="run--">run--305,10857
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom328,11430
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow332,11607
+<a name="skip.navbar.bottom">skip.navbar.bottom385,13444
+
+doc/coresystem/package-frame.html,0
+
+doc/coresystem/package-summary.html,364
+<div class="topNav"><a name="navbar.top">navbar.top26,770
+<a name="navbar.top.firstrow">navbar.top.firstrow30,938
+<a name="skip.navbar.top">skip.navbar.top68,2184
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom103,3379
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow107,3556
+<a name="skip.navbar.bottom">skip.navbar.bottom145,4811
+
+doc/coresystem/package-tree.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,802
+<a name="navbar.top.firstrow">navbar.top.firstrow30,970
+<a name="skip.navbar.top">skip.navbar.top68,2150
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom96,3323
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow100,3500
+<a name="skip.navbar.bottom">skip.navbar.bottom138,4689
+
+doc/coresystem/package-use.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,802
+<a name="navbar.top.firstrow">navbar.top.firstrow30,970
+<a name="skip.navbar.top">skip.navbar.top68,2075
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2393
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2570
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3684
+
+doc/coresystem/RestaurantSystem.html,2591
+<div class="topNav"><a name="navbar.top">navbar.top32,1186
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1354
+<a name="skip.navbar.top">skip.navbar.top89,3228
+<li class="blockList"><a name="field.summary">field.summary127,4244
+<li class="blockList"><a name="constructor.summary">constructor.summary154,5560
+<li class="blockList"><a name="method.summary">method.summary173,6367
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object284,13361
+<li class="blockList"><a name="field.detail">field.detail300,13783
+<a name="meal_list">meal_list304,13867
+<a name="birthdaySpecialOffer">birthdaySpecialOffer313,14110
+<a name="birthdayOffer">birthdayOffer322,14307
+<li class="blockList"><a name="constructor.detail">constructor.detail335,14559
+<a name="RestaurantSystem-java.lang.String-">RestaurantSystem-java.lang.String-339,14655
+<li class="blockList"><a name="method.detail">method.detail357,15141
+<a name="addUser-users.ClientUser-">addUser-users.ClientUser-361,15227
+<a name="getRestaurantName--">getRestaurantName--375,15659
+<a name="getRegistrationPhase--">getRegistrationPhase--388,15961
+<a name="setRegistrationPhase-boolean-">setRegistrationPhase-boolean-401,16266
+<a name="getUserPhase--">getUserPhase--415,16624
+<a name="setUserPhase-boolean-">setUserPhase-boolean-428,16897
+<a name="setExit-boolean-">setExit-boolean-442,17223
+<a name="printUsers--">printUsers--456,17529
+<a name="register--">register--467,17877
+<a name="login-java.lang.String-java.lang.String-">login-java.lang.String-java.lang.String-477,18098
+<a name="subscribe-update.Subscriber-">subscribe-update.Subscriber-487,18434
+<a name="unsubscribe-update.Subscriber-">unsubscribe-update.Subscriber-500,18988
+<a name="notifySubscriber--">notifySubscriber--513,19554
+<a name="popupMessage-update.Subscriber-">popupMessage-update.Subscriber-526,20022
+<a name="birthdayOffer-update.Subscriber-">birthdayOffer-update.Subscriber-535,20296
+<a name="allMealOffer--">allMealOffer--544,20585
+<a name="normaldayOffer-update.Subscriber-">normaldayOffer-update.Subscriber-553,20767
+<a name="setbirthdaySpecialOffer-java.lang.String-">setbirthdaySpecialOffer-java.lang.String-562,21059
+<a name="getbirthdaySpecialOffer--">getbirthdaySpecialOffer--571,21305
+<a name="refresh--">refresh--580,21520
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom597,21811
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow601,21988
+<a name="skip.navbar.bottom">skip.navbar.bottom654,23871
+
+doc/coresystem/RunSystem.html,918
+<div class="topNav"><a name="navbar.top">navbar.top32,1007
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1175
+<a name="skip.navbar.top">skip.navbar.top89,2872
+<li class="blockList"><a name="constructor.summary">constructor.summary122,3638
+<li class="blockList"><a name="method.summary">method.summary139,4306
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object155,5354
+<li class="blockList"><a name="constructor.detail">constructor.detail171,5776
+<a name="RunSystem--">RunSystem--175,5872
+<li class="blockList"><a name="method.detail">method.detail188,6109
+<a name="main-java.lang.String:A-">main-java.lang.String:A-192,6195
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom209,6530
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow213,6707
+<a name="skip.navbar.bottom">skip.navbar.bottom266,8413
+
+doc/customutilities/class-use/CustomUtilities.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,846
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1014
+<a name="skip.navbar.top">skip.navbar.top68,2256
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2634
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2811
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4062
+
+doc/customutilities/CustomUtilities.html,916
+<div class="topNav"><a name="navbar.top">navbar.top32,1019
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1187
+<a name="skip.navbar.top">skip.navbar.top89,2795
+<li class="blockList"><a name="constructor.summary">constructor.summary122,3601
+<li class="blockList"><a name="method.summary">method.summary139,4292
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object156,5358
+<li class="blockList"><a name="constructor.detail">constructor.detail172,5780
+<a name="CustomUtilities--">CustomUtilities--176,5876
+<li class="blockList"><a name="method.detail">method.detail189,6131
+<a name="round-double-int-">round-double-int-193,6217
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom211,6582
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow215,6759
+<a name="skip.navbar.bottom">skip.navbar.bottom268,8376
+
+doc/customutilities/package-frame.html,0
+
+doc/customutilities/package-summary.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,780
+<a name="navbar.top.firstrow">navbar.top.firstrow30,948
+<a name="skip.navbar.top">skip.navbar.top68,2187
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom95,3059
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow99,3236
+<a name="skip.navbar.bottom">skip.navbar.bottom137,4484
+
+doc/customutilities/package-tree.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,812
+<a name="navbar.top.firstrow">navbar.top.firstrow30,980
+<a name="skip.navbar.top">skip.navbar.top68,2153
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom90,2863
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow94,3040
+<a name="skip.navbar.bottom">skip.navbar.bottom132,4222
+
+doc/customutilities/package-use.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,812
+<a name="navbar.top.firstrow">navbar.top.firstrow30,980
+<a name="skip.navbar.top">skip.navbar.top68,2090
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2423
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2600
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3719
+
+doc/deprecated-list.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,774
+<a name="navbar.top.firstrow">navbar.top.firstrow30,942
+<a name="skip.navbar.top">skip.navbar.top68,1957
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2224
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2401
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3425
+
+doc/help-doc.html,364
+<div class="topNav"><a name="navbar.top">navbar.top26,760
+<a name="navbar.top.firstrow">navbar.top.firstrow30,928
+<a name="skip.navbar.top">skip.navbar.top68,1936
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom182,7499
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow186,7676
+<a name="skip.navbar.bottom">skip.navbar.bottom224,8693
+
+doc/index-files/index-1.html,1077
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,1998
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:A">I:A72,2094
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom122,8245
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow126,8422
+<a name="skip.navbar.bottom">skip.navbar.bottom164,9497
+
+doc/index-files/index-10.html,1075
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2028
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:L">I:L72,2124
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom94,5066
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow98,5243
+<a name="skip.navbar.bottom">skip.navbar.bottom136,6348
+
+doc/index-files/index-11.html,1077
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2029
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:M">I:M72,2125
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom120,8566
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow124,8743
+<a name="skip.navbar.bottom">skip.navbar.bottom162,9849
+
+doc/index-files/index-12.html,1075
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2029
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:N">I:N72,2125
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom92,5124
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow96,5301
+<a name="skip.navbar.bottom">skip.navbar.bottom134,6407
+
+doc/index-files/index-13.html,1076
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2029
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:O">I:O72,2125
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom96,5066
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow100,5243
+<a name="skip.navbar.bottom">skip.navbar.bottom138,6349
+
+doc/index-files/index-14.html,1076
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2029
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:P">I:P72,2125
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom98,5574
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow102,5751
+<a name="skip.navbar.bottom">skip.navbar.bottom140,6857
+
+doc/index-files/index-15.html,1075
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2029
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:Q">I:Q72,2125
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom82,3829
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow86,4006
+<a name="skip.navbar.bottom">skip.navbar.bottom124,5112
+
+doc/index-files/index-16.html,1077
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2029
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:R">I:R72,2125
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom120,7675
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow124,7852
+<a name="skip.navbar.bottom">skip.navbar.bottom162,8958
+
+doc/index-files/index-17.html,1080
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2029
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:S">I:S72,2125
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom164,12420
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow168,12597
+<a name="skip.navbar.bottom">skip.navbar.bottom206,13703
+
+doc/index-files/index-18.html,1075
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2029
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:T">I:T72,2125
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom94,5050
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow98,5227
+<a name="skip.navbar.bottom">skip.navbar.bottom136,6333
+
+doc/index-files/index-19.html,1078
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2001
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:U">I:U72,2097
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom130,9484
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow134,9661
+<a name="skip.navbar.bottom">skip.navbar.bottom172,10739
+
+doc/index-files/index-2.html,1077
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2025
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:B">I:B72,2121
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom106,7169
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow110,7346
+<a name="skip.navbar.bottom">skip.navbar.bottom148,8448
+
+doc/index-files/index-3.html,1080
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2025
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:C">I:C72,2121
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom141,11033
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow145,11210
+<a name="skip.navbar.bottom">skip.navbar.bottom183,12312
+
+doc/index-files/index-4.html,1075
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2025
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:D">I:D72,2121
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom90,4936
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow94,5113
+<a name="skip.navbar.bottom">skip.navbar.bottom132,6215
+
+doc/index-files/index-5.html,1077
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2025
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:E">I:E72,2121
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom102,5748
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow106,5925
+<a name="skip.navbar.bottom">skip.navbar.bottom144,7027
+
+doc/index-files/index-6.html,1075
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2025
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:F">I:F72,2121
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom88,4500
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow92,4677
+<a name="skip.navbar.bottom">skip.navbar.bottom130,5779
+
+doc/index-files/index-7.html,1080
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2025
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:G">I:G72,2121
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom172,12823
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow176,13000
+<a name="skip.navbar.bottom">skip.navbar.bottom214,14102
+
+doc/index-files/index-8.html,1077
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2025
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:H">I:H72,2121
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom106,5455
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow110,5632
+<a name="skip.navbar.bottom">skip.navbar.bottom148,6734
+
+doc/index-files/index-9.html,1077
+<div class="topNav"><a name="navbar.top">navbar.top26,764
+<a name="navbar.top.firstrow">navbar.top.firstrow30,932
+<a name="skip.navbar.top">skip.navbar.top68,2026
+<div class="contentContainer"><a href="index-1.html">A</a>&nbsp;<a href="index-2.html">B</a>&nbsp;<a href="index-3.html">C</a>&nbsp;<a href="index-4.html">D</a>&nbsp;<a href="index-5.html">E</a>&nbsp;<a href="index-6.html">F</a>&nbsp;<a href="index-7.html">G</a>&nbsp;<a href="index-8.html">H</a>&nbsp;<a href="index-9.html">I</a>&nbsp;<a href="index-10.html">L</a>&nbsp;<a href="index-11.html">M</a>&nbsp;<a href="index-12.html">N</a>&nbsp;<a href="index-13.html">O</a>&nbsp;<a href="index-14.html">P</a>&nbsp;<a href="index-15.html">Q</a>&nbsp;<a href="index-16.html">R</a>&nbsp;<a href="index-17.html">S</a>&nbsp;<a href="index-18.html">T</a>&nbsp;<a href="index-19.html">U</a>&nbsp;<a name="I:I">I:I72,2122
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom100,5815
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow104,5992
+<a name="skip.navbar.bottom">skip.navbar.bottom142,7095
+
+doc/index.html,92
+    function validURL(url) {validURL13,565
+    function loadFrames() {loadFrames54,1866
+
+doc/ingredients/class-use/Ingredient.html,561
+<div class="topNav"><a name="navbar.top">navbar.top26,828
+<a name="navbar.top.firstrow">navbar.top.firstrow30,996
+<a name="skip.navbar.top">skip.navbar.top68,2211
+<li class="blockList"><a name="coresystem">coresystem102,3376
+<li class="blockList"><a name="ingredients">ingredients122,4624
+<li class="blockList"><a name="mealsystem">mealsystem147,6383
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom332,21058
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow336,21235
+<a name="skip.navbar.bottom">skip.navbar.bottom374,22459
+
+doc/ingredients/class-use/IngredientFactory.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,842
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1010
+<a name="skip.navbar.top">skip.navbar.top68,2246
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2618
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2795
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4040
+
+doc/ingredients/class-use/IngredientTest.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,836
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1004
+<a name="skip.navbar.top">skip.navbar.top68,2231
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2594
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2771
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4007
+
+doc/ingredients/Ingredient.html,2027
+<div class="topNav"><a name="navbar.top">navbar.top32,1093
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1261
+<a name="skip.navbar.top">skip.navbar.top89,3022
+<li class="blockList"><a name="field.summary">field.summary122,3794
+<li class="blockList"><a name="constructor.summary">constructor.summary157,5434
+<li class="blockList"><a name="method.summary">method.summary180,6501
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object240,10149
+<li class="blockList"><a name="field.detail">field.detail256,10553
+<a name="name">name260,10637
+<a name="quantity">quantity269,10786
+<a name="priceperquantity">priceperquantity278,10937
+<a name="totalprice">totalprice287,11112
+<a name="original_quantity">original_quantity296,11269
+<li class="blockList"><a name="constructor.detail">constructor.detail309,11533
+<a name="Ingredient-java.lang.String-double-">Ingredient-java.lang.String-double-313,11629
+<a name="Ingredient-java.lang.String-double-double-">Ingredient-java.lang.String-double-double-323,11880
+<li class="blockList"><a name="method.detail">method.detail338,12264
+<a name="getOriginalQuantity--">getOriginalQuantity--342,12350
+<a name="addQuantity-double-">addQuantity-double-351,12543
+<a name="removeQuantity-double-">removeQuantity-double-360,12736
+<a name="getPriceperquantity--">getPriceperquantity--369,12938
+<a name="setPriceperquantity-double-">setPriceperquantity-double-378,13131
+<a name="getTotalprice--">getTotalprice--387,13356
+<a name="setQuantity-double-">setQuantity-double-396,13531
+<a name="getName--">getName--405,13724
+<a name="getQuantity--">getQuantity--414,13891
+<a name="equals-java.lang.Object-">equals-java.lang.Object-423,14060
+<a name="hashCode--">hashCode--437,14460
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom459,14958
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow463,15135
+<a name="skip.navbar.bottom">skip.navbar.bottom516,16905
+
+doc/ingredients/IngredientFactory.html,1087
+<div class="topNav"><a name="navbar.top">navbar.top32,1034
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1202
+<a name="skip.navbar.top">skip.navbar.top89,3032
+<li class="blockList"><a name="constructor.summary">constructor.summary122,3832
+<li class="blockList"><a name="method.summary">method.summary139,4525
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object162,6200
+<li class="blockList"><a name="constructor.detail">constructor.detail178,6622
+<a name="IngredientFactory--">IngredientFactory--182,6718
+<li class="blockList"><a name="method.detail">method.detail195,6979
+<a name="createIngredient-java.lang.String-double-">createIngredient-java.lang.String-double-199,7065
+<a name="createIngredient-java.lang.String-double-double-">createIngredient-java.lang.String-double-double-209,7441
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom228,8017
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow232,8194
+<a name="skip.navbar.bottom">skip.navbar.bottom285,10033
+
+doc/ingredients/IngredientTest.html,1114
+<div class="topNav"><a name="navbar.top">navbar.top32,1036
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1204
+<a name="skip.navbar.top">skip.navbar.top89,2920
+<li class="blockList"><a name="constructor.summary">constructor.summary122,3708
+<li class="blockList"><a name="method.summary">method.summary139,4392
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object163,5995
+<li class="blockList"><a name="constructor.detail">constructor.detail179,6417
+<a name="IngredientTest--">IngredientTest--183,6513
+<li class="blockList"><a name="method.detail">method.detail196,6765
+<a name="testConstructorsAndEquivalence--">testConstructorsAndEquivalence--200,6851
+<a name="ConstructorQuantityCannotBeNegative--">ConstructorQuantityCannotBeNegative--209,7075
+<a name="CannotRemoveZeroQuantity--">CannotRemoveZeroQuantity--218,7314
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom235,7656
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow239,7833
+<a name="skip.navbar.bottom">skip.navbar.bottom292,9558
+
+doc/ingredients/package-frame.html,0
+
+doc/ingredients/package-summary.html,364
+<div class="topNav"><a name="navbar.top">navbar.top26,772
+<a name="navbar.top.firstrow">navbar.top.firstrow30,940
+<a name="skip.navbar.top">skip.navbar.top68,2179
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom103,3393
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow107,3570
+<a name="skip.navbar.bottom">skip.navbar.bottom145,4818
+
+doc/ingredients/package-tree.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,804
+<a name="navbar.top.firstrow">navbar.top.firstrow30,972
+<a name="skip.navbar.top">skip.navbar.top68,2145
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom92,3159
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow96,3336
+<a name="skip.navbar.bottom">skip.navbar.bottom134,4518
+
+doc/ingredients/package-use.html,558
+<div class="topNav"><a name="navbar.top">navbar.top26,804
+<a name="navbar.top.firstrow">navbar.top.firstrow30,972
+<a name="skip.navbar.top">skip.navbar.top68,2078
+<li class="blockList"><a name="coresystem">coresystem100,3152
+<li class="blockList"><a name="ingredients">ingredients115,3782
+<li class="blockList"><a name="mealsystem">mealsystem130,4416
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom148,5106
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow152,5283
+<a name="skip.navbar.bottom">skip.navbar.bottom190,6398
+
+doc/mealsystem/AddIngredient.html,988
+<div class="topNav"><a name="navbar.top">navbar.top32,1018
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1186
+<a name="skip.navbar.top">skip.navbar.top89,2889
+<li class="blockList"><a name="constructor.summary">constructor.summary127,3921
+<li class="blockList"><a name="method.summary">method.summary144,4601
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object162,5875
+<li class="blockList"><a name="constructor.detail">constructor.detail178,6297
+<a name="AddIngredient--">AddIngredient--182,6393
+<li class="blockList"><a name="method.detail">method.detail195,6642
+<a name="behavior-mealsystem.Meal-ingredients.Ingredient-double-">behavior-mealsystem.Meal-ingredients.Ingredient-double-199,6728
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom222,7649
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow226,7826
+<a name="skip.navbar.bottom">skip.navbar.bottom279,9538
+
+doc/mealsystem/Appertizer.html,1390
+<div class="topNav"><a name="navbar.top">navbar.top32,1020
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1188
+<a name="skip.navbar.top">skip.navbar.top89,2998
+<li class="blockList"><a name="constructor.summary">constructor.summary127,3955
+<li class="blockList"><a name="method.summary">method.summary152,5327
+<li class="blockList"><a name="methods.inherited.from.class.mealsystem.Meal">methods.inherited.from.class.mealsystem.Meal176,6693
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object183,8269
+<li class="blockList"><a name="constructor.detail">constructor.detail199,8663
+<a name="Appertizer-java.lang.String-java.lang.String-double-ingredients.Ingredient:A-">Appertizer-java.lang.String-java.lang.String-double-ingredients.Ingredient:A-203,8759
+<a name="Appertizer-java.lang.String-java.lang.String-ingredients.Ingredient:A-">Appertizer-java.lang.String-java.lang.String-ingredients.Ingredient:A-215,9217
+<li class="blockList"><a name="method.detail">method.detail230,9717
+<a name="equals-java.lang.Object-">equals-java.lang.Object-234,9803
+<a name="hashCode--">hashCode--249,10500
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom271,11101
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow275,11278
+<a name="skip.navbar.bottom">skip.navbar.bottom328,13097
+
+doc/mealsystem/AppertizerFactory.html,1209
+<div class="topNav"><a name="navbar.top">navbar.top32,1034
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1202
+<a name="skip.navbar.top">skip.navbar.top89,3029
+<li class="blockList"><a name="constructor.summary">constructor.summary127,4042
+<li class="blockList"><a name="method.summary">method.summary144,4734
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object172,6775
+<li class="blockList"><a name="constructor.detail">constructor.detail188,7197
+<a name="AppertizerFactory--">AppertizerFactory--192,7293
+<li class="blockList"><a name="method.detail">method.detail205,7554
+<a name="createMeal-java.lang.String-java.lang.String-ingredients.Ingredient...-">createMeal-java.lang.String-java.lang.String-ingredients.Ingredient...-209,7640
+<a name="createMeal-java.lang.String-java.lang.String-double-ingredients.Ingredient...-">createMeal-java.lang.String-java.lang.String-double-ingredients.Ingredient...-229,9009
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom253,10046
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow257,10223
+<a name="skip.navbar.bottom">skip.navbar.bottom310,12059
+
+doc/mealsystem/ChangeIngredient.html,994
+<div class="topNav"><a name="navbar.top">navbar.top32,1024
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1192
+<a name="skip.navbar.top">skip.navbar.top89,3014
+<li class="blockList"><a name="constructor.summary">constructor.summary127,4058
+<li class="blockList"><a name="method.summary">method.summary144,4747
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object162,6024
+<li class="blockList"><a name="constructor.detail">constructor.detail178,6446
+<a name="ChangeIngredient--">ChangeIngredient--182,6542
+<li class="blockList"><a name="method.detail">method.detail195,6800
+<a name="behavior-mealsystem.Meal-ingredients.Ingredient-double-">behavior-mealsystem.Meal-ingredients.Ingredient-double-199,6886
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom222,7807
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow226,7984
+<a name="skip.navbar.bottom">skip.navbar.bottom279,9815
+
+doc/mealsystem/class-use/AddIngredient.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,832
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1000
+<a name="skip.navbar.top">skip.navbar.top68,2221
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2578
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2755
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3985
+
+doc/mealsystem/class-use/Appertizer.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,826
+<a name="navbar.top.firstrow">navbar.top.firstrow30,994
+<a name="skip.navbar.top">skip.navbar.top68,2206
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2554
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2731
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3952
+
+doc/mealsystem/class-use/AppertizerFactory.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,840
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1008
+<a name="skip.navbar.top">skip.navbar.top68,2241
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2610
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2787
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4029
+
+doc/mealsystem/class-use/ChangeIngredient.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,838
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1006
+<a name="skip.navbar.top">skip.navbar.top68,2236
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2602
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2779
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4018
+
+doc/mealsystem/class-use/Dessert.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,820
+<a name="navbar.top.firstrow">navbar.top.firstrow30,988
+<a name="skip.navbar.top">skip.navbar.top68,2191
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2530
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2707
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3919
+
+doc/mealsystem/class-use/DessertFactory.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,834
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1002
+<a name="skip.navbar.top">skip.navbar.top68,2226
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2586
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2763
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3996
+
+doc/mealsystem/class-use/MainCourse.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,826
+<a name="navbar.top.firstrow">navbar.top.firstrow30,994
+<a name="skip.navbar.top">skip.navbar.top68,2206
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2554
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2731
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3952
+
+doc/mealsystem/class-use/MainCourseFactory.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,840
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1008
+<a name="skip.navbar.top">skip.navbar.top68,2241
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2610
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2787
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4029
+
+doc/mealsystem/class-use/Meal.html,552
+<div class="topNav"><a name="navbar.top">navbar.top26,814
+<a name="navbar.top.firstrow">navbar.top.firstrow30,982
+<a name="skip.navbar.top">skip.navbar.top68,2176
+<li class="blockList"><a name="coresystem">coresystem102,3303
+<li class="blockList"><a name="mealsystem">mealsystem135,5360
+<li class="blockList"><a name="orders">orders264,15647
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom297,17498
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow301,17675
+<a name="skip.navbar.bottom">skip.navbar.bottom339,18878
+
+doc/mealsystem/class-use/MealBehavior.html,428
+<div class="topNav"><a name="navbar.top">navbar.top26,838
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1006
+<a name="skip.navbar.top">skip.navbar.top68,2228
+<li class="blockList"><a name="mealsystem">mealsystem94,3161
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom157,7007
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow161,7184
+<a name="skip.navbar.bottom">skip.navbar.bottom199,8415
+
+doc/mealsystem/class-use/MealFactory.html,427
+<div class="topNav"><a name="navbar.top">navbar.top26,828
+<a name="navbar.top.firstrow">navbar.top.firstrow30,996
+<a name="skip.navbar.top">skip.navbar.top68,2211
+<li class="blockList"><a name="mealsystem">mealsystem94,3128
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom138,5692
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow142,5869
+<a name="skip.navbar.bottom">skip.navbar.bottom180,7093
+
+doc/mealsystem/class-use/MealFactoryBuilder.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,842
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1010
+<a name="skip.navbar.top">skip.navbar.top68,2246
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2618
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2795
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4040
+
+doc/mealsystem/class-use/MealsTestTest.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,832
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1000
+<a name="skip.navbar.top">skip.navbar.top68,2221
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2578
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2755
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3985
+
+doc/mealsystem/class-use/NormalBehavior.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,834
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1002
+<a name="skip.navbar.top">skip.navbar.top68,2226
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2586
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2763
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3996
+
+doc/mealsystem/class-use/RemoveIngredient.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,838
+<a name="navbar.top.firstrow">navbar.top.firstrow30,1006
+<a name="skip.navbar.top">skip.navbar.top68,2236
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2602
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2779
+<a name="skip.navbar.bottom">skip.navbar.bottom119,4018
+
+doc/mealsystem/Dessert.html,1378
+<div class="topNav"><a name="navbar.top">navbar.top32,1014
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1182
+<a name="skip.navbar.top">skip.navbar.top89,2983
+<li class="blockList"><a name="constructor.summary">constructor.summary127,3928
+<li class="blockList"><a name="method.summary">method.summary152,5267
+<li class="blockList"><a name="methods.inherited.from.class.mealsystem.Meal">methods.inherited.from.class.mealsystem.Meal176,6627
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object183,8203
+<li class="blockList"><a name="constructor.detail">constructor.detail199,8597
+<a name="Dessert-java.lang.String-java.lang.String-double-ingredients.Ingredient:A-">Dessert-java.lang.String-java.lang.String-double-ingredients.Ingredient:A-203,8693
+<a name="Dessert-java.lang.String-java.lang.String-ingredients.Ingredient:A-">Dessert-java.lang.String-java.lang.String-ingredients.Ingredient:A-215,9133
+<li class="blockList"><a name="method.detail">method.detail230,9618
+<a name="equals-java.lang.Object-">equals-java.lang.Object-234,9704
+<a name="hashCode--">hashCode--249,10401
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom271,11002
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow275,11179
+<a name="skip.navbar.bottom">skip.navbar.bottom328,12989
+
+doc/mealsystem/DessertFactory.html,1202
+<div class="topNav"><a name="navbar.top">navbar.top32,1028
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1196
+<a name="skip.navbar.top">skip.navbar.top89,3005
+<li class="blockList"><a name="constructor.summary">constructor.summary127,4006
+<li class="blockList"><a name="method.summary">method.summary144,4689
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object172,6724
+<li class="blockList"><a name="constructor.detail">constructor.detail188,7146
+<a name="DessertFactory--">DessertFactory--192,7242
+<li class="blockList"><a name="method.detail">method.detail205,7494
+<a name="createMeal-java.lang.String-java.lang.String-ingredients.Ingredient...-">createMeal-java.lang.String-java.lang.String-ingredients.Ingredient...-209,7580
+<a name="createMeal-java.lang.String-java.lang.String-double-ingredients.Ingredient...-">createMeal-java.lang.String-java.lang.String-double-ingredients.Ingredient...-229,8949
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom253,9986
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow257,10163
+<a name="skip.navbar.bottom">skip.navbar.bottom310,11981
+
+doc/mealsystem/MainCourse.html,1390
+<div class="topNav"><a name="navbar.top">navbar.top32,1020
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1188
+<a name="skip.navbar.top">skip.navbar.top89,2999
+<li class="blockList"><a name="constructor.summary">constructor.summary127,3956
+<li class="blockList"><a name="method.summary">method.summary152,5328
+<li class="blockList"><a name="methods.inherited.from.class.mealsystem.Meal">methods.inherited.from.class.mealsystem.Meal176,6694
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object183,8270
+<li class="blockList"><a name="constructor.detail">constructor.detail199,8664
+<a name="MainCourse-java.lang.String-java.lang.String-double-ingredients.Ingredient:A-">MainCourse-java.lang.String-java.lang.String-double-ingredients.Ingredient:A-203,8760
+<a name="MainCourse-java.lang.String-java.lang.String-ingredients.Ingredient:A-">MainCourse-java.lang.String-java.lang.String-ingredients.Ingredient:A-215,9218
+<li class="blockList"><a name="method.detail">method.detail230,9718
+<a name="equals-java.lang.Object-">equals-java.lang.Object-234,9804
+<a name="hashCode--">hashCode--249,10501
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom271,11102
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow275,11279
+<a name="skip.navbar.bottom">skip.navbar.bottom328,13099
+
+doc/mealsystem/MainCourseFactory.html,1209
+<div class="topNav"><a name="navbar.top">navbar.top32,1034
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1202
+<a name="skip.navbar.top">skip.navbar.top89,3017
+<li class="blockList"><a name="constructor.summary">constructor.summary127,4030
+<li class="blockList"><a name="method.summary">method.summary144,4722
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object172,6763
+<li class="blockList"><a name="constructor.detail">constructor.detail188,7185
+<a name="MainCourseFactory--">MainCourseFactory--192,7281
+<li class="blockList"><a name="method.detail">method.detail205,7542
+<a name="createMeal-java.lang.String-java.lang.String-ingredients.Ingredient...-">createMeal-java.lang.String-java.lang.String-ingredients.Ingredient...-209,7628
+<a name="createMeal-java.lang.String-java.lang.String-double-ingredients.Ingredient...-">createMeal-java.lang.String-java.lang.String-double-ingredients.Ingredient...-229,8997
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom253,10034
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow257,10211
+<a name="skip.navbar.bottom">skip.navbar.bottom310,12035
+
+doc/mealsystem/Meal.html,2602
+<div class="topNav"><a name="navbar.top">navbar.top32,1153
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1321
+<a name="skip.navbar.top">skip.navbar.top89,3116
+<li class="blockList"><a name="constructor.summary">constructor.summary126,4170
+<li class="blockList"><a name="method.summary">method.summary160,6097
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object277,12778
+<li class="blockList"><a name="constructor.detail">constructor.detail293,13172
+<a name="Meal-java.lang.String-java.lang.String-ingredients.Ingredient...-">Meal-java.lang.String-java.lang.String-ingredients.Ingredient...-297,13268
+<a name="Meal-java.lang.String-java.lang.String-double-ingredients.Ingredient...-">Meal-java.lang.String-java.lang.String-double-ingredients.Ingredient...-314,13822
+<a name="Meal-java.lang.String-java.lang.String-double-mealsystem.MealBehavior-ingredients.Ingredient...-">Meal-java.lang.String-java.lang.String-double-mealsystem.MealBehavior-ingredients.Ingredient...-334,14510
+<li class="blockList"><a name="method.detail">method.detail351,15162
+<a name="getTotalIngredientPrice--">getTotalIngredientPrice--355,15248
+<a name="updatePrices--">updatePrices--368,15599
+<a name="updateSpecialPrices-double-">updateSpecialPrices-double-381,15912
+<a name="getName--">getName--390,16128
+<a name="getPrice--">getPrice--399,16295
+<a name="setPrice-double-">setPrice-double-413,16631
+<a name="getSpecialPrice--">getSpecialPrice--427,16958
+<a name="setSpecialPrice-double-">setSpecialPrice-double-441,17300
+<a name="getDescription--">getDescription--455,17680
+<a name="setDescription-java.lang.String-">setDescription-java.lang.String-464,17868
+<a name="isSpecialOffer--">isSpecialOffer--473,18093
+<a name="setSpecialOfferToggle-boolean-">setSpecialOfferToggle-boolean-486,18398
+<a name="getIngredients--">getIngredients--500,18802
+<a name="getIngredientsString--">getIngredientsString--513,19201
+<a name="setBehavior-mealsystem.MealBehavior-">setBehavior-mealsystem.MealBehavior-526,19538
+<a name="executeBehavior-ingredients.Ingredient-java.lang.Integer-">executeBehavior-ingredients.Ingredient-java.lang.Integer-535,19825
+<a name="toString--">toString--545,20205
+<a name="equals-java.lang.Object-">equals-java.lang.Object-561,20666
+<a name="hashCode--">hashCode--575,21066
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom597,21564
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow601,21741
+<a name="skip.navbar.bottom">skip.navbar.bottom654,23545
+
+doc/mealsystem/MealBehavior.html,640
+<div class="topNav"><a name="navbar.top">navbar.top32,1015
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1183
+<a name="skip.navbar.top">skip.navbar.top89,2915
+<li class="blockList"><a name="method.summary">method.summary117,3982
+<li class="blockList"><a name="method.detail">method.detail144,5401
+<a name="behavior-mealsystem.Meal-ingredients.Ingredient-double-">behavior-mealsystem.Meal-ingredients.Ingredient-double-148,5487
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom167,6046
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow171,6223
+<a name="skip.navbar.bottom">skip.navbar.bottom224,7964
+
+doc/mealsystem/MealFactory.html,1195
+<div class="topNav"><a name="navbar.top">navbar.top32,1020
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1188
+<a name="skip.navbar.top">skip.navbar.top89,3005
+<li class="blockList"><a name="constructor.summary">constructor.summary126,4129
+<li class="blockList"><a name="method.summary">method.summary143,4803
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object171,6850
+<li class="blockList"><a name="constructor.detail">constructor.detail187,7272
+<a name="MealFactory--">MealFactory--191,7368
+<li class="blockList"><a name="method.detail">method.detail204,7611
+<a name="createMeal-java.lang.String-java.lang.String-ingredients.Ingredient...-">createMeal-java.lang.String-java.lang.String-ingredients.Ingredient...-208,7697
+<a name="createMeal-java.lang.String-java.lang.String-double-ingredients.Ingredient...-">createMeal-java.lang.String-java.lang.String-double-ingredients.Ingredient...-229,8677
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom249,9400
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow253,9577
+<a name="skip.navbar.bottom">skip.navbar.bottom306,11403
+
+doc/mealsystem/MealFactoryBuilder.html,916
+<div class="topNav"><a name="navbar.top">navbar.top32,1025
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1193
+<a name="skip.navbar.top">skip.navbar.top89,3021
+<li class="blockList"><a name="constructor.summary">constructor.summary122,3823
+<li class="blockList"><a name="method.summary">method.summary139,4518
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object155,5663
+<li class="blockList"><a name="constructor.detail">constructor.detail171,6085
+<a name="MealFactoryBuilder--">MealFactoryBuilder--175,6181
+<li class="blockList"><a name="method.detail">method.detail188,6445
+<a name="buildFactory--">buildFactory--192,6531
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom209,6962
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow213,7139
+<a name="skip.navbar.bottom">skip.navbar.bottom266,8976
+
+doc/mealsystem/MealsTestTest.html,890
+<div class="topNav"><a name="navbar.top">navbar.top32,1018
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1186
+<a name="skip.navbar.top">skip.navbar.top89,3007
+<li class="blockList"><a name="constructor.summary">constructor.summary122,3789
+<li class="blockList"><a name="method.summary">method.summary139,4469
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object155,5470
+<li class="blockList"><a name="constructor.detail">constructor.detail171,5892
+<a name="MealsTestTest--">MealsTestTest--175,5988
+<li class="blockList"><a name="method.detail">method.detail188,6237
+<a name="test--">test--192,6323
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom209,6605
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow213,6782
+<a name="skip.navbar.bottom">skip.navbar.bottom266,8612
+
+doc/mealsystem/NormalBehavior.html,990
+<div class="topNav"><a name="navbar.top">navbar.top32,1020
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1188
+<a name="skip.navbar.top">skip.navbar.top89,3009
+<li class="blockList"><a name="constructor.summary">constructor.summary127,4045
+<li class="blockList"><a name="method.summary">method.summary144,4728
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object162,6003
+<li class="blockList"><a name="constructor.detail">constructor.detail178,6425
+<a name="NormalBehavior--">NormalBehavior--182,6521
+<li class="blockList"><a name="method.detail">method.detail195,6773
+<a name="behavior-mealsystem.Meal-ingredients.Ingredient-double-">behavior-mealsystem.Meal-ingredients.Ingredient-double-199,6859
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom222,7780
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow226,7957
+<a name="skip.navbar.bottom">skip.navbar.bottom279,9787
+
+doc/mealsystem/package-frame.html,0
+
+doc/mealsystem/package-summary.html,364
+<div class="topNav"><a name="navbar.top">navbar.top26,770
+<a name="navbar.top.firstrow">navbar.top.firstrow30,938
+<a name="skip.navbar.top">skip.navbar.top68,2168
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom162,5861
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow166,6038
+<a name="skip.navbar.bottom">skip.navbar.bottom204,7277
+
+doc/mealsystem/package-tree.html,364
+<div class="topNav"><a name="navbar.top">navbar.top26,802
+<a name="navbar.top.firstrow">navbar.top.firstrow30,970
+<a name="skip.navbar.top">skip.navbar.top68,2134
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom113,5568
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow117,5745
+<a name="skip.navbar.bottom">skip.navbar.bottom155,6918
+
+doc/mealsystem/package-use.html,548
+<div class="topNav"><a name="navbar.top">navbar.top26,802
+<a name="navbar.top.firstrow">navbar.top.firstrow30,970
+<a name="skip.navbar.top">skip.navbar.top68,2075
+<li class="blockList"><a name="coresystem">coresystem100,3135
+<li class="blockList"><a name="mealsystem">mealsystem115,3750
+<li class="blockList"><a name="orders">orders136,4639
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom154,5298
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow158,5475
+<a name="skip.navbar.bottom">skip.navbar.bottom196,6589
+
+doc/mealsystem/RemoveIngredient.html,994
+<div class="topNav"><a name="navbar.top">navbar.top32,1024
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1192
+<a name="skip.navbar.top">skip.navbar.top89,2908
+<li class="blockList"><a name="constructor.summary">constructor.summary127,3952
+<li class="blockList"><a name="method.summary">method.summary144,4641
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object162,5918
+<li class="blockList"><a name="constructor.detail">constructor.detail178,6340
+<a name="RemoveIngredient--">RemoveIngredient--182,6436
+<li class="blockList"><a name="method.detail">method.detail195,6694
+<a name="behavior-mealsystem.Meal-ingredients.Ingredient-double-">behavior-mealsystem.Meal-ingredients.Ingredient-double-199,6780
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom222,7701
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow226,7878
+<a name="skip.navbar.bottom">skip.navbar.bottom279,9603
+
+doc/orders/class-use/Order.html,417
+<div class="topNav"><a name="navbar.top">navbar.top26,808
+<a name="navbar.top.firstrow">navbar.top.firstrow30,976
+<a name="skip.navbar.top">skip.navbar.top68,2161
+<li class="blockList"><a name="users">users94,3028
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom117,4163
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow121,4340
+<a name="skip.navbar.bottom">skip.navbar.bottom159,5534
+
+doc/orders/class-use/OrderTest.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,816
+<a name="navbar.top.firstrow">navbar.top.firstrow30,984
+<a name="skip.navbar.top">skip.navbar.top68,2181
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom77,2514
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow81,2691
+<a name="skip.navbar.bottom">skip.navbar.bottom119,3897
+
+doc/orders/Order.html,1179
+<div class="topNav"><a name="navbar.top">navbar.top32,1026
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1194
+<a name="skip.navbar.top">skip.navbar.top89,2860
+<li class="blockList"><a name="constructor.summary">constructor.summary122,3602
+<li class="blockList"><a name="method.summary">method.summary141,4292
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object175,6514
+<li class="blockList"><a name="constructor.detail">constructor.detail191,6936
+<a name="Order--">Order--195,7032
+<li class="blockList"><a name="method.detail">method.detail209,7300
+<a name="Add_order-mealsystem.Meal-users.User-int-">Add_order-mealsystem.Meal-users.User-int-213,7386
+<a name="getTotalTransaction--">getTotalTransaction--231,8001
+<a name="Add_order_specialoffer-mealsystem.Meal-users.User-int-">Add_order_specialoffer-mealsystem.Meal-users.User-int-240,8194
+<a name="Summary--">Summary--251,8662
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom268,8965
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow272,9142
+<a name="skip.navbar.bottom">skip.navbar.bottom325,10817
+
+doc/orders/OrderTest.html,882
+<div class="topNav"><a name="navbar.top">navbar.top32,1010
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1178
+<a name="skip.navbar.top">skip.navbar.top89,2852
+<li class="blockList"><a name="constructor.summary">constructor.summary122,3610
+<li class="blockList"><a name="method.summary">method.summary139,4274
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object155,5267
+<li class="blockList"><a name="constructor.detail">constructor.detail171,5689
+<a name="OrderTest--">OrderTest--175,5785
+<li class="blockList"><a name="method.detail">method.detail188,6022
+<a name="test--">test--192,6108
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom214,6564
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow218,6741
+<a name="skip.navbar.bottom">skip.navbar.bottom271,8424
+
+doc/orders/package-frame.html,0
+
+doc/orders/package-summary.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,762
+<a name="navbar.top.firstrow">navbar.top.firstrow30,930
+<a name="skip.navbar.top">skip.navbar.top68,2155
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom99,3139
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow103,3316
+<a name="skip.navbar.bottom">skip.navbar.bottom141,4550
+
+doc/orders/package-tree.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,794
+<a name="navbar.top.firstrow">navbar.top.firstrow30,962
+<a name="skip.navbar.top">skip.navbar.top68,2121
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom91,2912
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow95,3089
+<a name="skip.navbar.bottom">skip.navbar.bottom133,4257
+
+doc/orders/package-use.html,417
+<div class="topNav"><a name="navbar.top">navbar.top26,794
+<a name="navbar.top.firstrow">navbar.top.firstrow30,962
+<a name="skip.navbar.top">skip.navbar.top68,2063
+<li class="blockList"><a name="users">users92,2859
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom110,3504
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow114,3681
+<a name="skip.navbar.bottom">skip.navbar.bottom152,4791
+
+doc/overview-frame.html,0
+
+doc/overview-summary.html,364
+<div class="topNav"><a name="navbar.top">navbar.top26,760
+<a name="navbar.top.firstrow">navbar.top.firstrow30,928
+<a name="skip.navbar.top">skip.navbar.top68,1944
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom116,3616
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow120,3793
+<a name="skip.navbar.bottom">skip.navbar.bottom158,4818
+
+doc/overview-tree.html,365
+<div class="topNav"><a name="navbar.top">navbar.top26,774
+<a name="navbar.top.firstrow">navbar.top.firstrow30,942
+<a name="skip.navbar.top">skip.navbar.top68,1955
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom151,8861
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow155,9038
+<a name="skip.navbar.bottom">skip.navbar.bottom193,10060
+
+doc/script.js,73
+function show(type)show1,0
+function updateTabs(type)updateTabs16,354
+
+doc/update/class-use/Publisher.html,427
+<div class="topNav"><a name="navbar.top">navbar.top26,824
+<a name="navbar.top.firstrow">navbar.top.firstrow30,992
+<a name="skip.navbar.top">skip.navbar.top68,2193
+<li class="blockList"><a name="coresystem">coresystem94,3098
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom117,4170
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow121,4347
+<a name="skip.navbar.bottom">skip.navbar.bottom159,5557
+
+doc/update/class-use/Subscriber.html,539
+<div class="topNav"><a name="navbar.top">navbar.top26,826
+<a name="navbar.top.firstrow">navbar.top.firstrow30,994
+<a name="skip.navbar.top">skip.navbar.top68,2198
+<li class="blockList"><a name="coresystem">coresystem102,3335
+<li class="blockList"><a name="update">update136,6086
+<li class="blockList"><a name="users">users158,7569
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom193,9164
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow197,9341
+<a name="skip.navbar.bottom">skip.navbar.bottom235,10554
+
+doc/update/package-frame.html,0
+
+doc/update/package-summary.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,762
+<a name="navbar.top.firstrow">navbar.top.firstrow30,930
+<a name="skip.navbar.top">skip.navbar.top68,2150
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom99,3167
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow103,3344
+<a name="skip.navbar.bottom">skip.navbar.bottom141,4573
+
+doc/update/package-tree.html,362
+<div class="topNav"><a name="navbar.top">navbar.top26,794
+<a name="navbar.top.firstrow">navbar.top.firstrow30,962
+<a name="skip.navbar.top">skip.navbar.top68,2116
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom87,2881
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow91,3058
+<a name="skip.navbar.bottom">skip.navbar.bottom129,4221
+
+doc/update/package-use.html,538
+<div class="topNav"><a name="navbar.top">navbar.top26,794
+<a name="navbar.top.firstrow">navbar.top.firstrow30,962
+<a name="skip.navbar.top">skip.navbar.top68,2063
+<li class="blockList"><a name="coresystem">coresystem100,3097
+<li class="blockList"><a name="update">update118,3840
+<li class="blockList"><a name="users">users133,4439
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom151,5094
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow155,5271
+<a name="skip.navbar.bottom">skip.navbar.bottom193,6381
+
+doc/update/Publisher.html,726
+<div class="topNav"><a name="navbar.top">navbar.top32,1023
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1191
+<a name="skip.navbar.top">skip.navbar.top89,2805
+<li class="blockList"><a name="method.summary">method.summary117,3581
+<li class="blockList"><a name="method.detail">method.detail150,5404
+<a name="subscribe-update.Subscriber-">subscribe-update.Subscriber-154,5490
+<a name="unsubscribe-update.Subscriber-">unsubscribe-update.Subscriber-163,5743
+<a name="notifySubscriber--">notifySubscriber--172,6004
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom189,6310
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow193,6487
+<a name="skip.navbar.bottom">skip.navbar.bottom246,8110
+
+doc/update/Subscriber.html,1109
+<div class="topNav"><a name="navbar.top">navbar.top32,1046
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1214
+<a name="skip.navbar.top">skip.navbar.top89,2887
+<li class="blockList"><a name="field.summary">field.summary117,3778
+<li class="blockList"><a name="method.summary">method.summary136,4536
+<li class="blockList"><a name="field.detail">field.detail181,7018
+<a name="receive_address">receive_address185,7102
+<li class="blockList"><a name="method.detail">method.detail202,7539
+<a name="setReceiveAddress-java.lang.String-">setReceiveAddress-java.lang.String-206,7625
+<a name="getReceiveAddress--">getReceiveAddress--215,7851
+<a name="setReceiveUpdates-boolean-">setReceiveUpdates-boolean-224,8036
+<a name="getReceiveUpdates--">getReceiveUpdates--233,8233
+<a name="setBirthday-java.util.Date-">setBirthday-java.util.Date-242,8409
+<a name="getBirthday--">getBirthday--251,8602
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom268,8903
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow272,9080
+<a name="skip.navbar.bottom">skip.navbar.bottom325,10762
+
+doc/users/class-use/ClientUser.html,481
+<div class="topNav"><a name="navbar.top">navbar.top26,816
+<a name="navbar.top.firstrow">navbar.top.firstrow30,984
+<a name="skip.navbar.top">skip.navbar.top68,2181
+<li class="blockList"><a name="coresystem">coresystem98,3187
+<li class="blockList"><a name="users">users132,5339
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom157,6418
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow161,6595
+<a name="skip.navbar.bottom">skip.navbar.bottom199,7801
+
+doc/users/class-use/StaffUser.html,427
+<div class="topNav"><a name="navbar.top">navbar.top26,814
+<a name="navbar.top.firstrow">navbar.top.firstrow30,982
+<a name="skip.navbar.top">skip.navbar.top68,2176
+<li class="blockList"><a name="coresystem">coresystem94,3065
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom119,4309
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow123,4486
+<a name="skip.navbar.bottom">skip.navbar.bottom161,5689
+
+doc/users/class-use/User.html,555
+<div class="topNav"><a name="navbar.top">navbar.top26,804
+<a name="navbar.top.firstrow">navbar.top.firstrow30,972
+<a name="skip.navbar.top">skip.navbar.top68,2151
+<li class="blockList"><a name="cardfidelitysystem">cardfidelitysystem102,3264
+<li class="blockList"><a name="orders">orders147,6401
+<li class="blockList"><a name="users">users175,8160
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom206,9490
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow210,9667
+<a name="skip.navbar.bottom">skip.navbar.bottom248,10855
+
+doc/users/ClientUser.html,1845
+<div class="topNav"><a name="navbar.top">navbar.top32,1012
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1180
+<a name="skip.navbar.top">skip.navbar.top89,2858
+<li class="blockList"><a name="constructor.summary">constructor.summary140,4171
+<li class="blockList"><a name="method.summary">method.summary190,6735
+<li class="blockList"><a name="methods.inherited.from.class.users.User">methods.inherited.from.class.users.User206,7754
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object213,10067
+<li class="blockList"><a name="constructor.detail">constructor.detail229,10461
+<a name="ClientUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-">ClientUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-233,10557
+<a name="ClientUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">ClientUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-257,11445
+<a name="ClientUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-">ClientUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-279,12191
+<a name="ClientUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">ClientUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-301,12984
+<li class="blockList"><a name="method.detail">method.detail325,13721
+<a name="getUsertype--">getUsertype--329,13807
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom346,14122
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow350,14299
+<a name="skip.navbar.bottom">skip.navbar.bottom403,15986
+
+doc/users/package-frame.html,0
+
+doc/users/package-summary.html,364
+<div class="topNav"><a name="navbar.top">navbar.top26,760
+<a name="navbar.top.firstrow">navbar.top.firstrow30,928
+<a name="skip.navbar.top">skip.navbar.top68,2103
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom107,3349
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow111,3526
+<a name="skip.navbar.bottom">skip.navbar.bottom149,4710
+
+doc/users/package-tree.html,363
+<div class="topNav"><a name="navbar.top">navbar.top26,792
+<a name="navbar.top.firstrow">navbar.top.firstrow30,960
+<a name="skip.navbar.top">skip.navbar.top68,2072
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom98,3113
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow102,3290
+<a name="skip.navbar.bottom">skip.navbar.bottom140,4411
+
+doc/users/package-use.html,618
+<div class="topNav"><a name="navbar.top">navbar.top26,792
+<a name="navbar.top.firstrow">navbar.top.firstrow30,960
+<a name="skip.navbar.top">skip.navbar.top68,2060
+<li class="blockList"><a name="cardfidelitysystem">cardfidelitysystem104,3229
+<li class="blockList"><a name="coresystem">coresystem119,3861
+<li class="blockList"><a name="orders">orders141,4710
+<li class="blockList"><a name="users">users156,5294
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom179,6098
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow183,6275
+<a name="skip.navbar.bottom">skip.navbar.bottom221,7384
+
+doc/users/StaffUser.html,2036
+<div class="topNav"><a name="navbar.top">navbar.top32,1018
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1186
+<a name="skip.navbar.top">skip.navbar.top89,2952
+<li class="blockList"><a name="constructor.summary">constructor.summary141,4308
+<li class="blockList"><a name="method.summary">method.summary191,6840
+<li class="blockList"><a name="methods.inherited.from.class.users.ClientUser">methods.inherited.from.class.users.ClientUser215,8199
+<li class="blockList"><a name="methods.inherited.from.class.users.User">methods.inherited.from.class.users.User222,8528
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object229,10721
+<li class="blockList"><a name="constructor.detail">constructor.detail245,11115
+<a name="StaffUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-">StaffUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-249,11211
+<a name="StaffUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">StaffUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-273,12090
+<a name="StaffUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-">StaffUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-295,12828
+<a name="StaffUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">StaffUser-java.lang.String-java.lang.String-java.lang.String-java.lang.String-317,13613
+<li class="blockList"><a name="method.detail">method.detail341,14343
+<a name="equals-java.lang.Object-">equals-java.lang.Object-345,14429
+<a name="hashCode--">hashCode--360,15111
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom383,15858
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow387,16035
+<a name="skip.navbar.bottom">skip.navbar.bottom440,17810
+
+doc/users/User.html,4252
+<div class="topNav"><a name="navbar.top">navbar.top32,1243
+<a name="navbar.top.firstrow">navbar.top.firstrow36,1411
+<a name="skip.navbar.top">skip.navbar.top89,3071
+<li class="blockList"><a name="constructor.summary">constructor.summary131,4169
+<li class="blockList"><a name="method.summary">method.summary198,7910
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">methods.inherited.from.class.java.lang.Object336,16523
+<li class="blockList"><a name="constructor.detail">constructor.detail352,16917
+<a name="User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-">User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-356,17013
+<a name="User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-java.util.Date-">User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-java.util.Date-379,17805
+<a name="User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-404,18688
+<a name="User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.Date-">User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.Date-425,19344
+<a name="User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-">User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-448,20091
+<a name="User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-java.util.Date-">User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.util.HashMap-java.util.Date-469,20794
+<a name="User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">User-java.lang.String-java.lang.String-java.lang.String-java.lang.String-483,21320
+<li class="blockList"><a name="method.detail">method.detail506,21973
+<a name="setFidelityCard-cardfidelitysystem.FidelityCard-">setFidelityCard-cardfidelitysystem.FidelityCard-510,22059
+<a name="getOrders--">getOrders--519,22389
+<a name="getFidelityCard--">getFidelityCard--528,22637
+<a name="setCanReceiveSpecialOffers-boolean-">setCanReceiveSpecialOffers-boolean-537,22914
+<a name="getCanReceiveSpecialOffers--">getCanReceiveSpecialOffers--546,23150
+<a name="getUsername--">getUsername--555,23365
+<a name="getPassword--">getPassword--564,23544
+<a name="getEmail--">getEmail--573,23723
+<a name="getContactHash--">getContactHash--582,23893
+<a name="getContactKeys--">getContactKeys--591,24123
+<a name="getContactValue-java.lang.String-">getContactValue-java.lang.String-600,24311
+<a name="setReceiveUpdates-boolean-">setReceiveUpdates-boolean-609,24550
+<a name="getReceiveUpdates--">getReceiveUpdates--622,25057
+<a name="setEmail-java.lang.String-">setEmail-java.lang.String-635,25536
+<a name="getFirstname--">getFirstname--644,25737
+<a name="setReceiveAddress-java.lang.String-">setReceiveAddress-java.lang.String-653,25919
+<a name="getReceiveAddress--">getReceiveAddress--666,26464
+<a name="getLastname--">getLastname--679,26952
+<a name="registerUpdates--">registerUpdates--688,27131
+<a name="setBirthday-java.util.Date-">setBirthday-java.util.Date-698,27412
+<a name="getBirthday--">getBirthday--711,27910
+<a name="setReceiveBirthdayOffer-java.lang.Boolean-">setReceiveBirthdayOffer-java.lang.Boolean-724,28366
+<a name="getReceiveBirthdayOffer--">getReceiveBirthdayOffer--733,28613
+<a name="registerBirthday--">registerBirthday--742,28819
+<a name="recordBirthday--">recordBirthday--752,29118
+<a name="birthdayIsToday--">birthdayIsToday--762,29370
+<a name="toString--">toString--771,29552
+<a name="equals-java.lang.Object-">equals-java.lang.Object-784,29875
+<a name="hashCode--">hashCode--798,30280
+<div class="bottomNav"><a name="navbar.bottom">navbar.bottom820,30778
+<a name="navbar.bottom.firstrow">navbar.bottom.firstrow824,30955
+<a name="skip.navbar.bottom">skip.navbar.bottom877,32624
+
+src/cardfidelitysystem/BasicFidelityCard.java,390
+package cardfidelitysystem;cardfidelitysystem1,0
+public class BasicFidelityCard extends FidelityCard {BasicFidelityCard5,49
+	public BasicFidelityCard(User owner){BasicFidelityCard10,168
+	public BasicFidelityCard(User owner){BasicFidelityCard.BasicFidelityCard10,168
+	public boolean useFeature() {useFeature21,369
+	public boolean useFeature() {BasicFidelityCard.useFeature21,369
+
+src/cardfidelitysystem/FidelityCard.java,874
+package cardfidelitysystem;cardfidelitysystem1,0
+public abstract class FidelityCard {FidelityCard10,95
+	public User owner;owner11,132
+	public User owner;FidelityCard.owner11,132
+	public int percentage;percentage12,152
+	public int percentage;FidelityCard.percentage12,152
+	public String name;name13,176
+	public String name;FidelityCard.name13,176
+	public FidelityCard(User owner){FidelityCard19,242
+	public FidelityCard(User owner){FidelityCard.FidelityCard19,242
+	public String getCardName(){getCardName28,381
+	public String getCardName(){FidelityCard.getCardName28,381
+	public FidelityCard(User owner, int percentage){FidelityCard39,585
+	public FidelityCard(User owner, int percentage){FidelityCard.FidelityCard39,585
+	public abstract boolean useFeature();useFeature52,833
+	public abstract boolean useFeature();FidelityCard.useFeature52,833
+
+src/cardfidelitysystem/FidelityCardFactory.java,549
+package cardfidelitysystem;cardfidelitysystem1,0
+public class FidelityCardFactory {FidelityCardFactory12,176
+	HashMap<String, FidelityCard> cardtypes = new HashMap<String, FidelityCard>();cardtypes13,211
+	HashMap<String, FidelityCard> cardtypes = new HashMap<String, FidelityCard>();FidelityCardFactory.cardtypes13,211
+	public FidelityCard createFidelityCard(String cardName, ClientUser user){createFidelityCard22,405
+	public FidelityCard createFidelityCard(String cardName, ClientUser user){FidelityCardFactory.createFidelityCard22,405
+
+src/cardfidelitysystem/LotteryFidelityCard.java,1399
+package cardfidelitysystem;cardfidelitysystem1,0
+public class LotteryFidelityCard extends FidelityCard{LotteryFidelityCard12,113
+	Random rand = new Random();rand13,168
+	Random rand = new Random();LotteryFidelityCard.rand13,168
+	private boolean canUseFeature = true;canUseFeature14,197
+	private boolean canUseFeature = true;LotteryFidelityCard.canUseFeature14,197
+	int percentage;percentage15,236
+	int percentage;LotteryFidelityCard.percentage15,236
+	public LotteryFidelityCard(User owner, int percentage){LotteryFidelityCard22,392
+	public LotteryFidelityCard(User owner, int percentage){LotteryFidelityCard.LotteryFidelityCard22,392
+	public LotteryFidelityCard(User owner){LotteryFidelityCard31,590
+	public LotteryFidelityCard(User owner){LotteryFidelityCard.LotteryFidelityCard31,590
+	public void setPercentage(int percentage){setPercentage41,764
+	public void setPercentage(int percentage){LotteryFidelityCard.setPercentage41,764
+	public boolean useFeature() {useFeature52,1078
+	public boolean useFeature() {LotteryFidelityCard.useFeature52,1078
+	public boolean isCanUseFeature() {isCanUseFeature68,1389
+	public boolean isCanUseFeature() {LotteryFidelityCard.isCanUseFeature68,1389
+	public void setCanUseFeature(boolean canUseFeature) {setCanUseFeature76,1517
+	public void setCanUseFeature(boolean canUseFeature) {LotteryFidelityCard.setCanUseFeature76,1517
+
+src/cardfidelitysystem/PointFidelityCard.java,1735
+package cardfidelitysystem;cardfidelitysystem1,0
+public class PointFidelityCard extends FidelityCard{PointFidelityCard10,119
+	int points = 0;points11,172
+	int points = 0;PointFidelityCard.points11,172
+	double totalAmountSpent;totalAmountSpent12,189
+	double totalAmountSpent;PointFidelityCard.totalAmountSpent12,189
+	double totalAmountProcessed;totalAmountProcessed13,215
+	double totalAmountProcessed;PointFidelityCard.totalAmountProcessed13,215
+	int discountTickets = 0;discountTickets14,245
+	int discountTickets = 0;PointFidelityCard.discountTickets14,245
+	boolean canGetDiscount = false;canGetDiscount15,271
+	boolean canGetDiscount = false;PointFidelityCard.canGetDiscount15,271
+	double discountRate = 0.10;	discountRate16,304
+	double discountRate = 0.10;	PointFidelityCard.discountRate16,304
+	public PointFidelityCard(User owner){PointFidelityCard17,334
+	public PointFidelityCard(User owner){PointFidelityCard.PointFidelityCard17,334
+	public double getDiscountRate(){getDiscountRate28,517
+	public double getDiscountRate(){PointFidelityCard.getDiscountRate28,517
+	public void update(){update35,626
+	public void update(){PointFidelityCard.update35,626
+	public void updatePoints(){updatePoints45,846
+	public void updatePoints(){PointFidelityCard.updatePoints45,846
+	public void Add_Cash_as_Points(double amount){Add_Cash_as_Points62,1202
+	public void Add_Cash_as_Points(double amount){PointFidelityCard.Add_Cash_as_Points62,1202
+	public boolean useFeature(){useFeature80,1559
+	public boolean useFeature(){PointFidelityCard.useFeature80,1559
+	public int getDiscountTickets() {getDiscountTickets92,1745
+	public int getDiscountTickets() {PointFidelityCard.getDiscountTickets92,1745
+
+src/CLUITest/TestAllCorrectCases.java,405
+package CLUITest;CLUITest1,0
+public class TestAllCorrectCases {TestAllCorrectCases13,266
+	static Scanner scanner = new Scanner(System.in);scanner14,301
+	static Scanner scanner = new Scanner(System.in);TestAllCorrectCases.scanner14,301
+	public static void main(String[] args) throws Exception {main16,353
+	public static void main(String[] args) throws Exception {TestAllCorrectCases.main16,353
+
+src/CLUITest/TestExceptions.java,385
+package CLUITest;CLUITest1,0
+public class TestExceptions {TestExceptions10,165
+	static Scanner scanner = new Scanner(System.in);scanner11,195
+	static Scanner scanner = new Scanner(System.in);TestExceptions.scanner11,195
+	public static void main(String[] args) throws Exception {main13,246
+	public static void main(String[] args) throws Exception {TestExceptions.main13,246
+
+src/CLUITest/TestFidelityCardsEffects.java,425
+package CLUITest;CLUITest1,0
+public class TestFidelityCardsEffects {TestFidelityCardsEffects13,266
+	static Scanner scanner = new Scanner(System.in);scanner14,306
+	static Scanner scanner = new Scanner(System.in);TestFidelityCardsEffects.scanner14,306
+	public static void main(String[] args) throws Exception {main16,358
+	public static void main(String[] args) throws Exception {TestFidelityCardsEffects.main16,358
+
+src/commandinterface/ClientConsole.java,5505
+package commandinterface;commandinterface1,0
+public class ClientConsole {ClientConsole27,482
+	static RestaurantSystem re1 = new RestaurantSystem("our restaurant!");re128,511
+	static RestaurantSystem re1 = new RestaurantSystem("our restaurant!");ClientConsole.re128,511
+	static ArrayList<Order> orders = new ArrayList<Order>();orders29,583
+	static ArrayList<Order> orders = new ArrayList<Order>();ClientConsole.orders29,583
+	static HashSet<AbstractMeal> meals = new HashSet<AbstractMeal>();;meals30,641
+	static HashSet<AbstractMeal> meals = new HashSet<AbstractMeal>();;ClientConsole.meals30,641
+	static HashSet<String> ingredients = new HashSet<String>();ingredients31,709
+	static HashSet<String> ingredients = new HashSet<String>();ClientConsole.ingredients31,709
+	static Scanner sc = new Scanner(System.in);sc32,770
+	static Scanner sc = new Scanner(System.in);ClientConsole.sc32,770
+	private static CommandConsole cl = new CommandConsole();cl33,815
+	private static CommandConsole cl = new CommandConsole();ClientConsole.cl33,815
+	static ClientUser currentUser;currentUser34,873
+	static ClientUser currentUser;ClientConsole.currentUser34,873
+	static Meal currentMeal;currentMeal35,905
+	static Meal currentMeal;ClientConsole.currentMeal35,905
+	static protected FidelityCardFactory fcf = new FidelityCardFactory();fcf36,931
+	static protected FidelityCardFactory fcf = new FidelityCardFactory();ClientConsole.fcf36,931
+	static Meal editedMeal = null;editedMeal38,1003
+	static Meal editedMeal = null;ClientConsole.editedMeal38,1003
+	static boolean globalPhase = true;globalPhase40,1036
+	static boolean globalPhase = true;ClientConsole.globalPhase40,1036
+	static boolean loginPhase = true;loginPhase41,1072
+	static boolean loginPhase = true;ClientConsole.loginPhase41,1072
+	static boolean loggedinPhase = false;loggedinPhase42,1107
+	static boolean loggedinPhase = false;ClientConsole.loggedinPhase42,1107
+	public static void registerUser(String input) throws RuntimeException {registerUser51,1281
+	public static void registerUser(String input) throws RuntimeException {ClientConsole.registerUser51,1281
+	public static void insertChef(String input) throws RuntimeException {insertChef76,2022
+	public static void insertChef(String input) throws RuntimeException {ClientConsole.insertChef76,2022
+	public static void loginUser(String input) {loginUser101,2722
+	public static void loginUser(String input) {ClientConsole.loginUser101,2722
+	public static void addContactInfo(String input) {addContactInfo132,3539
+	public static void addContactInfo(String input) {ClientConsole.addContactInfo132,3539
+	public static void associateCard(String input) {associateCard158,4299
+	public static void associateCard(String input) {ClientConsole.associateCard158,4299
+	public static void associateAgreement(String input) {associateAgreement188,5229
+	public static void associateAgreement(String input) {ClientConsole.associateAgreement188,5229
+	public static void addIngredient(String input) {addIngredient228,6328
+	public static void addIngredient(String input) {ClientConsole.addIngredient228,6328
+	public static void createMeal(String input) {createMeal258,7066
+	public static void createMeal(String input) {ClientConsole.createMeal258,7066
+	public static void currentMeal(String input) {currentMeal286,7763
+	public static void currentMeal(String input) {ClientConsole.currentMeal286,7763
+	public static void saveMeal(String input) {saveMeal299,7987
+	public static void saveMeal(String input) {ClientConsole.saveMeal299,7987
+	public static void listMeals(String input) {listMeals312,8238
+	public static void listMeals(String input) {ClientConsole.listMeals312,8238
+	public static void listIngredients(String input) {listIngredients325,8497
+	public static void listIngredients(String input) {ClientConsole.listIngredients325,8497
+	public static void selectMeal(String input) {selectMeal344,8993
+	public static void selectMeal(String input) {ClientConsole.selectMeal344,8993
+	public static void personalizeMeal(String input) {personalizeMeal378,9857
+	public static void personalizeMeal(String input) {ClientConsole.personalizeMeal378,9857
+	public static void saveOrder(String input) {saveOrder409,10609
+	public static void saveOrder(String input) {ClientConsole.saveOrder409,10609
+	public static void notifyBirthday(String input) {notifyBirthday422,10846
+	public static void notifyBirthday(String input) {ClientConsole.notifyBirthday422,10846
+	public static void putInSpecialOffer(String input) {putInSpecialOffer444,11430
+	public static void putInSpecialOffer(String input) {ClientConsole.putInSpecialOffer444,11430
+	public static void notifyAd(String input) {notifyAd473,12264
+	public static void notifyAd(String input) {ClientConsole.notifyAd473,12264
+	public static void showMeal(String input) {showMeal507,13228
+	public static void showMeal(String input) {ClientConsole.showMeal507,13228
+	public static void logout(String input) {logout534,13876
+	public static void logout(String input) {ClientConsole.logout534,13876
+	public static void operationsInputTreatment(String input) {operationsInputTreatment549,14225
+	public static void operationsInputTreatment(String input) {ClientConsole.operationsInputTreatment549,14225
+	public static void main(String[] args) throws Exception {main832,24429
+	public static void main(String[] args) throws Exception {ClientConsole.main832,24429
+
+src/commandinterface/CommandConsole.java,4005
+package commandinterface;commandinterface1,0
+public class CommandConsole {CommandConsole19,399
+	private static Scanner sc = new Scanner(System.in);sc20,429
+	private static Scanner sc = new Scanner(System.in);CommandConsole.sc20,429
+	public ClientUser registerClient(String firstname, String lastname, String username, String password){registerClient30,630
+	public ClientUser registerClient(String firstname, String lastname, String username, String password){CommandConsole.registerClient30,630
+	public ClientUser login(String username, String password){login43,1020
+	public ClientUser login(String username, String password){CommandConsole.login43,1020
+	public void associateCard(String username, String password, String cardType){associateCard62,1565
+	public void associateCard(String username, String password, String cardType){CommandConsole.associateCard62,1565
+	public void associateAgreement(String username, String password, String agreement) {associateAgreement79,2173
+	public void associateAgreement(String username, String password, String agreement) {CommandConsole.associateAgreement79,2173
+	public void associateAgreement(String username, String password, String agreement, String modifier){associateAgreement102,2821
+	public void associateAgreement(String username, String password, String agreement, String modifier){CommandConsole.associateAgreement102,2821
+	public StaffUser insertChef(String firstname, String lastname, String username, String password){insertChef126,3465
+	public StaffUser insertChef(String firstname, String lastname, String username, String password){CommandConsole.insertChef126,3465
+	public void logout(){logout137,3818
+	public void logout(){CommandConsole.logout137,3818
+	public void addContactInfo(String username, String password, String type, String detail){addContactInfo153,4226
+	public void addContactInfo(String username, String password, String type, String detail){CommandConsole.addContactInfo153,4226
+	public Meal createMeal(String name, double price){createMeal174,4746
+	public Meal createMeal(String name, double price){CommandConsole.createMeal174,4746
+	public Ingredient addIngredient(String name, double quantity){addIngredient194,5377
+	public Ingredient addIngredient(String name, double quantity){CommandConsole.addIngredient194,5377
+	public Meal currentMeal(){currentMeal213,6110
+	public Meal currentMeal(){CommandConsole.currentMeal213,6110
+	public Meal saveMeal(){saveMeal235,6841
+	public Meal saveMeal(){CommandConsole.saveMeal235,6841
+	public void putInSpecialOffer(String mealName, double price) {putInSpecialOffer261,7686
+	public void putInSpecialOffer(String mealName, double price) {CommandConsole.putInSpecialOffer261,7686
+	public void listIngredients(String meal){listIngredients287,8344
+	public void listIngredients(String meal){CommandConsole.listIngredients287,8344
+	public void selectMeal(String mealname, int quantity){selectMeal307,8904
+	public void selectMeal(String mealname, int quantity){CommandConsole.selectMeal307,8904
+	public Meal personalizeMeal(String mealName, String IngredientName, int quantity){personalizeMeal333,9592
+	public Meal personalizeMeal(String mealName, String IngredientName, int quantity){CommandConsole.personalizeMeal333,9592
+	public void saveOrder(){saveOrder374,11291
+	public void saveOrder(){CommandConsole.saveOrder374,11291
+	public void notifyBirthday(){notifyBirthday385,11732
+	public void notifyBirthday(){CommandConsole.notifyBirthday385,11732
+	public void notifyAd(String message, String mealName, double specialPrice) {notifyAd397,12116
+	public void notifyAd(String message, String mealName, double specialPrice) {CommandConsole.notifyAd397,12116
+	public void listMeals() {listMeals406,12387
+	public void listMeals() {CommandConsole.listMeals406,12387
+	public void showMeal(String orderingCriteria){showMeal414,12575
+	public void showMeal(String orderingCriteria){CommandConsole.showMeal414,12575
+
+src/commandinterface/Test1.java,861
+package commandinterface;commandinterface1,0
+public class Test1 {Test115,255
+	static InputStream stdin = System.in;stdin17,325
+	static InputStream stdin = System.in;Test1.stdin17,325
+	static StaffUser waiter = new StaffUser("Bob", "Red", "bobred", "123456");waiter20,385
+	static StaffUser waiter = new StaffUser("Bob", "Red", "bobred", "123456");Test1.waiter20,385
+	static CommandConsole cc = new CommandConsole();cc21,461
+	static CommandConsole cc = new CommandConsole();Test1.cc21,461
+	private static Scanner sc = new Scanner(System.in);sc22,511
+	private static Scanner sc = new Scanner(System.in);Test1.sc22,511
+	private static Scanner customscan;customscan24,565
+	private static Scanner customscan;Test1.customscan24,565
+	public static void main(String[] args){main26,603
+	public static void main(String[] args){Test1.main26,603
+
+src/coresystem/LoadSystem.java,1241
+package coresystem;coresystem1,0
+public class LoadSystem extends Thread {LoadSystem14,250
+	RestaurantSystem re1;re115,292
+	RestaurantSystem re1;LoadSystem.re115,292
+	ArrayList<Order> orders;orders16,316
+	ArrayList<Order> orders;LoadSystem.orders16,316
+	ClientUser LoginUser;LoginUser17,343
+	ClientUser LoginUser;LoadSystem.LoginUser17,343
+	HashSet<AbstractMeal> meals;meals18,367
+	HashSet<AbstractMeal> meals;LoadSystem.meals18,367
+	HashSet<Ingredient> ingredients;ingredients19,398
+	HashSet<Ingredient> ingredients;LoadSystem.ingredients19,398
+	private Scanner sc;sc20,433
+	private Scanner sc;LoadSystem.sc20,433
+	public LoadSystem(String name){LoadSystem26,515
+	public LoadSystem(String name){LoadSystem.LoadSystem26,515
+	public void addStaff(StaffUser staff){addStaff38,814
+	public void addStaff(StaffUser staff){LoadSystem.addStaff38,814
+	public void addIngredient(Ingredient ingredient){addIngredient46,987
+	public void addIngredient(Ingredient ingredient){LoadSystem.addIngredient46,987
+	public void addMeals(AbstractMeal meals){addMeals54,1157
+	public void addMeals(AbstractMeal meals){LoadSystem.addMeals54,1157
+	public void run() {run60,1249
+	public void run() {LoadSystem.run60,1249
+
+src/coresystem/RestaurantSystem.java,6761
+package coresystem;coresystem1,0
+public class RestaurantSystem implements Publisher{RestaurantSystem20,378
+	String message = "";message21,431
+	String message = "";RestaurantSystem.message21,431
+	String name;name22,454
+	String name;RestaurantSystem.name22,454
+	boolean registration_phase = true;registration_phase23,469
+	boolean registration_phase = true;RestaurantSystem.registration_phase23,469
+	boolean user_phase = true;user_phase24,506
+	boolean user_phase = true;RestaurantSystem.user_phase24,506
+	boolean exit = false;exit25,535
+	boolean exit = false;RestaurantSystem.exit25,535
+	Set<ClientUser> user_list;user_list26,559
+	Set<ClientUser> user_list;RestaurantSystem.user_list26,559
+	private ArrayList<Subscriber> subscriber_list = new ArrayList<Subscriber>();subscriber_list27,588
+	private ArrayList<Subscriber> subscriber_list = new ArrayList<Subscriber>();RestaurantSystem.subscriber_list27,588
+	public HashSet<AbstractMeal> meal_list = new HashSet<AbstractMeal>();meal_list28,667
+	public HashSet<AbstractMeal> meal_list = new HashSet<AbstractMeal>();RestaurantSystem.meal_list28,667
+	public String birthdaySpecialOffer = "30% discount!";birthdaySpecialOffer29,739
+	public String birthdaySpecialOffer = "30% discount!";RestaurantSystem.birthdaySpecialOffer29,739
+	public double birthdayOffer = 0.3;birthdayOffer30,795
+	public double birthdayOffer = 0.3;RestaurantSystem.birthdayOffer30,795
+	private String staffKey = "EYMSresto";staffKey31,832
+	private String staffKey = "EYMSresto";RestaurantSystem.staffKey31,832
+	public RestaurantSystem(String restaurant_name){RestaurantSystem37,966
+	public RestaurantSystem(String restaurant_name){RestaurantSystem.RestaurantSystem37,966
+	public Set<ClientUser> getUserList(){getUserList46,1152
+	public Set<ClientUser> getUserList(){RestaurantSystem.getUserList46,1152
+	public ClientUser getUserFromUserName(String USERNAME){getUserFromUserName55,1311
+	public ClientUser getUserFromUserName(String USERNAME){RestaurantSystem.getUserFromUserName55,1311
+	public ClientUser validateUser(String USERNAME, String PASSWORD){validateUser70,1635
+	public ClientUser validateUser(String USERNAME, String PASSWORD){RestaurantSystem.validateUser70,1635
+	public void addUser(ClientUser newUser){addUser92,2178
+	public void addUser(ClientUser newUser){RestaurantSystem.addUser92,2178
+	public String getRestaurantName(){getRestaurantName99,2300
+	public String getRestaurantName(){RestaurantSystem.getRestaurantName99,2300
+	public boolean getRegistrationPhase(){getRegistrationPhase106,2413
+	public boolean getRegistrationPhase(){RestaurantSystem.getRegistrationPhase106,2413
+	public void setRegistrationPhase(boolean bool){setRegistrationPhase114,2551
+	public void setRegistrationPhase(boolean bool){RestaurantSystem.setRegistrationPhase114,2551
+	public boolean getUserPhase(){getUserPhase122,2681
+	public boolean getUserPhase(){RestaurantSystem.getUserPhase122,2681
+	public void setUserPhase(boolean bool){setUserPhase129,2792
+	public void setUserPhase(boolean bool){RestaurantSystem.setUserPhase129,2792
+	public void setExit(boolean bool){setExit137,2905
+	public void setExit(boolean bool){RestaurantSystem.setExit137,2905
+	public void printUsers(){printUsers145,3145
+	public void printUsers(){RestaurantSystem.printUsers145,3145
+	public void register(){register159,3464
+	public void register(){RestaurantSystem.register159,3464
+	public void register(String firstname, String lastname, String username, String password, String email, String dob, String staffKey){register348,9962
+	public void register(String firstname, String lastname, String username, String password, String email, String dob, String staffKey){RestaurantSystem.register348,9962
+	public ClientUser login(String username, String password){login365,10525
+	public ClientUser login(String username, String password){RestaurantSystem.login365,10525
+	Set<ClientUser> getUser_list(){getUser_list384,10982
+	Set<ClientUser> getUser_list(){RestaurantSystem.getUser_list384,10982
+	public ArrayList<Subscriber> getSubscriber_list(){getSubscriber_list392,11123
+	public ArrayList<Subscriber> getSubscriber_list(){RestaurantSystem.getSubscriber_list392,11123
+	public HashSet<AbstractMeal> getMeal_list(){getMeal_list396,11214
+	public HashSet<AbstractMeal> getMeal_list(){RestaurantSystem.getMeal_list396,11214
+	public void subscribe(Subscriber sub) {subscribe404,11363
+	public void subscribe(Subscriber sub) {RestaurantSystem.subscribe404,11363
+	public void unsubscribe(Subscriber unsub) {unsubscribe412,11494
+	public void unsubscribe(Subscriber unsub) {RestaurantSystem.unsubscribe412,11494
+	public void notifySubscriber() {notifySubscriber421,11721
+	public void notifySubscriber() {RestaurantSystem.notifySubscriber421,11721
+	public void notifySubscriber(String message, String mealName) {notifySubscriber451,12588
+	public void notifySubscriber(String message, String mealName) {RestaurantSystem.notifySubscriber451,12588
+	public void notifyBirthday(){notifyBirthday483,13584
+	public void notifyBirthday(){RestaurantSystem.notifyBirthday483,13584
+	public void popupMessage(Subscriber sub){popupMessage506,14239
+	public void popupMessage(Subscriber sub){RestaurantSystem.popupMessage506,14239
+	public String birthdayOffer(Subscriber sub){birthdayOffer520,14585
+	public String birthdayOffer(Subscriber sub){RestaurantSystem.birthdayOffer520,14585
+	public String allMealOffer(){allMealOffer534,15048
+	public String allMealOffer(){RestaurantSystem.allMealOffer534,15048
+	public String normaldayOffer(Subscriber sub){normaldayOffer549,15365
+	public String normaldayOffer(Subscriber sub){RestaurantSystem.normaldayOffer549,15365
+	public void setbirthdaySpecialOffer(String offer){this.birthdaySpecialOffer = offer;}setbirthdaySpecialOffer562,15716
+	public void setbirthdaySpecialOffer(String offer){this.birthdaySpecialOffer = offer;}RestaurantSystem.setbirthdaySpecialOffer562,15716
+	public String getbirthdaySpecialOffer(){return this.birthdaySpecialOffer;}getbirthdaySpecialOffer563,15804
+	public String getbirthdaySpecialOffer(){return this.birthdaySpecialOffer;}RestaurantSystem.getbirthdaySpecialOffer563,15804
+	public void refresh(){refresh569,15932
+	public void refresh(){RestaurantSystem.refresh569,15932
+	public void setMessage(String message) {setMessage604,17076
+	public void setMessage(String message) {RestaurantSystem.setMessage604,17076
+	public String getMessage() {getMessage612,17215
+	public String getMessage() {RestaurantSystem.getMessage612,17215
+	public String printMeal_list() {printMeal_list621,17330
+	public String printMeal_list() {RestaurantSystem.printMeal_list621,17330
+
+src/coresystem/RunSystem.java,193
+package coresystem;coresystem1,0
+public class RunSystem {RunSystem14,354
+	public static void main(String[] args){main15,380
+	public static void main(String[] args){RunSystem.main15,380
+
+src/customutilities/CustomUtilities.java,279
+package customutilities;customutilities1,0
+public final class CustomUtilities {CustomUtilities6,87
+	public static double round(final double value, final int places) {round7,124
+	public static double round(final double value, final int places) {CustomUtilities.round7,124
+
+src/gui/CreateMealGUI.java,69
+package gui;gui1,0
+public class CreateMealGUI {CreateMealGUI3,14
+
+src/gui/HomeGUI.java,2581
+		package gui;gui1,0
+public class HomeGUI extends JFrame{HomeGUI25,567
+	static RestaurantSystem res = new RestaurantSystem("EYMS");res26,604
+	static RestaurantSystem res = new RestaurantSystem("EYMS");HomeGUI.res26,604
+    public static void main(String[] args){main32,698
+    public static void main(String[] args){HomeGUI.main32,698
+    JTextField usernameF;usernameF37,792
+    JTextField usernameF;HomeGUI.usernameF37,792
+    JTextField passwordF;passwordF38,818
+    JTextField passwordF;HomeGUI.passwordF38,818
+    JButton loginB;loginB39,844
+    JButton loginB;HomeGUI.loginB39,844
+    JButton registerB;registerB40,864
+    JButton registerB;HomeGUI.registerB40,864
+    JTextArea display;display41,887
+    JTextArea display;HomeGUI.display41,887
+    public HomeGUI(){HomeGUI44,916
+    public HomeGUI(){HomeGUI.HomeGUI44,916
+    private class ListenForButton implements ActionListener {ListenForButton116,2947
+    private class ListenForButton implements ActionListener {HomeGUI.ListenForButton116,2947
+        public void actionPerformed(ActionEvent e) {actionPerformed119,3028
+        public void actionPerformed(ActionEvent e) {HomeGUI.ListenForButton.actionPerformed119,3028
+    private class ListenForKey implements KeyListener {ListenForKey143,3862
+    private class ListenForKey implements KeyListener {HomeGUI.ListenForKey143,3862
+        public void keyPressed(KeyEvent e) {keyPressed146,3937
+        public void keyPressed(KeyEvent e) {HomeGUI.ListenForKey.keyPressed146,3937
+        public void keyTyped(KeyEvent e) {keyTyped152,4063
+        public void keyTyped(KeyEvent e) {HomeGUI.ListenForKey.keyTyped152,4063
+        public void keyReleased(KeyEvent e) {keyReleased158,4187
+        public void keyReleased(KeyEvent e) {HomeGUI.ListenForKey.keyReleased158,4187
+        public int hashCode() {hashCode165,4315
+        public int hashCode() {HomeGUI.ListenForKey.hashCode165,4315
+        protected void finalize() throws Throwable {finalize171,4468
+        protected void finalize() throws Throwable {HomeGUI.ListenForKey.finalize171,4468
+        public boolean equals(Object obj) {equals177,4635
+        public boolean equals(Object obj) {HomeGUI.ListenForKey.equals177,4635
+        public String toString() {toString183,4801
+        public String toString() {HomeGUI.ListenForKey.toString183,4801
+        protected Object clone() throws CloneNotSupportedException {clone189,4957
+        protected Object clone() throws CloneNotSupportedException {HomeGUI.ListenForKey.clone189,4957
+
+src/gui/LogInGUI.java,1034
+package gui;gui1,0
+public class LogInGUI extends JFrame{LogInGUI16,288
+	User user;user17,326
+	User user;LogInGUI.user17,326
+	JTextArea display;display18,338
+	JTextArea display;LogInGUI.display18,338
+	JPanel logInPan;logInPan19,358
+	JPanel logInPan;LogInGUI.logInPan19,358
+	JButton createMeal;createMeal20,376
+	JButton createMeal;LogInGUI.createMeal20,376
+	public LogInGUI(User u){LogInGUI23,401
+	public LogInGUI(User u){LogInGUI.LogInGUI23,401
+	public void clientlogin(){clientlogin72,1453
+	public void clientlogin(){LogInGUI.clientlogin72,1453
+	public void stafflogin(){stafflogin75,1487
+	public void stafflogin(){LogInGUI.stafflogin75,1487
+    private class ListenForButton implements ActionListener {ListenForButton83,1626
+    private class ListenForButton implements ActionListener {LogInGUI.ListenForButton83,1626
+        public void actionPerformed(ActionEvent e) {actionPerformed86,1707
+        public void actionPerformed(ActionEvent e) {LogInGUI.ListenForButton.actionPerformed86,1707
+
+src/gui/RegisterGUI.java,2799
+package gui;gui1,0
+public class RegisterGUI extends JFrame{RegisterGUI30,647
+    JTextField firstnameF;firstnameF32,707
+    JTextField firstnameF;RegisterGUI.firstnameF32,707
+    JTextField lastnameF;lastnameF33,734
+    JTextField lastnameF;RegisterGUI.lastnameF33,734
+    JTextField usernameF;usernameF34,760
+    JTextField usernameF;RegisterGUI.usernameF34,760
+    JTextField passwordF;passwordF35,786
+    JTextField passwordF;RegisterGUI.passwordF35,786
+    JTextField emailF;emailF36,812
+    JTextField emailF;RegisterGUI.emailF36,812
+    JTextField dobF;dobF37,835
+    JTextField dobF;RegisterGUI.dobF37,835
+    JTextField staffKeyF;staffKeyF38,856
+    JTextField staffKeyF;RegisterGUI.staffKeyF38,856
+    JButton registerB;registerB39,882
+    JButton registerB;RegisterGUI.registerB39,882
+    JTextArea display;display40,905
+    JTextArea display;RegisterGUI.display40,905
+	 public RegisterGUI(){RegisterGUI43,930
+	 public RegisterGUI(){RegisterGUI.RegisterGUI43,930
+	    private class ListenForButton implements ActionListener {ListenForButton128,3408
+	    private class ListenForButton implements ActionListener {RegisterGUI.ListenForButton128,3408
+	        public void actionPerformed(ActionEvent e) {actionPerformed131,3491
+	        public void actionPerformed(ActionEvent e) {RegisterGUI.ListenForButton.actionPerformed131,3491
+	    private class ListenForKey implements KeyListener {ListenForKey149,4323
+	    private class ListenForKey implements KeyListener {RegisterGUI.ListenForKey149,4323
+	        public void keyPressed(KeyEvent e) {keyPressed152,4400
+	        public void keyPressed(KeyEvent e) {RegisterGUI.ListenForKey.keyPressed152,4400
+	        public void keyTyped(KeyEvent e) {keyTyped158,4530
+	        public void keyTyped(KeyEvent e) {RegisterGUI.ListenForKey.keyTyped158,4530
+	        public void keyReleased(KeyEvent e) {keyReleased164,4658
+	        public void keyReleased(KeyEvent e) {RegisterGUI.ListenForKey.keyReleased164,4658
+	        public int hashCode() {hashCode171,4790
+	        public int hashCode() {RegisterGUI.ListenForKey.hashCode171,4790
+	        protected void finalize() throws Throwable {finalize177,4948
+	        protected void finalize() throws Throwable {RegisterGUI.ListenForKey.finalize177,4948
+	        public boolean equals(Object obj) {equals183,5120
+	        public boolean equals(Object obj) {RegisterGUI.ListenForKey.equals183,5120
+	        public String toString() {toString189,5291
+	        public String toString() {RegisterGUI.ListenForKey.toString189,5291
+	        protected Object clone() throws CloneNotSupportedException {clone195,5452
+	        protected Object clone() throws CloneNotSupportedException {RegisterGUI.ListenForKey.clone195,5452
+
+src/ingredients/Ingredient.java,2983
+package ingredients;ingredients1,0
+public class Ingredient {Ingredient7,99
+	private String name;name8,126
+	private String name;Ingredient.name8,126
+	private double quantity;quantity9,149
+	private double quantity;Ingredient.quantity9,149
+	private double priceperquantity = 0;priceperquantity10,176
+	private double priceperquantity = 0;Ingredient.priceperquantity10,176
+	private double totalprice = 0;totalprice11,215
+	private double totalprice = 0;Ingredient.totalprice11,215
+	private double original_quantity;original_quantity12,248
+	private double original_quantity;Ingredient.original_quantity12,248
+	public Ingredient(String name, double quantity){Ingredient15,289
+	public Ingredient(String name, double quantity){Ingredient.Ingredient15,289
+	public Ingredient(String name, double quantity, double priceperquantity){Ingredient23,445
+	public Ingredient(String name, double quantity, double priceperquantity){Ingredient.Ingredient23,445
+	public Ingredient createnewinstance(){createnewinstance36,868
+	public Ingredient createnewinstance(){Ingredient.createnewinstance36,868
+	public void setOriginal_Quantity(double quantity) {setOriginal_Quantity41,971
+	public void setOriginal_Quantity(double quantity) {Ingredient.setOriginal_Quantity41,971
+	public double getOriginalQuantity(){getOriginalQuantity46,1074
+	public double getOriginalQuantity(){Ingredient.getOriginalQuantity46,1074
+	public void addQuantity(double quantity){addQuantity51,1152
+	public void addQuantity(double quantity){Ingredient.addQuantity51,1152
+	public void removeQuantity(double quantity){removeQuantity56,1312
+	public void removeQuantity(double quantity){Ingredient.removeQuantity56,1312
+	public double getPriceperquantity() {getPriceperquantity65,1595
+	public double getPriceperquantity() {Ingredient.getPriceperquantity65,1595
+	public void setPriceperquantity(double priceperquantity) {setPriceperquantity69,1669
+	public void setPriceperquantity(double priceperquantity) {Ingredient.setPriceperquantity69,1669
+	public double getTotalprice() {getTotalprice73,1781
+	public double getTotalprice() {Ingredient.getTotalprice73,1781
+	public void setTotalprice(double totalprice) {setTotalprice78,1926
+	public void setTotalprice(double totalprice) {Ingredient.setTotalprice78,1926
+	public void setName(String name) {setName82,2039
+	public void setName(String name) {Ingredient.setName82,2039
+	public void setQuantity(double quantity) {setQuantity86,2103
+	public void setQuantity(double quantity) {Ingredient.setQuantity86,2103
+	public String getName(){getName95,2379
+	public String getName(){Ingredient.getName95,2379
+	public double getQuantity(){getQuantity99,2434
+	public double getQuantity(){Ingredient.getQuantity99,2434
+	public boolean equals(Object o){equals110,2583
+	public boolean equals(Object o){Ingredient.equals110,2583
+	public int hashCode(){hashCode122,2818
+	public int hashCode(){Ingredient.hashCode122,2818
+
+src/ingredients/IngredientFactory.java,539
+package ingredients;ingredients1,0
+public class IngredientFactory {IngredientFactory3,22
+	public Ingredient createIngredient(String name, double quantity) {createIngredient4,55
+	public Ingredient createIngredient(String name, double quantity) {IngredientFactory.createIngredient4,55
+	public Ingredient createIngredient(String name, double quantity, double priceperquantity){createIngredient8,169
+	public Ingredient createIngredient(String name, double quantity, double priceperquantity){IngredientFactory.createIngredient8,169
+
+src/jUnittests/JFidCardTest.java,685
+package jUnittests;jUnittests1,0
+public class JFidCardTest {JFidCardTest13,262
+	public void testBasicUseFeature() {testBasicUseFeature17,329
+	public void testBasicUseFeature() {JFidCardTest.testBasicUseFeature17,329
+	public void testLotteryUseFeature() {testLotteryUseFeature26,608
+	public void testLotteryUseFeature() {JFidCardTest.testLotteryUseFeature26,608
+	public void testPointAdd_Cash_as_Points(){testPointAdd_Cash_as_Points41,974
+	public void testPointAdd_Cash_as_Points(){JFidCardTest.testPointAdd_Cash_as_Points41,974
+	public void testPointUseFeature(){testPointUseFeature49,1233
+	public void testPointUseFeature(){JFidCardTest.testPointUseFeature49,1233
+
+src/jUnittests/JIngredientTest.java,835
+package jUnittests;jUnittests1,0
+public class JIngredientTest {JIngredientTest12,161
+	Ingredient TestIngredient = new Ingredient("test1", 1, 1.56);TestIngredient13,192
+	Ingredient TestIngredient = new Ingredient("test1", 1, 1.56);JIngredientTest.TestIngredient13,192
+	public void testConstructorsAndEquivalence(){testConstructorsAndEquivalence16,264
+	public void testConstructorsAndEquivalence(){JIngredientTest.testConstructorsAndEquivalence16,264
+	public void ConstructorQuantityCannotBeNegative() {ConstructorQuantityCannotBeNegative38,1309
+	public void ConstructorQuantityCannotBeNegative() {JIngredientTest.ConstructorQuantityCannotBeNegative38,1309
+	public void CannotRemoveZeroQuantity(){CannotRemoveZeroQuantity44,1518
+	public void CannotRemoveZeroQuantity(){JIngredientTest.CannotRemoveZeroQuantity44,1518
+
+src/jUnittests/JMealsTest.java,3385
+package jUnittests;jUnittests1,0
+public class JMealsTest {JMealsTest22,493
+	private static final String Exception = null;Exception23,519
+	private static final String Exception = null;JMealsTest.Exception23,519
+	AbstractMealFactory meals = new MealFactory();meals24,566
+	AbstractMealFactory meals = new MealFactory();JMealsTest.meals24,566
+	IngredientFactory ingredient = new IngredientFactory();ingredient26,616
+	IngredientFactory ingredient = new IngredientFactory();JMealsTest.ingredient26,616
+	Ingredient vegetable = ingredient.createIngredient("vegetable", 1, 1.15);vegetable27,673
+	Ingredient vegetable = ingredient.createIngredient("vegetable", 1, 1.15);JMealsTest.vegetable27,673
+	Meal salad = (Meal) meals.createMeal("salad", "good for your health", 0, vegetable);salad29,750
+	Meal salad = (Meal) meals.createMeal("salad", "good for your health", 0, vegetable);JMealsTest.salad29,750
+	Meal steak = (Meal) meals.createMeal("steak", "also good for you", vegetable);steak30,836
+	Meal steak = (Meal) meals.createMeal("steak", "also good for you", vegetable);JMealsTest.steak30,836
+	Meal icecream = (Meal) meals.createMeal("icecream", "good for you", 10, vegetable);icecream31,916
+	Meal icecream = (Meal) meals.createMeal("icecream", "good for you", 10, vegetable);JMealsTest.icecream31,916
+	HashSet<AbstractMeal> meal_list = new HashSet<AbstractMeal>();meal_list32,1001
+	HashSet<AbstractMeal> meal_list = new HashSet<AbstractMeal>();JMealsTest.meal_list32,1001
+	public void testMealsDistinguishedNotOnlyByName() {testMealsDistinguishedNotOnlyByName36,1076
+	public void testMealsDistinguishedNotOnlyByName() {JMealsTest.testMealsDistinguishedNotOnlyByName36,1076
+	public void testMeal_ListSize(){testMeal_ListSize42,1179
+	public void testMeal_ListSize(){JMealsTest.testMeal_ListSize42,1179
+	public void testSettingSpecialProceHigherThanPriceShouldGiveDefaultPrice(){testSettingSpecialProceHigherThanPriceShouldGiveDefaultPrice51,1339
+	public void testSettingSpecialProceHigherThanPriceShouldGiveDefaultPrice(){JMealsTest.testSettingSpecialProceHigherThanPriceShouldGiveDefaultPrice51,1339
+	public void testGetSpecialPriceReturnSpecialPriceWhenOnSpecialOffer(){testGetSpecialPriceReturnSpecialPriceWhenOnSpecialOffer56,1508
+	public void testGetSpecialPriceReturnSpecialPriceWhenOnSpecialOffer(){JMealsTest.testGetSpecialPriceReturnSpecialPriceWhenOnSpecialOffer56,1508
+	public void testAddExistingIngredientsReturnException(){testAddExistingIngredientsReturnException63,1742
+	public void testAddExistingIngredientsReturnException(){JMealsTest.testAddExistingIngredientsReturnException63,1742
+	public void testRemoveNonExistingIngredientsReturnException(){testRemoveNonExistingIngredientsReturnException72,2077
+	public void testRemoveNonExistingIngredientsReturnException(){JMealsTest.testRemoveNonExistingIngredientsReturnException72,2077
+	public void testNormalBehavoirReturnsEverythingToNormal(){testNormalBehavoirReturnsEverythingToNormal82,2447
+	public void testNormalBehavoirReturnsEverythingToNormal(){JMealsTest.testNormalBehavoirReturnsEverythingToNormal82,2447
+	public void testChangeIngredientToBelowZeroReturnException(){testChangeIngredientToBelowZeroReturnException107,3242
+	public void testChangeIngredientToBelowZeroReturnException(){JMealsTest.testChangeIngredientToBelowZeroReturnException107,3242
+
+src/jUnittests/JOrderTest.java,3449
+package jUnittests;jUnittests1,0
+public class JOrderTest {JOrderTest25,580
+	User mathias = new ClientUser("Mathias", "Loh", "mathiasloh", "12345");mathias26,606
+	User mathias = new ClientUser("Mathias", "Loh", "mathiasloh", "12345");JOrderTest.mathias26,606
+	Order order = new Order(mathias);order27,679
+	Order order = new Order(mathias);JOrderTest.order27,679
+	IngredientFactory ingredient = new IngredientFactory();ingredient32,895
+	IngredientFactory ingredient = new IngredientFactory();JOrderTest.ingredient32,895
+	Ingredient vegetable = ingredient.createIngredient("vegetable", 1, 1);vegetable33,952
+	Ingredient vegetable = ingredient.createIngredient("vegetable", 1, 1);JOrderTest.vegetable33,952
+	Ingredient meat = ingredient.createIngredient("Meat", 2);meat34,1024
+	Ingredient meat = ingredient.createIngredient("Meat", 2);JOrderTest.meat34,1024
+	AbstractMealFactory meal = new MealFactory();meal41,1213
+	AbstractMealFactory meal = new MealFactory();JOrderTest.meal41,1213
+	MealFactory appertizers = new AppertizerFactory();appertizers42,1260
+	MealFactory appertizers = new AppertizerFactory();JOrderTest.appertizers42,1260
+	MealFactory maincourses = new MainCourseFactory();maincourses43,1312
+	MealFactory maincourses = new MainCourseFactory();JOrderTest.maincourses43,1312
+	MealFactory desserts = new DessertFactory();desserts44,1364
+	MealFactory desserts = new DessertFactory();JOrderTest.desserts44,1364
+	Appertizer salad = (Appertizer) appertizers.createMeal("salad", "good for your health", 1, vegetable);salad46,1412
+	Appertizer salad = (Appertizer) appertizers.createMeal("salad", "good for your health", 1, vegetable);JOrderTest.salad46,1412
+	MainCourse steak = (MainCourse) maincourses.createMeal("salad", "also good for you", vegetable);steak47,1516
+	MainCourse steak = (MainCourse) maincourses.createMeal("salad", "also good for you", vegetable);JOrderTest.steak47,1516
+	Dessert icecream = (Dessert) desserts.createMeal("icecream", "good for you", 10, vegetable);icecream48,1614
+	Dessert icecream = (Dessert) desserts.createMeal("icecream", "good for you", 10, vegetable);JOrderTest.icecream48,1614
+	public void testSaveOrderGiveCorrectTotalTransactionWithoutPersonalization(){testSaveOrderGiveCorrectTotalTransactionWithoutPersonalization52,1718
+	public void testSaveOrderGiveCorrectTotalTransactionWithoutPersonalization(){JOrderTest.testSaveOrderGiveCorrectTotalTransactionWithoutPersonalization52,1718
+	public void testSaveOrderGiveCorrectTotalTransactionWithPersonalization(){testSaveOrderGiveCorrectTotalTransactionWithPersonalization62,2047
+	public void testSaveOrderGiveCorrectTotalTransactionWithPersonalization(){JOrderTest.testSaveOrderGiveCorrectTotalTransactionWithPersonalization62,2047
+	public void testNewOrderOfModifiedMealShouldGiveDefaultPrice(){testNewOrderOfModifiedMealShouldGiveDefaultPrice72,2450
+	public void testNewOrderOfModifiedMealShouldGiveDefaultPrice(){JOrderTest.testNewOrderOfModifiedMealShouldGiveDefaultPrice72,2450
+	public void testOrderAsItIs(){testOrderAsItIs87,2933
+	public void testOrderAsItIs(){JOrderTest.testOrderAsItIs87,2933
+	public void testOrderMostModified(){testOrderMostModified103,3400
+	public void testOrderMostModified(){JOrderTest.testOrderMostModified103,3400
+	public void testOrderJustOnSale(){testOrderJustOnSale123,4130
+	public void testOrderJustOnSale(){JOrderTest.testOrderJustOnSale123,4130
+
+src/mealsystem/AbstractMeal.java,8152
+package mealsystem;mealsystem1,0
+public abstract class AbstractMeal{AbstractMeal16,352
+	private String name;name17,388
+	private String name;AbstractMeal.name17,388
+	double totalIngredientsPrice;totalIngredientsPrice18,410
+	double totalIngredientsPrice;AbstractMeal.totalIngredientsPrice18,410
+	double extraIngredientsPrice;extraIngredientsPrice19,441
+	double extraIngredientsPrice;AbstractMeal.extraIngredientsPrice19,441
+	private double price;price20,472
+	private double price;AbstractMeal.price20,472
+	private String stringPrice;stringPrice21,495
+	private String stringPrice;AbstractMeal.stringPrice21,495
+	private double specialPrice;specialPrice22,524
+	private double specialPrice;AbstractMeal.specialPrice22,524
+	private String description = "";description23,554
+	private String description = "";AbstractMeal.description23,554
+	private boolean specialOfferToggle = false;specialOfferToggle24,588
+	private boolean specialOfferToggle = false;AbstractMeal.specialOfferToggle24,588
+	private HashSet<Ingredient> ingredients = new HashSet<Ingredient>();ingredients25,633
+	private HashSet<Ingredient> ingredients = new HashSet<Ingredient>();AbstractMeal.ingredients25,633
+	private MealBehavior behavior = new NormalBehavior();behavior26,703
+	private MealBehavior behavior = new NormalBehavior();AbstractMeal.behavior26,703
+	private DecimalFormat df = new DecimalFormat("#.00"); df27,758
+	private DecimalFormat df = new DecimalFormat("#.00"); AbstractMeal.df27,758
+	private Boolean personalized = false;personalized28,814
+	private Boolean personalized = false;AbstractMeal.personalized28,814
+	private double default_price;default_price30,855
+	private double default_price;AbstractMeal.default_price30,855
+	private final HashSet<Ingredient> default_ingredients = new HashSet<Ingredient>();default_ingredients31,886
+	private final HashSet<Ingredient> default_ingredients = new HashSet<Ingredient>();AbstractMeal.default_ingredients31,886
+	public AbstractMeal(String name, String description, Ingredient ...ingredients){AbstractMeal39,1049
+	public AbstractMeal(String name, String description, Ingredient ...ingredients){AbstractMeal.AbstractMeal39,1049
+	private void setDefault_price(double price2) {setDefault_price59,1776
+	private void setDefault_price(double price2) {AbstractMeal.setDefault_price59,1776
+	private void setTotalingredientsprice(double updatePrices) {setTotalingredientsprice64,1872
+	private void setTotalingredientsprice(double updatePrices) {AbstractMeal.setTotalingredientsprice64,1872
+	private void setExtraingredientsprice(int i) {setExtraingredientsprice68,1994
+	private void setExtraingredientsprice(int i) {AbstractMeal.setExtraingredientsprice68,1994
+	private void setName(String name2) {setName72,2090
+	private void setName(String name2) {AbstractMeal.setName72,2090
+	public AbstractMeal(String name, String description, double price, Ingredient ...ingredients){AbstractMeal83,2297
+	public AbstractMeal(String name, String description, double price, Ingredient ...ingredients){AbstractMeal.AbstractMeal83,2297
+	public AbstractMeal(String name, String description, double price, MealBehavior behavior, Ingredient ...ingredients){AbstractMeal100,2751
+	public AbstractMeal(String name, String description, double price, MealBehavior behavior, Ingredient ...ingredients){AbstractMeal.AbstractMeal100,2751
+	public AbstractMeal(String name, double price){AbstractMeal115,3247
+	public AbstractMeal(String name, double price){AbstractMeal.AbstractMeal115,3247
+	public void insertInitialIngredients(Ingredient e){insertInitialIngredients120,3347
+	public void insertInitialIngredients(Ingredient e){AbstractMeal.insertInitialIngredients120,3347
+	public AbstractMeal createNewInstance(){createNewInstance124,3432
+	public AbstractMeal createNewInstance(){AbstractMeal.createNewInstance124,3432
+	private MealBehavior getBehavior() {return this.behavior;}getBehavior131,3754
+	private MealBehavior getBehavior() {return this.behavior;}AbstractMeal.getBehavior131,3754
+	public void setFinalDefaultIngredients(){setFinalDefaultIngredients133,3815
+	public void setFinalDefaultIngredients(){AbstractMeal.setFinalDefaultIngredients133,3815
+	public void setPersonalizedBool(Boolean bool){setPersonalizedBool148,4253
+	public void setPersonalizedBool(Boolean bool){AbstractMeal.setPersonalizedBool148,4253
+	public Boolean getPersonalizedBool(){getPersonalizedBool152,4334
+	public Boolean getPersonalizedBool(){AbstractMeal.getPersonalizedBool152,4334
+	public double getTotalIngredientPrice(){getTotalIngredientPrice156,4406
+	public double getTotalIngredientPrice(){AbstractMeal.getTotalIngredientPrice156,4406
+	public double updatePrices(){updatePrices164,4595
+	public double updatePrices(){AbstractMeal.updatePrices164,4595
+	public double updateSpecialPrices(double price){updateSpecialPrices172,4772
+	public double updateSpecialPrices(double price){AbstractMeal.updateSpecialPrices172,4772
+	public String getName() {getName181,5014
+	public String getName() {AbstractMeal.getName181,5014
+	public double getPrice() {getPrice190,5179
+	public double getPrice() {AbstractMeal.getPrice190,5179
+	public String getStringPrice(){getStringPrice198,5409
+	public String getStringPrice(){AbstractMeal.getStringPrice198,5409
+	public void setPrice(double price){setPrice207,5575
+	public void setPrice(double price){AbstractMeal.setPrice207,5575
+	public double getSpecialPrice() {getSpecialPrice217,5744
+	public double getSpecialPrice() {AbstractMeal.getSpecialPrice217,5744
+	public void setSpecialPrice(double specialPrice) {setSpecialPrice229,5986
+	public void setSpecialPrice(double specialPrice) {AbstractMeal.setSpecialPrice229,5986
+	public String getDescription() {getDescription238,6193
+	public String getDescription() {AbstractMeal.getDescription238,6193
+	public void setDescription(String description) {setDescription243,6259
+	public void setDescription(String description) {AbstractMeal.setDescription243,6259
+	public boolean isSpecialOffer() {isSpecialOffer251,6412
+	public boolean isSpecialOffer() {AbstractMeal.isSpecialOffer251,6412
+	public void setSpecialOfferToggle(boolean specialOffer) {setSpecialOfferToggle259,6566
+	public void setSpecialOfferToggle(boolean specialOffer) {AbstractMeal.setSpecialOfferToggle259,6566
+	public HashSet<Ingredient> getIngredients() {getIngredients267,6728
+	public HashSet<Ingredient> getIngredients() {AbstractMeal.getIngredients267,6728
+	public String getIngredientsString(){getIngredientsString275,6872
+	public String getIngredientsString(){AbstractMeal.getIngredientsString275,6872
+	public void setBehavior(MealBehavior b){setBehavior295,7473
+	public void setBehavior(MealBehavior b){AbstractMeal.setBehavior295,7473
+	public void executeBehavior(Ingredient ingredient, Integer quantity){executeBehavior299,7541
+	public void executeBehavior(Ingredient ingredient, Integer quantity){AbstractMeal.executeBehavior299,7541
+	public String toString(){toString305,7674
+	public String toString(){AbstractMeal.toString305,7674
+	public void printIngredients(){printIngredients312,7898
+	public void printIngredients(){AbstractMeal.printIngredients312,7898
+	public boolean equals(Object o){equals327,8259
+	public boolean equals(Object o){AbstractMeal.equals327,8259
+	public int hashCode(){hashCode339,8541
+	public int hashCode(){AbstractMeal.hashCode339,8541
+	public double getextraIngredientsPrice() {getextraIngredientsPrice349,8763
+	public double getextraIngredientsPrice() {AbstractMeal.getextraIngredientsPrice349,8763
+	public double getDefaultprice() {getDefaultprice353,8848
+	public double getDefaultprice() {AbstractMeal.getDefaultprice353,8848
+	public void setIngredients(HashSet<Ingredient> hashSet) {setIngredients357,8916
+	public void setIngredients(HashSet<Ingredient> hashSet) {AbstractMeal.setIngredients357,8916
+	public HashSet<Ingredient> getDefault_ingredients() {getDefault_ingredients362,9012
+	public HashSet<Ingredient> getDefault_ingredients() {AbstractMeal.getDefault_ingredients362,9012
+
+src/mealsystem/AbstractMealFactory.java,846
+package mealsystem;mealsystem1,0
+public abstract class AbstractMealFactory {AbstractMealFactory5,53
+	public abstract AbstractMeal createMeal(String name, String description, Ingredient ...ingredients);createMeal16,403
+	public abstract AbstractMeal createMeal(String name, String description, Ingredient ...ingredients);AbstractMealFactory.createMeal16,403
+	public abstract AbstractMeal createMeal(String name, String description, double price, Ingredient ...ingredients);createMeal17,505
+	public abstract AbstractMeal createMeal(String name, String description, double price, Ingredient ...ingredients);AbstractMealFactory.createMeal17,505
+	public abstract AbstractMeal createMeal(String name, double price);createMeal18,621
+	public abstract AbstractMeal createMeal(String name, double price);AbstractMealFactory.createMeal18,621
+
+src/mealsystem/AbstractMealFactoryBuilder.java,302
+package mealsystem;mealsystem1,0
+public class AbstractMealFactoryBuilder {AbstractMealFactoryBuilder6,70
+	public static Map<String,AbstractMealFactory> buildFactory() {buildFactory7,112
+	public static Map<String,AbstractMealFactory> buildFactory() {AbstractMealFactoryBuilder.buildFactory7,112
+
+src/mealsystem/AddIngredient.java,314
+package mealsystem;mealsystem1,0
+public class AddIngredient implements MealBehavior{AddIngredient6,79
+	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity){behavior7,131
+	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity){AddIngredient.behavior7,131
+
+src/mealsystem/Appertizer.java,866
+package mealsystem;mealsystem1,0
+public class Appertizer extends Meal{Appertizer5,53
+	public Appertizer(String name, String description, double price, Ingredient[] ingredients) {Appertizer7,92
+	public Appertizer(String name, String description, double price, Ingredient[] ingredients) {Appertizer.Appertizer7,92
+	public Appertizer(String name, String description, Ingredient[] ingredients) {Appertizer11,239
+	public Appertizer(String name, String description, Ingredient[] ingredients) {Appertizer.Appertizer11,239
+	public Appertizer(String name, double price){Appertizer15,365
+	public Appertizer(String name, double price){Appertizer.Appertizer15,365
+	public boolean equals(Object o){equals20,450
+	public boolean equals(Object o){Appertizer.equals20,450
+	public int hashCode(){hashCode32,679
+	public int hashCode(){Appertizer.hashCode32,679
+
+src/mealsystem/AppertizerFactory.java,746
+package mealsystem;mealsystem1,0
+public class AppertizerFactory extends MealFactory{AppertizerFactory5,53
+	public Meal createMeal(String name, String description, Ingredient... ingredients) {createMeal8,117
+	public Meal createMeal(String name, String description, Ingredient... ingredients) {AppertizerFactory.createMeal8,117
+	public Meal createMeal(String name, String description, double price, Ingredient... ingredients) {createMeal13,275
+	public Meal createMeal(String name, String description, double price, Ingredient... ingredients) {AppertizerFactory.createMeal13,275
+	public Meal createMeal(String name, double price){createMeal18,454
+	public Meal createMeal(String name, double price){AppertizerFactory.createMeal18,454
+
+src/mealsystem/ChangeIngredient.java,328
+package mealsystem;mealsystem1,0
+public class ChangeIngredient implements MealBehavior {ChangeIngredient6,93
+	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {behavior11,241
+	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {ChangeIngredient.behavior11,241
+
+src/mealsystem/Dessert.java,809
+package mealsystem;mealsystem1,0
+public class Dessert extends Meal{Dessert5,53
+	public Dessert(String name, String description, double price, Ingredient[] ingredients) {Dessert7,89
+	public Dessert(String name, String description, double price, Ingredient[] ingredients) {Dessert.Dessert7,89
+	public Dessert(String name, String description, Ingredient[] ingredients) {Dessert12,274
+	public Dessert(String name, String description, Ingredient[] ingredients) {Dessert.Dessert12,274
+	public Dessert(String name, double price){Dessert16,396
+	public Dessert(String name, double price){Dessert.Dessert16,396
+	public boolean equals(Object o){equals21,478
+	public boolean equals(Object o){Dessert.equals21,478
+	public int hashCode(){hashCode33,698
+	public int hashCode(){Dessert.hashCode33,698
+
+src/mealsystem/DessertFactory.java,732
+package mealsystem;mealsystem1,0
+public class DessertFactory extends MealFactory {DessertFactory5,53
+	public Meal createMeal(String name, String description, Ingredient... ingredients) {createMeal8,115
+	public Meal createMeal(String name, String description, Ingredient... ingredients) {DessertFactory.createMeal8,115
+	public Meal createMeal(String name, String description, double price, Ingredient... ingredients) {createMeal13,270
+	public Meal createMeal(String name, String description, double price, Ingredient... ingredients) {DessertFactory.createMeal13,270
+	public Meal createMeal(String name, double price){createMeal18,446
+	public Meal createMeal(String name, double price){DessertFactory.createMeal18,446
+
+src/mealsystem/MainCourse.java,867
+package mealsystem;mealsystem1,0
+public class MainCourse extends Meal {MainCourse5,53
+	public MainCourse(String name, String description, double price, Ingredient[] ingredients) {MainCourse7,93
+	public MainCourse(String name, String description, double price, Ingredient[] ingredients) {MainCourse.MainCourse7,93
+	public MainCourse(String name, String description, Ingredient[] ingredients) {MainCourse12,282
+	public MainCourse(String name, String description, Ingredient[] ingredients) {MainCourse.MainCourse12,282
+	public MainCourse(String name, double price){MainCourse16,408
+	public MainCourse(String name, double price){MainCourse.MainCourse16,408
+	public boolean equals(Object o){equals21,493
+	public boolean equals(Object o){MainCourse.equals21,493
+	public int hashCode(){hashCode33,722
+	public int hashCode(){MainCourse.hashCode33,722
+
+src/mealsystem/MainCourseFactory.java,746
+package mealsystem;mealsystem1,0
+public class MainCourseFactory extends MealFactory{MainCourseFactory5,53
+	public Meal createMeal(String name, String description, Ingredient... ingredients) {createMeal8,117
+	public Meal createMeal(String name, String description, Ingredient... ingredients) {MainCourseFactory.createMeal8,117
+	public Meal createMeal(String name, String description, double price, Ingredient... ingredients) {createMeal13,275
+	public Meal createMeal(String name, String description, double price, Ingredient... ingredients) {MainCourseFactory.createMeal13,275
+	public Meal createMeal(String name, double price){createMeal19,491
+	public Meal createMeal(String name, double price){MainCourseFactory.createMeal19,491
+
+src/mealsystem/Meal.java,1010
+package mealsystem;mealsystem1,0
+public class Meal extends AbstractMeal {Meal5,53
+	public Meal(String name, String description, double price, Ingredient[] ingredients) {Meal7,95
+	public Meal(String name, String description, double price, Ingredient[] ingredients) {Meal.Meal7,95
+	public Meal(String name, String description, double price, MealBehavior behavior, Ingredient[] ingredients){Meal12,277
+	public Meal(String name, String description, double price, MealBehavior behavior, Ingredient[] ingredients){Meal.Meal12,277
+	public Meal(String name, String description, Ingredient[] ingredients) {Meal16,450
+	public Meal(String name, String description, Ingredient[] ingredients) {Meal.Meal16,450
+	public Meal(String name, double price){Meal20,570
+	public Meal(String name, double price){Meal.Meal20,570
+	public boolean equals(Object o){equals24,647
+	public boolean equals(Object o){Meal.equals24,647
+	public int hashCode(){hashCode36,858
+	public int hashCode(){Meal.hashCode36,858
+
+src/mealsystem/MealBehavior.java,276
+package mealsystem;mealsystem1,0
+public interface MealBehavior {MealBehavior5,53
+	void behavior(AbstractMeal meal, Ingredient ingredient, double Quantity);behavior6,85
+	void behavior(AbstractMeal meal, Ingredient ingredient, double Quantity);MealBehavior.behavior6,85
+
+src/mealsystem/MealFactory.java,772
+package mealsystem;mealsystem1,0
+public class MealFactory extends AbstractMealFactory{MealFactory5,53
+	public AbstractMeal createMeal(String name, String description, Ingredient... ingredients) {createMeal8,119
+	public AbstractMeal createMeal(String name, String description, Ingredient... ingredients) {MealFactory.createMeal8,119
+	public AbstractMeal createMeal(String name, String description, double price, Ingredient... ingredients) {createMeal13,279
+	public AbstractMeal createMeal(String name, String description, double price, Ingredient... ingredients) {MealFactory.createMeal13,279
+	public AbstractMeal createMeal(String name, double price){createMeal18,460
+	public AbstractMeal createMeal(String name, double price){MealFactory.createMeal18,460
+
+src/mealsystem/NormalBehavior.java,322
+package mealsystem;mealsystem1,0
+public class NormalBehavior implements MealBehavior {NormalBehavior7,80
+	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {behavior10,146
+	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {NormalBehavior.behavior10,146
+
+src/mealsystem/RemoveIngredient.java,328
+package mealsystem;mealsystem1,0
+public class RemoveIngredient implements MealBehavior {RemoveIngredient6,93
+	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {behavior12,217
+	public void behavior(AbstractMeal meal, Ingredient ingredient, double quantity) {RemoveIngredient.behavior12,217
+
+src/orders/Order.java,6308
+package orders;orders1,0
+public class Order{Order14,229
+	private DecimalFormat df = new DecimalFormat("#.00"); df15,249
+	private DecimalFormat df = new DecimalFormat("#.00"); Order.df15,249
+	private ArrayList<AbstractMeal> unprocessedOrders;unprocessedOrders16,305
+	private ArrayList<AbstractMeal> unprocessedOrders;Order.unprocessedOrders16,305
+	private double total_transaction;total_transaction17,357
+	private double total_transaction;Order.total_transaction17,357
+	private ArrayList<AbstractMeal> savedOrders;savedOrders18,392
+	private ArrayList<AbstractMeal> savedOrders;Order.savedOrders18,392
+	private ArrayList<AbstractMeal> editedOrders;editedOrders19,438
+	private ArrayList<AbstractMeal> editedOrders;Order.editedOrders19,438
+	private static Stack<AbstractMeal> orders_as_it_is = new Stack<AbstractMeal>();orders_as_it_is20,485
+	private static Stack<AbstractMeal> orders_as_it_is = new Stack<AbstractMeal>();Order.orders_as_it_is20,485
+	private static HashMap<AbstractMeal, Integer> orders_most_modified = new HashMap<AbstractMeal, Integer>();orders_most_modified21,566
+	private static HashMap<AbstractMeal, Integer> orders_most_modified = new HashMap<AbstractMeal, Integer>();Order.orders_most_modified21,566
+	private static Stack<AbstractMeal> orders_when_special_offer = new Stack<AbstractMeal>();orders_when_special_offer22,674
+	private static Stack<AbstractMeal> orders_when_special_offer = new Stack<AbstractMeal>();Order.orders_when_special_offer22,674
+	private User orderedby;orderedby23,765
+	private User orderedby;Order.orderedby23,765
+	public Order(User user) {Order34,1009
+	public Order(User user) {Order.Order34,1009
+	public void saveOrder(){saveOrder45,1319
+	public void saveOrder(){Order.saveOrder45,1319
+	public static String showMealAsMostModified(){showMealAsMostModified86,2660
+	public static String showMealAsMostModified(){Order.showMealAsMostModified86,2660
+	public static String showMealsAsItIs(){showMealsAsItIs104,3240
+	public static String showMealsAsItIs(){Order.showMealsAsItIs104,3240
+	public static String showMealJustOnSale(){showMealJustOnSale117,3495
+	public static String showMealJustOnSale(){Order.showMealJustOnSale117,3495
+	public static void resetAllStaticData(){resetAllStaticData129,3754
+	public static void resetAllStaticData(){Order.resetAllStaticData129,3754
+	public void addToModifiedMap(ArrayList<AbstractMeal> mealArray){addToModifiedMap135,3974
+	public void addToModifiedMap(ArrayList<AbstractMeal> mealArray){Order.addToModifiedMap135,3974
+	public void clearOrders(){clearOrders146,4310
+	public void clearOrders(){Order.clearOrders146,4310
+	public void setSavedOrder(ArrayList<AbstractMeal> o){this.savedOrders = o;}setSavedOrder152,4458
+	public void setSavedOrder(ArrayList<AbstractMeal> o){this.savedOrders = o;}Order.setSavedOrder152,4458
+	public ArrayList<AbstractMeal> getSavedOrder(){getSavedOrder154,4536
+	public ArrayList<AbstractMeal> getSavedOrder(){Order.getSavedOrder154,4536
+	public void addPersonalizedMeal(AbstractMeal meal){addPersonalizedMeal158,4616
+	public void addPersonalizedMeal(AbstractMeal meal){Order.addPersonalizedMeal158,4616
+	public void selectMeal(AbstractMeal meal, int count){selectMeal168,4803
+	public void selectMeal(AbstractMeal meal, int count){Order.selectMeal168,4803
+	public void setUnprocessedOrders(ArrayList<AbstractMeal> o){this.unprocessedOrders = o;}setUnprocessedOrders175,4935
+	public void setUnprocessedOrders(ArrayList<AbstractMeal> o){this.unprocessedOrders = o;}Order.setUnprocessedOrders175,4935
+	public ArrayList<AbstractMeal> getUnprocessedOrders(){getUnprocessedOrders177,5026
+	public ArrayList<AbstractMeal> getUnprocessedOrders(){Order.getUnprocessedOrders177,5026
+	public void setEditedOrders(ArrayList<AbstractMeal> o){this.editedOrders = o;}setEditedOrders181,5114
+	public void setEditedOrders(ArrayList<AbstractMeal> o){this.editedOrders = o;}Order.setEditedOrders181,5114
+	public ArrayList<AbstractMeal> getEditedOrders(){getEditedOrders183,5195
+	public ArrayList<AbstractMeal> getEditedOrders(){Order.getEditedOrders183,5195
+	public AbstractMeal personalizeMeal(AbstractMeal meal, Ingredient ingredient, int quantity){personalizeMeal187,5273
+	public AbstractMeal personalizeMeal(AbstractMeal meal, Ingredient ingredient, int quantity){Order.personalizeMeal187,5273
+	public double getTotalTransaction(){return this.total_transaction;}getTotalTransaction227,6933
+	public double getTotalTransaction(){return this.total_transaction;}Order.getTotalTransaction227,6933
+	public String Summary(){Summary234,7078
+	public String Summary(){Order.Summary234,7078
+	public User getOrderedby() {getOrderedby244,7358
+	public User getOrderedby() {Order.getOrderedby244,7358
+	public void setOrderedby(User user) {setOrderedby248,7412
+	public void setOrderedby(User user) {Order.setOrderedby248,7412
+	public static Stack<AbstractMeal> getOrders_as_it_is() {getOrders_as_it_is252,7480
+	public static Stack<AbstractMeal> getOrders_as_it_is() {Order.getOrders_as_it_is252,7480
+	public static void setOrders_as_it_is(Stack<AbstractMeal> orders_as_it_is) {setOrders_as_it_is256,7568
+	public static void setOrders_as_it_is(Stack<AbstractMeal> orders_as_it_is) {Order.setOrders_as_it_is256,7568
+	public static HashMap<AbstractMeal, Integer> getOrders_most_modified() {getOrders_most_modified260,7693
+	public static HashMap<AbstractMeal, Integer> getOrders_most_modified() {Order.getOrders_most_modified260,7693
+	public static void setOrders_most_modified(HashMap<AbstractMeal, Integer> orders_most_modified) {setOrders_most_modified264,7802
+	public static void setOrders_most_modified(HashMap<AbstractMeal, Integer> orders_most_modified) {Order.setOrders_most_modified264,7802
+	public static Stack<AbstractMeal> getOrders_when_special_offer() {getOrders_when_special_offer268,7958
+	public static Stack<AbstractMeal> getOrders_when_special_offer() {Order.getOrders_when_special_offer268,7958
+	public static void setOrders_when_special_offer(Stack<AbstractMeal> orders_when_special_offer) {setOrders_when_special_offer272,8066
+	public static void setOrders_when_special_offer(Stack<AbstractMeal> orders_when_special_offer) {Order.setOrders_when_special_offer272,8066
+
+src/update/Publisher.java,629
+package update;update1,0
+public interface Publisher {Publisher3,17
+	public void subscribe(Subscriber sub);subscribe4,46
+	public void subscribe(Subscriber sub);Publisher.subscribe4,46
+	public void unsubscribe(Subscriber unsub);unsubscribe5,86
+	public void unsubscribe(Subscriber unsub);Publisher.unsubscribe5,86
+	public void notifySubscriber();notifySubscriber6,130
+	public void notifySubscriber();Publisher.notifySubscriber6,130
+	public void notifySubscriber(String message, String mealName);notifySubscriber7,163
+	public void notifySubscriber(String message, String mealName);Publisher.notifySubscriber7,163
+
+src/update/Subscriber.java,1101
+package update;update1,0
+public interface Subscriber {Subscriber5,41
+	public String receive_address ="";receive_address6,71
+	public String receive_address ="";Subscriber.receive_address6,71
+	public void setReceiveAddress(String receive_address);setReceiveAddress8,109
+	public void setReceiveAddress(String receive_address);Subscriber.setReceiveAddress8,109
+	public String getReceiveAddress();getReceiveAddress9,165
+	public String getReceiveAddress();Subscriber.getReceiveAddress9,165
+	public void setReceiveUpdates(boolean bool);setReceiveUpdates10,201
+	public void setReceiveUpdates(boolean bool);Subscriber.setReceiveUpdates10,201
+	public boolean getReceiveUpdates();getReceiveUpdates11,247
+	public boolean getReceiveUpdates();Subscriber.getReceiveUpdates11,247
+	public void setBirthday(Date date);setBirthday12,284
+	public void setBirthday(Date date);Subscriber.setBirthday12,284
+	public Date getBirthday();getBirthday13,321
+	public Date getBirthday();Subscriber.getBirthday13,321
+	public void update();update14,349
+	public void update();Subscriber.update14,349
+
+src/users/ClientUser.java,1494
+package users;users1,0
+public class ClientUser extends User{ClientUser12,160
+	protected String user_type = "Client";user_type13,199
+	protected String user_type = "Client";ClientUser.user_type13,199
+	public ClientUser(String firstname, String lastname, String username, String password, String email, HashMap<String,String> contact){ClientUser24,406
+	public ClientUser(String firstname, String lastname, String username, String password, String email, HashMap<String,String> contact){ClientUser.ClientUser24,406
+	public ClientUser(String firstname, String lastname, String username, String password, String email){ClientUser37,789
+	public ClientUser(String firstname, String lastname, String username, String password, String email){ClientUser.ClientUser37,789
+	public ClientUser(String firstname, String lastname, String username, String password, HashMap<String,String> contact){ClientUser50,1133
+	public ClientUser(String firstname, String lastname, String username, String password, HashMap<String,String> contact){ClientUser.ClientUser50,1133
+	public ClientUser(String firstname, String lastname, String username, String password){ClientUser62,1477
+	public ClientUser(String firstname, String lastname, String username, String password){ClientUser.ClientUser62,1477
+	public String getUsertype(){getUsertype67,1655
+	public String getUsertype(){ClientUser.getUsertype67,1655
+	public void update() {update72,1730
+	public void update() {ClientUser.update72,1730
+
+src/users/StaffUser.java,1226
+package users;users1,0
+public class StaffUser extends ClientUser {StaffUser10,130
+	public StaffUser(String firstname, String lastname, String username, String password, String email,StaffUser21,329
+	public StaffUser(String firstname, String lastname, String username, String password, String email,StaffUser.StaffUser21,329
+	public StaffUser(String firstname, String lastname, String username, String password, String email) {StaffUser35,701
+	public StaffUser(String firstname, String lastname, String username, String password, String email) {StaffUser.StaffUser35,701
+	public StaffUser(String firstname, String lastname, String username, String password,StaffUser48,1030
+	public StaffUser(String firstname, String lastname, String username, String password,StaffUser.StaffUser48,1030
+	public StaffUser(String firstname, String lastname, String username, String password) {StaffUser61,1363
+	public StaffUser(String firstname, String lastname, String username, String password) {StaffUser.StaffUser61,1363
+	public boolean equals(Object o){equals67,1546
+	public boolean equals(Object o){StaffUser.equals67,1546
+	public int hashCode(){hashCode76,1737
+	public int hashCode(){StaffUser.hashCode76,1737
+
+src/users/User.java,8847
+package users;users1,0
+public abstract class User implements Subscriber{User15,330
+	private String first_name;first_name16,380
+	private String first_name;User.first_name16,380
+	private String last_name;last_name17,408
+	private String last_name;User.last_name17,408
+	protected String user_name;user_name18,435
+	protected String user_name;User.user_name18,435
+	private String password;password19,464
+	private String password;User.password19,464
+	protected String email;email20,490
+	protected String email;User.email20,490
+	private HashMap<String, String> contact = new HashMap<String,String>();contact21,515
+	private HashMap<String, String> contact = new HashMap<String,String>();User.contact21,515
+	boolean receive_updates = false;receive_updates22,588
+	boolean receive_updates = false;User.receive_updates22,588
+	boolean receive_birthdayOffer = false;receive_birthdayOffer23,622
+	boolean receive_birthdayOffer = false;User.receive_birthdayOffer23,622
+	private String receive_address = this.email;receive_address24,662
+	private String receive_address = this.email;User.receive_address24,662
+	protected int amount_spent;amount_spent25,708
+	protected int amount_spent;User.amount_spent25,708
+	protected Order currentOrder = new Order(this);currentOrder26,737
+	protected Order currentOrder = new Order(this);User.currentOrder26,737
+	protected ArrayList<Order> userOrders = new ArrayList<Order>();userOrders27,786
+	protected ArrayList<Order> userOrders = new ArrayList<Order>();User.userOrders27,786
+	protected boolean canReceiveSpecialOffers = true;canReceiveSpecialOffers28,851
+	protected boolean canReceiveSpecialOffers = true;User.canReceiveSpecialOffers28,851
+	protected FidelityCard membershipCard = new BasicFidelityCard(this);membershipCard29,902
+	protected FidelityCard membershipCard = new BasicFidelityCard(this);User.membershipCard29,902
+	private Date birthday = new Date(1000,1,1);birthday31,1006
+	private Date birthday = new Date(1000,1,1);User.birthday31,1006
+	public User(String firstname, String lastname, String username, String password, String email, HashMap<String,String> contact){User34,1078
+	public User(String firstname, String lastname, String username, String password, String email, HashMap<String,String> contact){User.User34,1078
+	public User(String firstname, String lastname, String username, String password, String email, HashMap<String,String> contact, Date birthday){User44,1402
+	public User(String firstname, String lastname, String username, String password, String email, HashMap<String,String> contact, Date birthday){User.User44,1402
+	public User(String firstname, String lastname, String username, String password, String email){User55,1771
+	public User(String firstname, String lastname, String username, String password, String email){User.User55,1771
+	public User(String firstname, String lastname, String username, String password, String email, Date birthday){User64,2059
+	public User(String firstname, String lastname, String username, String password, String email, Date birthday){User.User64,2059
+	public User(String firstname, String lastname, String username, String password, HashMap<String,String> contact){User74,2392
+	public User(String firstname, String lastname, String username, String password, HashMap<String,String> contact){User.User74,2392
+	public User(String firstname, String lastname, String username, String password, HashMap<String,String> contact, Date birthday){User83,2674
+	public User(String firstname, String lastname, String username, String password, HashMap<String,String> contact, Date birthday){User.User83,2674
+	public User(String firstname, String lastname, String username, String password){User93,3000
+	public User(String firstname, String lastname, String username, String password){User.User93,3000
+	public void setFidelityCardByString(String name){setFidelityCardByString107,3345
+	public void setFidelityCardByString(String name){User.setFidelityCardByString107,3345
+	public Order getCurrentOrder(){getCurrentOrder110,3402
+	public Order getCurrentOrder(){User.getCurrentOrder110,3402
+	public void setFidelityCard(FidelityCard fidelitycard){setFidelityCard114,3468
+	public void setFidelityCard(FidelityCard fidelitycard){User.setFidelityCard114,3468
+	public ArrayList<Order> getOrders(){getOrders118,3568
+	public ArrayList<Order> getOrders(){User.getOrders118,3568
+	public FidelityCard getFidelityCard(){getFidelityCard122,3637
+	public FidelityCard getFidelityCard(){User.getFidelityCard122,3637
+	public void setCanReceiveSpecialOffers(boolean bool){setCanReceiveSpecialOffers126,3712
+	public void setCanReceiveSpecialOffers(boolean bool){User.setCanReceiveSpecialOffers126,3712
+	public boolean getCanReceiveSpecialOffers(){getCanReceiveSpecialOffers130,3811
+	public boolean getCanReceiveSpecialOffers(){User.getCanReceiveSpecialOffers130,3811
+	public String getUsername(){getUsername134,3901
+	public String getUsername(){User.getUsername134,3901
+	public String getPassword(){getPassword138,3962
+	public String getPassword(){User.getPassword138,3962
+	public String getEmail(){getEmail142,4021
+	public String getEmail(){User.getEmail142,4021
+	public void setCurrentOrder(Order o){setCurrentOrder146,4074
+	public void setCurrentOrder(Order o){User.setCurrentOrder146,4074
+	public HashMap<String, String> getContactHash(){getContactHash150,4143
+	public HashMap<String, String> getContactHash(){User.getContactHash150,4143
+	public String getContactKeys(){getContactKeys154,4216
+	public String getContactKeys(){User.getContactKeys154,4216
+	public String getContactValue(String ContactKey){getContactValue158,4297
+	public String getContactValue(String ContactKey){User.getContactValue158,4297
+	public void setReceiveUpdates(boolean bool){setReceiveUpdates162,4387
+	public void setReceiveUpdates(boolean bool){User.setReceiveUpdates162,4387
+	public boolean getReceiveUpdates(){getReceiveUpdates166,4469
+	public boolean getReceiveUpdates(){User.getReceiveUpdates166,4469
+	public void setEmail(String email){setEmail170,4542
+	public void setEmail(String email){User.setEmail170,4542
+	public String getFirstname() {getFirstname174,4606
+	public String getFirstname() {User.getFirstname174,4606
+	public void setReceiveAddress(String receive_address){setReceiveAddress178,4663
+	public void setReceiveAddress(String receive_address){User.setReceiveAddress178,4663
+	public String getReceiveAddress(){getReceiveAddress182,4766
+	public String getReceiveAddress(){User.getReceiveAddress182,4766
+	public String getLastname() {getLastname186,4838
+	public String getLastname() {User.getLastname186,4838
+	public boolean addContact(String type, String detail){addContact190,4894
+	public boolean addContact(String type, String detail){User.addContact190,4894
+	public void registerUpdates(String type){registerUpdates200,5059
+	public void registerUpdates(String type){User.registerUpdates200,5059
+	public void registerUpdates(){registerUpdates215,5434
+	public void registerUpdates(){User.registerUpdates215,5434
+	public void setBirthday(Date date){this.birthday = date;}setBirthday340,10245
+	public void setBirthday(Date date){this.birthday = date;}User.setBirthday340,10245
+	public Date getBirthday(){return this.birthday;}getBirthday342,10306
+	public Date getBirthday(){return this.birthday;}User.getBirthday342,10306
+	public void setReceiveBirthdayOffer(Boolean bool){setReceiveBirthdayOffer345,10360
+	public void setReceiveBirthdayOffer(Boolean bool){User.setReceiveBirthdayOffer345,10360
+	public boolean getReceiveBirthdayOffer(){return this.receive_birthdayOffer;}getReceiveBirthdayOffer363,10909
+	public boolean getReceiveBirthdayOffer(){return this.receive_birthdayOffer;}User.getReceiveBirthdayOffer363,10909
+	public void registerBirthday(String date){registerBirthday369,11112
+	public void registerBirthday(String date){User.registerBirthday369,11112
+	public void registerBirthday(){registerBirthday376,11297
+	public void registerBirthday(){User.registerBirthday376,11297
+	public void recordBirthday(){recordBirthday388,11540
+	public void recordBirthday(){User.recordBirthday388,11540
+	public void recordBirthday(String birthdayString){recordBirthday412,12641
+	public void recordBirthday(String birthdayString){User.recordBirthday412,12641
+	public boolean birthdayIsToday(){birthdayIsToday431,13490
+	public boolean birthdayIsToday(){User.birthdayIsToday431,13490
+	public String toString(){toString438,13717
+	public String toString(){User.toString438,13717
+	public boolean equals(Object o){equals513,15839
+	public boolean equals(Object o){User.equals513,15839
+	public int hashCode(){hashCode524,16069
+	public int hashCode(){User.hashCode524,16069
