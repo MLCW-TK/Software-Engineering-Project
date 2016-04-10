@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_tAXG0OVQEeWm85KOYWRhCg" name="RootElement">
   <packagedElement xmi:type="uml:Class" xmi:id="_ZjMekO6HEeWTO7qyjKJ3vA" name="RestaurantSystem">
-    <elementImport xmi:type="uml:ElementImport" xmi:id="_rXIIUO6JEeWTO7qyjKJ3vA"/>
-    <generalization xmi:type="uml:Generalization" xmi:id="_lVZTAP8qEeW867h8WDmWGw" general="_Z1fhMP8qEeW867h8WDmWGw"/>
+    <elementImport xmi:type="uml:ElementImport" xmi:id="_rXIIUO6JEeWTO7qyjKJ3vA" importedElement="_bFshMO6JEeWTO7qyjKJ3vA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_kgujIO6HEeWTO7qyjKJ3vA" name="name" visibility="package">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedAttribute>
@@ -25,6 +24,17 @@
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
     </ownedAttribute>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OlcFoO6JEeWTO7qyjKJ3vA" name="RunSystem">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_VAVsgO6JEeWTO7qyjKJ3vA" name="main"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bFshMO6JEeWTO7qyjKJ3vA" name="LoadSystem">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fsJu8O6JEeWTO7qyjKJ3vA" name="re1" type="_ZjMekO6HEeWTO7qyjKJ3vA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_yHyj0O6JEeWTO7qyjKJ3vA" name="orders"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0aVOMO6JEeWTO7qyjKJ3vA" name="LoginUser"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2AkMMO6JEeWTO7qyjKJ3vA" name="meals"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3fm9EO6JEeWTO7qyjKJ3vA" name="ingredients"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_Hxvu0O6KEeWTO7qyjKJ3vA" client="_bFshMO6JEeWTO7qyjKJ3vA" supplier="_tAXG0OVQEeWm85KOYWRhCg"/>
   <packagedElement xmi:type="uml:Interface" xmi:id="_TzYUsO6KEeWTO7qyjKJ3vA" name="Subscriber">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_pFKlYO6MEeWRj9kt77fkGg" name="receive_address">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -432,148 +442,6 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q60P0f5nEeWOKe10P2utqA" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_Q67kkP5nEeWOKe10P2utqA" name="meal" type="_-wkF4P5mEeWOKe10P2utqA" association="_Q6yaoP5nEeWOKe10P2utqA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_RXezEP8qEeW867h8WDmWGw" name="ClientConsole">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_QKLLEP8tEeW867h8WDmWGw" name="main"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_Z1fhMP8qEeW867h8WDmWGw" name="CommandConsole">
-    <generalization xmi:type="uml:Generalization" xmi:id="_dw0HQP8qEeW867h8WDmWGw" general="_RXezEP8qEeW867h8WDmWGw"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_5PUq0P8qEeW867h8WDmWGw" name="login">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_E0G8oP8rEeW867h8WDmWGw" name="username">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_HbAtcP8rEeW867h8WDmWGw" name="password">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_7zWt0P8qEeW867h8WDmWGw" name="createMeal">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_K89KMP8rEeW867h8WDmWGw" name="mealname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Pm4isP8rEeW867h8WDmWGw" name="price">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_S506IP8rEeW867h8WDmWGw" name="addIngredient">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZV0tMP8rEeW867h8WDmWGw" name="ingredient">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_aq3NgP8rEeW867h8WDmWGw" name="quantity">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_TzE2UP8rEeW867h8WDmWGw" name="currentMeal"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_UAauwP8rEeW867h8WDmWGw" name="saveMeal"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_UNrusP8rEeW867h8WDmWGw" name="selectMeal">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_kdGjoP8rEeW867h8WDmWGw" name="mealname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lhPhMP8rEeW867h8WDmWGw" name="quantity">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_UdEOgP8rEeW867h8WDmWGw" name="personalizeMeal">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zHvMEP8rEeW867h8WDmWGw" name="mealname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_50jCUP8rEeW867h8WDmWGw" name="ingredientname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="__mqK4P8rEeW867h8WDmWGw" name="qualtity">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_UqEvwP8rEeW867h8WDmWGw" name="putInSpecialOffer">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_EnJpQP8sEeW867h8WDmWGw" name="mealname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_GB03gP8sEeW867h8WDmWGw" name="price">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_U3mOYP8rEeW867h8WDmWGw" name="removeFromSpecialOffer">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_JGAaMP8sEeW867h8WDmWGw" name="mealname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_VSn9gP8rEeW867h8WDmWGw" name="listIngredients">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_L23YQP8sEeW867h8WDmWGw" name="mealname" type="_kXy_4O6jEeWjqrXASGzHzw"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_VfsJIP8rEeW867h8WDmWGw" name="addContactInfo">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_QQBJ0P8sEeW867h8WDmWGw" name="contactinfo">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_VvGeIP8rEeW867h8WDmWGw" name="associateCard">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_VNfwcP8sEeW867h8WDmWGw" name="username">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_YPpS0P8sEeW867h8WDmWGw" name="cardType">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Y1YdIP8sEeW867h8WDmWGw" name="associateAgreement">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_d0y9cP8sEeW867h8WDmWGw" name="username">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gLuYkP8sEeW867h8WDmWGw" name="agreement">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZRl4AP8sEeW867h8WDmWGw" name="insertChef">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_irrM0P8sEeW867h8WDmWGw" name="firstname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_k8Z5UP8sEeW867h8WDmWGw" name="lastname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_nB1UwP8sEeW867h8WDmWGw" name="username">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_oViYUP8sEeW867h8WDmWGw" name="password">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZkAdsP8sEeW867h8WDmWGw" name="saveOrder"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Z0nskP8sEeW867h8WDmWGw" name="insertOffer">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ydKIkP8sEeW867h8WDmWGw" name="mealname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0RGycP8sEeW867h8WDmWGw" name="newprice">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_aHSw8P8sEeW867h8WDmWGw" name="registerClient">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_3pRoIP8sEeW867h8WDmWGw" name="firstname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_4zeKYP8sEeW867h8WDmWGw" name="lastname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_6RBGcP8sEeW867h8WDmWGw" name="username">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7bbrIP8sEeW867h8WDmWGw" name="password">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_BZlroP8tEeW867h8WDmWGw" name="notifyAd">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_EdjL4P8tEeW867h8WDmWGw" name="message">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_GTnVoP8tEeW867h8WDmWGw" name="mealname">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_IHbcoP8tEeW867h8WDmWGw" name="specialprice">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_BpvngP8tEeW867h8WDmWGw" name="notifyBirthday"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_B-Ff0P8tEeW867h8WDmWGw" name="showMeal">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LXyaIP8tEeW867h8WDmWGw" name="OrderingCriteria">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-      </ownedParameter>
-    </ownedOperation>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_UEqPgOVWEeWV-96N_MXogA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UErdoOVWEeWV-96N_MXogA" source="http://www.eclipse.org/uml2/2.0.0/UML">
