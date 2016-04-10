@@ -1,5 +1,6 @@
 package mealsystem;
 
+
 import ingredients.Ingredient;
 
 public class MealFactory extends AbstractMealFactory{
